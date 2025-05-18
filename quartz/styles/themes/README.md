@@ -1,10 +1,10 @@
-# Obsidianotion
+# Simply Colorful
 
-[Obsidianotion](https://diegoeis.com)
+[Simply Colorful](https://github.com/LorenzoPegorari)
 
 ## Preview
 
-[Open live preview](https://quartz-themes.github.io/obsidianotion/)
+[Open live preview](https://quartz-themes.github.io/simply-colorful/)
 
 ## Usage
 
@@ -12,7 +12,7 @@
 
 ```yaml
 - name: Fetch Quartz Theme
-  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- obsidianotion
+  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- simply-colorful
 ```
 
 ### Manual install
@@ -20,7 +20,7 @@
 ```bash
 curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh
 
-./action.sh obsidianotion
+./action.sh simply-colorful
 ```
 
 ### Install script (Advanced)
@@ -28,5 +28,5 @@ curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-them
 After installing:
 
 ```bash
-npm run theme obsidianotion
+npm run theme simply-colorful
 ```
