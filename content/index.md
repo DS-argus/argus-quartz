@@ -1,4 +1,12 @@
 ---
-title: 공부중독자의 블로그에 오신 것을 환영합니다!
+title: 공부 중독자의 기록 공간
 ---
-Welcome to my blog!
+공부한 내용과 관심사를 정리하는 블로그입니다
+
+
+Interests
+- Data Engineering
+- AI
+- Causal Inference
+- ...
+
