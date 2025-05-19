@@ -15,9 +15,9 @@ related:
 ##### 설치 (macOS 기준)
 
 - Homebrew를 이용한 설치
-``` shell
-brew install gh
-```
+	``` shell
+	brew install gh
+	```
 
 - 버전 확인
 
