@@ -9,3 +9,8 @@ tsconfig.tsbuildinfo
 private/
 .replit
 replit.nix
+.smtcmp_json_db/
+.trash/
+.obsidian.vimrc
+
+
