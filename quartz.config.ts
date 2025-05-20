@@ -17,8 +17,9 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "study-addiction.pages.dev",
-    ignorePatterns: ["private", "templates", ".obsidian"],
-    defaultDateType: "modified",
+    // For my local notes
+    ignorePatterns: ["private", "templates", ".obsidian", "/^\d{3}\..*/"],
+    defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
