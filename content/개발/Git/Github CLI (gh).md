@@ -4,7 +4,7 @@ tags:
   - GitHub
   - CLI
 url: 
-Creation Date: 2025년 5월 14일 수요일
+Creation Date: 2025-05-14
 Last modified: 2025년 5월 18일 일요일 13:51:11
 related:
 ---
