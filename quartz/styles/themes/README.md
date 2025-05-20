@@ -1,10 +1,10 @@
-# Simply Colorful
+# Mint-Breeze
 
-[Simply Colorful](https://github.com/LorenzoPegorari)
+[Mint-Breeze](https://quinta0.github.io/)
 
 ## Preview
 
-[Open live preview](https://quartz-themes.github.io/simply-colorful/)
+[Open live preview](https://quartz-themes.github.io/mint-breeze/)
 
 ## Usage
 
@@ -12,7 +12,7 @@
 
 ```yaml
 - name: Fetch Quartz Theme
-  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- simply-colorful
+  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- mint-breeze
 ```
 
 ### Manual install
@@ -20,7 +20,7 @@
 ```bash
 curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh
 
-./action.sh simply-colorful
+./action.sh mint-breeze
 ```
 
 ### Install script (Advanced)
@@ -28,5 +28,5 @@ curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-them
 After installing:
 
 ```bash
-npm run theme simply-colorful
+npm run theme mint-breeze
 ```

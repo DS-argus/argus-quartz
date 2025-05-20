@@ -1,14 +1,15 @@
-/* quartz themes */
+/* quartz themes light-only */
 @use "sass:map";
 @use "sass:meta";
 @use "sass:string";
 @use "sass:list";
 @use "sass:color";
 
-@use "dark";
 @use "light";
 @use "extras";
-@use "extras/fonts/roboto.scss";
+@use "extras/hide-toggle.scss";
+@use "extras/fonts/noto-sans-old-persian.scss";
+@use "extras/fonts/noto-serif-kr.scss";
 
 /* Callouts */
 $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question", "warning",
@@ -329,76 +330,14 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
   --icon-color-focus: var(--interactive-accent-hover);
   --icon-stroke: var(--icon-l-stroke-width);
 
-  --font-editor-theme: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Ubuntu,
-    sans-serif;
-  --icon-color-hover: hsl(var(--color-accent-hsl));
-  --icon-color-active: hsl(var(--color-accent-hsl));
-  --icon-color-focused: hsl(var(--color-accent-hsl));
-  --icon-opacity: 0.8;
-  --bold-color: var(--color-cyan);
-  --italic-color: var(--color-green);
-  --divider-color-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
-  --nav-item-color-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.775);
-  --nav-item-color-active: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.95);
-  --nav-item-color-selected: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.95);
-  --nav-item-weight: 500;
-  --nav-item-weight-hover: 500;
-  --slider-thumb-border-width: 2px;
-  --slider-thumb-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.75);
-  --slider-track-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
-  --slider-track-height: 3px;
-  --tab-text-color: var(--text-faint);
-  --tab-text-color-active: var(--text-muted);
-  --tab-text-color-focused: var(--text-muted);
-  --tab-text-color-focused-active: var(--text-muted);
-  --tab-text-color-focused-highlighted: var(--text-accent);
-  --tab-text-color-focused-active-current: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --tab-font-weight: 700;
-  --embed-block-shadow-hover: none;
-  --blockquote-background-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
-  --blockquote-border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
-  --blockquote-color: var(--text-muted);
-  --callout-border-width: 2px;
-  --callout-padding: var(--size-4-3) var(--size-4-3) var(--size-4-3) var(--size-4-6);
-  --callout-radius: var(--radius-m);
-  --code-radius: var(--radius-m);
-  --embed-max-height: 750px;
-  --embed-border-start: 2px solid hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.5);
-  --file-header-font-weight: 700;
-  --h1-size: 1.802em;
-  --h2-size: 1.602em;
-  --h3-size: 1.424em;
-  --h4-size: 1.266em;
-  --h5-size: 1.125em;
-  --h6-size: 1em;
-  --h1-weight: 700;
-  --h2-weight: 700;
-  --h3-weight: 700;
-  --h4-weight: 700;
-  --h5-weight: 700;
-  --h6-weight: 700;
-  --inline-title-color: var(--text-normal);
-  --inline-title-size: 1.92em;
-  --inline-title-weight: 700;
-  --link-unresolved-opacity: 0.7;
-  --link-unresolved-filter: grayscale(25%);
-  --list-indent: 2em;
-  --list-marker-color-collapsed: var(--text-faint);
-  --metadata-background: var(--color-base-10);
-  --metadata-border-radius: var(--radius-m);
-  --metadata-property-radius: var(--radius-s);
-  --metadata-property-radius-hover: var(--radius-s);
-  --metadata-property-radius-focus: var(--radius-s);
-  --table-background: var(--background-secondary);
-  --table-border-color: var(--background-modifier-border);
-  --dataview-table-tbody-size: calc(var(--font-text-size) * 0.82);
-  --dataview-table-thead-size: calc(var(--font-text-size) * 0.88);
-  --tag-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.925);
-  --tag-color-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.95);
-  --tag-padding-x: 0.7em;
-  --tag-padding-y: 0.3em;
-  --live-heading-bg-top: calc((var(--p-spacing) * 9) / 16);
-  --live-heading-bg-bottom: calc((var(--p-spacing) * 7) / 16);
+  --radius-s: 8px;
+  --radius-m: 12px;
+  --radius-l: 16px;
+  --input-radius: 12px;
+  --checkbox-radius: 12px;
+  --toggle-radius: 12px;
+  --toggle-thumb-radius: 12px;
+  --slider-thumb-radius: 12px;
 
   --titleFont: var(--font-text) !important;
   --headerFont: var(--font-text) !important;
@@ -464,137 +403,9 @@ body {
   --metadata-sidebar-input-font-size: var(--font-ui-small);
 }
 
-/* START DARK */
-:root[saved-theme="dark"],
-html[saved-theme="dark"] {
-  --highlight-mix-blend-mode: lighten;
-  --mono-rgb-0: 0, 0, 0;
-  --mono-rgb-100: 255, 255, 255;
-  --color-red-rgb: 251, 70, 76;
-  --color-red: #fb464c;
-  --color-orange-rgb: 233, 151, 63;
-  --color-orange: #e9973f;
-  --color-yellow-rgb: 224, 222, 113;
-  --color-yellow: #e0de71;
-  --color-green-rgb: 68, 207, 110;
-  --color-green: #44cf6e;
-  --color-cyan-rgb: 83, 223, 221;
-  --color-cyan: #53dfdd;
-  --color-blue-rgb: 2, 122, 255;
-  --color-blue: #027aff;
-  --color-purple-rgb: 168, 130, 255;
-  --color-purple: #a882ff;
-  --color-pink-rgb: 250, 153, 205;
-  --color-pink: #fa99cd;
-  --color-base-00: #1e1e1e;
-  --color-base-05: #212121;
-  --color-base-10: #242424;
-  --color-base-20: #262626;
-  --color-base-25: #2a2a2a;
-  --color-base-30: #363636;
-  --color-base-35: #3f3f3f;
-  --color-base-40: #555555;
-  --color-base-50: #666666;
-  --color-base-60: #999999;
-  --color-base-70: #b3b3b3;
-  --color-base-100: #dadada;
-  --color-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-1: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --color-accent-2: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --background-modifier-form-field: var(--color-base-25);
-  --background-secondary-alt: var(--color-base-30);
-  --interactive-normal: var(--color-base-30);
-  --interactive-hover: var(--color-base-35);
-  --text-accent: var(--color-accent-1);
-  --interactive-accent: var(--color-accent);
-  --interactive-accent-hover: var(--color-accent-1);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-cover: rgba(10, 10, 10, 0.4);
-  --text-selection: hsla(var(--interactive-accent-hsl), 0.25);
-  --pdf-shadow: 0 0 0 1px var(--background-modifier-border);
-  --pdf-thumbnail-shadow: 0 0 0 1px var(--background-modifier-border);
-
-  --color-red-rgb: 224, 48, 53;
-  --color-orange-rgb: 224, 131, 48;
-  --color-yellow-rgb: 206, 201, 42;
-  --color-green-rgb: 47, 206, 42;
-  --color-cyan-rgb: 42, 206, 201;
-  --color-blue-rgb: 36, 113, 212;
-  --color-purple-rgb: 131, 48, 224;
-  --color-pink-rgb: 224, 48, 141;
-  --color-red: #e03035;
-  --color-orange: #e08330;
-  --color-yellow: #cec92a;
-  --color-green: #32ce2d;
-  --color-cyan: #2dcec9;
-  --color-blue: #2471d4;
-  --color-purple: #9149e4;
-  --color-pink: #e0308d;
-  --color-base-00: #191919;
-  --color-base-05: #1e1e1e;
-  --color-base-10: #222222;
-  --color-base-20: #313131;
-  --color-base-25: #363636;
-  --color-base-30: #414141;
-  --color-base-35: #4c4c4c;
-  --color-base-40: #555555;
-  --color-base-50: #666666;
-  --color-base-60: #999999;
-  --color-base-70: #b3b3b3;
-  --color-base-100: #dadada;
-  --text-accent: #8a5cf5;
-  --text-accent-hover: rgba(138, 92, 245, 0.825);
-  --dataview-table-even-bg-color: var(--color-base-10);
-  --dataview-table-odd-bg-color: var(--color-base-05);
-  --dataview-table-row-hover: var(--color-accent-hsl);
-  --tag-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.075);
-  --tag-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
-  --h-transparency: 7%;
-  --background-primary: var(--color-base-00);
-  --background-primary-alt: var(--color-base-10);
-  --background-secondary: var(--color-base-05);
-  --background-secondary-alt: var(--color-base-05);
-  --background-modifier-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --background-modifier-active-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --background-modifier-border: var(--color-base-25);
-  --background-modifier-border-hover: var(--color-base-30);
-  --background-modifier-border-focus: var(--color-base-35);
-  --background-modifier-form-field: var(--color-base-05);
-  --text-highlight-bg-rgb: 236, 235, 0;
-  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.4);
-  --h1-color: var(--color-blue);
-  --h2-color: var(--color-purple);
-  --h3-color: var(--color-pink);
-  --h4-color: var(--color-red);
-  --h5-color: var(--color-orange);
-  --h6-color: var(--color-yellow);
-  --link-external-color: #0071e3;
-  --link-external-color-hover: #0764c1;
-
-  code[data-theme*=" "] {
-    color: var(--shiki-dark);
-    background-color: var(--shiki-dark-bg);
-  }
-
-  code[data-theme*=" "] span {
-    color: var(--shiki-dark);
-  }
-
-  .callout {
-    @each $type in $callout-types {
-      &[data-callout="#{$type}"] {
-        --color: rgb(var(#{"--callout-#{$type}"}));
-        --border: rgba(var(#{"--callout-#{$type}"}), 0.267);
-        --bg: rgba(var(#{"--callout-#{$type}"}), 0.063);
-      }
-    }
-  }
-}
-/* END DARK */
-
 /* START LIGHT */
-:root[saved-theme="light"],
-html[saved-theme="light"] {
+:root,
+html {
   --highlight-mix-blend-mode: darken;
   --mono-rgb-0: 255, 255, 255;
   --mono-rgb-100: 0, 0, 0;
@@ -633,62 +444,20 @@ html[saved-theme="light"] {
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.1);
   --background-modifier-cover: rgba(220, 220, 220, 0.4);
 
-  --color-red-rgb: 224, 48, 53;
-  --color-orange-rgb: 224, 131, 48;
-  --color-yellow-rgb: 206, 201, 42;
-  --color-green-rgb: 47, 206, 42;
-  --color-cyan-rgb: 42, 206, 201;
-  --color-blue-rgb: 36, 113, 212;
-  --color-purple-rgb: 131, 48, 224;
-  --color-pink-rgb: 224, 48, 141;
-  --color-red: #e03035;
-  --color-orange: #d57929;
-  --color-yellow: #b6b11c;
-  --color-green: #0fa50a;
-  --color-cyan: #18ada8;
-  --color-blue: #2471d4;
-  --color-purple: #8330e0;
-  --color-pink: #e0308d;
-  --color-base-00: #f7f7f7;
-  --color-base-05: #f0f0f0;
-  --color-base-10: #e7e7e7;
-  --color-base-20: #e0e0e0;
-  --color-base-25: #dadada;
-  --color-base-30: #d4d4d4;
-  --color-base-35: #c7c7c7;
-  --color-base-40: #bdbdbd;
-  --color-base-50: #aaaaaa;
-  --color-base-60: #707070;
-  --color-base-70: #4f4f4f;
-  --color-base-100: #222222;
-  --text-accent: #7e55dd;
-  --text-accent-hover: rgba(126, 85, 221, 0.825);
-  --dataview-table-even-bg-color: var(--color-base-10);
-  --dataview-table-odd-bg-color: var(--color-base-05);
-  --dataview-table-row-hover: var(--color-accent-hsl);
-  --tag-background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.125);
-  --tag-background-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1);
-  --h-transparency: 12%;
-  --background-primary: var(--color-base-00);
-  --background-primary-alt: var(--color-base-10);
-  --background-secondary: var(--color-base-05);
-  --background-secondary-alt: var(--color-base-05);
-  --background-modifier-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --background-modifier-active-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.08);
-  --background-modifier-border: var(--color-base-25);
-  --background-modifier-border-hover: var(--color-base-30);
-  --background-modifier-border-focus: var(--color-base-35);
-  --background-modifier-form-field: var(--color-base-05);
-  --text-highlight-bg-rgb: 236, 235, 0;
-  --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.4);
-  --h1-color: var(--color-blue);
-  --h2-color: var(--color-purple);
-  --h3-color: var(--color-pink);
-  --h4-color: var(--color-red);
-  --h5-color: var(--color-orange);
-  --h6-color: var(--color-yellow);
-  --link-external-color: #0071e3;
-  --link-external-color-hover: #0764c1;
+  --text: #13201c;
+  --background-primary: #f8fcfb;
+  --primary: #2a5a4a;
+  --secondary: #8ccfb9;
+  --accent: #42b38d;
+  --highlight-hue: 30;
+  --italic-color: var(--accent);
+  --bold-color: var(--accent);
+  --h1-color: var(--accent);
+  --h2-color: var(--accent);
+  --h3-color: var(--accent);
+  --h4-color: var(--accent);
+  --h5-color: var(--accent);
+  --h6-color: var(--accent);
 
   code[data-theme*=" "] {
     color: var(--shiki-light);
@@ -1253,7 +1022,7 @@ body {
 /* START CANVAS GRAPH WORKAROUND */
 
 /* START LIGHT GRAPH */
-:root:root[saved-theme="light"] {
+:root:root {
   --highlight-fallback: 258, 88%, 66%;
   --textHighlight-fallback: 255, 208, 0;
   --light: var(
@@ -1306,60 +1075,5 @@ body {
   ) !important;
 }
 /* END LIGHT GRAPH */
-
-/* START DARK GRAPH */
-:root:root[saved-theme="dark"] {
-  --highlight-fallback: 258, 88%, 66%;
-  --textHighlight-fallback: 255, 208, 0;
-  --light: var(
-    --graph-node,
-    var(--text-muted, var(--background-primary, var(--color-base-00, #1e1e1e)))
-  ) !important;
-  --lightgray: var(
-    --graph-line,
-    var(
-      --color-base-35,
-      var(
-        --background-modifier-border-focus,
-        var(--background-modifier-border, var(--color-base-30, #363636))
-      )
-    )
-  ) !important;
-  --gray: var(
-    --graph-node,
-    var(
-      --text-muted,
-      var(
-        --graph-text,
-        var(--text-normal, var(--checkbox-border-color, var(--text-faint, #666666)))
-      )
-    )
-  ) !important;
-  --darkgray: var(
-    --graph-node-unresolved,
-    var(--text-faint, var(--text-normal, var(--color-base-100, #dadada)))
-  ) !important;
-  --dark: var(--h1-color, var(--text-faint, #666666)) !important;
-  --secondary: var(
-    --graph-node-focused,
-    var(--text-accent, var(--link-color, var(--text-accent, var(--color-accent-1, #a386f9))))
-  ) !important;
-  --tertiary: var(
-    --graph-node-tag,
-    var(
-      --color-green,
-      var(--link-color-hover, var(--text-accent-hover, var(--color-accent-2, #c5b6fc)))
-    )
-  ) !important;
-  --highlight: var(
-    --tag-background,
-    hsla(var(--interactive-accent-hsl, var(--color-accent-hsl, var(--highlight-fallback))), 0.2)
-  ) !important;
-  --textHighlight: var(
-    --text-highlight-bg,
-    rgba(var(--text-highlight-bg-rgb, var(--textHighlight-fallback)), 0.4)
-  ) !important;
-}
-/* END DARK GRAPH */
 
 /* END CANVAS GRAPH WORKAROUND */
