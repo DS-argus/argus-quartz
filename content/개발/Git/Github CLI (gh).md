@@ -4,8 +4,8 @@ tags:
   - GitHub
   - CLI
 url: 
-Creation Date: 2025-05-14
-Last modified: 2025년 5월 18일 일요일 13:51:11
+created: 2025-05-14
+updated: 2025년 5월 18일 일요일 13:51:11
 related:
 ---
 > [!info] gh란?
