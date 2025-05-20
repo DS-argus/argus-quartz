@@ -30,7 +30,7 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
   --blockquote-color: inherit;
   --blockquote-background-color: transparent;
   --bold-modifier: 200;
-  --bold-color: inherit;
+  --bold-color: rgb(var(--ctp-sky));
   --bold-weight: calc(var(--font-weight) + var(--bold-modifier));
   --border-width: 1px;
   --button-radius: var(--input-radius);
@@ -182,7 +182,7 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
   --inline-title-weight: var(--h1-weight);
   --input-font-weight: var(--font-normal);
   --input-border-width: 1px;
-  --italic-color: inherit;
+  --italic-color: rgb(var(--ctp-green));
   --italic-weight: inherit;
   --nav-item-color: var(--text-muted);
   --nav-item-color-hover: var(--text-normal);
@@ -294,7 +294,7 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
   --text-warning: var(--color-orange);
   --text-success: var(--color-green);
   --text-selection: hsla(var(--color-accent-hsl), 0.2);
-  --text-highlight-bg-rgb: 255, 208, 0;
+  --text-highlight-bg-rgb: var(--ctp-yellow);
   --text-highlight-bg: rgba(var(--text-highlight-bg-rgb), 0.4);
   --text-accent: var(--color-accent);
   --text-accent-hover: var(--color-accent-2);
