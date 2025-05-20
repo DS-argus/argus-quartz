@@ -22,7 +22,7 @@
   --ctp-surface2: var(--ctp-custom-surface2, var(--ctp-ext-surface2, 172, 176, 190));
   --ctp-surface1: var(--ctp-custom-surface1, var(--ctp-ext-surface1, 188, 192, 204));
   --ctp-surface0: var(--ctp-custom-surface0, var(--ctp-ext-surface0, 204, 208, 218));
-  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 239, 241, 245));
+  --ctp-base: var(--ctp-custom-base, var(--ctp-ext-base, 230, 233, 239));
   --ctp-mantle: var(--ctp-custom-mantle, var(--ctp-ext-mantle, 230, 233, 239));
   --ctp-crust: var(--ctp-custom-crust, var(--ctp-ext-crust, 220, 224, 232));
   --highlight-mix-blend-mode: none;
@@ -31,6 +31,10 @@
   --background-modifier-border-focus: rgb(var(--ctp-overlay0));
   --anp-speech-bubble-opacity: var(--anp-sp-op-light, 0.5);
   --background-modifier-cover: #00000022;
+  --background-primary: rgb(var(--ctp-crust));
+  --background-primary-alt: rgb(var(--ctp-mantle));
+  --background-secondary: rgb(var(--ctp-mantle));
+  --background-secondary-alt: rgb(var(--ctp-base));
   --h1-color: rgb(var(--ctp-red));
   --h2-color: rgb(var(--ctp-peach));
   --h3-color: rgb(var(--ctp-green));
