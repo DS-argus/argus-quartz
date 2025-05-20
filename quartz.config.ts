@@ -13,7 +13,8 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "google",
+      tagId: "G-SX0ZVK7B4H",
     },
     locale: "en-US",
     baseUrl: "study-addiction.pages.dev",
