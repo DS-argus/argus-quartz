@@ -307,12 +307,12 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --font-monospace-default: ui-monospace, SFMono-Regular, "Cascadia Mono", "Roboto Mono",
     "DejaVu Sans Mono", "Liberation Mono", Menlo, Monaco, "Consolas", "Source Code Pro", monospace;
-  --font-interface-override: "??";
-  --font-interface-theme: "??";
+  --font-interface-override: "Gowun Batang";
+  --font-interface-theme: "Gowun Batang";
   --font-interface: var(--font-interface-override), var(--font-interface-theme),
     var(--default-font, "??"), var(--font-default);
-  --font-text-override: "??";
-  --font-text-theme: "??";
+  --font-text-override: "Gowun Batang";
+  --font-text-theme: "Gowun Batang";
   --font-text: var(--font-text-override), var(--font-text-theme), var(--font-default);
   --font-print-override: "??";
   --font-print: var(--font-print-override), var(--font-text-override), var(--font-text-theme),
@@ -335,7 +335,7 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
   --anp-preview-width-pct: 95%;
   --anp-preview-width-max: 800px;
   --anp-header-margin-value: 15px;
-  --anp-header-font: "Noto Serif";
+  --anp-header-font: "Gowun Batang";
   --tab-stacked-pane-width: calc(var(--anp-tab-stacked-pane-width, 1) * var(--file-line-width));
   --anp-table-width-pct: 100%;
   --code-background: var(--anp-code-bg-color, var(--background-secondary-alt));
@@ -412,10 +412,6 @@ $callout-types: "note", "abstract", "info", "todo", "tip", "success", "question"
   --ribbon-background: var(--colorful-frame-color);
   --ribbon-background-collapsed: var(--colorful-frame-color);
   --card-background-color: var(--colorful-frame-color);
-  --icon-color: var(--colorful-icon-color);
-  --icon-color-hover: var(--colorful-icon-color-alt);
-  --icon-color-active: var(--colorful-icon-color-alt);
-  --icon-color-focused: var(--colorful-icon-color);
   --icon-color: var(--colorful-icon-color);
   --icon-color-hover: var(--colorful-icon-color-alt);
   --icon-color-active: var(--colorful-icon-color-alt);
