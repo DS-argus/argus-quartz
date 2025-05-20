@@ -1,10 +1,10 @@
-# Mint-Breeze
+# AnuPpuccin
 
-[Mint-Breeze](https://quinta0.github.io/)
+[AnuPpuccin](https://github.com/AnubisNekhet)
 
 ## Preview
 
-[Open live preview](https://quartz-themes.github.io/mint-breeze/)
+[Open live preview](https://quartz-themes.github.io/anuppuccin/)
 
 ## Usage
 
@@ -12,7 +12,7 @@
 
 ```yaml
 - name: Fetch Quartz Theme
-  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- mint-breeze
+  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- anuppuccin
 ```
 
 ### Manual install
@@ -20,7 +20,7 @@
 ```bash
 curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh
 
-./action.sh mint-breeze
+./action.sh anuppuccin
 ```
 
 ### Install script (Advanced)
@@ -28,5 +28,5 @@ curl -s -S -o action.sh https://raw.githubusercontent.com/saberzero1/quartz-them
 After installing:
 
 ```bash
-npm run theme mint-breeze
+npm run theme anuppuccin
 ```
