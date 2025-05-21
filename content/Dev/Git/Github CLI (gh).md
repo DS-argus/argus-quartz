@@ -3,10 +3,8 @@ tags:
   - Git
   - GitHub
   - CLI
-url: 
 created: 2025-05-14
-updated: 2025-05-21T20:44:43
-related: 
+updated: 2025-05-21T22:21:11
 ---
 > [!info] gh란?
 >- GitHub에서 공식 제공하는 **CLI(Command Line Interface)** 도구
