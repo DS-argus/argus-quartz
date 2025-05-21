@@ -3,14 +3,14 @@ tags:
   - Obsidian
   - Quartz
 created: 2025-05-21T22:34:20
-updated: 2025-05-21T23:24:47
+updated: 2025-05-21T23:32:05
 ---
 ### Quartz-Theme
 Obsidian의 가장 큰 장점은 아주 많은 테마를  선택할 수 있다는 점이다.
 [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) 플러그인까지 활용하면 정말 건드리지 못하는 곳이 없다 싶을 정도로 커스터마이징이 가능하다.
 
 내 local theme으로는 [Anuppuccin](https://github.com/AnubisNekhet/AnuPpuccin) +  style settings 플러그인을 활용해 아래와 같이 사용하고 있다
-![[2025-05-21 - 22-40-20.png|470x269]]
+![[Obsidian Quartz 테마 - 2025-05-21 - 22-40-20.png|470x269]]
 
 하지만 Quartz로 만든 블로그는 직접 config 파일을 만지는 방법 이외에는 뚜렷한 방도가 없어보였는데 너무 귀찮았기 때문에 검색을 해보았고 다음 GitHub repository를 찾을 수 있었다
 https://github.com/saberzero1/quartz-themes?tab=readme-ov-file
