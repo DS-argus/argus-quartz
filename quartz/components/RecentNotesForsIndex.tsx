@@ -5,9 +5,9 @@ const RecentNotesForIndex: QuartzComponent = (props: QuartzComponentProps) => {
   if (props.fileData.slug === "index") {
     return RecentNotes({
       title: "Recent Notes",
-      limit: 3,
+      limit: 5,
       showTags: false,
-      linkToMore: "/all-posts",
+      // linkToMore: "/all-posts",
     })(props)
   }
   return null
