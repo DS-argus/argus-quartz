@@ -23,8 +23,9 @@ export const sharedPageComponents: SharedLayout = {
   ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      GitHub: "https://github.com/DS-argus/argus-quartz",
+      "LinkedIn": "https://www.linkedin.com/in/soungmin-park-081580203/",
+      "Naver Blog": "https://blog.naver.com/parksoungpark"
     },
   }),
 }
