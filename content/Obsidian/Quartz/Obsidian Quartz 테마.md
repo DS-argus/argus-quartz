@@ -3,7 +3,7 @@ tags:
   - Obsidian
   - Quartz
 created: 2025-05-21T22:34:20
-updated: 2025-05-22T11:28:50
+updated: 2025-05-22T16:39:20
 ---
 ### Quartz-Theme
 Obsidian의 가장 큰 장점은 아주 많은 테마를  선택할 수 있다는 점이다.  
@@ -36,6 +36,7 @@ chmod +x action.sh
 
 ![[Obsidian Quartz 테마 - 2025-05-21 - 22-47-09.png|470x457]]
 
+그리고 `quartz/styles/custom.scss`에 `@use "./themes";` 이 추가되며 build할 때 적용이 되는 것으로 보인다
 
 새로운 테마로 바꾸고 싶으면 그냥 `action.sh`를 다시 실행시켜주면 된다
 
@@ -45,6 +46,8 @@ chmod +x action.sh
 
 나는 다음 부분들을 추가적으로 수정했다
 - header의 색이 header 종류마다 다르게 수정
+- header마다 크기와 굵기 수정
+	- header별 크기와 굵기가 기존 `quartz/styles/base.scss`로 적용이 되고 있어 해당 파일을 직접 수정했다 (더 나은 방법이 있는지 모르겠다)
 - 블로그의 전체적인 배경색이 내 local obsidian 테마와 유사하게 수정
 - anuppuccin 테마에서 사용하는 font가 아니라 내가  `quartz.config.ts`에서 설정한 font가 적용되도록 수정
 
