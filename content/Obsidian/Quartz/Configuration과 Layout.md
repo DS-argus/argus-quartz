@@ -3,7 +3,7 @@ tags:
   - Obsidian
   - Quartz
 created: 2025-05-22T15:14:54
-updated: 2025-05-22T16:44:50
+updated: 2025-05-22T16:55:03
 ---
 ### Quartz의 기본 Configuration과 Layout
 
@@ -74,9 +74,9 @@ export const defaultListPageLayout: PageLayout = {
 
 
 ### 내가 수정한 부분
-1. Transformers plugin의 TableOfContents의 maxDepth 6으로 수정
+1. Transformers plugin의 TableOfContents 파라미터 maxDepth을 6으로 수정
 	- 나는 보통 header 3, 5를 많이 사용해서 default값 3에서 6으로 수정했다
-2. Shared Page에 [[Obsidian Quartz Blog 시작하기#^0dc00b|댓글창]], [[Obsidian Quartz Blog 시작하기#^18a869|Recent Notes]] 기능 추가
+2. Shared Page에 [[Obsidian Quartz Blog 시작하기#^0dc00b|댓글창]], [[Obsidian Quartz Blog 시작하기#^45a2bf|Recent Notes]] 기능 추가
 	- Recent Notes의 경우 afterBody에 넣어서 `index.md` 내용이 먼저 나오고 하단에 Recent Notes 가 나오도록 했다 ^ccdc30
 3. Shared Page 하단에 내 개인 GitHub, LinkedIn, Naver blog 링크와 아이콘 추가
 	- 기존 footer에 있는 내용을 내 개인 계정 링크로 수정했다
