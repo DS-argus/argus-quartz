@@ -4,7 +4,7 @@ tags:
   - multiplexer
 url: 
 created: 2025-05-23T19:50:40
-updated: 2025-05-23T23:11:36
+updated: 2025-05-23T23:19:30
 related: 
 ---
 ### 터미널 멀티플렉서란? 
@@ -102,14 +102,22 @@ tmux의 화면을 구성하는 3가지 요소는 다음과 같다
 	tmux
 	tmux new -s <session-name> // session 이름 부여
 	```
+
+
 - 현재 session에서 나오기
 	```
 	<prefix> + d
 	```
+
+
+
 - 현재 존재하는 session 목록 확인
 	```
 	tmux ls
 	```
+
+
+
 
 - 만들어진 session에 재접속
 	```
@@ -117,10 +125,15 @@ tmux의 화면을 구성하는 3가지 요소는 다음과 같다
 	tmux at  // 최근 접속 session에 바로 attach
 	```
 
+
+
+
 - session 이름 변경
 	```
 	<prefix> + $
 	```
+
+
 
 - session 종료
 	```
@@ -129,21 +142,32 @@ tmux의 화면을 구성하는 3가지 요소는 다음과 같다
 	tmux kill-session -t <session-name>   // tmux 밖에서 특정 세션 종료
 	```
 
+
+
 ##### Window 관련 명령어
 - 새로운 window 생성
 	```
 	<prefix> + c
 	```
 
+
+
+
 - window 간 이동 : 다음 (n), 이전 (p)
 	```
 	<prefix> + n, p
 	```
 
+
+
+
 - window 이름 변경
 	```
 	<prefix> + ,
 	```
+
+
+
 
 - window 제거
 	```
@@ -159,11 +183,17 @@ tmux의 화면을 구성하는 3가지 요소는 다음과 같다
 	<prefix> + |      // 바꾼 후
 	```
 
+
+
+
 - pane 상하 분할
 	```
 	<prefix> + ""     // 바꾸기 전
 	<prefix> + -      // 바꾼 후
 	```
+
+
+
 
 - pane 간 이동
 	```
@@ -171,10 +201,16 @@ tmux의 화면을 구성하는 3가지 요소는 다음과 같다
 	<prefix> + h,j,k,l  // 바꾼 후 (vim 방향키 : h(왼), j(아래), k(위), l(오))
 	```
 
+
+
+
 - 현재 pane 최대화 및 원상복구 (기존에 없는 명령어)
 	```
 	<prefix> + m
 	```
+
+
+
 
 - pane 제거
 	```
@@ -191,13 +227,17 @@ tmux의 화면을 구성하는 3가지 요소는 다음과 같다
 	- 이후 화살표 혹은 vim 방향키로 원하는 session, window, pane으로 이동한 후 enter를 누르면 이동된다
 
 
+
+
 - copy 모드 : 원래 tmux에서는 마우스 사용이 불가능해서 스크롤이 안되기 때문에 copy 모드 진입해서 이동해야 함
 	```
 	<prefix> + [     // copy 모드 진입
-	ctrl + c         // copy 모드 나가기
+	ctrl + c or q or esc         // copy 모드 나가기
 	```
 	- 진입 후에는 화살표로 이동할 수 있고 영역을 선택하여 복사를 할 수 있다
 	- 하지만 추후 tmux 설정에서 마우스를 사용할 수 있게 하면 굳이 사용할 일은 없어보인다
+
+
 
 ### 내가 사용하는 tmux configuration
 
