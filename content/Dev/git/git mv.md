@@ -3,7 +3,7 @@ tags:
   - git
 url: 
 created: 2025-05-23T23:40:09
-updated: 2025-05-25T00:04:30
+updated: 2025-05-25T00:05:13
 related: 
 ---
 ### 문제
@@ -35,11 +35,11 @@ git mv content/Dev/Git content/Dev/git
 ![[git mv - 2025-05-24 - 09-07-43.png|650x350]]
 
 
-이는 기본적으로 macOS 파일시스템에서 case-insensitive, 즉 대소문자를 구분하지 않기 때문에 발생하는 문제로  
+이는 기본적으로 macOS 파일시스템이 case-insensitive, 즉 대소문자를 구분하지 않기 때문에 발생하는 문제로  
 다음과 같이 중간에 거쳐가는 임시 폴더명을 만드는 것으로 살짝 우회할 수 있다
 
 ```shell
-git mv content/Dev/Git content/Dev/temp     // 임시로 폴더명을 'tmp'로 바꿈
+git mv content/Dev/Git content/Dev/temp     // 임시로 폴더명을 'temp'로 바꿈
 git mv content/Dev/temp content/Dev/git
 ```
 
