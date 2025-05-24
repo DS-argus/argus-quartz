@@ -3,7 +3,7 @@ tags:
   - git
 url: 
 created: 2025-05-23T23:40:09
-updated: 2025-05-25T00:01:29
+updated: 2025-05-25T00:04:30
 related: 
 ---
 ### 문제
@@ -19,7 +19,7 @@ git mv <old-name> <new-name>
 ```
 
 공식 reference는 [다음](https://git-scm.com/docs/git-mv)과 같다  
-폴더명, 파일명, symlink를 이동하거나 이름을 변경할 때 사용하면 된다
+폴더, 파일, symlink를 이동하거나 이름을 변경할 때 사용하면 된다
 
 ### 적용
 
