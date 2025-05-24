@@ -1,6 +1,6 @@
 ---
 tags:
-  - Obsidian
+  - obsidian
   - Quartz
 created: 2025-05-21T22:21:27
 updated: 2025-05-22T16:53:14
