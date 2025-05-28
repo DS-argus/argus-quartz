@@ -2,7 +2,7 @@
 tags:
   - yaml
 created: 2025년 5월 16일 금요일
-updated: 2025-05-28T23:51:55
+updated: 2025-05-28T23:59:29
 ---
 ### YAML 파일이란?
 
@@ -30,9 +30,10 @@ YAML 전체 문서는 루트 노드라고 하며 노드 타입에는 Map, Sequen
 	- item1
 	- item2
 	```
--  Scalar : 더 이상 쪼갤 수 없는 값
+-  Scalar : 더 이상 쪼갤 수 없는 값으로 Map에서 value에 해당 (hello world)
 	```yaml
 	message: hello world
+   #  ↑ key    ↑ value(=Scalar)
 	```
 
 ##### 기본 문법 예시
