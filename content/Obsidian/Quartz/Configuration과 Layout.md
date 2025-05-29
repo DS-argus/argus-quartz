@@ -3,7 +3,7 @@ tags:
   - obsidian
   - Quartz
 created: 2025-05-22T15:14:54
-updated: 2025-05-22T16:55:03
+updated: 2025-05-29T10:50:52
 ---
 ### Quartz의 기본 Configuration과 Layout
 
@@ -84,5 +84,30 @@ export const defaultListPageLayout: PageLayout = {
 
 	![[Configuration과 Layout - 2025-05-22 - 15-57-22.png|470x116]]
 
-3. Default Content left에 있는 Explorer 설정에서 폴더와 노트 앞에 icon 추가
+1. Default Content left에 있는 Explorer 설정에서 폴더와 노트 앞에 icon 추가
 	- [다음](https://quartz.jzhao.xyz/features/explorer#add-emoji-prefix)을 참고했다
+2. explorer에서 파일이름이 긴 경우 ... 처리
+	- `explorer.scss`와 `Explorer.tsx`를 수정
+		```css title="explorer.scss"
+		...
+		.folder-title,
+		.file-title {
+		  display: inline-block;
+		  max-width: 160px;
+		  white-space: nowrap;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		  vertical-align: middle;
+		}
+		```
+
+		```ts title="Explorer.tsx"
+		...
+		       <template id="template-file">
+		          <li>
+		            {/* <a href="#"></a> */}              // 기존
+		            <a href="#" class="file-title"></a>   // 수정
+		          </li>
+		        </template>
+		...
+		```

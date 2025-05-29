@@ -268,3 +268,14 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
     overflow: hidden;
   }
 }
+
+
+.folder-title,
+.file-title {
+  display: inline-block;
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
