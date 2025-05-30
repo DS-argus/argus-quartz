@@ -3,11 +3,9 @@ tags:
   - obsidian
   - Quartz
 created: 2025-05-22T15:14:54
-updated: 2025-05-29T10:50:52
+updated: 2025-05-30T11:35:03
 ---
-### Quartz의 기본 Configuration과 Layout
-
-기본적으로 제공되는 Quartz 블로그의 configuration과 layout은 다음 파일에서 찾아볼 수 있다.
+### Quartz의 기본 Configuration
 
 Configuration을 설정할 수 있는 `quartz.config.ts` 는 크게 configuration 부분과 plugins 부분으로 나뉘고 plugins는 또 3개로 나뉜다
 - [configuration](https://quartz.jzhao.xyz/configuration)
@@ -36,6 +34,7 @@ export default config
 ```
 
 ---
+### Quartz의 기본 Layout
 
 [Layout](https://quartz.jzhao.xyz/layout)은 `quartz.layout.ts`에서 설정할 수 있고 크게 3개의 Layout으로 나눌 수 있다
 - Shared Page : 모든 페이지에서 공유되는 layout
@@ -94,6 +93,8 @@ export const defaultListPageLayout: PageLayout = {
 		.file-title {
 		  display: inline-block;
 		  max-width: 160px;
+		  font-size: 0.83rem;
+		  line-height: 1;  
 		  white-space: nowrap;
 		  overflow: hidden;
 		  text-overflow: ellipsis;

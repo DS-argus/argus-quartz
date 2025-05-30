@@ -274,6 +274,8 @@ li:has(> .folder-outer:not(.open)) > .folder-container > svg {
 .file-title {
   display: inline-block;
   max-width: 160px;
+  font-size: 0.83rem;   /* = 14 px, 원하는 크기로 바꿔주세요 */
+  line-height: 1;      /* 줄높이도 살짝 줄여 균형 맞추기(선택) */
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
