@@ -2,7 +2,7 @@
 tags:
   - docker
 created: 2025-06-04T20:49:30
-updated: 2025-06-04T00:08:42
+updated: 2025-06-04T00:19:39
 ---
 ### Docker란?  
 애플리케이션과 그 실행 환경을 한데 묶어 **어디서든 동일하게 실행**할 수 있도록 해 주는 컨테이너 기술 스택.   
@@ -89,7 +89,7 @@ updated: 2025-06-04T00:08:42
 
 ##### docker CLI  
 - 터미널 명령어 모음이자 HTTP REST 클라이언트
-- [[200. Inbox/Dev/소켓 (Socket)|소켓 (Socket)]]을 통해 dockred가 열어 둔 REST API에 HTTP 요청을 전송
+- [[소켓 (Socket)|소켓 (Socket)]]을 통해 dockred가 열어 둔 REST API에 HTTP 요청을 전송
 - `context`, `buildx`, `compose` 등 서브커맨드로 멀티플랫폼 빌드·오케스트레이션 확장  
 
 ##### dockerd  
