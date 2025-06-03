@@ -1,23 +1,23 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 import { h } from "preact"
+// …기존 import 그대로
 
-const GoogleSiteVerification = {
+/** Google Site-Verification meta 태그 삽입용 Transformer */
+const GoogleSiteVerification = () => ({
   name: "GoogleSiteVerification",
-
-  // 1) <head>에 메타태그 삽입
-  additionalHead: () =>
-    h("meta", {
-      name: "google-site-verification",
-      content: "t0Al_xNiDhFjwcKR2jbAfC-sYr7IlukcBq4cC8YLDmk",
-    }),
-
-  // 2) emitters 배열에 들어가기 위한 필수 no-op 함수
-  // (아무 파일도 내보내지 않아도 괜찮습니다)
-  async emit() {
-    return []
+  /** 외부 리소스 정의: <head>에 메타태그 주입 */
+  externalResources() {
+    return {
+      additionalHead: [
+        h("meta", {
+          name: "google-site-verification",
+          content: "t0Al_xNiDhFjwcKR2jbAfC-sYr7IlukcBq4cC8YLDmk",
+        }),
+      ],
+    }
   },
-}
+})
 
 /**
  * Quartz 4 Configuration
@@ -76,6 +76,7 @@ const config: QuartzConfig = {
   },
   plugins: {
     transformers: [
+      GoogleSiteVerification(),
       Plugin.FrontMatter(),
       Plugin.CreatedModifiedDate({
         priority: ["frontmatter", "git", "filesystem"],
@@ -96,7 +97,6 @@ const config: QuartzConfig = {
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
-      GoogleSiteVerification,
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
