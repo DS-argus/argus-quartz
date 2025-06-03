@@ -1,5 +1,16 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { h } from "preact"
+
+const GoogleSiteVerification = {
+  name: "GoogleSiteVerification",
+  additionalHead: () => (
+    <meta
+      name="google-site-verification"
+      content="t0Al_xNiDhFjwcKR2jbAfC-sYr7IlukcBq4cC8YLDmk"
+    />
+  ),
+}
 
 /**
  * Quartz 4 Configuration
@@ -78,6 +89,7 @@ const config: QuartzConfig = {
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [
+      GoogleSiteVerification,
       Plugin.AliasRedirects(),
       Plugin.ComponentResources(),
       Plugin.ContentPage(),
