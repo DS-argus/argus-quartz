@@ -4,12 +4,11 @@ import { h } from "preact"
 
 const GoogleSiteVerification = {
   name: "GoogleSiteVerification",
-  additionalHead: () => (
-    <meta
-      name="google-site-verification"
-      content="t0Al_xNiDhFjwcKR2jbAfC-sYr7IlukcBq4cC8YLDmk"
-    />
-  ),
+  additionalHead: () =>
+    h("meta", {
+      name: "google-site-verification",
+      content: "t0Al_xNiDhFjwcKR2jbAfC-sYr7IlukcBq4cC8YLDmk",
+    }),
 }
 
 /**
