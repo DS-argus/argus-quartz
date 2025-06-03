@@ -4,11 +4,19 @@ import { h } from "preact"
 
 const GoogleSiteVerification = {
   name: "GoogleSiteVerification",
+
+  // 1) <head>에 메타태그 삽입
   additionalHead: () =>
     h("meta", {
       name: "google-site-verification",
       content: "t0Al_xNiDhFjwcKR2jbAfC-sYr7IlukcBq4cC8YLDmk",
     }),
+
+  // 2) emitters 배열에 들어가기 위한 필수 no-op 함수
+  // (아무 파일도 내보내지 않아도 괜찮습니다)
+  async emit() {
+    /* no-op */
+  },
 }
 
 /**
