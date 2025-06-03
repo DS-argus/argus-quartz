@@ -15,7 +15,7 @@ const GoogleSiteVerification = {
   // 2) emitters 배열에 들어가기 위한 필수 no-op 함수
   // (아무 파일도 내보내지 않아도 괜찮습니다)
   async emit() {
-    /* no-op */
+    return []
   },
 }
 
