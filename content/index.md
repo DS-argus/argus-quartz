@@ -1,14 +1,14 @@
 ---
 title: 공부의 흔적
 created: 2025-05-14
-updated: 2025-05-30T16:05:22
+updated: 2025-06-05T10:29:12
 ---
 공부한 내용과 관심사를 정리하는 블로그입니다
 
 
 Interests
-- Data Engineering
-- AI
+- Data Engineering : #docker #airflow #git #k8s 
+- AI : #AI 
 - Causal Inference
 - ...
 

@@ -2,10 +2,8 @@
 tags:
   - AI
   - MCP
-url: 
 created: 2025-05-22T17:01:52
-updated: 2025-05-22T18:36:30
-related: 
+updated: 2025-06-05T10:28:25
 ---
 ### MCP란 무엇인가
 
