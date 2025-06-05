@@ -3,31 +3,31 @@ tags:
   - docker
   - dockerfile
 created: 2025-06-04T00:00:00
-updated: 2025-06-04T00:12:09
+updated: 2025-06-04T23:40:29
 ---
 ### Dockerfile 명령어
 ##### 기본 명령어
-- FROM : 베이스 이미지 지정 (필수)
+- **FROM** : 베이스 이미지 지정 (필수)
 	```docker
 	FROM python:3.12-slim
 	FROM python:3.12-slim AS build-stage
 	```
 	- FROM을 여려 번 사용하는 멀티 스테이지 빌드 시 AS 를 활용해 해당 base 이미지를 reference 가능 (COPY 참고)
 
-- RUN : 셸 커맨드 실행 (이미지 생성 시 실행됨)
+- **RUN** : 셸 커맨드 실행 (이미지 생성 시 실행됨)
 	``` docker
 	RUN apt update && apt install -y curl
 	```
 	- 빌드 중 컨테이너 안에서 명령어 실행하고 그 결과를 이미지 레이어에 저장
 	- FROM instruction에서 지정한 이미지에서 실행할 수 있어야 함
 
-- ENTRYPOINT : 실행 명령을 고정시키고 싶을 때 사용 (CMD보다 우선)
+- **ENTRYPOINT** : 실행 명령을 고정시키고 싶을 때 사용 (CMD보다 우선)
 	```docker
 	ENTRYPOINT ["python", "main.py"]
 	```
 	- Dockerfile에서 설정하거나, docker run 명령어에서 명시적으로 지정
 
-- CMD : ENTRYPOINT의 기본 인자 또는 대체 명령어
+- **CMD** : ENTRYPOINT의 기본 인자 또는 대체 명령어
 	```docker
 	CMD ["python", "app.py"]
 	```
@@ -36,13 +36,13 @@ updated: 2025-06-04T00:12:09
 		- docker run test Hi GPT! 하면 Hi, GPT! 출력
 
 
-- WORKDIR : 이후 명령어가 실행될 작업 디렉토리 설정
+- **WORKDIR** : 이후 명령어가 실행될 작업 디렉토리 설정
 	```docker
 	WORKDIR /app
 	```
 
 
-- COPY : 로컬 파일을 이미지에 복사
+- **COPY** : 로컬 파일을 이미지에 복사
 	```docker
 	COPY . /app
 	COPY requirements.txt .
@@ -50,25 +50,25 @@ updated: 2025-06-04T00:12:09
 	```
 	- build-stage라고 명명한 base 이미지 내의 'build.txt'를 현재 base 이미지에 복사
 
-- ADD : COPY처럼 파일 복사. +URL에서 다운로드하거나 압축 파일 자동 압축 해제 기능 포함
+- **ADD** : COPY처럼 파일 복사. +URL에서 다운로드하거나 압축 파일 자동 압축 해제 기능 포함
 	```docker
 	ADD https://example.com/file.tar.gz /files/
 	```
 	- 예측 가능성, 보안, 유지보수성 때문에 복사 목적인 경우 COPY를 사용하는 것을 권장
 
 
-- ENV : 환경 변수 설정
+- **ENV** : 환경 변수 설정
 	```docker
 	ENV ENV_NAME=production
 	```
 
 
-- EXPOSE : 컨테이너가 열 포트를 명시 (실제 포트를 노출하는 건 아님)
+- **EXPOSE** : 컨테이너가 열 포트를 명시 (실제 포트를 노출하는 건 아님)
 	```docker
 	EXPOSE 8080
 	```
 
-- VOLUME : 외부 마운트용 디렉토리 지정
+- **VOLUME** : 외부 마운트용 디렉토리 지정
 	```docker
 	VOLUME "/data"
 	```
