@@ -83,8 +83,9 @@ export const defaultListPageLayout: PageLayout = {
 
 	![[Configuration과 Layout - 2025-05-22 - 15-57-22.png|470x116]]
 
-1. Default Content left에 있는 Explorer 설정에서 폴더와 노트 앞에 icon 추가
-	- [다음](https://quartz.jzhao.xyz/features/explorer#add-emoji-prefix)을 참고했다
+1. ~~Default Content left에 있는 Explorer 설정에서 폴더와 노트 앞에 icon 추가~~
+	- ~~[다음](https://quartz.jzhao.xyz/features/explorer#add-emoji-prefix)을 참고했다~~
+	- 다시 제거. useSavedState를 false로 수정해서 항상 클릭하지 않은 폴더는 닫혀 있도록 했다
 2. explorer에서 파일이름이 긴 경우 ... 처리
 	- `explorer.scss`와 `Explorer.tsx`를 수정
 		```css title="explorer.scss"
