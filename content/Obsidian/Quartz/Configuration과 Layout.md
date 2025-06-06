@@ -3,7 +3,7 @@ tags:
   - obsidian
   - Quartz
 created: 2025-05-22T15:14:54
-updated: 2025-06-06T15:26:15
+updated: 2025-06-06T15:37:24
 ---
 ### Quartz의 기본 Configuration
 
