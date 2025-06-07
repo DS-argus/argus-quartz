@@ -4,7 +4,7 @@ tags:
   - docker
   - pyspark
 created: 2025-06-07T22:10:36
-updated: 2025-06-07T23:18:38
+updated: 2025-06-07T23:23:00
 ---
 ### docker로 spark 실행하기
 기본적으로 Apache Spark는 [여기](https://spark.apache.org/downloads.html)에서 직접 다운받을 수 있다  
@@ -36,7 +36,7 @@ docker run -it --name spark-container -v ./:/opt/spark/work-dir spark:python3-ja
 ### 예제 실행 해보기
 
 이제 잘 동작하는지 실행해볼 수 있다  
-먼저 위에서 `docker run`에서 마운트한 현재 디렉토리에 다음을 추가한다
+먼저 `docker run`에서 마운트한 현재 디렉토리에 다음을 추가한다
 1. [mnmcount.py](https://github.com/databricks/LearningSparkV2/blob/master/chapter2/py/src/mnmcount.py)
 2. [data/mnm.dataset.csv](https://github.com/databricks/LearningSparkV2/blob/master/chapter2/py/src/data/mnm_dataset.csv)
 
@@ -52,7 +52,7 @@ docker run -it --name spark-container -v ./:/opt/spark/work-dir spark:python3-ja
 
 
 그럼 긴 로그 중간중간에 다음과 같은 실행 결과를 확인할 수 있다
-```
+```text {1,12,22,25}
 # 출력 1
 +-----+------+-----+
 |State|Color |Count|
