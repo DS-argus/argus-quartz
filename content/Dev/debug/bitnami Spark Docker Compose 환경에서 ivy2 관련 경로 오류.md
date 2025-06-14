@@ -5,7 +5,7 @@ tags:
   - spark
   - troubleshooting
 created: 2025-06-02T23:27:34
-updated: 2025-06-03T00:10:01
+updated: 2025-06-14T21:55:57
 ---
 ### 문제
 - bitnami/spark Docker Compose 환경에서 `spark-submit` 실행 시 `basedir must be absolute: ?/.ivy2/local` 에러 발생
@@ -85,7 +85,7 @@ updated: 2025-06-03T00:10:01
 ### 해결
 1. 캐시 경로 강제 지정 : `--conf spark.jars.ivy="/tmp"` 추가
 	```shell
-	spark-submit --master spark://spark-master:7077 --conf spark.jobs.ivy="/tmp" /opt/bitnami/spark/jobs/word_count.py
+	spark-submit --master spark://spark-master:7077 --conf spark.jars.ivy="/tmp" /opt/bitnami/spark/jobs/word_count.py
 	```
 	- 장점 : 가장 간단한 해결책
 	- 단점 : Ivy 캐시가 `/tmp`에 쌓임
