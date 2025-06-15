@@ -4,7 +4,7 @@ tags:
   - docker
   - pyspark
 created: 2025-06-07T22:10:36
-updated: 2025-06-07T23:23:00
+updated: 2025-06-15T22:11:48
 ---
 ### docker로 spark 실행하기
 기본적으로 Apache Spark는 [여기](https://spark.apache.org/downloads.html)에서 직접 다운받을 수 있다  
@@ -31,6 +31,18 @@ docker run -it --name spark-container -v ./:/opt/spark/work-dir spark:python3-ja
 ```
 
 그러면 컨테이너 내부 `/opt/spark/work-dir`에 접속할 수 있다
+
+
+> [!note]+ 이건 spark를 어떻게 실행한거지?
+> - 만약 내 노트북에서 위 명령어로 spark를 실행한 뒤, 후술할 spark-submit으로 job 제출한 경우
+> 	- `--master`의 기본 값은 local이기 때문에 local 모드로 실행되며 Spark Driver, Executor 모두 하나의 JVM 안에서 실행
+> - 만약 standalone으로 실행하려면?
+> 	- 컨테이너 내부에서
+> 		- `./sbin/start-master.sh`로 Master daemon 가동
+> 		- `./sbin/start-worker.sh spark://localhost:7077`로 worker daemon 가동
+> 		- `jps -l`로 잘 실행되었는지 확인 가능
+> 	- spark-submit할 때 `--master` 옵션 추가
+> - 자세한 내용은 [[Spark 구조 및 Deployment 방식]]
 
 ---
 ### 예제 실행 해보기
