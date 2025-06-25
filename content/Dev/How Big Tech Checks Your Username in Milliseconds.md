@@ -2,9 +2,9 @@
 tags:
   - database
 created: 2025-06-25T22:33:27
-updated: 2025-06-25T23:14:52
+updated: 2025-06-26T00:19:33
 ---
-> [!success]+ 
+> [!success]+ 참고영상 
 ><iframe width="560" height="315" src="https://www.youtube.com/embed/_l5Q5kKHtR8?si=YxlAJuo1AR5VJkzq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 > 
 

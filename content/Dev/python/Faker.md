@@ -3,7 +3,7 @@ tags:
   - faker
   - python
 created: 2025-06-21T20:17:32
-updated: 2025-06-21T20:21:14
+updated: 2025-06-26T00:13:02
 ---
 ### Faker란?
 - Faker는 테스트나 데모용으로 현실감 있는 가짜 데이터를 자동 생성해 주는 파이썬 라이브러리
@@ -40,7 +40,7 @@ updated: 2025-06-21T20:21:14
 	fake.phone_number()
 	fake.email()
 	fake.address()
-		```
+	```
 
 ##### 시계열 데이터
 - 날짜와 시간
@@ -52,7 +52,7 @@ updated: 2025-06-21T20:21:14
 - 타임스탬프 문자열 커스텀
 	```python
 	fake.date_time().isoformat()
-		```
+	```
 
 ##### 금융 데이터
 - 카드
@@ -87,7 +87,6 @@ updated: 2025-06-21T20:21:14
 	fake.sentence(nb_words=6)
 	fake.paragraph(nb_sentences=3)
 	```
-- Lorem ipsum 커스텀 길이
 
 ##### 장소 정보
 - 위도 경도

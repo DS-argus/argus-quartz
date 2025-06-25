@@ -2,19 +2,24 @@
 tags:
   - RecSys
 created: 2025-06-24T22:34:17
-updated: 2025-06-25T22:31:44
+updated: 2025-06-26T00:18:22
 ---
 > [!abstract]+ TL;DR
 >- source : https://arxiv.org/pdf/1708.05031
->-  Deep Learning :BoBxsHeart: Collaborative Filtering
+>-  Deep Learning + Collaborative Filtering
 >- **Contributions**
 > 	 1. neural network로 CF를 하는 NCF 제안
 > 	 2. 기존의 Matrix Factorization은 NCF로 설명 가능하고 고차원의 non-linearity를 모델링하기 위해 MLP 사용
 
 ---
 ### 기존 MF 한계
-- interaction을 user와 item의 latent vector $\bf p_u, q_i$로 추정
-    $$ \hat y_{ui} = f(u, i\mid \mathbf p_u, \mathbf q_i) = \mathbf p_u^T \mathbf q_i = \sum_{k=1}^K p_{uk}q_{ik} $$
+- interaction을 user와 item의 latent vector $\bf p_u, q_i$로 추정  
+
+$$\large
+\begin{align*}
+\hat y_{ui} = f(u, i\mid \mathbf p_u, \mathbf q_i) = \mathbf p_u^T \mathbf q_i = \sum_{k=1}^K p_{uk}q_{ik}
+\end{align*}
+$$
 1.  독립 · 동일 가중치 가정
 	- 각 차원은 서로 영향 없음  
 	- 모든 차원이 같은 힘으로 결과에 기여  
@@ -31,8 +36,9 @@ updated: 2025-06-25T22:31:44
 	- 관측 로그만 사용해 노출 편향 교정 힘듦  
 	- 저빈도 아이템은 정보 부족으로 부정확
 
+---
 ### Neural Matrix Factorization (NeuMF)
-![[Neural Collaborative Filtering - 2025-06-25 - 22-16-03.png|804x554]]
+![[Neural Collaborative Filtering - 2025-06-25 - 22-16-03.png|804x554]][^1]
 
 ##### 기본 세팅
 - Implicit feedback 가정
@@ -47,9 +53,9 @@ updated: 2025-06-25T22:31:44
 	    - 모델이 학습 과정에서 ‘싫어함’ 신호를 거의 받지 못해 over-generalization 위험
 ##### Loss : Implicit feedback -> Binary cross entropy loss
 $$\large
-\begin{align}
+\begin{align*}
 L = -\sum_{(u, i)\in \mathcal Y \cup \mathcal Y^-} y_{ui}\log \hat y_{ui} + (1-y_{ui})\log (1-\hat y_{ui})
-\end{align}
+\end{align*}
 $$
 - $\mathcal Y$ : 관찰된 interaction
 - $\mathcal Y^-$ : 관찰되지 않은 interaction
@@ -77,7 +83,7 @@ $$
 >    return user_input, item_input, labels
 >    ```
 > - item 인기도 기반으로 non-uniform sampling도 가능
-> 	- 실제로 노출이 많이 되었지만 (인기가 높아서) 선택이 안된 interaction을 학습에 더 자주 사용ㅁ
+> 	- 실제로 노출이 많이 되었지만 (인기가 높아서) 선택이 안된 interaction을 학습에 더 자주 사용
 
 ##### Pre-training
 - GMF 부분과 MLP 부분으로 각각 모델 만들어서 학습
@@ -85,3 +91,5 @@ $$
 
 ##### Evaluation : leave-one-out
 - user의 가장 마지막 interaction 1개 + user와 상호작용 없던 item 100개 샘플링해서 총 101개 item으로 Hit ratio, NDCG 검증
+
+[^1]: https://github.com/hexiangnan/neural_collaborative_filtering

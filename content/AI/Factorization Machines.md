@@ -2,7 +2,7 @@
 tags:
   - RecSys
 created: 2025-06-23T14:33:27
-updated: 2025-06-24T01:28:30
+updated: 2025-06-26T00:15:25
 ---
 > [!abstract]+ TL;DR
 >-  source : https://www.ismll.uni-hildesheim.de/pub/pdfs/Rendle2010FM.pdf
@@ -21,18 +21,18 @@ updated: 2025-06-24T01:28:30
 ##### SVM models
 1. Linear Kernel
 	$$\large
-	\begin{align}
+	\begin{align*}
 	\hat y(\mathbf x) &= w_0 + \sum_{i=1}^n w_i x_i\\
      &= w_0 + w_u + w_i
-	\end{align}
+	\end{align*}
 	$$
 	- user ,item의 bias만 고려한 아주 기본적인 CF 모형으로 생각할 수 있음
 	- 매우 간단해서 sparse해도 추정 잘되긴하는데 당연히 성능은 안좋음
 2. Polynomial Kernel
 	$$\large
-	\begin{align}
+	\begin{align*}
 	\hat y(\mathbf x) &= w_0 + \sqrt{2}\sum_{i=1}^n w_i x_i + \sum_{i=1}^n w_{i, i}^{(2)}x_i^2 + \sqrt{2} \sum_{i=1}^n \sum_{j=i+1}^n w_{i,j}^{(2)}x_ix_j \\ &=  \hat y(\mathbf x) = w_0 + \sqrt{2}(w_u+w_i) + w_{u, u}^{(2)} + w_{i, i}^{(2)} + \sqrt{2} w_{u, i}^{(2)}
-	\end{align}
+	\end{align*}
 	$$
 	- $\mathbf W^{(2)} \in \mathbb R^{n\times n}$ : symmetric matrix
 	- _모든 상호작용 파라미터 $w_{i,j}$를 독립으로 취급_
@@ -72,11 +72,11 @@ updated: 2025-06-24T01:28:30
 	- Last Movie rated: 직전에 평가한 영화
 ##### 2-way Factorization Model
 $$\large
-\begin{align}
+\begin{align*}
 \hat y(\mathbf x) &:= w_0 + \sum_{i=1}^n w_ix_i + \sum_{i=1}^n \sum_{j=i+1}^n \langle \mathbf v_i, \mathbf v_j\rangle x_i x_j\\
 &= w_0 + \sum_{i=1}^n w_ix_i + \sum_{i=1}^n \sum_{j=i+1}^n (\sum_{f=1}^k v_{i,f}\cdot v_{j,f})x_i x_j\\
 &= w_0 + \sum_{i=1}^n w_ix_i + \sum_{i=1}^n \sum_{j=i+1}^n \hat w_{i,j}x_i x_j
-\end{align}
+\end{align*}
 $$
 - Notation
 	- $n$ : data sample의 feature 개수. *총 interaction 데이터 개수가 아니고 위의 그림에서 column의 길이*
@@ -115,23 +115,23 @@ $$
 ##### Linear Complexity
 - Pairwise Interaction의 시간복잡도는 $O(kn^2)$으로 보이지만 실제로는 $O(kn)$에 계산 가능
 	$$\large
-	\begin{align}
+	\begin{align*}
 	\sum_{i=1}^n \sum_{j=i+1}^n \langle\mathbf v_i, \mathbf v_j\rangle x_i x_j &= \frac{1}{2}\sum_{i=1}^n \sum_{j=1}^n \langle \mathbf v_i, \mathbf v_j\rangle x_i x_j - \frac{1}{2}\langle\mathbf v_i, \mathbf v_i \rangle x_ix_i\\
 	&=\frac{1}{2} \Bigg(\sum_{i=1}^n\sum_{j=1}^n\sum_{f=1}^k v_{i,f} v_{j,f}x_ix_j - \sum_{i=1}^n\sum_{f=1}^k v_{i,f}v_{i,f}x_ix_i\Bigg)\\
 	&=\frac{1}{2}\sum_{f=1}^k\Bigg(\bigg(\sum_{i=1}^n v_{i,f}x_i\bigg)\bigg(\sum_{j=1}^nv_{j,f}x_j\bigg) - \sum_{i=1}^n v_{i,f}^2x_i^2\Bigg)\\
 	&=\frac{1}{2}\sum_{f=1}^k\Bigg(\bigg(\sum_{i=1}^n v_{i,f}x_i\bigg)^2- \sum_{i=1}^n v_{i,f}^2x_i^2\Bigg)\\
-	\end{align}
+	\end{align*}
 	$$
 
 ##### Training : 위에서 $O(kn)$으로 변형한 식을 미분해서 SGD
 $$\large
-\begin{align}
+\begin{align*}
 \frac{\partial}{\partial \theta}\hat y(\mathbf x) = \begin{cases}
 1, &\text{if $\theta$ is $w_0$}\\
 x_i, &\text{if $\theta$ is $w_1$}\\
 x_i\sum_{j=1}^n v_{j, f}x_j - v_{i,f}x_i^2, &\text{if $\theta$ is $v_{i,f}$}
 \end{cases}
-\end{align}
+\end{align*}
 $$
 
 
