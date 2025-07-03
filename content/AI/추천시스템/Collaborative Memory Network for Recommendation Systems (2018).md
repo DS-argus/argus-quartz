@@ -4,7 +4,7 @@ tags:
 created: 2025-07-03T14:17:07
 updated: 2025-07-03T16:11:06
 ---
-> [!abstract]+ 
+> [!abstract]+ TL;DR
 > - source : https://arxiv.org/pdf/1804.10862
 > - code : https://github.com/tebesu/CollaborativeMemoryNetwork/tree/master
 > - 일반적으로 Collaborative Filtering는 크게 두 가지
@@ -19,7 +19,7 @@ updated: 2025-07-03T16:11:06
 > 		- output module은 이웃에 대한 정보와 user, item 정보를 nonlinear하게 결합
 > 	- CMN과 대표적인 2개의 CF 모델 (latent factor, neighborhood-based)과의 관련성 밝혀냄
 
-
+---
 ### Memory Augmented Neural Networks
 - 정의 : 일반적인 신경망에 외부 메모리 컴포넌트 추가해서 모델의 능력 향상시킨 구조
 - 주요 구성 요소
