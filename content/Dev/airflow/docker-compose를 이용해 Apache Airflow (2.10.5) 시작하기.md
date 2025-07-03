@@ -4,7 +4,7 @@ tags:
   - docker-compose
   - airflow
 created: 2025-06-02T15:22:37
-updated: 2025-06-02T17:53:07
+updated: 2025-06-28T11:52:29
 ---
 ### docker-compose를 활용한 Airflow 세팅
 
