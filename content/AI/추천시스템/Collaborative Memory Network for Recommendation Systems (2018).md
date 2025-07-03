@@ -2,7 +2,7 @@
 tags:
   - RecSys
 created: 2025-07-03T14:17:07
-updated: 2025-07-03T16:11:06
+updated: 2025-07-03T16:25:30
 ---
 > [!abstract]+ TL;DR
 > - source : https://arxiv.org/pdf/1804.10862
@@ -37,7 +37,8 @@ updated: 2025-07-03T16:11:06
 - Item specific memory $\mathbf E \in \mathbb R^{Q\times d}$ : 각 아이템의 고유한 속성 저장
 	- 총 $Q$개의 Item이 있을 때, 각 Item 대한 임베딩 행렬
 - collective neighborhood state $\mathbf  C \in \mathbb R^{P\times d}$ : 특정 아이템에 대해 피드백을 제공한 사용자들(이웃)의 집합적인 선호도 저장
-	- 장기 정보 저장을 담당
+	- row : **사용자 v가 과거에 소비한 아이템·컨텍스트를 요약**한 representation
+	- attention 수행할 때, value로 가져와서 neighborhood 집합 정보 전달
 
 ##### Neighborhood Attention
 > 그래서 여기서는 어떻게 이웃에 대한 정보를 활용하는거지?  
@@ -49,6 +50,9 @@ updated: 2025-07-03T16:11:06
 - $\mathbf q_{ui}$의 각 차원에 softmax 씌워서 $\mathbf c_{v}$를 weighted sum해서 최종 neighborhood representation $\mathbf o_{ui}$ 생성
 
 > CMN은 유저들 간의 유사점을 잡아내고 target item에 기반해서 각 이웃들의 기여도를 동적으로 할당
+> - $\mathbf m_u, \mathbf e_i$ : '현재 $u, i$의 관점에서 어떤 이웃이 중요할까'를 찾는 Key
+> - $\mathbf c_v$ : '각 이웃이 오랜 기간 축적해온 특성'을 담은 Value
+> - $\mathbf o_{ui}$ : 과거 행동이 농축된 장기 패턴 반영
 
 
 ##### Output Module
