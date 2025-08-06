@@ -6,7 +6,7 @@ tags:
   - gunicorn
   - starlette
 created: 2025-06-06T18:18:03
-updated: 2025-06-07T00:24:47
+updated: 2025-07-21T13:55:30
 ---
 ### FastAPI란?
 
@@ -69,21 +69,245 @@ graph TD
 
 ---
 
-### FastAPI 실행 예시
+### FastAPI Tutorial
+##### 패키지 설치
+```
+pip install "fastapi[all]"
+```
 
-##### 개발(로컬)
+##### 간단한 API 만들기
+```python title="main.py"
+from fastapi import FastAPI
 
+# Create a FastAPI instance
+app = FastAPI()
+
+
+# path '/' 로 가서 GET operation 실행했을 때, 호출될 파이썬 함수
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+```
+##### 실행
 ```bash
+# 개발
 uvicorn main:app --reload
-```
-
-```python
 python -m fastapi dev app/main.py
-```
-##### 운영(배포)
 
-```bash
+# 운영(배포)
 gunicorn -k uvicorn.workers.UvicornWorker main:app
 ```
+- main : python script 이름
+##### Path Parameter
+```python title="path_param.py"
+from fastapi import FastAPI
 
-[^1]: Python 웹 서버와 웹 앱(프레임워크)을 연결해주는 동기 인터페이스
+# Create a FastAPI instance
+app = FastAPI()
+
+# item_id가 Path Parameter. function에 argument로 전달
+@app.get("/items/{item_id}")
+def read_item(item_id: int):
+    return {"item_id": item_id}
+```
+
+##### Query Parameter
+```python title="query_param.py"
+from fastapi import FastAPI
+
+# Create a FastAPI instance
+app = FastAPI()
+
+fake_items_db = [{"item_name": "Foo"}, {"item_name": "Bar"}, {"item_name": "Baz"}]
+
+# function parameter에 포함되지만, Path Operation에 포함 X
+# http://localhost:8000/items/?skip=0&limit=10 으로 접근
+@app.get("/items/")
+def read_item(skip: int = 0, limit: int = 10):
+    return fake_items_db[skip : skip + limit]
+```
+
+##### Multiple Path and Query Parameters
+```python title="multi_param.py"
+# multi_param.py
+from typing import Union
+from fastapi import FastAPI
+
+# Create a FastAPI instance
+app = FastAPI()
+
+# Path Parameter + Query Parameter
+@app.get("/users/{user_id}/items/{item_id}")
+def read_user_item(user_id: int, item_id: str, q: Union[str, None] = None, short: bool = False):
+    item = {"item_id": item_id, "owner_id": user_id}
+    if q:
+        item.update({"q": q})
+    if not short:
+        item.update(
+            {"description": "This is an amazing item that has a long description"},
+        )
+    return item
+```
+
+### FastAPI CRUD
+- CREATE / READ / UPDATE / DELETE 기능을 Path Parameter, Query Parameter, Pydantic을 활용해 구현 가능
+##### Path Parameter CRUD
+- CREATE : `POST /users/name/{name}/nickname/{nickname}`
+- READ : `GET /users/name/{name}`
+- UPDATE : `PUT /users/name/{name}/nickname/{nickname}`
+- DELETE : `DELETE /users/name/{name}`
+
+```python title="crud_path.py"
+from fastapi import FastAPI, HTTPException
+
+# Create a FastAPI instance
+app = FastAPI()
+
+# User database
+USER_DB = {}
+
+# Fail response
+NAME_NOT_FOUND = HTTPException(status_code=400, detail="Name not found.")
+
+
+@app.post("/users/name/{name}/nickname/{nickname}")
+def create_user(name: str, nickname: str):
+    USER_DB[name] = nickname
+    return {"status": "success"}
+
+
+@app.get("/users/name/{name}")
+def read_user(name: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    return {"nickname": USER_DB[name]}
+
+
+@app.put("/users/name/{name}/nickname/{nickname}")
+def update_user(name: str, nickname: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    USER_DB[name] = nickname
+    return {"status": "success"}
+
+
+@app.delete("/users/name/{name}")
+def delete_user(name: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    del USER_DB[name]
+    return {"status": "success"}
+```
+
+##### Query Parameter CRUD
+- CREATE : `POST /users?name=hello&nickname=world`
+- READ : `GET /users?name=hello`
+- UPDATE : `PUT /users?name=hello&nickname=world2`
+- DELETE : `DELETE /users?name=hello`
+```python title="crud_query.py"
+from fastapi import FastAPI, HTTPException
+
+# Create a FastAPI instance
+app = FastAPI()
+
+# User database
+USER_DB = {}
+
+# Fail response
+NAME_NOT_FOUND = HTTPException(status_code=400, detail="Name not found.")
+
+
+@app.post("/users")
+def create_user(name: str, nickname: str):
+    USER_DB[name] = nickname
+    return {"status": "success"}
+
+
+@app.get("/users")
+def read_user(name: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    return {"nickname": USER_DB[name]}
+
+
+@app.put("/users")
+def update_user(name: str, nickname: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    USER_DB[name] = nickname
+    return {"status": "success"}
+
+
+@app.delete("/users")
+def delete_user(name: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    del USER_DB[name]
+    return {"status": "success"}
+```
+
+##### Pydantic CRUD
+- 기능
+	- 데이터 검증 및 타입안정성 (BaseModel)
+		- CreateIn : 입력받는 데이터 형태 지정
+		- CreateOut : 반환하고자 하는 데이터 형태 지정
+	- 코드 가독성 및 유지보수성 향상
+	- 보안 및 정보 노출 최소화 : Response Model 별도 지정해서 비밀번호와 같은 민감한 정보 응답에서 제외 가능
+	- 자동 변환 및 직렬화 (Python ↔ JSON)
+
+```python title="crud_pydantic.py"
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+
+class CreateIn(BaseModel):
+    name: str
+    nickname: str
+
+class CreateOut(BaseModel):
+    status: str
+    id: int
+
+# Create a FastAPI instance
+app = FastAPI()
+
+# User database
+USER_DB = {}
+
+# Fail response
+NAME_NOT_FOUND = HTTPException(status_code=400, detail="Name not found.")
+
+
+@app.post("/users", response_model=CreateOut)
+def create_user(user: CreateIn):
+    USER_DB[user.name] = user.nickname
+    user_dict = user.dict()
+    user_dict["status"] = "success"
+    user_dict["id"] = len(USER_DB)
+    return user_dict
+
+
+@app.get("/users")
+def read_user(name: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    return {"nickname": USER_DB[name]}
+
+
+@app.put("/users")
+def update_user(name: str, nickname: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    USER_DB[name] = nickname
+    return {"status": "success"}
+
+
+@app.delete("/users")
+def delete_user(name: str):
+    if name not in USER_DB:
+        raise NAME_NOT_FOUND
+    del USER_DB[name]
+    return {"status": "success"}
+```
+
+
+

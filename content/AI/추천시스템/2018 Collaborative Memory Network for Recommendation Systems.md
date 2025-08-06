@@ -2,7 +2,7 @@
 tags:
   - RecSys
 created: 2025-07-03T14:17:07
-updated: 2025-07-03T16:25:30
+updated: 2025-07-03T22:32:47
 ---
 > [!abstract]+ TL;DR
 > - source : https://arxiv.org/pdf/1804.10862
@@ -43,7 +43,8 @@ updated: 2025-07-03T16:25:30
 ##### Neighborhood Attention
 > 그래서 여기서는 어떻게 이웃에 대한 정보를 활용하는거지?  
 
-![[Collaborative Memory Network for Recommendation Systems (2018) - 2025-07-03 - 14-54-15.png|812x468]]
+![[Collaborative Memory Network for Recommendation Systems (2018) - 2025-07-03 - 22-32-31.png|965x528]]
+
 - 특정 User와 Item 조합 $\set{u, i}$에 대해서 먼저 item $i$와 상호작용한 user 리스트 $N(i)$  확인 (본인 포함)
 - $|N(i)|$ 크기의 user preference vector $\mathbf q_{ui}$ 생성
 	- 각 차원의 의미 : User $u$와 이웃인 $v$ 와의 관계, 상대적 중요도
@@ -101,7 +102,7 @@ $$
 ##### 다른 모델과의 관계
 1. Latent Factor Model
 	- rating 행렬을 저 차원 행렬의 곱으로 표현해서 숨겨진 관계 발견
-	- CMN에서 이웃 정보 처리하는 부분과 MLP,  activation function 단순화 하면 [[Neural Collaborative Filtering (2017)|GMF]]와 동일
+	- CMN에서 이웃 정보 처리하는 부분과 MLP,  activation function 단순화 하면 [[content/AI/추천시스템/2017 Neural Collaborative Filtering|GMF]]와 동일
 2. Neighborhood-based Similarity Model
 	- 목적 : user-user similarity 행렬 $\mathbf S \in \mathbb R^{P\times P}$ 추정
 	- memory module이 similarity 행렬 역할 수행
