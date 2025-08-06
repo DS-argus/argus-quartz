@@ -2,8 +2,8 @@
 tags:
   - database
   - postgresql
-created: 2025년 5월 12일 월요일
-updated: 2025-08-06T14:53:08
+created: 2025-08-06T00:00:00
+updated: 2025-08-06T14:58:52
 ---
 ### 1. Why PostgreSQL?
 
