@@ -2,3 +2,42 @@
 @use "./themes";
 
 // put your custom CSS here!
+
+/* Bootstrap 클래스 오버라이드 - Bold체 색상 통일 */
+.text-danger strong,
+strong.text-danger {
+  color: var(--bold-color) !important;
+}
+
+.text-primary strong,
+strong.text-primary {
+  color: var(--bold-color) !important;
+}
+
+/* alert 내부의 strong 태그도 통일 */
+.alert-danger strong,
+.alert-primary strong {
+  color: var(--bold-color) !important;
+}
+
+/* 모든 strong 태그에 대한 강제 오버라이드 */
+strong {
+  color: var(--bold-color) !important;
+}
+
+/* callout 내부의 strong 태그도 통일 */
+.callout strong {
+  color: var(--bold-color) !important;
+}
+
+/* 리스트 내부의 strong 태그도 통일 */
+li strong,
+ul strong,
+ol strong {
+  color: var(--bold-color) !important;
+}
+
+/* 모든 컨테이너 내부의 strong 태그 통일 */
+* strong {
+  color: var(--bold-color) !important;
+}
