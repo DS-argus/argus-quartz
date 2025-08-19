@@ -3,7 +3,7 @@ tags:
   - database
   - postgresql
 created: 2025-08-06T00:00:00
-updated: 2025-08-06T15:37:06
+updated: 2025-08-07T09:54:23
 ---
 ### 1. Why PostgreSQL?
 
