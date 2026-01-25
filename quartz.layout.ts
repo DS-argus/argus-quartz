@@ -28,7 +28,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/DS-argus/argus-quartz",
       "LinkedIn": "https://www.linkedin.com/in/soungmin-park-081580203/",
-      "Naver Blog": "https://blog.naver.com/parksoungpark"
+      // "Naver Blog": "https://blog.naver.com/parksoungpark"
     },
   }),
 }
