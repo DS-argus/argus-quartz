@@ -4,13 +4,20 @@ tags:
   - uv
   - package_manager
 created: 2026-01-31T17:59:32
-updated: 2026-01-31T23:50:12
+updated: 2026-02-01T09:59:29
 ---
 > [!info]+ UV?
 > - 파이썬 프로젝트 관리 all in one 도구
 > - rust기반으로 매우 빠름
 > - pip, virtualenv, venv, conda, pyenv, pipenv, poetry 등... 수많은 도구들 대신 uv 사용합시다
 > - https://docs.astral.sh/uv/
+
+> [!tip]+ pyenv 프로젝트에서 uv 프로젝트로 바꾸기
+> 1. pyenv 가상환경 활성화 상태에서 `pip freeze > requirements.txt`
+> 2. `.python-version`이 가상환경 이름으로 되어 있는 경우 버전으로 수정(uv 호환 목적)
+> 3. 프로젝트 루트 경로에서 `uv init --bare` 로 `pyproject.toml` 생성
+> 4. `uv add -r requirements.txt` 로 `.venv/`, `uv.lock` 생성
+
 
 ---
 ### 1. 설치
