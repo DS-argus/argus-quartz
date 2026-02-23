@@ -12,11 +12,12 @@
 
 ## 1회 설정
 
-`.gitignore`에 `content/Files/**`가 추가되어 있어야 합니다.
+`.git/info/exclude`에 `content/Files/**`를 추가합니다.
 
 효과:
 - `content/Files` 신규 파일은 기본적으로 `git status`에서 보이지 않음
 - 단, 스크립트가 필요한 파일은 `git add -f`로 강제 stage 가능
+- `.gitignore`에는 넣지 않으므로 빌드/배포에서 첨부파일 누락을 피할 수 있음
 
 ## 글 발행 절차 (권장)
 
@@ -116,7 +117,7 @@ git push origin main
 7. 실제로 존재하는 `content/Files/...` 파일만 추림
 
 8. 추린 첨부파일을 `git add -f -- ...`로 stage
-- `.gitignore`에 걸려 있어도 필요한 파일은 커밋 대상에 포함됨
+- `.git/info/exclude`에 걸려 있어도 필요한 파일은 커밋 대상에 포함됨
 
 9. 결과 요약 출력
 - staged markdown 개수

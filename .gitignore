@@ -11,7 +11,7 @@ replit.nix
 .smtcmp_json_db/
 .trash/
 .obsidian.vimrc
-content/Files/**
+.npm-local-cache
 
 # For my local notes
 [0-9][0-9][0-9].*/
