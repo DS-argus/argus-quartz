@@ -4,7 +4,7 @@ tags:
   - uv
   - package_manager
 created: 2026-01-31T17:59:32
-updated: 2026-02-01T09:59:29
+updated: 2026-02-01T10:50:24
 ---
 > [!info]+ UV?
 > - 파이썬 프로젝트 관리 all in one 도구
