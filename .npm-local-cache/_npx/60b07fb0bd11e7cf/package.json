@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@jackyzha0/quartz": "file:../../.."
+  },
+  "_npx": {
+    "packages": [
+      "/Users/argus/Desktop/Obsidian/Argus"
+    ]
+  }
+}
