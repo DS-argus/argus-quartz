@@ -1,6 +1,6 @@
 # stage-content 사용 가이드
 
-이 문서는 `scripts/stage-content.mjs`를 사용해서 Obsidian 글(`content/**/*.md`)과 첨부 이미지(`content/Files`)를 깔끔하게 GitHub에 올리는 방법을 설명합니다.
+이 문서는 `scripts/stage-content.sh`를 사용해서 Obsidian 글(`content/**/*.md`)과 첨부 이미지(`content/Files`)를 깔끔하게 GitHub에 올리는 방법을 설명합니다.
 
 ## 배경
 
@@ -10,13 +10,9 @@
   - 평소에는 `content/Files` 변경을 숨기고
   - 실제 게시 글에서 참조한 이미지들만 자동으로 커밋에 포함
 
-## 1회 설정 (로컬)
+## 1회 설정
 
-아래 설정은 로컬 저장소에만 적용되며 원격에는 올라가지 않습니다.
-
-```bash
-grep -qxF "content/Files/**" .git/info/exclude || echo "content/Files/**" >> .git/info/exclude
-```
+`.gitignore`에 `content/Files/**`가 추가되어 있어야 합니다.
 
 효과:
 - `content/Files` 신규 파일은 기본적으로 `git status`에서 보이지 않음
@@ -33,13 +29,13 @@ mv "200. Inbox/내 글.md" "content/Dev/내 글.md"
 2. 게시 대상 글과 첨부를 자동 stage
 
 ```bash
-npm run stage:content -- "content/Dev/내 글.md"
+./scripts/stage-content.sh "content/Dev/내 글.md"
 ```
 
 파일명을 길게 입력하기 번거로우면 인자 없이 실행해도 됩니다.
 
 ```bash
-npm run stage:content
+./scripts/stage-content.sh
 ```
 
 이 경우 `content/` 아래에서 변경된 markdown 파일을 자동 탐지해 먼저 stage한 뒤, 해당 글의 첨부를 자동 stage합니다.
@@ -61,7 +57,15 @@ git push origin main
 ## 여러 글을 한 번에 올릴 때
 
 ```bash
-npm run stage:content -- "content/Dev/A.md" "content/AI/B.md"
+./scripts/stage-content.sh "content/Dev/A.md" "content/AI/B.md"
+```
+
+## 자동완성 사용
+
+`bash`/`zsh`에서 경로 자동완성을 사용할 수 있습니다.
+
+```bash
+./scripts/stage-content.sh content/Dev/<TAB>
 ```
 
 ## 자동 탐지 모드
@@ -74,12 +78,16 @@ npm run stage:content -- "content/Dev/A.md" "content/AI/B.md"
 실행:
 
 ```bash
-npm run stage:content
+./scripts/stage-content.sh
 ```
 
 ## 스크립트 동작 상세
 
-스크립트 파일: `scripts/stage-content.mjs`
+실행 파일:
+- 래퍼: `scripts/stage-content.sh`
+- 본체: `scripts/stage-content.mjs`
+
+`stage-content.sh`는 전달받은 인자를 그대로 `node scripts/stage-content.mjs`에 넘겨 실행합니다.
 
 1. 인자가 있으면 해당 markdown 파일을 먼저 stage
 - 내부에서 `git add -- <md 경로들>` 실행
@@ -108,7 +116,7 @@ npm run stage:content
 7. 실제로 존재하는 `content/Files/...` 파일만 추림
 
 8. 추린 첨부파일을 `git add -f -- ...`로 stage
-- `.git/info/exclude`에 걸려 있어도 필요한 파일은 커밋 대상에 포함됨
+- `.gitignore`에 걸려 있어도 필요한 파일은 커밋 대상에 포함됨
 
 9. 결과 요약 출력
 - staged markdown 개수
@@ -117,11 +125,5 @@ npm run stage:content
 
 ## 참고
 
-- `npm run stage:content`는 `package.json`의 아래 스크립트를 사용합니다.
-
-```json
-"stage:content": "node scripts/stage-content.mjs"
-```
-
-- 이 스크립트는 "필요한 파일 자동 추가" 용도입니다.
+- `scripts/stage-content.mjs`는 "필요한 파일 자동 추가" 용도입니다.
 - 이미 과거에 올라간 불필요 이미지 정리(`git rm --cached` 등)는 별도 정리 작업이 필요합니다.
