@@ -12,6 +12,7 @@ replit.nix
 .trash/
 .obsidian.vimrc
 .npm-local-cache
+.omx/
 
 # For my local notes
 [0-9][0-9][0-9].*/
