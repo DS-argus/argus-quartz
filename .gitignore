@@ -16,3 +16,10 @@ replit.nix
 
 # For my local notes
 [0-9][0-9][0-9].*/
+
+# Agents
+AGENTS.md
+CLAUDE.md
+
+# Obsidian publish theme
+quartz/styles/themes/publish.css
