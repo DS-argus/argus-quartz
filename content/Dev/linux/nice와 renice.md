@@ -27,19 +27,22 @@ updated: 2026-03-31T00:00:00
 	- PRI 값이 낮을수록 우선순위 높음
 
 ```bash title="현재 프로세스의 nice 값 확인"
-# ps로 확인 (NI 컬럼)
+# ps로 확인 (NI 컬럼) — Linux/macOS 공통
 ps -el | head -5
 #   F S   UID   PID  PPID  C PRI  NI ADDR SZ WCHAN  TTY          TIME CMD
 #   4 S     0     1     0  0  80   0 -  ...  -      ?        00:00:03 systemd
 
-# top에서도 NI 컬럼으로 확인 가능
+# 특정 프로세스의 nice 값만 확인
+ps -o pid,ni,comm -p <PID>
+
+# Linux top — NI 컬럼이 기본으로 표시됨
 top
 # PID USER  PR  NI    VIRT    RES    SHR S  %CPU  %MEM   TIME+ COMMAND
 #   1 root  20   0  ...                                   systemd
-
-# 특정 프로세스의 nice 값만 확인
-ps -o pid,ni,comm -p <PID>
 ```
+
+> [!info] macOS의 top은 NI 컬럼이 기본으로 표시되지 않음
+> macOS에서는 `top`의 컬럼 구성이 Linux와 다르기 때문에, nice 값을 확인하려면 `ps -o pid,ni,comm` 명령을 사용하는 것이 확실함
 
 ---
 ### nice : 프로세스를 **시작할 때** 우선순위를 지정
