@@ -5,8 +5,10 @@ created: 2025-06-15T09:26:27
 updated: 2025-06-17T17:14:45
 ---
 
-> [!abstract]+ 정리한 이유
+> [!note]+ 정리한 이유
 > 다양한 환경에서 spark를 실행하고 spark-submit을 해봤는데 각각 구체적으로 어떤 식으로 동작하는지 이해가 안가서 정리
+
+> [!abstract]+ TL;DR
 > 1. **spark를 docker에서 단일 컨테이너로 실행하고 추가 옵션 X**  -> _local 모드_
 > 2. **docker compose로 master, worker 실행하고 `--master spark://spark-master:7077`** -> _standalone + client 모드_
 > 	- spark-master 컨테이너에는 master daemon JVM이 위치해있고 여기서 submit하면 Driver JVM이 하나 더 생성

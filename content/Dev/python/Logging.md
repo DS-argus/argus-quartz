@@ -9,7 +9,7 @@ updated: 2026-04-05T00:00:00
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다
 
-> [!note] 알아볼 내용
+> [!abstract]+ TL;DR
 > 1. 왜 print가 아니라 logging인가
 > 2. 로그 레벨과 실무 기준
 > 3. logging 모듈의 구성 요소

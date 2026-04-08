@@ -9,7 +9,7 @@ updated: 2026-04-06T22:07:52
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다
 
-> [!note] 알아볼 내용
+> [!abstract]+ TL;DR
 > 1. 권한의 기본 구조 — 누가, 무엇을
 > 2. 숫자 표기법
 > 3. `ls -l` 출력 읽기

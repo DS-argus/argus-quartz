@@ -11,7 +11,7 @@ updated: 2026-04-05T21:48:05
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다
 
-> [!note] 알아볼 내용
+> [!abstract]+ TL;DR
 > 1. 웹 페이지의 3요소 — HTML, CSS, JavaScript
 > 2. HTML — 구조와 콘텐츠
 > 3. CSS — 스타일과 레이아웃
