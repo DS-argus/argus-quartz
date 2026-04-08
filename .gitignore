@@ -1,23 +1,30 @@
+# OS
 .DS_Store
+
+# Dependencies and build artifacts
 node_modules
+.npm-local-cache
 public
+.quartz-cache
 prof
 tsconfig.tsbuildinfo
+
+# Obsidian local state
 .obsidian
-.quartz-cache
-private/
-.replit
-replit.nix
+.obsidian-mobile
+.obsidian.vimrc
 .smtcmp_json_db/
 .trash/
-.obsidian.vimrc
-.npm-local-cache
-.omx/
+private/
 
-# For my local notes
+# Local notes kept out of Git
 [0-9][0-9][0-9].*/
 
-# Agents
+# Local tooling and agent files
+.ignore
+.omx/
+.replit
+replit.nix
 AGENTS.md
 CLAUDE.md
 
