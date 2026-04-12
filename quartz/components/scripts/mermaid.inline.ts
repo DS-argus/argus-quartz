@@ -139,7 +139,15 @@ const cssVars = [
   "--highlight",
   "--dark",
   "--darkgray",
+  "--background-primary",
+  "--background-primary-alt",
+  "--background-secondary",
+  "--background-modifier-border",
+  "--background-modifier-border-focus",
+  "--text-normal",
+  "--text-muted",
   "--codeFont",
+  "--bodyFont",
 ] as const
 
 let mermaidImport = undefined
@@ -176,6 +184,8 @@ document.addEventListener("nav", async () => {
       },
       {} as Record<(typeof cssVars)[number], string>,
     )
+    const pickCssVar = (...keys: (typeof cssVars)[number][]) =>
+      keys.map((key) => computedStyleMap[key].trim()).find((value) => value.length > 0) ?? ""
 
     const darkMode = document.documentElement.getAttribute("saved-theme") === "dark"
     mermaid.initialize({
@@ -183,15 +193,20 @@ document.addEventListener("nav", async () => {
       securityLevel: "loose",
       theme: darkMode ? "dark" : "base",
       themeVariables: {
-        fontFamily: computedStyleMap["--codeFont"],
-        primaryColor: computedStyleMap["--light"],
-        primaryTextColor: computedStyleMap["--darkgray"],
-        primaryBorderColor: computedStyleMap["--tertiary"],
-        lineColor: computedStyleMap["--darkgray"],
-        secondaryColor: computedStyleMap["--secondary"],
-        tertiaryColor: computedStyleMap["--tertiary"],
-        clusterBkg: computedStyleMap["--light"],
-        edgeLabelBackground: computedStyleMap["--highlight"],
+        // Mermaid should follow page surfaces, not graph-node colors from the Quartz theme.
+        fontFamily: pickCssVar("--bodyFont", "--codeFont"),
+        primaryColor: pickCssVar("--background-primary-alt", "--background-primary", "--light"),
+        primaryTextColor: pickCssVar("--text-normal", "--darkgray"),
+        primaryBorderColor: pickCssVar(
+          "--background-modifier-border-focus",
+          "--background-modifier-border",
+          "--tertiary",
+        ),
+        lineColor: pickCssVar("--text-muted", "--darkgray"),
+        secondaryColor: pickCssVar("--background-secondary", "--highlight", "--secondary"),
+        tertiaryColor: pickCssVar("--highlight", "--tertiary"),
+        clusterBkg: pickCssVar("--background-primary", "--light"),
+        edgeLabelBackground: pickCssVar("--background-primary", "--highlight"),
       },
     })
 
