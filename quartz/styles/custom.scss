@@ -3,6 +3,24 @@
 
 // put your custom CSS here!
 
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("/static/fonts/RIDIBatang.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font-interface-override: "RIDIBatang" !important;
+  --font-interface-theme: "RIDIBatang" !important;
+  --font-text-override: "RIDIBatang" !important;
+  --font-text-theme: "RIDIBatang" !important;
+  --titleFont: "RIDIBatang", serif !important;
+  --headerFont: "RIDIBatang", serif !important;
+  --bodyFont: "RIDIBatang", serif !important;
+}
+
 /* Bootstrap 클래스 오버라이드 - Bold체 색상 통일 */
 .text-danger strong,
 strong.text-danger {
