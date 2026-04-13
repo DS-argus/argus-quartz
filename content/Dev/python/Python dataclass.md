@@ -418,7 +418,7 @@ print(c)  # Circle(radius=5.0, area=78.53975)
 
 ##### metadata 활용
 
-`metadata`는 [[Python 직렬화(Serialization)|직렬화]] 라이브러리나 검증 로직에서 필드 정보를 참조할 때 유용하다.
+`metadata`는 [[Python serialization|직렬화]] 라이브러리나 검증 로직에서 필드 정보를 참조할 때 유용하다.
 
 ```python
 from dataclasses import dataclass, field, fields
@@ -853,7 +853,7 @@ class PaginatedResponse:
 | ORM 모델 | `SQLAlchemy Model` 등 | ORM은 자체 메타클래스 시스템이 있음 |
 
 > [!note]+ dataclass vs pydantic
-> [[Pydantic|pydantic]]은 **런타임 타입 검증과 자동 변환**이 핵심이다. `age: int`에 `"30"`(문자열)을 넣으면 pydantic은 자동으로 `int(30)`으로 변환하지만, dataclass는 그대로 `"30"`이 들어간다. API 입력 검증이 필요하면 pydantic, 내부 데이터 구조화만 필요하면 dataclass가 적합하다.
+> [[Python pydantic|pydantic]]은 **런타임 타입 검증과 자동 변환**이 핵심이다. `age: int`에 `"30"`(문자열)을 넣으면 pydantic은 자동으로 `int(30)`으로 변환하지만, dataclass는 그대로 `"30"`이 들어간다. API 입력 검증이 필요하면 pydantic, 내부 데이터 구조화만 필요하면 dataclass가 적합하다.
 
 > [!note]+ dataclass vs attrs
 > attrs(2015)는 사실 dataclass(2017, PEP 557)보다 먼저 나왔고, dataclass가 attrs에서 영감을 받아 만들어졌다. attrs는 validator, converter 같은 기능을 기본 제공해서 `__post_init__`으로 직접 구현해야 하는 검증/변환을 선언적으로 처리할 수 있다.

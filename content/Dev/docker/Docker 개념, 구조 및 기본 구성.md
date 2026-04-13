@@ -89,7 +89,7 @@ updated: 2025-06-04T00:19:39
 
 ##### docker CLI  
 - 터미널 명령어 모음이자 HTTP REST 클라이언트
-- [[소켓 (Socket)|소켓 (Socket)]]을 통해 dockred가 열어 둔 REST API에 HTTP 요청을 전송
+- [[Socket|소켓 (Socket)]]을 통해 dockred가 열어 둔 REST API에 HTTP 요청을 전송
 - `context`, `buildx`, `compose` 등 서브커맨드로 멀티플랫폼 빌드·오케스트레이션 확장  
 
 ##### dockerd  

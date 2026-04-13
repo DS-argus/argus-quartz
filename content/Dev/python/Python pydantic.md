@@ -11,7 +11,7 @@ updated: 2026-04-12T00:00:00
 > [!abstract]+ TL;DR
 > - pydantic은 Python의 타입 힌트를 **런타임에 강제**하는 데이터 검증 라이브러리
 > - [[Python dataclass|dataclass]]는 타입 힌트가 힌트일 뿐이지만, pydantic은 실제로 검증하고 변환한다
-> - [[FastAPI]]의 요청/응답 처리, 설정 관리, 외부 데이터 파싱 등에서 핵심적으로 사용된다
+> - [[Python fastapi]]의 요청/응답 처리, 설정 관리, 외부 데이터 파싱 등에서 핵심적으로 사용된다
 
 > [!info]+ Sources
 > - [Pydantic 공식 문서](https://docs.pydantic.dev/latest/)
@@ -304,7 +304,7 @@ print(u.name)  # Alice — before에서 키 변환, after에서 title() 적용
 ---
 ### 5. 직렬화/역직렬화
 
-pydantic은 [[Python 직렬화(Serialization)|직렬화]] 메서드를 내장하고 있다. `asdict` + `json.dumps` 조합이 필요한 [[Python dataclass|dataclass]]와 달리 한 줄로 처리된다.
+pydantic은 [[Python serialization|직렬화]] 메서드를 내장하고 있다. `asdict` + `json.dumps` 조합이 필요한 [[Python dataclass|dataclass]]와 달리 한 줄로 처리된다.
 
 ##### Python 객체 → dict / JSON
 
@@ -501,7 +501,7 @@ print(u.company.address.city)   # 서울
 
 ##### JSON Schema 자동 생성
 
-pydantic 모델에서 JSON Schema를 자동으로 생성할 수 있다. [[FastAPI]]는 이 기능을 이용해 API 문서(Swagger UI)를 자동 생성한다.
+pydantic 모델에서 JSON Schema를 자동으로 생성할 수 있다. [[Python fastapi]]는 이 기능을 이용해 API 문서(Swagger UI)를 자동 생성한다.
 
 ```python
 import json
@@ -528,7 +528,7 @@ print(json.dumps(schema, indent=2))
 ---
 ### 8. FastAPI와의 연동
 
-[[FastAPI]]는 내부적으로 pydantic을 사용한다. 요청 body를 pydantic 모델로 선언하면 검증, 변환, 문서화가 자동으로 처리된다.
+[[Python fastapi]]는 내부적으로 pydantic을 사용한다. 요청 body를 pydantic 모델로 선언하면 검증, 변환, 문서화가 자동으로 처리된다.
 
 ```python
 from fastapi import FastAPI
