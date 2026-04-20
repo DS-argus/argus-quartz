@@ -3,7 +3,7 @@ tags:
   - python
   - typing
 created: 2026-04-13T00:00:00
-updated: 2026-04-13T00:00:00
+updated: 2026-04-14T21:53:32
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다
@@ -588,13 +588,13 @@ stack.push("a")    # 타입 체커 에러
 ---
 ### 12. Version changes
 
-| 버전 | 주요 변경 |
-|------|----------|
-| 3.5 | `typing` 모듈 도입 |
-| **3.9** | 내장 제네릭 (`list[int]`, `dict[str, int]`). `typing.List` 등 불필요 |
-| **3.10** | `X \| Y` union 문법. `Optional[X]` 대신 `X \| None` |
-| 3.11 | `TypedDict`에 `Required`, `NotRequired` 추가 |
-| **3.12** | `type` 문, 제네릭 문법 `def f[T]()`, `class C[T]:` |
+| 버전       | 주요 변경                                                       |
+| -------- | ----------------------------------------------------------- |
+| 3.5      | `typing` 모듈 도입                                              |
+| **3.9**  | 내장 제네릭 (`list[int]`, `dict[str, int]`). `typing.List` 등 불필요 |
+| **3.10** | `X \| Y` union 문법. `Optional[X]` 대신 `X \| None`             |
+| 3.11     | `TypedDict`에 `Required`, `NotRequired` 추가                   |
+| **3.12** | `type` 문, 제네릭 문법 `def f[T]()`, `class C[T]:`                |
 
 > [!tip]+ 어떤 버전 문법을 쓸까
 > - Python 3.10+ → `int | str`, `str | None` 사용 (가장 깔끔)

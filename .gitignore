@@ -27,6 +27,7 @@ private/
 replit.nix
 AGENTS.md
 CLAUDE.md
+.claude/
 
 # Obsidian publish theme
 quartz/styles/themes/publish.css

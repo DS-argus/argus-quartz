@@ -4,7 +4,7 @@ tags:
   - uv
   - package_manager
 created: 2026-01-31T17:59:32
-updated: 2026-02-23T23:41:51
+updated: 2026-04-19T09:24:16
 ---
 > [!info]+ UV?
 > - 파이썬 프로젝트 관리 all in one 도구
@@ -50,7 +50,7 @@ uv python list --only-installed   # 설치된 것만
 uv python list --only-downloads   # 다운로드 가능한 것만
 uv python list --managed-python   # uv가 설치/관리하는 것만
 uv python list --all-versions     # 가능한 patch 전부
-uv python list --all-platforms    # 가능한 patch 전부
+uv python list --all-platforms    # 모든 os에서 전부
 
 uv python list 3.13               # 3.13 버전 리스트
 ```
