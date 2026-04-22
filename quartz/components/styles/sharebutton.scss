@@ -1,0 +1,147 @@
+.share-button {
+  --share-button-bg: rgba(198, 186, 255, 0.18);
+  --share-button-border: rgba(223, 216, 255, 0.18);
+  --share-button-color: #d8cfff;
+  --share-button-bg-hover: rgba(214, 205, 255, 0.28);
+  --share-button-border-hover: rgba(232, 225, 255, 0.3);
+  --share-button-color-hover: #f5f1ff;
+  --share-button-shadow: rgba(36, 28, 68, 0.18);
+  --share-button-bg-copied: rgba(113, 212, 139, 0.18);
+  --share-button-border-copied: rgba(113, 212, 139, 0.4);
+  --share-button-color-copied: #99efb2;
+  --share-button-color-error: #f4b2ad;
+  --share-button-border-error: rgba(242, 139, 130, 0.45);
+  --share-tooltip-bg: rgba(19, 24, 33, 0.96);
+  --share-tooltip-color: #f8fafc;
+  --share-tooltip-border: rgba(148, 163, 184, 0.18);
+  --share-tooltip-shadow: rgba(15, 23, 42, 0.32);
+
+  appearance: none;
+  border: 1px solid var(--share-button-border);
+  background: var(--share-button-bg);
+  color: var(--share-button-color);
+  border-radius: 999px;
+  width: 2.1rem;
+  height: 2.1rem;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  cursor: pointer;
+  box-shadow: 0 10px 24px -20px var(--share-button-shadow);
+  transition:
+    border-color 0.18s ease,
+    background-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-color: var(--share-button-border-hover);
+    background: var(--share-button-bg-hover);
+    color: var(--share-button-color-hover);
+    box-shadow: 0 14px 30px -22px var(--share-button-shadow);
+  }
+
+  &:focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--secondary) 55%, transparent);
+    outline-offset: 2px;
+  }
+
+  &[data-state="copied"] {
+    color: var(--share-button-color-copied);
+    border-color: var(--share-button-border-copied);
+    background: var(--share-button-bg-copied);
+  }
+
+  &[data-state="error"] {
+    color: var(--share-button-color-error);
+    border-color: var(--share-button-border-error);
+  }
+
+  &[data-state="copied"],
+  &:hover,
+  &:focus-visible {
+    &::after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    padding: 0.34rem 0.62rem;
+    border-radius: 0.72rem;
+    border: 1px solid var(--share-tooltip-border);
+    background: var(--share-tooltip-bg);
+    color: var(--share-tooltip-color);
+    box-shadow: 0 14px 32px -16px var(--share-tooltip-shadow);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+    z-index: 2;
+  }
+
+  &__icon {
+    position: absolute;
+    inset: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease;
+
+    & > svg {
+      width: 1.05rem;
+      height: 1.05rem;
+    }
+  }
+
+  &__icon--success {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  &[data-state="copied"] {
+    .share-button__icon--share {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .share-button__icon--success {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+:root[saved-theme="light"] .share-button {
+  --share-button-bg: color-mix(in srgb, white 86%, var(--secondary) 14%);
+  --share-button-border: color-mix(in srgb, white 68%, var(--secondary) 32%);
+  --share-button-color: color-mix(in srgb, #3f3454 18%, var(--secondary) 82%);
+  --share-button-bg-hover: color-mix(in srgb, white 78%, var(--secondary) 22%);
+  --share-button-border-hover: color-mix(in srgb, white 56%, var(--secondary) 44%);
+  --share-button-color-hover: color-mix(in srgb, #2c2142 14%, var(--secondary) 86%);
+  --share-button-shadow: rgba(76, 54, 128, 0.18);
+  --share-button-bg-copied: color-mix(in srgb, white 84%, #71d48b 16%);
+  --share-button-border-copied: color-mix(in srgb, white 52%, #71d48b 48%);
+  --share-button-color-copied: #287846;
+  --share-button-color-error: #b6534e;
+  --share-button-border-error: color-mix(in srgb, white 54%, #f28b82 46%);
+}

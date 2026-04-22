@@ -6,7 +6,6 @@ export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [
-
     RecentNotesForIndex,
 
     Component.Comments({
@@ -40,7 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
+    Component.ArticleHeader(),
     Component.ContentMeta(),
     Component.TagList(),
   ],

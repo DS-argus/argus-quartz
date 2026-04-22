@@ -29,6 +29,7 @@ AGENTS.md
 CLAUDE.md
 .claude/
 .playwright-mcp/
+.codex-artifacts/
 
 # Obsidian publish theme
 quartz/styles/themes/publish.css

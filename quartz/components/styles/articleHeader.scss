@@ -1,0 +1,27 @@
+@use "../../styles/variables.scss" as *;
+
+.article-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 2rem;
+
+  & > .article-title {
+    margin: 0;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  & > .share-button {
+    margin-top: 0.1rem;
+  }
+
+  @media all and ($mobile) {
+    gap: 0.65rem;
+
+    & > .share-button {
+      margin-top: 0.2rem;
+    }
+  }
+}
