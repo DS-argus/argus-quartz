@@ -28,6 +28,7 @@ replit.nix
 AGENTS.md
 CLAUDE.md
 .claude/
+.playwright-mcp/
 
 # Obsidian publish theme
 quartz/styles/themes/publish.css
