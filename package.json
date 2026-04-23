@@ -12,6 +12,7 @@
     "url": "https://github.com/DS-argus/argus-quartz.git"
   },
   "scripts": {
+    "prepare": "simple-git-hooks",
     "quartz": "./quartz/bootstrap-cli.mjs",
     "stage:content": "node scripts/stage-content.mjs",
     "check": "tsc --noEmit && npx prettier . --check",
@@ -33,6 +34,9 @@
   ],
   "bin": {
     "quartz": "./quartz/bootstrap-cli.mjs"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run stage:content -- --staged-only"
   },
   "dependencies": {
     "@clack/prompts": "^1.2.0",
@@ -111,6 +115,7 @@
     "@types/yargs": "^17.0.35",
     "esbuild": "^0.28.0",
     "prettier": "^3.8.1",
+    "simple-git-hooks": "^2.13.1",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2"
   }

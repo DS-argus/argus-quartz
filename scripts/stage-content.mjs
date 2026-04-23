@@ -3,6 +3,7 @@
 import { spawnSync } from "node:child_process"
 import { existsSync, readFileSync } from "node:fs"
 import path from "node:path"
+import { ensurePermalinks } from "./content/permalink-utils.mjs"
 
 function runGit(args, allowFailure = false) {
   const result = spawnSync("git", args, { encoding: "utf8" })
@@ -145,11 +146,13 @@ function stagePaths(paths) {
 function main() {
   const args = process.argv.slice(2)
   const showHelp = args.includes("-h") || args.includes("--help")
+  const stagedOnly = args.includes("--staged-only")
   const requestedPaths = args.filter((arg) => !arg.startsWith("-"))
 
   if (showHelp) {
     console.log("Usage:")
     console.log("  npm run stage:content -- <content markdown paths...>")
+    console.log("  npm run stage:content -- --staged-only")
     console.log("  npm run stage:content")
     console.log("")
     console.log("When no paths are provided, changed markdown files under content/ are auto-detected.")
@@ -158,7 +161,7 @@ function main() {
 
   if (requestedPaths.length > 0) {
     stagePaths(requestedPaths)
-  } else {
+  } else if (!stagedOnly) {
     const changedMarkdownFiles = getChangedMarkdownFiles()
     if (changedMarkdownFiles.length > 0) {
       stagePaths(changedMarkdownFiles)
@@ -172,6 +175,24 @@ function main() {
     console.log("Try: npm run stage:content")
     console.log("Or:  npm run stage:content -- content/path/to/post.md")
     process.exit(0)
+  }
+
+  const { updatedFiles, errors } = ensurePermalinks(markdownFiles)
+  if (updatedFiles.length > 0) {
+    stagePaths(updatedFiles)
+    console.log(`Permalinks added: ${updatedFiles.length}`)
+    for (const filePath of updatedFiles) {
+      console.log(`- ${filePath}`)
+    }
+  }
+
+  if (errors.length > 0) {
+    console.error("Permalink generation failed:")
+    for (const error of errors) {
+      console.error(`- ${error.filePath}: ${error.reason}`)
+    }
+    console.error("Add a permalink manually in frontmatter and retry the commit.")
+    process.exit(1)
   }
 
   const linkedAssets = new Set()
