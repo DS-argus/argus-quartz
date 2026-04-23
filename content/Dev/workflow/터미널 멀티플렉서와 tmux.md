@@ -5,6 +5,7 @@ tags:
 url: 
 created: 2025-05-23T19:50:40
 updated: 2025-05-23T23:19:30
+permalink: /Dev/workflow/terminal-multiplexers-and-tmux
 related: 
 ---
 ### 터미널 멀티플렉서란? 

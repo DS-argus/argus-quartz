@@ -4,6 +4,7 @@ tags:
   - typing
 created: 2026-04-13T00:00:00
 updated: 2026-04-14T21:53:32
+permalink: /Dev/python/python-typing
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

@@ -4,6 +4,7 @@ tags:
   - docker
 created: 2025-06-27T14:48:31
 updated: 2025-06-27T15:00:50
+permalink: /Dev/debug/postgres-container-initdb-script-permissions
 ---
 ### 상황
 - database 및 table 생성 스크립트 (.sh, .sql)을 컨테이너 시작할 때 바로 실행시키기 위해 `/docker-entrypoint.initdb.d/`에 복사

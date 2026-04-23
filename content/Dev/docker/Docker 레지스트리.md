@@ -4,6 +4,7 @@ tags:
   - registry
 created: 2025-06-04T12:39:56
 updated: 2025-06-03T23:54:51
+permalink: /Dev/docker/docker-registry
 ---
 > [!abstract] TL;DR
 > - 이미지는 레이어 묶음, 레지스트리는 그 보관소 → 캐시 덕에 Pull·Push 때 필요한 레이어만 이동

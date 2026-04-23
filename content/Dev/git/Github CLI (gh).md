@@ -5,6 +5,7 @@ tags:
   - CLI
 created: 2025-05-14
 updated: 2025-05-21T22:21:11
+permalink: /Dev/git/github-cli-gh
 ---
 > [!info] gh란?
 >- GitHub에서 공식 제공하는 **CLI(Command Line Interface)** 도구

@@ -3,6 +3,7 @@ tags:
   - spark
 created: 2025-06-15T09:26:27
 updated: 2025-06-17T17:14:45
+permalink: /Dev/spark/spark-architecture-and-deployment-models
 ---
 
 > [!note]+ 정리한 이유

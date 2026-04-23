@@ -4,6 +4,7 @@ tags:
   - MCP
 created: 2025-05-22T17:01:52
 updated: 2025-07-12T20:48:44
+permalink: /AI/mcp-model-context-protocol
 ---
 ### MCP란 무엇인가
 

@@ -3,6 +3,7 @@ tags:
   - yaml
 created: 2025-05-28T23:59:29
 updated: 2025-05-29T07:40:22
+permalink: /Dev/yaml-and-anchors
 ---
 ### YAML 파일이란?
 

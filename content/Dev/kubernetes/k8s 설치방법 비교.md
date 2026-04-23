@@ -3,6 +3,7 @@ tags:
   - k8s
 created: 2025-06-04T22:39:43
 updated: 2025-06-05T16:17:05
+permalink: /Dev/kubernetes/k8s-installation-methods-compared
 ---
 > [!abstract]+ TL;DR
 > k8s 설치의 대표적인 **다섯** 가지 방법을 비교  

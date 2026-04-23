@@ -3,6 +3,7 @@ tags:
   - k8s
 created: 2025-06-25T23:57:54
 updated: 2025-06-26T00:20:22
+permalink: /Dev/kubernetes/lessons-from-adopting-k8s
 ---
 > [!success]+ 참고영상
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/JBGsqsoGxEo?si=va7pReYihQmhFqYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

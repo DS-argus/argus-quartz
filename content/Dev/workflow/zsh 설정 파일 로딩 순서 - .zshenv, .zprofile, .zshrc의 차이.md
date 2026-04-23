@@ -5,6 +5,7 @@ tags:
   - zsh
 created: 2026-04-20T00:00:00
 updated: 2026-04-20T00:00:00
+permalink: /Dev/workflow/zsh-startup-file-loading-order
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

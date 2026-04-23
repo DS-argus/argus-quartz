@@ -4,6 +4,7 @@ tags:
   - logging
 created: 2025-06-26T13:25:07
 updated: 2026-04-05T00:00:00
+permalink: /Dev/python/python-logging
 ---
 
 > [!warning]+ Alert

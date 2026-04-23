@@ -4,6 +4,7 @@ tags:
   - permission
 created: 2025-06-27T14:52:54
 updated: 2026-04-06T22:07:52
+permalink: /Dev/linux/linux-permission-numbers
 ---
 
 > [!warning]+ Alert

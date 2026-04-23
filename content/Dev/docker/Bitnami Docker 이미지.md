@@ -6,6 +6,7 @@ tags:
   - k8s
 created: 2025-06-02T23:05:13
 updated: 2025-06-02T23:17:20
+permalink: /Dev/docker/bitnami-docker-images
 ---
 > [!abstract] TL;DR
 >-  Bitnami 이미지는 **“비전문가도 운영 가능한 수준까지 자동화된, 보안 강화·멀티아키 지원 컨테이너 스택”**

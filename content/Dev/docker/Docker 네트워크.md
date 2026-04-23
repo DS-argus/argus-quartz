@@ -4,6 +4,7 @@ tags:
   - network
 created: 2025-06-04T08:59:41
 updated: 2025-06-04T00:38:37
+permalink: /Dev/docker/docker-networking
 ---
 ### Docker 네트워크의 기본 구조
 

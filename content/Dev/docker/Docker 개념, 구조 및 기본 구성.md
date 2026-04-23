@@ -3,6 +3,7 @@ tags:
   - docker
 created: 2025-06-04T20:49:30
 updated: 2025-06-04T00:19:39
+permalink: /Dev/docker/docker-concepts-architecture-and-basics
 ---
 ### Docker란?  
 애플리케이션과 그 실행 환경을 한데 묶어 **어디서든 동일하게 실행**할 수 있도록 해 주는 컨테이너 기술 스택.   

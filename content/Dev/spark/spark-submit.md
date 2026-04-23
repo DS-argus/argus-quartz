@@ -3,6 +3,7 @@ tags:
   - spark
 created: 2025-06-14T23:42:21
 updated: 2025-06-15T22:40:50
+permalink: /Dev/spark/spark-submit
 ---
 ### Spark-Submit이란?
 Spark job을 배치 혹은 스트리밍 형태로 실행하기 위한 공식 CLI 런처로 notebook이나 spark-shell과 함께 Spark job을 실행할 수 있는 방법 중 하나  

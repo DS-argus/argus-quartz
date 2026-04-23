@@ -3,10 +3,11 @@ tags:
   - RecSys
 created: 2025-06-26T09:37:38
 updated: 2025-06-26T09:44:47
+permalink: /AI/recsys/2017-deep-matrix-factorization
 ---
 > [!abstract]+ TL;DR
 >- source : https://www.ijcai.org/proceedings/2017/0447.pdf
->- [[content/AI/추천시스템/2017 Neural Collaborative Filtering|NCF]]와 input 다름
+>- [[content/AI/recsys/2017 Neural Collaborative Filtering|NCF]]와 input 다름
 >- **Contributions**
 > 	 1. Explicit, Implicit feedback 모두 사용
 > 	 2. Explicit, Implicit 모두 사용할 때 사용가능한 Loss 제안

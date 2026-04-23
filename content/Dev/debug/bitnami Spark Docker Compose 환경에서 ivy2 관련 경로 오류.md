@@ -6,6 +6,7 @@ tags:
   - troubleshooting
 created: 2025-06-02T23:27:34
 updated: 2025-06-14T21:55:57
+permalink: /Dev/debug/bitnami-spark-docker-compose-ivy2-path-error
 ---
 ### 문제
 - bitnami/spark Docker Compose 환경에서 `spark-submit` 실행 시 `basedir must be absolute: ?/.ivy2/local` 에러 발생

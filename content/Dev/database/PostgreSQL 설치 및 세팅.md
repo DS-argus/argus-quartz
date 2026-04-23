@@ -4,6 +4,7 @@ tags:
   - postgresql
 created: 2025-08-06T00:00:00
 updated: 2025-08-07T09:54:23
+permalink: /Dev/database/postgresql-installation-and-setup
 ---
 ### 1. Why PostgreSQL?
 

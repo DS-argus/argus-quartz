@@ -5,6 +5,7 @@ tags:
   - SLM
 created: 2025-06-06T18:34:06
 updated: 2025-07-09T17:48:52
+permalink: /AI/slm-small-language-model
 ---
 ### 1. 정의 및 등장 배경
 - 소형 언어 모델(Small Language Model, SLM)은 파라미터 수가 수백만에서 수십억으로 대규모 언어 모델(LLM)의 수천억·수조 파라미터보다 작음  

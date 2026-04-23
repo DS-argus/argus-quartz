@@ -3,6 +3,7 @@ tags:
   - LLM
 created: 2025-06-25T23:55:02
 updated: 2025-06-26T13:00:22
+permalink: /AI/chain-of-thought-cot
 ---
 > [!abstract]+ TL;DR
 >-  Chain-of-Thought(CoT)는 LLM의 단계적 추론 능력을 극대화하여 복잡한 문제 해결에 뛰어난 성과를 보여주는 핵심 프롬프트 기법

@@ -5,6 +5,7 @@ tags:
   - k8s
 created: 2025-06-13T12:43:41
 updated: 2025-06-14T23:27:12
+permalink: /Dev/linux/cron-expressions
 ---
 ### 크론(cron) 표현식이란?  
 - 일정 기반 자동화에 쓰는 시간 예약 포맷

@@ -4,6 +4,7 @@ tags:
   - Quartz
 created: 2025-05-21T22:34:20
 updated: 2025-05-22T16:39:20
+permalink: /Obsidian/Quartz/obsidian-quartz-theme
 ---
 ### Quartz-Theme
 Obsidian의 가장 큰 장점은 아주 많은 테마를  선택할 수 있다는 점이다.  

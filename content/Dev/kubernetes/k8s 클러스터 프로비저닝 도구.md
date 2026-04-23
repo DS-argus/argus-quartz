@@ -4,6 +4,7 @@ tags:
   - provisioning
 created: 2025-06-04T23:16:25
 updated: 2025-06-04T23:27:14
+permalink: /Dev/kubernetes/k8s-cluster-provisioning-tools
 ---
 > [!abstract]+ TL;DR
 > - **Docker Desktop** 로컬 개발 → `kind` 빠른 테스트  

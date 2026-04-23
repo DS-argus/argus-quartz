@@ -4,6 +4,7 @@ tags:
   - python
 created: 2025-06-21T20:17:32
 updated: 2025-06-26T00:13:02
+permalink: /Dev/python/python-faker
 ---
 ### Faker란?
 - Faker는 테스트나 데모용으로 현실감 있는 가짜 데이터를 자동 생성해 주는 파이썬 라이브러리

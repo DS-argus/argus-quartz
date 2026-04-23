@@ -3,6 +3,7 @@ tags:
   - RecSys
 created: 2025-07-03T14:17:07
 updated: 2025-07-03T22:32:47
+permalink: /AI/recsys/2018-collaborative-memory-network-for-recommendation-systems
 ---
 > [!abstract]+ TL;DR
 > - source : https://arxiv.org/pdf/1804.10862
@@ -102,7 +103,7 @@ $$
 ##### 다른 모델과의 관계
 1. Latent Factor Model
 	- rating 행렬을 저 차원 행렬의 곱으로 표현해서 숨겨진 관계 발견
-	- CMN에서 이웃 정보 처리하는 부분과 MLP,  activation function 단순화 하면 [[content/AI/추천시스템/2017 Neural Collaborative Filtering|GMF]]와 동일
+	- CMN에서 이웃 정보 처리하는 부분과 MLP,  activation function 단순화 하면 [[content/AI/recsys/2017 Neural Collaborative Filtering|GMF]]와 동일
 2. Neighborhood-based Similarity Model
 	- 목적 : user-user similarity 행렬 $\mathbf S \in \mathbb R^{P\times P}$ 추정
 	- memory module이 similarity 행렬 역할 수행

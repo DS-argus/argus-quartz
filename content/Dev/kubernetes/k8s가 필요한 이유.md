@@ -4,6 +4,7 @@ tags:
   - docker
 created: 2025-06-14T14:06:01
 updated: 2025-06-14T23:29:58
+permalink: /Dev/kubernetes/why-k8s-is-needed
 ---
 ### 컨테이너만 사용하는 것의 한계
 

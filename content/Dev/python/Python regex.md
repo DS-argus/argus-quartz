@@ -5,6 +5,7 @@ tags:
   - re
 created: 2026-04-12T00:00:00
 updated: 2026-04-13T07:36:36
+permalink: /Dev/python/python-regex
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

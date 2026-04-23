@@ -5,6 +5,7 @@ tags:
   - docker
 created: 2025-06-02T09:41:22
 updated: 2025-06-02T09:57:19
+permalink: /Obsidian/Quartz/check-blog-updates-locally
 ---
 ### docker를 이용해 블로그 변경 사항 확인하기
 

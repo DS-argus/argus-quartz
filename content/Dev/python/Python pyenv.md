@@ -6,6 +6,7 @@ tags:
   - python
 created: 2025-05-27T22:53:24
 updated: 2026-01-31T23:52:01
+permalink: /Dev/python/python-pyenv
 ---
 > 이젠 [[Python uv - An extremely fast Python package and project manager|uv]] 사용합시다
 

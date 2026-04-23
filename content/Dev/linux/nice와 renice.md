@@ -4,6 +4,7 @@ tags:
   - process
 created: 2026-03-31T00:00:00
 updated: 2026-03-31T00:00:00
+permalink: /Dev/linux/nice-and-renice
 ---
 
 > [!warning]+ Alert

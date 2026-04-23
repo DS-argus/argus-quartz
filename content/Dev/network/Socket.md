@@ -4,6 +4,7 @@ tags:
   - network
 created: 2025-05-30T08:22:15
 updated: 2025-05-30T08:49:56
+permalink: /Dev/network/socket
 ---
 ### 소켓 (Socket)이란?
 

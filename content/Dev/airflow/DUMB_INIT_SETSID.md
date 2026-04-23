@@ -4,6 +4,7 @@ tags:
   - Celery
 created: 2025-06-02T17:00:00
 updated: 2025-06-02T17:55:14
+permalink: /Dev/airflow/dumb-init-setsid
 ---
 > [!abstract] DUMB_INIT_SETSID: "0" 의 의미
 > - Celery worker 컨테이너가 **정상적으로 종료되도록** 돕는 설정

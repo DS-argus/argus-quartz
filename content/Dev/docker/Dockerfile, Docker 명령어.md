@@ -4,6 +4,7 @@ tags:
   - dockerfile
 created: 2025-06-04T00:00:00
 updated: 2025-06-04T23:40:29
+permalink: /Dev/docker/dockerfile-and-docker-commands
 ---
 ### Dockerfile 명령어
 ##### 기본 명령어

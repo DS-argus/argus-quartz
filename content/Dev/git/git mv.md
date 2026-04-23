@@ -4,6 +4,7 @@ tags:
 url: 
 created: 2025-05-23T23:40:09
 updated: 2025-05-25T00:05:13
+permalink: /Dev/git/git-mv
 related: 
 ---
 ### 문제

@@ -5,6 +5,7 @@ tags:
   - pyspark
 created: 2025-06-07T22:10:36
 updated: 2025-06-15T22:11:48
+permalink: /Dev/spark/getting-started-with-apache-spark-using-docker
 ---
 ### docker로 spark 실행하기
 기본적으로 Apache Spark는 [여기](https://spark.apache.org/downloads.html)에서 직접 다운받을 수 있다  

@@ -5,6 +5,7 @@ tags:
   - postgresql
 created: 2025-05-28T22:18:21
 updated: 2025-05-28T22:22:55
+permalink: /Dev/debug/postgresql-5432-port-conflict-and-missing-postgres-role
 ---
 ### 문제
 

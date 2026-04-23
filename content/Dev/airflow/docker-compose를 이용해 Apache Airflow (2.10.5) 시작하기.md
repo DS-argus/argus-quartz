@@ -5,6 +5,7 @@ tags:
   - airflow
 created: 2025-06-02T15:22:37
 updated: 2025-06-28T11:52:29
+permalink: /Dev/airflow/getting-started-with-apache-airflow-2-10-5-using-docker-compose
 ---
 ### docker-compose를 활용한 Airflow 세팅
 

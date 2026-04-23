@@ -5,6 +5,7 @@ tags:
   - lsp
 created: 2026-04-22T00:00:00
 updated: 2026-04-22T00:00:00
+permalink: /Logs/neovim-0-12-release-notes
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

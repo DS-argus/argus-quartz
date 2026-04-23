@@ -4,6 +4,7 @@ tags:
   - k8s
 created: 2025-06-12T14:02:14
 updated: 2025-06-12T14:03:08
+permalink: /Dev/kubernetes/helm
 ---
 ### Helm이란?
 

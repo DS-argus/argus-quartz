@@ -5,6 +5,7 @@ tags:
   - TLS
 created: 2025-06-11T13:10:12
 updated: 2025-06-11T13:10:59
+permalink: /Dev/network/ssl-secure-sockets-layer
 ---
 ### SSL (Secure Sockets Layer)
 

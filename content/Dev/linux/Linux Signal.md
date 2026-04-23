@@ -5,6 +5,7 @@ tags:
   - signal
 created: 2026-03-31T00:00:00
 updated: 2026-03-31T22:40:35
+permalink: /Dev/linux/linux-signal
 ---
 
 > [!warning]+ Alert

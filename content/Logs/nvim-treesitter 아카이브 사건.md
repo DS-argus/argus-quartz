@@ -5,6 +5,7 @@ tags:
   - terminal
 created: 2026-04-20T00:00:00
 updated: 2026-04-20T22:49:56
+permalink: /Logs/nvim-treesitter-archive-incident
 ---
 > [!abstract]+ TL;DR
 > 2026년 4월, 13k star의 nvim-treesitter 플러그인이 아카이브되었다. Neovim 0.12 필수 요구에 불만을 품은 사용자들의 이슈 폭주가 원인.

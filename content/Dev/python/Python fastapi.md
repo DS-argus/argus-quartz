@@ -7,6 +7,7 @@ tags:
   - starlette
 created: 2025-06-06T18:18:03
 updated: 2026-04-20T22:23:40
+permalink: /Dev/python/python-fastapi
 ---
 ### FastAPI란?
 

@@ -7,6 +7,7 @@ tags:
   - data_engineering
 created: 2025-07-17T17:45:46
 updated: 2026-04-08T22:07:46
+permalink: /Dev/java/fat-jar-vs-thin-jar-and-shading
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

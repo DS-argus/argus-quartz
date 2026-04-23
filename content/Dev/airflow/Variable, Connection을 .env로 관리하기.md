@@ -3,6 +3,7 @@ tags:
   - airflow
 created: 2025-06-14T21:31:52
 updated: 2025-06-14T23:32:27
+permalink: /Dev/airflow/manage-variable-and-connection-with-env-file
 ---
 ### Variable, Connection을 .env로 관리
 

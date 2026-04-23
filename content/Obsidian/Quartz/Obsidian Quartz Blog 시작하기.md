@@ -4,6 +4,7 @@ tags:
   - Quartz
 created: 2025-05-21T22:21:27
 updated: 2025-05-22T16:53:14
+permalink: /Obsidian/Quartz/getting-started-with-obsidian-quartz-blog
 ---
 이 블로그를 만들 때 참고한 분들의 링크를 정리한다 ^ae49b0
 

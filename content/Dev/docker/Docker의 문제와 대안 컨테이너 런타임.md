@@ -2,6 +2,7 @@
 tags: 
 created: 2025-06-04T19:42:42
 updated: 2025-06-03T22:26:23
+permalink: /Dev/docker/docker-limitations-and-alternative-container-runtimes
 ---
 > [!success] 참고영상
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/NGAxHC0f1wU?si=lP6eWK_NLg_txMPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

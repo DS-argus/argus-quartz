@@ -3,6 +3,7 @@ tags:
   - docker
 created: 2025-06-04T11:19:33
 updated: 2025-06-04T00:07:39
+permalink: /Dev/docker/dockerfile-optimization-strategies
 ---
 ### 레이어 동작 방식
 

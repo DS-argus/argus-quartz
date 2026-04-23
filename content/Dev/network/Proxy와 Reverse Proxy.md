@@ -5,6 +5,7 @@ tags:
   - reverse-proxy
 created: 2025-06-11T13:07:45
 updated: 2025-06-11T13:17:50
+permalink: /Dev/network/proxy-and-reverse-proxy
 ---
 ### Proxy (Forward Proxy)
 클라이언트를 대신하여 인터넷에 요청을 전달하고 응답을 클라이언트로 되돌려주는 중개 서버
