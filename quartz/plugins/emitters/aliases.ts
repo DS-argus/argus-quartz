@@ -49,10 +49,10 @@ function getSocialImageData(
     } else if (fileData.filePath) {
       imagePath = getAbsoluteUrl(baseUrl, `${fileData.slug!}-og-image.webp`)
     } else {
-      imagePath = `https://${baseUrl}/static/og-image.png`
+      imagePath = `https://${baseUrl}/static/og-image-brain-repository.png`
     }
   } else {
-    imagePath = `https://${baseUrl}/static/og-image.png`
+    imagePath = `https://${baseUrl}/static/og-image-brain-repository.png`
   }
 
   const imageType = `image/${(getFileExtension(imagePath) ?? ".png").replace(/^\./, "")}`
