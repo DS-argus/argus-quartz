@@ -195,7 +195,7 @@
     },
     "permalink-slug": {
       "source": "./plugins/permalink-slug",
-      "resolved": "/Users/argus/Desktop/Obsidian/Argus-v5-migration/plugins/permalink-slug",
+      "resolved": "/Users/argus/Desktop/Obsidian/Argus/plugins/permalink-slug",
       "commit": "local",
       "installedAt": "2026-05-28T12:33:45.157Z"
     },

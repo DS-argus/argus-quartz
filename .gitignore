@@ -11,3 +11,27 @@ private/
 replit.nix
 .quartz/
 quartz/cli/tui/dist/
+
+# Local Obsidian vault folders that are not published to Quartz.
+/.obsidian-mobile/
+/.obsidian.vimrc
+/000. Bases/
+/100. Daily Notes/
+/200. Inbox/
+/300. Book/
+/400. Resources/
+/500. Excalidraw/
+/600. Clippings/
+/700. Project/
+/999. ETC/
+
+# Local agent/tool state.
+/.claude/
+/.ignore
+/.npm-local-cache/
+/.omx/
+/.playwright-mcp/
+/.smtcmp_json_db/
+/.trash/
+/AGENTS.md
+/CLAUDE.md

@@ -9,7 +9,20 @@ public
 .obsidian
 .obsidian-mobile
 .trash
+000. Bases
 100. Daily Notes
 200. Inbox
 300. Book
+400. Resources
+500. Excalidraw
+600. Clippings
+700. Project
 999. ETC
+.claude
+.ignore
+.omx
+.playwright-mcp
+.smtcmp_json_db
+.obsidian.vimrc
+AGENTS.md
+CLAUDE.md
