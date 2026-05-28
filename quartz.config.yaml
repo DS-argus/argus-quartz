@@ -18,9 +18,9 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Gowun Batang
+      body: Gowun Batang
+      code: JetBrains Mono
     colors:
       lightMode:
         light: "#faf8f8"
@@ -68,7 +68,7 @@ plugins:
       wikilinks: true
       callouts: true
       mermaid: true
-      parseTags: true
+      parseTags: false
       parseArrows: true
       parseBlockReferences: true
       enableInHtmlEmbed: false
@@ -117,7 +117,7 @@ plugins:
   - source: github:quartz-community/explicit-publish
     enabled: false
   - source: github:quartz-community/unlisted-pages
-    enabled: true
+    enabled: false
     options: {}
     order: 45
   - source: github:quartz-community/encrypted-pages
@@ -145,9 +145,9 @@ plugins:
   - source: github:quartz-community/og-image
     enabled: false
   - source: github:quartz-community/cname
-    enabled: true
+    enabled: false
   - source: github:quartz-community/canvas-page
-    enabled: true
+    enabled: false
   - source: github:quartz-community/content-page
     enabled: true
   - source: github:quartz-community/folder-page
@@ -156,6 +156,8 @@ plugins:
     enabled: true
   - source: github:quartz-community/explorer
     enabled: true
+    options:
+      useSavedState: false
     layout:
       position: left
       priority: 50
@@ -235,7 +237,18 @@ plugins:
         GitHub: https://github.com/DS-argus/argus-quartz
         LinkedIn: https://www.linkedin.com/in/soungmin-park-081580203/
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
+    options:
+      title: Recent Notes
+      limit: 5
+      linkToMore: false
+      showTags: false
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: afterBody
+      priority: 5
+      condition: index
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
@@ -245,7 +258,7 @@ plugins:
       priority: 25
       display: mobile-only
   - source: github:quartz-community/bases-page
-    enabled: true
+    enabled: false
     options: {}
     order: 50
   - source: github:quartz-community/note-properties
@@ -272,11 +285,11 @@ plugins:
       name: quartz-themes
       repo: github:saberzero1/quartz-themes
       subdir: plugin
-    enabled: true
+    enabled: false
     options:
       theme: default
   - source: github:quartz-community/obsidian-plugin-excalidraw
-    enabled: true
+    enabled: false
     options:
       enableInteraction: true
       darkMode: auto
