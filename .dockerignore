@@ -1,0 +1,15 @@
+.git
+.gitignore
+.quartz
+.quartz-cache
+.npm-local-cache
+node_modules
+public
+.DS_Store
+.obsidian
+.obsidian-mobile
+.trash
+100. Daily Notes
+200. Inbox
+300. Book
+999. ETC
