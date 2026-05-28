@@ -1,0 +1,16 @@
+{
+  "name": "permalink-slug",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "permalink-slug",
+    "displayName": "Permalink Slug",
+    "description": "Uses frontmatter permalink as the canonical page slug.",
+    "version": "1.0.0",
+    "category": "transformer",
+    "defaultOrder": 6
+  }
+}

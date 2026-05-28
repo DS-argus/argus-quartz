@@ -1,19 +1,21 @@
 {
-  "name": "@jackyzha0/quartz",
-  "description": "🌱 publish your digital garden and notes as a website",
+  "name": "argus-quartz",
+  "description": "Quartz-based Obsidian blog and publishing workspace for Argus",
   "private": true,
   "version": "5.0.0",
   "type": "module",
-  "author": "jackyzha0 <j.zhao2k19@gmail.com>",
+  "author": "Argus",
   "license": "MIT",
-  "homepage": "https://quartz.jzhao.xyz",
+  "homepage": "https://study-addiction.pages.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackyzha0/quartz.git"
+    "url": "https://github.com/DS-argus/argus-quartz.git"
   },
   "scripts": {
+    "prepare": "simple-git-hooks",
     "quartz": "./quartz/bootstrap-cli.mjs",
     "docs": "npx quartz build --serve -d docs",
+    "stage:content": "node scripts/stage-content.mjs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
     "test": "tsx --test",
@@ -36,6 +38,9 @@
   "bin": {
     "quartz": "./quartz/bootstrap-cli.mjs"
   },
+  "simple-git-hooks": {
+    "pre-commit": "npm run stage:content -- --staged-only"
+  },
   "dependencies": {
     "@clack/prompts": "^0.11.0",
     "@floating-ui/dom": "^1.7.4",
@@ -47,6 +52,7 @@
     "esbuild-sass-plugin": "^3.6.0",
     "github-slugger": "^2.0.0",
     "globby": "^16.1.0",
+    "gray-matter": "^4.0.3",
     "hast-util-to-jsx-runtime": "^2.3.6",
     "isomorphic-git": "^1.36.3",
     "lightningcss": "^1.31.1",
@@ -82,6 +88,7 @@
     "@types/yargs": "^17.0.35",
     "esbuild": "^0.27.2",
     "prettier": "^3.8.1",
+    "simple-git-hooks": "^2.13.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   }
