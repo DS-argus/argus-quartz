@@ -4,7 +4,7 @@ tags:
   - architecture
 created: 2025-05-29T20:06:48
 updated: 2025-05-29T20:14:37
-permalink: /Dev/software-architecture-monolithic-vs-microservices
+permalink: /Dev/web/software-architecture-monolithic-vs-microservices
 ---
 ### 1. 개요
 
