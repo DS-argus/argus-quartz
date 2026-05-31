@@ -6,7 +6,7 @@ tags:
   - gunicorn
   - starlette
 created: 2025-06-06T18:18:03
-updated: 2026-04-20T22:23:40
+updated: 2026-05-31T23:23:11
 permalink: /Dev/python/python-fastapi
 ---
 ### FastAPI란?
@@ -53,22 +53,13 @@ flowchart TD
     Client(["클라이언트<br/>브라우저 또는 앱"]):::entry
     Uvicorn["Uvicorn<br/>ASGI 서버"]:::runtime
     Starlette["Starlette<br/>ASGI 프레임워크"]:::runtime
-    FastAPI[[FastAPI<br/>API 비즈니스 로직]]:::app
+    FastAPI[FastAPI<br/>API 비즈니스 로직]:::app
     Gunicorn["Gunicorn<br/>Uvicorn worker 관리"]:::ops
 
     Client -->|ASGI| Uvicorn
     Uvicorn --> Starlette
     Starlette --> FastAPI
     Gunicorn -. 운영 환경 .-> Uvicorn
-
-    classDef entry fill:#f8fafc,stroke:#94a3b8,color:#1e293b,stroke-width:1.4px;
-    classDef runtime fill:#eff6ff,stroke:#60a5fa,color:#1e3a8a,stroke-width:1.4px;
-    classDef app fill:#f0fdf4,stroke:#34d399,color:#14532d,stroke-width:1.6px;
-    classDef ops fill:#fff7ed,stroke:#fb923c,color:#9a3412,stroke-width:1.4px,stroke-dasharray: 4 3;
-    linkStyle 0 stroke:#64748b,stroke-width:1.6px;
-    linkStyle 1 stroke:#64748b,stroke-width:1.6px;
-    linkStyle 2 stroke:#64748b,stroke-width:1.6px;
-    linkStyle 3 stroke:#fb923c,stroke-width:1.4px,stroke-dasharray: 4 3;
 ```
 
 운영 환경에서는 Gunicorn이 여러 개의 Uvicorn 프로세스를 관리하는 역할로 추가될 수 있음

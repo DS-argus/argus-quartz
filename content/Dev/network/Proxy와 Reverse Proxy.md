@@ -44,3 +44,8 @@ permalink: /Dev/network/proxy-and-reverse-proxy
 
 - Proxy: 내부 사용자의 인터넷 접근 제어 및 보안 강화
 - Reverse Proxy: 외부 요청 관리 및 내부 서버 보호
+
+---
+### 관련 노트
+- [[Reverse Proxy vs Load Balancer vs API Gateway]] - Reverse Proxy, Load Balancer, API Gateway의 차이와 진화 관계
+- [[Headscale - Tailscale 대안 오픈소스 메시 VPN]] - 리버스 프록시를 활용한 Headscale 서버 구성
