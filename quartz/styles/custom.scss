@@ -1,3 +1,296 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Minimal Nord dark-only surface, matched to the local Obsidian Minimal setup.
+:root,
+:root[saved-theme="dark"],
+:root[saved-theme="light"] {
+  color-scheme: dark;
+
+  --minimal-nord-red: #bf616a;
+  --minimal-nord-orange: #d08770;
+  --minimal-nord-yellow: #ebcb8b;
+  --minimal-nord-green: #a3be8c;
+  --minimal-nord-cyan: #88c0d0;
+  --minimal-nord-blue: #81a1c1;
+  --minimal-nord-purple: #b48ead;
+  --minimal-inline-title: #cfa2da;
+  --minimal-bold: #5abaf2;
+  --minimal-italic: #8db700;
+
+  --tag-background: rgba(135, 152, 190, 0.15);
+  --tag-color: var(--minimal-nord-cyan);
+  --tag-background-hover: rgba(136, 192, 208, 0.16);
+  --quartz-text-highlight: rgba(208, 135, 112, 0.35);
+}
+
+html,
+body {
+  background: var(--light);
+}
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.page > #quartz-body {
+  column-gap: 1.25rem;
+}
+
+.page > #quartz-body .sidebar {
+  gap: 0.9rem;
+  font-size: 0.88rem;
+}
+
+.page-title {
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+
+.article-title {
+  color: var(--minimal-inline-title);
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.content-meta {
+  color: var(--gray);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-preview-view.markdown-rendered {
+  font-size: 0.96rem;
+}
+
+.markdown-preview-view p,
+.markdown-preview-view li,
+.markdown-preview-view td,
+.markdown-preview-view th {
+  line-height: 1.55;
+}
+
+.markdown-preview-view p {
+  margin-block: 0.75rem;
+}
+
+.markdown-preview-view .callout-title > .callout-title-inner > p {
+  line-height: normal;
+  margin: 0;
+}
+
+.markdown-preview-view .callout-content :where(p, li) {
+  line-height: 1.6rem;
+}
+
+.markdown-preview-view .callout-content > :where(p, ul, ol) {
+  margin-block-start: 0;
+}
+
+.markdown-preview-view .callout-content > :last-child {
+  margin-block-end: 1rem;
+}
+
+.center h1:not(.article-title),
+.center h2,
+.center h3,
+.center h4,
+.center h5,
+.center h6 {
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.center h1:not(.article-title) {
+  color: var(--minimal-nord-red);
+  font-size: 1.35em;
+}
+
+.center h2 {
+  color: var(--minimal-nord-orange);
+  font-size: 1.3em;
+}
+
+.center h3 {
+  color: var(--minimal-nord-yellow);
+  font-size: 1.25em;
+}
+
+.center h4 {
+  color: var(--minimal-nord-green);
+  font-size: 1.2em;
+}
+
+.center h5 {
+  color: var(--minimal-nord-blue);
+  font-size: 1.15em;
+}
+
+.center h6 {
+  color: var(--minimal-nord-purple);
+  font-size: 1.1em;
+}
+
+.markdown-preview-view strong {
+  color: var(--minimal-bold);
+}
+
+.markdown-preview-view em {
+  color: var(--minimal-italic);
+}
+
+.markdown-preview-view a.internal:not(.tag-link) {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--secondary) 55%, transparent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.markdown-preview-view a.internal:not(.tag-link):hover {
+  color: var(--tertiary);
+  background: var(--highlight);
+}
+
+.tags {
+  column-gap: 0.3rem;
+  row-gap: 0.45rem;
+  margin: 0.55rem 0 0.85rem;
+}
+
+.tags > li {
+  display: inline-flex;
+  line-height: 1;
+}
+
+a.internal.tag-link {
+  align-items: center;
+  background: var(--tag-background);
+  border: 1px solid rgba(136, 192, 208, 0.25);
+  border-radius: 8px;
+  color: var(--tag-color);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0;
+  padding: 0.14rem 0.45rem;
+}
+
+a.internal.tag-link:hover {
+  background: var(--tag-background-hover);
+  color: var(--dark);
+}
+
+a.internal.tag-link::before {
+  color: var(--minimal-nord-blue);
+  font-weight: 800;
+}
+
+.explorer,
+.explorer-content,
+.toc,
+.backlinks,
+.graph {
+  font-size: 0.86rem;
+}
+
+button.mobile-explorer h2,
+button.desktop-explorer h2,
+button.toc-header h3,
+.backlinks > h3,
+.graph > h3 {
+  font-size: 0.9rem;
+}
+
+.explorer-content {
+  margin-top: 0.35rem;
+}
+
+.explorer-content ul li > a,
+.folder-container div > a,
+.folder-container div > button span {
+  font-family: var(--bodyFont);
+  font-size: 0.86rem;
+  line-height: 1.35rem;
+}
+
+.folder-container div > a,
+.folder-container div > button span {
+  color: var(--darkgray);
+}
+
+.explorer-content ul li > a.nav-file-title {
+  font-size: 0.82rem;
+  line-height: 1.3rem;
+}
+
+.explorer-content ul li > a.active,
+.folder-container div > a:hover,
+.folder-icon:hover {
+  color: var(--tertiary);
+}
+
+.explorer-content .folder-outer > ul {
+  margin-left: 4px;
+  padding-left: 0.65rem;
+}
+
+.search {
+  max-width: 12rem;
+}
+
+.search > .search-button {
+  border-color: var(--lightgray);
+  font-size: 0.86rem;
+  height: 1.85rem;
+}
+
+.search > .search-container > .search-space > input {
+  font-size: 0.95rem;
+}
+
+pre,
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  background: #2b303b;
+  border-color: var(--lightgray);
+}
+
+pre > code {
+  font-size: 0.82rem;
+  line-height: 1.45rem;
+}
+
+code {
+  background: rgba(59, 66, 82, 0.72);
+  color: var(--minimal-nord-cyan);
+  font-size: 0.86em;
+}
+
+.page-listing,
+.section-ul,
+.section-li,
+.note-properties,
+.metadata {
+  font-size: 0.88rem;
+}
+
+.section-li > .section > .desc > h3 {
+  font-size: 0.95rem;
+}
+
+footer {
+  color: var(--gray);
+  font-size: 0.82rem;
+}
+
+.darkmode {
+  display: none !important;
+}

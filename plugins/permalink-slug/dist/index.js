@@ -16,6 +16,10 @@ function appendUnique(items, value) {
   items.push(value)
 }
 
+function permalinkKey(value) {
+  return normalizePermalink(value)?.toLowerCase()
+}
+
 export default function PermalinkSlug() {
   return {
     name: "PermalinkSlug",
@@ -28,11 +32,19 @@ export default function PermalinkSlug() {
             if (!permalink) return
 
             const previousSlug = typeof file.data.slug === "string" ? file.data.slug : undefined
+            const permalinkPathKey = permalinkKey(permalink)
             const aliases = Array.isArray(file.data.aliases)
-              ? file.data.aliases.filter((alias) => normalizePermalink(alias) !== permalink)
+              ? file.data.aliases.filter((alias) => {
+                  const aliasPath = normalizePermalink(alias)
+                  return aliasPath !== permalink && aliasPath?.toLowerCase() !== permalinkPathKey
+                })
               : []
 
-            if (previousSlug && previousSlug !== permalink) {
+            if (
+              previousSlug &&
+              previousSlug !== permalink &&
+              permalinkKey(previousSlug) !== permalinkPathKey
+            ) {
               appendUnique(aliases, previousSlug)
             }
 

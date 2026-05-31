@@ -20,13 +20,13 @@ test("slugifyAsciiLeaf rejects non-ascii text", () => {
   assert.equal(slugifyAsciiLeaf("파이썬 uv 사용법"), null)
 })
 
-test("buildGeneratedPermalink preserves content subdirectories", () => {
+test("buildGeneratedPermalink lowercases content subdirectories", () => {
   assert.equal(
     buildGeneratedPermalink(
       "content/Dev/Python/Python uv - An extremely fast Python package and project manager.md",
       "Python uv - An extremely fast Python package and project manager",
     ),
-    "/Dev/Python/python-uv-an-extremely-fast-python-package-and-project-manager",
+    "/dev/python/python-uv-an-extremely-fast-python-package-and-project-manager",
   )
 })
 

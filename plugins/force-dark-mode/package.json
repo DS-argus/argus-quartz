@@ -1,0 +1,16 @@
+{
+  "name": "force-dark-mode",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "quartz": {
+    "name": "force-dark-mode",
+    "displayName": "Force Dark Mode",
+    "description": "Forces Quartz to render with the dark theme state and removes dependence on the Darkmode toggle.",
+    "version": "1.0.0",
+    "category": "transformer",
+    "defaultOrder": 7
+  }
+}

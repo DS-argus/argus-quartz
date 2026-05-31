@@ -123,15 +123,15 @@ npm run stage:content -- --staged-only
 
 없으면 아래 규칙으로 자동 생성합니다.
 
-1. `content/` 이하 디렉터리 경로는 그대로 유지
+1. `content/` 이하 디렉터리 경로는 소문자로 유지
 2. `title`이 ASCII-safe면 `title`을 slugify해서 leaf 생성
 3. `title`이 부적절하면 파일명 stem으로 fallback
 4. 둘 다 부적절하면 자동 생성 실패
 
 예시:
 
-- `content/Dev/python/Python uv.md` -> `/Dev/python/python-uv`
-- `content/Dev/python/python-uv-usage.md` + 한글 title -> `/Dev/python/python-uv-usage`
+- `content/Dev/python/Python uv.md` -> `/dev/python/python-uv`
+- `content/Dev/python/python-uv-usage.md` + 한글 title -> `/dev/python/python-uv-usage`
 
 다음 경우에는 커밋이 차단됩니다.
 
