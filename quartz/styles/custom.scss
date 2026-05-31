@@ -43,7 +43,7 @@ body {
 }
 
 .page-title {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   letter-spacing: 0;
 }
 
@@ -198,13 +198,15 @@ a.internal.tag-link::before {
 .explorer-content,
 .toc,
 .backlinks,
-.graph {
+.graph,
+.recent-notes {
   font-size: 0.86rem;
 }
 
 button.mobile-explorer h2,
 button.desktop-explorer h2,
 button.toc-header h3,
+.recent-notes > h3,
 .backlinks > h3,
 .graph > h3 {
   font-size: 0.9rem;
@@ -241,6 +243,26 @@ button.toc-header h3,
 .explorer-content .folder-outer > ul {
   margin-left: 4px;
   padding-left: 0.65rem;
+}
+
+.recent-notes > ul.recent-ul {
+  margin-top: 0.45rem;
+}
+
+.recent-notes > ul.recent-ul > li {
+  margin: 0.55rem 0;
+}
+
+.recent-notes > ul.recent-ul > li .section > .desc > h3 {
+  font-size: 0.82rem;
+  line-height: 1.3rem;
+  margin: 0;
+}
+
+.recent-notes > ul.recent-ul > li .section > .meta {
+  font-size: 0.76rem;
+  line-height: 1.2;
+  margin: 0.15rem 0 0;
 }
 
 .search {

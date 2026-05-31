@@ -235,7 +235,16 @@ plugins:
         GitHub: https://github.com/DS-argus/argus-quartz
         LinkedIn: https://www.linkedin.com/in/soungmin-park-081580203/
   - source: github:quartz-community/recent-notes
-    enabled: false
+    enabled: true
+    options:
+      title: Recent Notes
+      limit: 5
+      showTags: false
+      hideTagPages: true
+      hideFolderPages: true
+    layout:
+      position: right
+      priority: 40
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
