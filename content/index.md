@@ -1,10 +1,11 @@
 ---
 title: README.md
 created: 2025-05-14
-updated: 2026-04-10T07:55:11
+updated: 2026-06-01T20:23:00
 ---
-공부한 내용과 관심사를 정리하는 블로그입니다
+![[index - 2026-06-01 - 20-22-25.png|800x420]]
 
+공부한 내용과 관심사를 정리하는 블로그입니다
 
 Interests
 - Data Engineering : #airflow #spark #kafka #database
