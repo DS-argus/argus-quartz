@@ -6,7 +6,7 @@ tags:
   - package_manager
 created: 2026-04-16T00:00:00
 updated: 2026-06-01T00:00:00
-permalink: /dev/workflow/zerobrew-a-5-20x-faster-experimental-homebrew-alternative
+permalink: /Dev/workflow/zerobrew-a-5-20x-faster-experimental-homebrew-alternative
 ---
 
 > [!warning]+ Alert

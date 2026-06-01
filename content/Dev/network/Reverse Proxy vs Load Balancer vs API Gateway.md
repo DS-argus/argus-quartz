@@ -6,7 +6,7 @@ tags:
   - web
 created: 2026-05-31T00:00:00
 updated: 2026-05-31T00:00:00
-permalink: /dev/network/reverse-proxy-vs-load-balancer-vs-api-gateway
+permalink: /Dev/network/reverse-proxy-vs-load-balancer-vs-api-gateway
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

@@ -5,7 +5,7 @@ tags:
   - performance
 created: 2026-04-22T00:00:00
 updated: 2026-05-10T17:40:42
-permalink: /dev/network/latency-numbers
+permalink: /Dev/network/latency-numbers
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

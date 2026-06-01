@@ -4,7 +4,7 @@ tags:
   - performance
 created: 2026-05-23T00:00:00
 updated: 2026-05-23T00:00:00
-permalink: /dev/python/python-lazy-imports-pep-810
+permalink: /Dev/python/python-lazy-imports-pep-810
 ---
 
 > [!warning]+ Alert

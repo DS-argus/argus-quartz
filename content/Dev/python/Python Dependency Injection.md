@@ -4,7 +4,7 @@ tags:
   - backend
 created: 2026-04-26T00:00:00
 updated: 2026-05-27T21:19:14
-permalink: /dev/python/python-dependency-injection
+permalink: /Dev/python/python-dependency-injection
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다

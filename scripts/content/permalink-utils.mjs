@@ -74,7 +74,7 @@ export function buildGeneratedPermalink(filePath, source) {
   if (!leaf) return null
 
   const relativePath = stripContentPrefix(filePath)
-  const relativeDir = path.posix.dirname(relativePath).toLowerCase()
+  const relativeDir = path.posix.dirname(relativePath)
   if (relativeDir === ".") {
     return `/${leaf}`
   }
