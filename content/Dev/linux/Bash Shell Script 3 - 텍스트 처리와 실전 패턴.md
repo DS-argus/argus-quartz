@@ -4,7 +4,7 @@ tags:
   - CLI
   - bash
 created: 2026-06-01T00:00:00
-updated: 2026-06-01T00:00:00
+updated: 2026-06-03T20:58:32
 permalink: /Dev/linux/bash-shell-script-3-text-processing-and-patterns
 ---
 > [!warning]+ Alert
@@ -17,11 +17,6 @@ permalink: /Dev/linux/bash-shell-script-3-text-processing-and-patterns
 > - `grep -q`, `head`, `cut`, `sort`, `uniq` 등 한 줄 도구를 파이프로 조합하는 것이 Bash의 핵심
 > - Job Control(`&`, `wait`, `jobs`)과 에러 핸들링(`set -euo pipefail`, `trap`)으로 견고한 스크립트 작성
 > - BashPitfalls 핵심 실수들을 알면 디버깅 시간이 줄어듦
-
-> [!note]+ 시리즈
-> - [[Bash Shell Script 1 - 기초 문법과 데이터 다루기|1편: 기초 문법과 데이터 다루기]]
-> - [[Bash Shell Script 2 - 제어 흐름과 IO|2편: 제어 흐름과 I/O]]
-> - **3편: 텍스트 처리와 실전 패턴** (현재 글)
 
 ---
 

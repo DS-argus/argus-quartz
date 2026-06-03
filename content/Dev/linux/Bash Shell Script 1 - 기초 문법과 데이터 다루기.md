@@ -4,7 +4,7 @@ tags:
   - CLI
   - bash
 created: 2026-06-01T00:00:00
-updated: 2026-06-01T20:39:32
+updated: 2026-06-03T20:58:02
 permalink: /Dev/linux/bash-shell-script-1-basics
 ---
 > [!warning]+ Alert
@@ -15,11 +15,6 @@ permalink: /Dev/linux/bash-shell-script-1-basics
 > - 특수 문자(`$`, `()`, `{}`, `<>`, `|` 등)의 역할을 알아야 스크립트를 읽을 수 있음
 > - 변수, 따옴표 규칙, 파라미터 확장, 문자열 조작은 모든 스크립트의 기본 도구
 > - 배열(인덱스/연관)과 glob/정규식 패턴 매칭까지 다루면 1편 완료
-
-> [!note]+ 시리즈
-> - **1편: 기초 문법과 데이터 다루기** (현재 글)
-> - [[Bash Shell Script 2 - 제어 흐름과 IO|2편: 제어 흐름과 I/O]]
-> - [[Bash Shell Script 3 - 텍스트 처리와 실전 패턴|3편: 텍스트 처리와 실전 패턴]]
 
 ---
 

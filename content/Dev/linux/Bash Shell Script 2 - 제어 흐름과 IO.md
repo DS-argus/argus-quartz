@@ -4,7 +4,7 @@ tags:
   - CLI
   - bash
 created: 2026-06-01T00:00:00
-updated: 2026-06-01T00:00:00
+updated: 2026-06-03T20:58:25
 permalink: /Dev/linux/bash-shell-script-2-control-flow-and-io
 ---
 > [!warning]+ Alert
@@ -17,11 +17,6 @@ permalink: /Dev/linux/bash-shell-script-2-control-flow-and-io
 > - Here Document 실무 활용 (`<< EOF` vs `<< 'EOF'`, SQL 패턴)
 > - 파이프, 프로세스 치환, `tee`, PIPESTATUS
 > - 특수 변수(`$@`, `$?`, `$$`)와 인자 파싱 패턴
-
-> [!note]+ 시리즈
-> - [[Bash Shell Script 1 - 기초 문법과 데이터 다루기|1편: 기초 문법과 데이터 다루기]]
-> - **2편: 제어 흐름과 I/O** (현재 글)
-> - [[Bash Shell Script 3 - 텍스트 처리와 실전 패턴|3편: 텍스트 처리와 실전 패턴]]
 
 ---
 
