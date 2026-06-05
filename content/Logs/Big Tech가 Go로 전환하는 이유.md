@@ -4,7 +4,7 @@ tags:
   - backend
 created: 2026-06-05T10:00:00
 updated: 2026-06-05T23:33:15
-permalink: /log/big-tech-switching-to-go
+permalink: /Logs/big-tech-switching-to-go
 ---
 > [!warning]+ Alert
 > 이 글은 Claude Code의 도움을 받아 작성되었습니다
