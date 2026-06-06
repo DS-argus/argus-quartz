@@ -2,7 +2,7 @@
 tags:
   - database
 created: 2025-06-25T22:33:27
-updated: 2025-06-26T00:19:33
+updated: 2026-06-06T12:49:54
 permalink: /Dev/database/how-big-tech-checks-your-username-in-milliseconds
 ---
 > [!success]+ 참고영상 
