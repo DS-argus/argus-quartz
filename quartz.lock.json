@@ -55,11 +55,11 @@
       "commit": "278115200a9bacfc0ee4695b200a5843d15517f3",
       "installedAt": "2026-05-28T12:27:19.677Z"
     },
-    "content-index": {
-      "source": "github:quartz-community/content-index",
-      "resolved": "https://github.com/quartz-community/content-index.git",
-      "commit": "34621a71940977a6af6b20abd5dc552d81181b6b",
-      "installedAt": "2026-05-28T12:27:19.003Z"
+    "content-index-with-date": {
+      "source": "./plugins/content-index-with-date",
+      "resolved": "/Users/argus/Desktop/Obsidian/Argus/plugins/content-index-with-date",
+      "commit": "local",
+      "installedAt": "2026-06-06T22:58:51.942Z"
     },
     "content-meta": {
       "source": "github:quartz-community/content-meta",
@@ -73,11 +73,11 @@
       "commit": "977d15f083f5b5de4b299c8f016e4e61fd422716",
       "installedAt": "2026-05-28T12:27:18.615Z"
     },
-    "crawl-links": {
-      "source": "github:quartz-community/crawl-links",
-      "resolved": "https://github.com/quartz-community/crawl-links.git",
-      "commit": "69497e22046d62ee601415ad832bcde89a70a544",
-      "installedAt": "2026-05-28T12:27:17.150Z"
+    "crawl-links-permalink": {
+      "source": "./plugins/crawl-links-permalink",
+      "resolved": "/Users/argus/Desktop/Obsidian/Argus/plugins/crawl-links-permalink",
+      "commit": "local",
+      "installedAt": "2026-06-06T22:58:51.942Z"
     },
     "created-modified-date": {
       "source": "github:quartz-community/created-modified-date",
@@ -133,17 +133,23 @@
       "commit": "9e3f6d734d886eac0d41841c4dc8862b377fcaf4",
       "installedAt": "2026-05-28T12:27:19.928Z"
     },
+    "force-dark-mode": {
+      "source": "./plugins/force-dark-mode",
+      "resolved": "/Users/argus/Desktop/Obsidian/Argus/plugins/force-dark-mode",
+      "commit": "local",
+      "installedAt": "2026-06-06T22:58:51.942Z"
+    },
     "github-flavored-markdown": {
       "source": "github:quartz-community/github-flavored-markdown",
       "resolved": "https://github.com/quartz-community/github-flavored-markdown.git",
       "commit": "3eabbaa252ce175665ab3f62e1af25948a83e8b6",
       "installedAt": "2026-05-28T12:27:17.145Z"
     },
-    "graph": {
-      "source": "github:quartz-community/graph",
-      "resolved": "https://github.com/quartz-community/graph.git",
-      "commit": "67ac4993907618a0ea5bd33726f792c572cddbad",
-      "installedAt": "2026-05-28T12:27:18.881Z"
+    "graph-current-node": {
+      "source": "./plugins/graph-current-node",
+      "resolved": "/Users/argus/Desktop/Obsidian/Argus/plugins/graph-current-node",
+      "commit": "local",
+      "installedAt": "2026-06-07T00:02:23.092Z"
     },
     "hard-line-breaks": {
       "source": "github:quartz-community/hard-line-breaks",

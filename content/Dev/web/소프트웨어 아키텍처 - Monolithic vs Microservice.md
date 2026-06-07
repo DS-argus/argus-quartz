@@ -4,7 +4,7 @@ tags:
   - architecture
   - backend
 created: 2025-05-29T20:06:48
-updated: 2026-06-06T00:00:00
+updated: 2026-06-07T08:47:13
 permalink: /Dev/web/software-architecture-monolithic-vs-microservices
 ---
 > [!abstract]+ TL;DR
@@ -83,15 +83,15 @@ permalink: /Dev/web/software-architecture-monolithic-vs-microservices
 
 MSA는 서비스를 나누는 순간 모놀리식에서는 없던 문제들이 생긴다. 이를 해결하기 위해 부수적인 인프라 컴포넌트가 필요하다.
 
-| 컴포넌트 | 역할 | 대표 도구 |
-|----------|------|-----------|
-| **API Gateway** | 클라이언트 요청을 적절한 서비스로 라우팅, 인증/인가 처리 | Kong, AWS API Gateway, Nginx |
-| **서비스 디스커버리** | 동적으로 생성/소멸하는 서비스 인스턴스의 위치를 자동 등록·조회 | Consul, etcd, K8s DNS |
-| **서비스 메시** | 서비스 간 통신의 관찰·제어·보안을 인프라 수준에서 처리 | Istio, Linkerd, Envoy |
-| **메시지 브로커** | 서비스 간 비동기 통신, 이벤트 기반 느슨한 결합 | Kafka, RabbitMQ, NATS |
-| **분산 추적** | 여러 서비스를 거치는 요청의 전체 흐름을 추적·시각화 | Jaeger, Zipkin, OpenTelemetry |
-| **중앙 집중 로깅** | 각 서비스의 로그를 한곳에 수집·검색 | ELK Stack, Loki, Fluentd |
-| **컨테이너 오케스트레이션** | 수십~수백 개 서비스의 배포·스케일링·장애 복구 자동화 | [[Kubernetes]], Docker Swarm |
+| 컴포넌트             | 역할                                  | 대표 도구                         |
+| ---------------- | ----------------------------------- | ----------------------------- |
+| **API Gateway**  | 클라이언트 요청을 적절한 서비스로 라우팅, 인증/인가 처리    | Kong, AWS API Gateway, Nginx  |
+| **서비스 디스커버리**    | 동적으로 생성/소멸하는 서비스 인스턴스의 위치를 자동 등록·조회 | Consul, etcd, K8s DNS         |
+| **서비스 메시**       | 서비스 간 통신의 관찰·제어·보안을 인프라 수준에서 처리     | Istio, Linkerd, Envoy         |
+| **메시지 브로커**      | 서비스 간 비동기 통신, 이벤트 기반 느슨한 결합         | Kafka, RabbitMQ, NATS         |
+| **분산 추적**        | 여러 서비스를 거치는 요청의 전체 흐름을 추적·시각화       | Jaeger, Zipkin, OpenTelemetry |
+| **중앙 집중 로깅**     | 각 서비스의 로그를 한곳에 수집·검색                | ELK Stack, Loki, Fluentd      |
+| **컨테이너 오케스트레이션** | 수십~수백 개 서비스의 배포·스케일링·장애 복구 자동화      | Kubernetes, Docker Swarm      |
 
 > [!note]+ 모놀리식에서는 왜 불필요한가
 > 모놀리식에서는 모듈 간 통신이 함수 호출이므로 서비스 디스커버리가 필요 없고, 하나의 프로세스이므로 분산 추적도 불필요하다. 배포 단위가 하나이므로 오케스트레이터 없이도 운영 가능하다. MSA의 운영 복잡성은 이 부수 인프라를 모두 구축·관리해야 하는 데서 온다.

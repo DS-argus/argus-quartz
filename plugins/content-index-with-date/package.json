@@ -1,0 +1,50 @@
+{
+  "name": "content-index-with-date",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "quartz": {
+    "name": "content-index-with-date",
+    "displayName": "Content Index With Date",
+    "description": "Generates sitemap, RSS, and contentIndex.json while preserving page dates for Explorer sorting.",
+    "version": "1.0.0",
+    "category": "emitter",
+    "defaultOrder": 50,
+    "defaultEnabled": true,
+    "defaultOptions": {
+      "enableSiteMap": true,
+      "enableRSS": true,
+      "rssLimit": 10,
+      "rssFullHtml": false,
+      "rssSlug": "index",
+      "includeEmptyFiles": true
+    },
+    "optionSchema": {
+      "enableSiteMap": {
+        "type": "boolean"
+      },
+      "enableRSS": {
+        "type": "boolean"
+      },
+      "rssLimit": {
+        "type": "number"
+      },
+      "rssFullHtml": {
+        "type": "boolean"
+      },
+      "rssSlug": {
+        "type": "string"
+      },
+      "includeEmptyFiles": {
+        "type": "boolean"
+      }
+    }
+  }
+}

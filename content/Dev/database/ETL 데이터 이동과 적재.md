@@ -6,7 +6,7 @@ tags:
   - bulk_load
   - greenplum
 created: 2026-06-06T10:00:00
-updated: 2026-06-06T23:03:01
+updated: 2026-06-07T08:02:03
 permalink: /Dev/database/etl-data-movement-and-loading
 ---
 > [!warning]+ Alert

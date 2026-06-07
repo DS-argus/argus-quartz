@@ -87,7 +87,7 @@ plugins:
     layout:
       position: right
       priority: 30
-  - source: github:quartz-community/crawl-links
+  - source: ./plugins/crawl-links-permalink
     enabled: true
     options:
       markdownLinkResolution: shortest
@@ -135,7 +135,7 @@ plugins:
       display: all
   - source: github:quartz-community/alias-redirects
     enabled: true
-  - source: github:quartz-community/content-index
+  - source: ./plugins/content-index-with-date
     enabled: true
     options:
       enableSiteMap: true
@@ -159,8 +159,11 @@ plugins:
     layout:
       position: left
       priority: 50
-  - source: github:quartz-community/graph
+  - source: ./plugins/graph-current-node
     enabled: true
+    options:
+      globalGraph:
+        currentNodeColor: "#ef4444"
     layout:
       position: right
       priority: 10

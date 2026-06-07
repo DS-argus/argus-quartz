@@ -1,0 +1,29 @@
+{
+  "name": "crawl-links-permalink",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "quartz": {
+    "name": "crawl-links-permalink",
+    "displayName": "Crawl Links Permalink",
+    "description": "Processes internal links while resolving file slugs and lowercase variants to canonical frontmatter permalinks.",
+    "version": "1.0.0",
+    "category": "transformer",
+    "defaultOrder": 60,
+    "defaultOptions": {
+      "markdownLinkResolution": "absolute",
+      "prettyLinks": true,
+      "openLinksInNewTab": false,
+      "lazyLoad": false,
+      "externalLinkIcon": true,
+      "disableBrokenWikilinks": false
+    }
+  }
+}
