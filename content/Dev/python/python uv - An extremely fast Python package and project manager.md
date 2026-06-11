@@ -4,7 +4,7 @@ tags:
   - uv
   - package_manager
 created: 2026-01-31T17:59:32
-updated: 2026-04-19T09:24:16
+updated: 2026-06-11T21:22:35
 permalink: /Dev/python/python-uv-an-extremely-fast-python-package-and-project-manager
 ---
 > [!info]+ UV?
@@ -473,3 +473,31 @@ docstring-code-format = false
 # enabled.
 docstring-code-line-length = "dynamic"
 ```
+
+---
+### 6. 보안 검사
+
+2026년 6월, uv에 의존성 보안 검사 기능이 추가되었다 ([발표 글](https://astral.sh/blog/uv-audit))
+
+공급망 공격과 CVE 증가로 의존성 검사의 중요성이 커졌는데, 기존에는 pip-audit 같은 별도 도구를 설치해서 돌려야 했다. uv는 이를 네이티브 기능으로 내장했고, Rust 구현과 lockfile 기반 최적화 덕분에 일반적인 프로젝트에서 pip-audit보다 4~10배 빠르다.
+
+##### uv audit
+의존성에서 알려진 취약점과 deprecated 패키지를 스캔한다. OSV(Open Source Vulnerabilities) 데이터베이스를 사용한다.
+
+```bash
+uv audit                # 프로젝트 의존성의 취약점/deprecated 스캔
+```
+
+`pyproject.toml`이나 `uv.toml`에서 관련 설정을 지정할 수 있다.
+
+##### 악성코드 검사
+취약점과 달리 악성 패키지는 설치 즉시 피해가 발생하므로, 설치 시점 차단이 필요하다. uv는 OSV의 MAL advisory를 활용한 경량 악성코드 조회를 `uv add`, `uv sync` 등 매 동기화 시점에 수행한다.
+
+```bash
+# 현재는 opt-in 방식: 환경변수로 활성화
+UV_MALWARE_CHECK=1 uv sync
+```
+
+> [!warning]+ 주의
+> - 두 기능 모두 현재 **preview 단계**라 동작과 인터페이스가 바뀔 수 있다
+> - 향후 다른 취약점 데이터베이스 지원, 정적 분석 통합, requirements.txt 지원이 검토 중이다
