@@ -30,8 +30,10 @@ quartz/cli/tui/dist/
 /.ignore
 /.npm-local-cache/
 /.omx/
+/.omc/
 /.playwright-mcp/
 /.smtcmp_json_db/
 /.trash/
 /AGENTS.md
 /CLAUDE.md
+/QUARTZ_CUSTOMIZATIONS.md
