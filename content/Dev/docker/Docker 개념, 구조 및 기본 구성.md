@@ -90,7 +90,7 @@ permalink: /Dev/docker/docker-concepts-architecture-and-basics
 
 ##### docker CLI  
 - 터미널 명령어 모음이자 HTTP REST 클라이언트
-- [[Socket|소켓 (Socket)]]을 통해 dockred가 열어 둔 REST API에 HTTP 요청을 전송
+- [[Socket|소켓 (Socket)]]을 통해 dockerd가 열어 둔 REST API에 HTTP 요청을 전송
 - `context`, `buildx`, `compose` 등 서브커맨드로 멀티플랫폼 빌드·오케스트레이션 확장  
 
 ##### dockerd  
@@ -99,6 +99,81 @@ permalink: /Dev/docker/docker-concepts-architecture-and-basics
 - 네트워크·볼륨을 준비한 뒤 containerd에 작업 위임  
 - 플러그인 시스템으로 로그·네트워크·볼륨 드라이버를 동적으로 로드
 - REST API 서버 역할: CLI·GUI·원격 툴이 모두 같은 API로 접근
+
+##### Docker Engine API
+
+`docker ps`, `docker logs` 같은 CLI 명령은 내부적으로 dockerd가 제공하는 REST API를 호출한다. 이 API는 [[Socket|유닉스 도메인 소켓(UDS)]] `/var/run/docker.sock`을 통해 노출되며, `curl`로 직접 호출할 수 있다.
+
+```bash
+# 실행 중인 컨테이너 목록 (= docker ps)
+curl --unix-socket /var/run/docker.sock http://localhost/containers/json
+
+# 특정 컨테이너 로그 조회 (= docker logs)
+curl --unix-socket /var/run/docker.sock "http://localhost/containers/<id>/logs?stdout=true&stderr=true"
+
+# 실시간 로그 스트리밍 (= docker logs -f)
+curl --unix-socket /var/run/docker.sock "http://localhost/containers/<id>/logs?follow=true&stdout=true"
+
+# 컨테이너 이벤트 수신 (= docker events)
+curl --unix-socket /var/run/docker.sock http://localhost/events
+
+# 시스템 정보 (= docker info)
+curl --unix-socket /var/run/docker.sock http://localhost/info
+```
+
+자주 쓰이는 엔드포인트는 다음과 같다.
+
+| 엔드포인트 | 대응 CLI | 설명 |
+|---|---|---|
+| `GET /containers/json` | `docker ps` | 컨테이너 목록 |
+| `POST /containers/create` | `docker create` | 컨테이너 생성 |
+| `POST /containers/{id}/start` | `docker start` | 컨테이너 시작 |
+| `GET /containers/{id}/logs` | `docker logs` | 로그 조회 |
+| `GET /containers/{id}/stats` | `docker stats` | CPU/메모리 메트릭 |
+| `GET /images/json` | `docker images` | 이미지 목록 |
+| `GET /events` | `docker events` | 실시간 이벤트 스트림 |
+
+###### 소켓 마운트 패턴
+
+[[Dozzle - 경량 Docker 로그 뷰어|Dozzle]], Portainer 같은 Docker 관리 도구는 별도의 에이전트 설치 없이 소켓 마운트만으로 동작한다.
+
+```yaml
+# docker-compose.yml
+services:
+  dozzle:
+    image: amir20/dozzle:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # 호스트 소켓을 컨테이너 안으로 마운트
+    ports:
+      - "8080:8080"
+```
+
+컨테이너 안에서 `/var/run/docker.sock`에 접근할 수 있으면, 호스트의 Docker 데몬을 그대로 제어할 수 있다. Dozzle은 이 방식으로 컨테이너 목록 조회, 실시간 로그 스트리밍, 리소스 메트릭 수집을 전부 처리한다.
+
+###### 소켓 노출의 보안 위험
+
+소켓 접근 권한 = Docker 데몬 전체 권한이다. 악의적인 컨테이너가 소켓에 접근하면 `--privileged` 컨테이너를 생성해 호스트 파일시스템 전체를 마운트할 수 있다.
+
+프로덕션에서는 소켓을 직접 마운트하는 대신 **Docker Socket Proxy**를 두는 것이 안전하다.
+
+```yaml
+services:
+  socket-proxy:
+    image: tecnativa/docker-socket-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - CONTAINERS=1    # 컨테이너 조회 허용
+      - POST=0          # 쓰기 작업 차단
+      - IMAGES=0        # 이미지 관련 API 차단
+
+  dozzle:
+    image: amir20/dozzle:latest
+    environment:
+      - DOCKER_HOST=tcp://socket-proxy:2375  # 소켓 직접 마운트 대신 프록시 경유
+```
+
+Socket Proxy가 허용된 읽기 전용 API만 통과시키므로, 관리 도구가 탈취되더라도 컨테이너 생성·삭제 같은 위험한 조작은 차단된다.
 
 ##### containerd  
 - CNCF 프로젝트[^8]
