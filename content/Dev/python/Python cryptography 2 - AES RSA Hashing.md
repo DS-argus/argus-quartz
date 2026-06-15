@@ -3,7 +3,7 @@ tags:
   - python
   - security
 created: 2026-06-05T10:00:00
-updated: 2026-06-05T10:00:00
+updated: 2026-06-15T10:00:00
 permalink: /Dev/python/python-cryptography-2-aes-rsa-hashing
 ---
 > [!warning]+ Alert
@@ -11,9 +11,9 @@ permalink: /Dev/python/python-cryptography-2-aes-rsa-hashing
 
 > [!abstract]+ TL;DR
 > - AES-GCM은 Fernet보다 유연한 대칭 키 암호화 방식
-> - RSA는 공개 키/개인 키 쌍을 사용하는 비대칭 암호화
+> - RSA는 공개 키/개인 키 쌍을 사용하는 비대칭 암호화. 소수 p, q에서 n, e, d가 결정되는 구조
+> - 실무에서는 데이터는 AES로, AES 키는 RSA로 암호화하는 하이브리드 방식을 사용
 > - 해싱은 단방향 변환으로 비밀번호 저장 등에 사용
-> - 상황별로 적절한 암호화 방식을 선택하는 것이 중요
 
 > [!info]+ 이전 글
 > [[Python cryptography 1 - Fernet]]에서 Fernet 기반 대칭 키 암호화를 다뤘다. 이 글에서는 Fernet으로 해결하기 어려운 상황에서 사용할 수 있는 저수준 API를 다룬다.
@@ -91,6 +91,87 @@ aesgcm.decrypt(nonce, ciphertext, b"user_id=99")
 
 - 공개 키 : 누구에게나 공개. 암호화에 사용
 - 개인 키 : 본인만 보유. 복호화에 사용
+
+##### RSA 키의 수학적 원리
+
+RSA 키는 다음 값들로 구성된다. 각 값이 어떻게 결정되는지 작은 숫자 예시로 살펴보자.
+
+```text
+p, q  → 개인키를 만들 사람이 랜덤하게 고르는 큰 소수
+n     → p × q 로 계산됨
+φ(n)  → (p - 1) × (q - 1) 로 계산됨
+e     → φ(n)과 서로소인 공개 지수. 보통 65537을 사용
+d     → e × d ≡ 1 mod φ(n) 을 만족하는 모듈러 역원
+```
+
+p = 61, q = 53으로 예시를 들면 다음과 같다.
+
+```text
+n = 61 × 53 = 3233
+φ(n) = 60 × 52 = 3120
+
+e = 17 선택 (gcd(17, 3120) = 1 이므로 가능)
+
+d = ?
+  17 × d ≡ 1 mod 3120 을 만족하는 값
+  17 × 2753 = 46801 = 1 + 15 × 3120
+  → d = 2753
+
+공개키 = (n=3233, e=17)
+개인키 = (n=3233, d=2753)
+```
+
+| 값 | 의미 | 공개 여부 | 결정 방식 |
+|---|---|---|---|
+| p, q | 큰 소수 | 비밀 | 랜덤 생성 |
+| n | p × q | 공개 | 계산 |
+| φ(n) | (p-1)(q-1) | 비밀 | 계산 |
+| e | 공개 지수 | 공개 | 조건 만족하는 값 선택 |
+| d | 개인 지수 | 비밀 | e의 모듈러 역원으로 계산 |
+
+암호화와 복호화는 이 관계를 이용한다.
+
+```text
+암호화: C = M^e mod n
+복호화: M = C^d mod n
+```
+
+e × d ≡ 1 mod φ(n) 이라는 관계 덕분에 `M^(e×d) mod n = M`이 성립하고, 암호화한 것을 복호화하면 원본이 복원된다.
+
+Python으로 직접 확인할 수 있다.
+
+```python
+import math
+
+p, q = 61, 53
+n = p * q
+phi = (p - 1) * (q - 1)
+e = 17
+
+print(f"gcd(e, phi): {math.gcd(e, phi)}")  # 1
+
+# Python 3.8+에서 모듈러 역원 계산
+d = pow(e, -1, phi)
+print(f"d: {d}")             # 2753
+print(f"e*d mod phi: {(e * d) % phi}")  # 1
+
+# 암호화 / 복호화
+message = 65
+ciphertext = pow(message, e, n)    # 2790
+decrypted = pow(ciphertext, d, n)  # 65
+
+print(f"message: {message}, ciphertext: {ciphertext}, decrypted: {decrypted}")
+```
+
+##### 공개키로 복호화할 수 없는 이유
+
+공개키에는 `(n, e)`만 있고 `d`는 없다. `d`를 알아내려면 `φ(n)`이 필요하고, `φ(n)`을 계산하려면 `n`을 소인수분해해서 `p`, `q`를 알아야 한다.
+
+```text
+n = 3233 → 61 × 53 (작은 숫자는 쉽게 분해됨)
+```
+
+실제 RSA-2048에서는 `n`이 617자리 정도의 숫자다. 이 크기의 소인수분해는 현재 컴퓨팅 능력으로 현실적으로 불가능하다. 그래서 공개키만으로는 개인키를 알아낼 수 없다.
 
 ##### 키 쌍 생성
 
@@ -203,7 +284,144 @@ public_key.verify(signature, b"tampered data", ...)
 ```
 
 ---
-### 3. 해싱
+### 3. 하이브리드 암호화
+
+##### 왜 RSA로 데이터 전체를 암호화하지 않는가
+
+RSA는 두 가지 단점이 있다.
+
+- **느리다** : 대칭 키 암호화보다 수백 배 느리다
+- **크기 제한이 있다** : RSA-2048 + OAEP 기준 한 번에 약 190바이트까지만 암호화 가능하다
+
+실무에서 다루는 데이터는 보통 이보다 훨씬 크다. 반면 AES 대칭 키는 16~32바이트로, RSA로 암호화하기에 충분히 작다. 그래서 실무에서는 이렇게 역할을 나눈다.
+
+```text
+큰 데이터   → AES 같은 대칭키로 암호화 (빠름)
+AES 키 자체 → RSA 같은 비대칭키로 암호화 (키 전달 문제 해결)
+```
+
+이런 방식으로 사용되는 대칭 키를 **세션 키(session key)**라고 부른다.
+
+##### 하이브리드 암호화의 전체 흐름
+
+Alice가 Bob에게 파일을 보내는 상황을 예시로 보자.
+
+```text
+1. Bob이 공개키/개인키 쌍을 만듦
+2. Bob이 공개키를 Alice에게 줌
+3. Alice가 랜덤한 AES 세션 키를 생성
+4. Alice가 파일을 AES 세션 키로 암호화
+5. Alice가 AES 세션 키를 Bob의 공개키로 암호화
+6. Alice가 [암호화된 파일 + 암호화된 세션 키]를 Bob에게 전송
+7. Bob이 자신의 개인키로 AES 세션 키를 복호화
+8. Bob이 AES 세션 키로 파일을 복호화
+```
+
+중간에 공격자 Eve가 전송 데이터를 가로채도 Bob의 개인키가 없으면 AES 세션 키를 복호화할 수 없다. AES 키를 모르면 파일도 복호화할 수 없다. 그래서 안전하다.
+
+> [!note]+ 공개키의 진위 확인
+> Alice가 받은 공개키가 진짜 Bob의 것인지 어떻게 알까? 공격자 Eve가 자신의 공개키를 Bob의 것이라고 속이면 Eve가 데이터를 읽을 수 있다. 이 문제를 해결하기 위해 인증서와 CA를 사용한다. HTTPS가 바로 이 구조다. 자세한 내용은 [[17. 안전성을 위한 기술]] 참고.
+
+##### Python 구현
+
+```python
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+from cryptography.hazmat.primitives.asymmetric import rsa, padding
+from cryptography.hazmat.primitives import hashes
+import os
+import base64
+import json
+
+
+def b64encode(data: bytes) -> str:
+    return base64.b64encode(data).decode("utf-8")
+
+
+def b64decode(data: str) -> bytes:
+    return base64.b64decode(data.encode("utf-8"))
+
+
+# 1. Bob: RSA 공개키/개인키 쌍 생성
+bob_private_key = rsa.generate_private_key(
+    public_exponent=65537,
+    key_size=2048,
+)
+bob_public_key = bob_private_key.public_key()
+
+
+# 2. Alice: 보낼 데이터 준비
+plaintext = """
+이것은 Bob에게 보내는 중요한 데이터입니다.
+실제로는 PDF 파일, 이미지, JSON, DB 백업 파일 등이 될 수 있습니다.
+""".encode("utf-8")
+
+
+# 3. Alice: 임시 AES 세션 키 생성
+aes_key = AESGCM.generate_key(bit_length=256)
+nonce = os.urandom(12)
+
+
+# 4. Alice: 실제 데이터는 AES-GCM으로 암호화
+aesgcm = AESGCM(aes_key)
+ciphertext = aesgcm.encrypt(nonce, plaintext, associated_data=None)
+
+
+# 5. Alice: AES 키를 Bob의 RSA 공개키로 암호화
+encrypted_aes_key = bob_public_key.encrypt(
+    aes_key,
+    padding.OAEP(
+        mgf=padding.MGF1(algorithm=hashes.SHA256()),
+        algorithm=hashes.SHA256(),
+        label=None,
+    ),
+)
+
+
+# 6. Alice → Bob: 전송할 패키지 구성
+package = {
+    "algorithm": "RSA-OAEP-SHA256 + AES-256-GCM",
+    "encrypted_aes_key": b64encode(encrypted_aes_key),
+    "nonce": b64encode(nonce),
+    "ciphertext": b64encode(ciphertext),
+}
+serialized_package = json.dumps(package, ensure_ascii=False, indent=2)
+print("Alice가 Bob에게 보내는 패키지:")
+print(serialized_package)
+
+
+# 7. Bob: 패키지 수신 후 RSA 개인키로 AES 키 복호화
+received = json.loads(serialized_package)
+decrypted_aes_key = bob_private_key.decrypt(
+    b64decode(received["encrypted_aes_key"]),
+    padding.OAEP(
+        mgf=padding.MGF1(algorithm=hashes.SHA256()),
+        algorithm=hashes.SHA256(),
+        label=None,
+    ),
+)
+
+
+# 8. Bob: 복호화한 AES 키로 실제 데이터 복호화
+bob_aesgcm = AESGCM(decrypted_aes_key)
+decrypted_plaintext = bob_aesgcm.decrypt(
+    b64decode(received["nonce"]),
+    b64decode(received["ciphertext"]),
+    associated_data=None,
+)
+
+print("\nBob이 복호화한 원문:")
+print(decrypted_plaintext.decode("utf-8"))
+```
+
+이 코드에서 역할을 정리하면 다음과 같다.
+
+| 역할 | 사용하는 방식 | 이유 |
+|---|---|---|
+| 실제 데이터 암호화 | AES-GCM (대칭 키) | 빠르고 대용량 가능 |
+| AES 키 전달 | RSA-OAEP (비대칭 키) | 사전에 비밀 키를 공유하지 않아도 됨 |
+
+---
+### 4. 해싱
 
 해싱은 암호화와 다르다. **단방향 변환**이기 때문에 해시 값에서 원본 데이터를 복원할 수 없다.
 
@@ -265,7 +483,7 @@ else:
 | argon2 | 비밀번호 저장 (최신 권장) | 느림 |
 
 ---
-### 4. 실전 선택 가이드
+### 5. 실전 선택 가이드
 
 상황에 따라 어떤 암호화 방식을 선택해야 하는지 정리한다.
 
@@ -286,7 +504,7 @@ else:
 > - 간단하게 끝내고 싶은가? → Fernet
 
 ---
-### 5. 흔한 실수와 보안 주의사항
+### 6. 흔한 실수와 보안 주의사항
 
 ##### 키를 코드에 하드코딩
 
