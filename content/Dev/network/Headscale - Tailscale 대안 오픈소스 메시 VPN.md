@@ -283,3 +283,9 @@ logs.example.com → 10.42.x.x (사설 IP)
 > | 클라이언트 | 오픈소스 | 동일 (Tailscale 클라이언트 사용) |
 > | 관리 UI | 공식 대시보드 | 커뮤니티 (Headplane 등) |
 > | 설정 난이도 | 매우 쉬움 | 중간 (서버 운영 필요) |
+
+---
+
+### 9. 관련 노트
+
+- [[Rustdesk over Tailscale - self-hosted remote desktop]] - Tailscale 메시 위에 원격 데스크톱(Rustdesk)을 얹어 relay 서버 없이 직접 연결하는 활용 사례

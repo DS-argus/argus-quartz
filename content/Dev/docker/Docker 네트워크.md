@@ -140,4 +140,9 @@ permalink: /Dev/docker/docker-networking
 
 이 구조 덕분에 한 호스트(bridge), 여러 호스트(overlay), 물리 네트워크(macvlan), 완전 독립(host/none) 등 다양한 네트워크 토폴로지를 컨테이너 환경에서 손쉽게 구현할 수 있음
 
+---
+### 관련 노트
+
+- [[Docker container networking - NAT and port publishing]] - bridge 위에서 패킷이 실제로 흐르는 경로(아웃바운드 NAT, 인바운드 포트 게시)와 `0.0.0.0` 바인딩 함정
+
 [^1]: https://k21academy.com/docker-kubernetes/docker-networking-different-types-of-networking-overview-for-beginners/
