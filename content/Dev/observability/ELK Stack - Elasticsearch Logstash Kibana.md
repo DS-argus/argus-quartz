@@ -3,8 +3,8 @@ tags:
   - DevOps
   - logging
   - backend
-created: 2026-06-09T12:00:00
-updated: 2026-06-09T12:00:00
+created: 2026-06-22T12:00:00
+updated: 2026-06-22T12:00:00
 permalink: /Dev/observability/elk-stack-elasticsearch-logstash-kibana
 ---
 > [!warning]+ Alert
