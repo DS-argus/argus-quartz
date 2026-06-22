@@ -50,7 +50,7 @@ ELK Stack은 이 문제를 해결하는 오픈소스 조합이다.
 
 Apache Lucene 기반의 분산 검색·분석 엔진이다.
 
-- **역인덱스(Inverted Index)** 구조로 전문 검색(Full-text Search)이 빠름
+- **역인덱스**(Inverted Index) 구조로 전문 검색(Full-text Search)이 빠름
 - 데이터를 **JSON 문서** 단위로 저장
 - 클러스터 구성으로 수평 확장 가능 (노드 추가만으로 용량·성능 확장)
 - REST API로 모든 작업 수행
@@ -76,7 +76,7 @@ curl -X GET "localhost:9200/logs/_search?q=level:ERROR"
 
 #### 3-2. Logstash
 
-데이터를 **수집(Input) → 변환(Filter) → 전송(Output)** 하는 파이프라인 도구다. JVM 위에서 동작한다.
+데이터를 **수집**(Input) → **변환**(Filter) → **전송**(Output) 하는 파이프라인 도구다. JVM 위에서 동작한다.
 
 ```ruby
 # logstash.conf 예시
@@ -118,7 +118,7 @@ Elasticsearch에 저장된 데이터를 시각화하는 웹 인터페이스다.
 - **Dashboard**: 차트·테이블·지도 등을 조합한 대시보드 구성
 - **Lens**: 드래그 앤 드롭으로 시각화 생성
 - **Alerting**: 조건 기반 알림 설정 (Slack, 이메일 등)
-- **KQL(Kibana Query Language)**: 직관적인 쿼리 문법
+- **KQL**(Kibana Query Language): 직관적인 쿼리 문법
 
 ```
 # KQL 예시
@@ -238,7 +238,7 @@ Filebeat → Kafka → Logstash → Elasticsearch → Kibana
 
 ### 7. 운영 시 주의사항
 
-- **인덱스 수명 관리(ILM)**: 오래된 인덱스를 자동으로 축소·삭제하는 정책을 설정해야 디스크 폭증을 방지할 수 있다
+- **인덱스 수명 관리**(ILM): 오래된 인덱스를 자동으로 축소·삭제하는 정책을 설정해야 디스크 폭증을 방지할 수 있다
 - **샤드 수 설계**: 샤드가 너무 많으면 클러스터 오버헤드가 증가한다. 샤드당 10~50GB가 적정 범위
 - **보안 설정**: 8.x부터 기본적으로 TLS와 인증이 활성화된다. 테스트 환경에서는 `xpack.security.enabled=false`로 끌 수 있지만, 프로덕션에서는 반드시 활성화
 - **힙 메모리**: 전체 메모리의 50% 이하로 설정하고, 32GB를 넘지 않도록 한다 (JVM compressed oops 한계)
