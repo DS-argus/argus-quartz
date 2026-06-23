@@ -4,7 +4,7 @@ tags:
   - terminal
   - zsh
 created: 2026-04-20T00:00:00
-updated: 2026-04-20T00:00:00
+updated: 2026-06-22T00:00:00
 permalink: /Dev/workflow/zsh-startup-file-loading-order
 ---
 > [!warning]+ Alert
@@ -29,18 +29,43 @@ zsh(또는 bash)가 실행되는 방식은 하나가 아니다.
 - **인터랙티브 셸** : 사용자가 직접 명령어를 입력하는 셸
 - **비인터랙티브 셸** : 스크립트 실행 시 자동으로 뜨는 셸 (cron, shell script)
 
-각 상황에 필요한 설정이 다르기 때문에 파일이 나뉘어 있다.
+상황마다 필요한 설정이 다르니 파일도 나뉘어 있다.
+
+지금 쓰는 셸이 어떤 유형인지는 직접 확인할 수 있다.
+
+```bash
+echo $0                                       # 맨 앞에 '-'(-zsh)가 붙으면 로그인 셸
+[[ -o login ]] && echo "login shell"          # 로그인 셸이면 출력
+[[ -o interactive ]] && echo "interactive shell"  # 인터랙티브 셸이면 출력
+```
+
+`-o`는 zsh의 셸 옵션 상태를 검사하는 문법이다. SSH로 갓 접속한 셸은 보통 로그인 + 인터랙티브, tmux 새 패인은 비로그인 + 인터랙티브, 스크립트 실행은 비인터랙티브로 잡힌다.
 
 ---
 
 ### 2. 로딩 순서
 
+큰 흐름은 이렇다.
+
 ```
 .zshenv → .zprofile → .zshrc → .zlogin → (셸 사용) → .zlogout
 ```
 
-> [!info]+ 시스템 전역 파일
-> 각 파일에는 시스템 전역 버전(`/etc/zshenv`, `/etc/zprofile` 등)이 있고, 사용자별 파일(`~/.zshenv`, `~/.zprofile` 등)이 있다. 시스템 전역 파일이 먼저 읽히고, 그 다음 사용자별 파일이 읽힌다.
+더 정확히는 각 단계마다 **시스템 전역 파일이 먼저, 사용자 파일이 그다음**으로 읽힌다.
+
+```
+/etc/zshenv       →  $ZDOTDIR/.zshenv      (항상)
+/etc/zprofile     →  $ZDOTDIR/.zprofile    (로그인 셸)
+/etc/zshrc        →  $ZDOTDIR/.zshrc       (인터랙티브 셸)
+/etc/zlogin       →  $ZDOTDIR/.zlogin      (로그인 셸)
+        ────────── 셸 사용 ──────────
+$ZDOTDIR/.zlogout →  /etc/zlogout          (로그인 셸 종료)
+```
+
+`$ZDOTDIR`은 사용자 설정 파일이 모여 있는 디렉토리다(아래 4번 참고). 따로 지정하지 않으면 기본값이 홈 디렉토리(`$HOME`)라서, `$ZDOTDIR/.zshrc`는 곧 익숙한 `~/.zshrc`가 된다. 종료 단계인 `.zlogout`만 사용자 파일이 시스템 파일보다 먼저 읽힌다는 점은 기억해 둘 만하다.
+
+> [!info]+ 시스템 전역 파일 경로
+> 시스템 전역 파일은 배포판마다 위치가 다르다. macOS는 `/etc/zshenv`, `/etc/zprofile`, `/etc/zshrc`처럼 `/etc` 바로 아래에 두지만, Debian·Ubuntu·Arch 등은 `/etc/zsh/` 디렉토리 안에 둔다. 사용자 설정이 자꾸 덮어써진다면 이 전역 파일 경로부터 확인하면 된다.
 
 ---
 
@@ -101,7 +126,29 @@ eval "$(zoxide init zsh)"
 
 ---
 
-### 4. 셸 유형별 로딩 정리
+### 4. 설정 파일 위치 바꾸기 — ZDOTDIR
+
+지금까지는 설정 파일이 홈 디렉토리(`~/.zshrc`)에 있다고 가정했다. 하지만 `ZDOTDIR` 환경 변수를 설정하면 zsh는 사용자 설정 파일을 홈이 아닌 다른 디렉토리에서 찾는다. `~/.config/zsh`처럼 한곳에 모아 두면 홈 디렉토리가 점(`.`) 파일로 어수선해지지 않고 설정을 묶어서 관리할 수 있다.
+
+```bash
+# ZDOTDIR을 지정하면 그 아래에서 설정 파일을 찾는다
+export ZDOTDIR="$HOME/.config/zsh"
+# 이후 .zprofile, .zshrc, .zlogin, .zlogout 은 모두 $ZDOTDIR 에서 로드된다
+```
+
+> [!warning]+ .zshenv 만은 예외
+> `ZDOTDIR`을 설정하는 코드 자체가 어딘가에서 먼저 실행되어야 한다. 그래서 **`.zshenv`만은 `ZDOTDIR`의 영향을 받지 않고 항상 `$HOME`(또는 `/etc`)에서 읽힌다.** `ZDOTDIR`을 지정하는 줄은 반드시 `~/.zshenv`에 둬야 하고, 나머지 파일은 `$ZDOTDIR` 안으로 옮기면 된다.
+
+위치를 옮기고 나면 파일 배치는 다음과 같다.
+
+| 파일 | 위치 |
+| :--- | :--- |
+| `.zshenv` | `~/.zshenv` (항상 홈에 고정) |
+| `.zprofile`, `.zshrc`, `.zlogin`, `.zlogout` | `$ZDOTDIR` (예: `~/.config/zsh`) |
+
+---
+
+### 5. 셸 유형별 로딩 정리
 
 | 파일 | 로그인 + 인터랙티브 | 비로그인 + 인터랙티브 | 비인터랙티브 (스크립트) |
 | :--- | :---: | :---: | :---: |
@@ -112,11 +159,11 @@ eval "$(zoxide init zsh)"
 | `.zlogout` | O (종료 시) | - | - |
 
 > [!tip]+ macOS 터미널 참고
-> macOS의 Terminal.app과 iTerm2는 새 탭/창을 열 때마다 **로그인 셸**로 실행한다. 따라서 `.zprofile`이 매번 읽힌다. 반면 tmux 새 패인이나 VS Code 내장 터미널은 **비로그인 셸**이므로 `.zprofile`을 읽지 않는다.
+> macOS의 Terminal.app과 iTerm2는 새 탭/창을 열 때마다 **로그인 셸**로 실행한다. 그래서 `.zprofile`이 매번 읽힌다. 반면 tmux 새 패인이나 VS Code 내장 터미널은 **비로그인 셸**이므로 `.zprofile`을 읽지 않는다.
 
 ---
 
-### 5. 실전 가이드
+### 6. 실전 가이드
 
 어디에 뭘 넣어야 할지 모르겠다면 아래 기준을 따른다.
 
