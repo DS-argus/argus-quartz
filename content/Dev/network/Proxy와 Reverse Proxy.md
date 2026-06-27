@@ -49,3 +49,4 @@ permalink: /Dev/network/proxy-and-reverse-proxy
 ### 관련 노트
 - [[Reverse Proxy vs Load Balancer vs API Gateway]] - Reverse Proxy, Load Balancer, API Gateway의 차이와 진화 관계
 - [[Headscale - Tailscale 대안 오픈소스 메시 VPN]] - 리버스 프록시를 활용한 Headscale 서버 구성
+- [[Nginx event loop and reverse proxy - why put a web server in front]] - Nginx가 reverse proxy로 동작하는 방식과 이벤트 루프 내부 구조

@@ -5,7 +5,7 @@ tags:
   - automation
   - CLI
 created: 2026-06-18T00:00:00
-updated: 2026-06-18T00:00:00
+updated: 2026-06-18T22:46:08
 permalink: /Dev/linux/make-and-makefile
 ---
 > [!warning]+ Alert
@@ -170,15 +170,15 @@ make build CFLAGS="-O0 -g"
 
 ### 6. 자동 변수
 
-recipe 안에서 target과 prerequisite를 매번 손으로 적으면 길고 실수하기 쉽다. `make`는 이를 대신하는 **자동 변수(automatic variable)**를 제공한다.
+recipe 안에서 target과 prerequisite를 매번 손으로 적으면 길고 실수하기 쉽다. `make`는 이를 대신하는 **자동 변수**(automatic variable)를 제공한다.
 
-| 변수 | 의미 |
-|------|------|
-| `$@` | 현재 target 이름 |
-| `$<` | 첫 번째 prerequisite |
-| `$^` | 모든 prerequisite (중복 제거) |
+| 변수   | 의미                         |
+| ---- | -------------------------- |
+| `$@` | 현재 target 이름               |
+| `$<` | 첫 번째 prerequisite          |
+| `$^` | 모든 prerequisite (중복 제거)    |
 | `$?` | target보다 최신인 prerequisite들 |
-| `$*` | 패턴 규칙에서 `%`에 매칭된 부분 |
+| `$*` | 패턴 규칙에서 `%`에 매칭된 부분        |
 
 앞의 C 예제를 자동 변수로 다시 쓰면 훨씬 간결해진다.
 
@@ -194,7 +194,7 @@ app: main.o utils.o
 
 ### 7. 패턴 규칙
 
-위 예제의 `%.o: %.c`가 **패턴 규칙(pattern rule)**이다. `%`는 와일드카드로, 임의의 문자열에 매칭된다. "어떤 `.c` 파일이든 같은 이름의 `.o`로 컴파일하는 방법"을 한 번에 정의한다.
+위 예제의 `%.o: %.c`가 **패턴 규칙**(pattern rule)이다. `%`는 와일드카드로, 임의의 문자열에 매칭된다. "어떤 `.c` 파일이든 같은 이름의 `.o`로 컴파일하는 방법"을 한 번에 정의한다.
 
 ```makefile
 %.o: %.c

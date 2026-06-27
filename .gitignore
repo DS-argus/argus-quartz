@@ -31,6 +31,7 @@ quartz/cli/tui/dist/
 /.npm-local-cache/
 /.omx/
 /.omc/
+/.gjc/
 /.playwright-mcp/
 /.smtcmp_json_db/
 /.trash/

@@ -39,7 +39,7 @@ permalink: /Dev/web/was-cgi-wsgi-asgi-web-server-architecture-evolution
 >
 > — [RFC 9110, IETF](https://httpwg.org/specs/rfc9110.html#server)
 
-쉽게 말해 **HTTP 요청을 받아서 응답을 보내는 프로그램**이 Web Server다. Nginx, Apache가 대표적이다.
+쉽게 말해 **HTTP 요청을 받아서 응답을 보내는 프로그램**이 Web Server다. Nginx, Apache가 대표적이다. Nginx가 내부적으로 수만 개의 연결을 어떻게 처리하고 왜 WAS 앞단에 두는지는 [[Nginx event loop and reverse proxy - why put a web server in front]]에서 다룬다.
 
 #### WAS (Web Application Server) — 공식 표준 용어가 아니다
 

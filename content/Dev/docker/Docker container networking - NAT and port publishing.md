@@ -5,7 +5,7 @@ tags:
   - NAT
   - linux
 created: 2026-06-16T09:15:00
-updated: 2026-06-16T09:15:00
+updated: 2026-06-17T18:09:33
 permalink: /Dev/docker/docker-container-networking-nat
 ---
 > [!warning]+ Alert
