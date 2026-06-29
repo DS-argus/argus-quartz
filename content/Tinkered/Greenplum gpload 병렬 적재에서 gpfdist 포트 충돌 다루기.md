@@ -11,22 +11,29 @@ permalink: /Tinkered/greenplum-gpload-gpfdist-port-collision
 > [!abstract]+ TL;DR
 > - gpload를 병렬 실행하면 내부에서 함께 뜨는 gpfdist의 포트가 충돌할 수 있음
 > - 두 가지 해법을 비교 — 직접 구현한 flock 기반 사전 port lease와 gpload 내장 PORT_RANGE
-> - 포트 사용 가능 여부의 최종 판정자는 OS의 bind()라서, 넓은 PORT_RANGE만으로도 충돌 회피는 충분한 경우가 많음
-> - flock lease는 실행 전 포트 확정·할당 실패 기록·동시성 제한 같은 운영 관측성이 필요할 때 의미가 있음
-> - GPDB 소스(gpload.py·gpfdist.c)로 포트 선택, bind 재시도, stdout 파싱 흐름을 직접 추적
+>   - 포트 사용 가능 여부의 최종 판정자는 OS의 bind()라서, 넓은 PORT_RANGE만으로도 충돌 회피는 충분한 경우가 많음
+>   - flock lease는 실행 전 포트 확정·할당 실패 기록·동시성 제한 같은 운영 관측성이 필요할 때 의미가 있음
+
+---
 
 ### 0. 문제의 출발점
 
 Greenplum DB에 CSV를 적재하기 위해 `gpload`를 병렬 실행하면, 내부에서 함께 실행되는 `gpfdist`의 port가 충돌할 수 있다. 이 문제를 해결하기 위해 먼저 shell script 수준에서 `flock` 기반 port lease를 구현해 보았다.
 
-이후 `gpload` 자체에도 `PORT_RANGE` 옵션이 있다는 것을 확인했다. 그래서 이 문서는 `flock` 기반 lease와 `gpload`/`gpfdist`의 기본 port range 처리 방식을 비교하고, [gpdb-archive 소스코드](https://github.com/greenplum-db/gpdb-archive)를 기준으로 실제 동작 원리를 정리한다.
+이후 `gpload` 자체에도 `PORT_RANGE` 옵션이 있다는 것을 확인했다. 그래서 이 문서는 `flock` 기반 lease와 `gpload`/`gpfdist`의 기본 port range 처리 방식을 비교하고, [gpdb-archive 소스코드](https://github.com/greenplum-db/gpdb-archive)를 기준으로 실제 동작 원리를 정리한다.  
+
 
 중점적으로 다루는 내용은 다음이다.
 
 - `flock`으로 shell script 수준의 port lease를 구현하는 방법
 - Greenplum `gpload`/`gpfdist`가 port를 선택하고 충돌을 처리하는 방식
 
+실습용 repo 경로는 [greenplum-gpload-port-lease-lab](https://github.com/DS-argus/greenplum-gpload-port-lease-lab)이다.  
+
+---
+
 ### 1. 실습 환경 구성
+
 
 #### 1.1 Docker image 선택
 
@@ -70,6 +77,8 @@ Greenplum은 PostgreSQL 기반 database라서 기본 접속 방식도 PostgreSQL
 ```bash
 psql -h localhost -p 5432 -U gpadmin -d demo
 ```
+
+---
 
 ### 2. Greenplum 적재 구조
 
@@ -265,6 +274,8 @@ CSV file
   -> target table에 INSERT
 ```
 
+---
+
 ### 3. gpload YAML 이해
 
 #### 3.1 기본 YAML 구조
@@ -362,6 +373,8 @@ def gpfdist_port_options(self, name, availablePorts, popenList):
 | `PORT_RANGE: [18000, 18100]` | `-p 18000 -P 18100`          | 18000부터 18100까지 bind 재시도          |
 
 이 차이 때문에 충돌 재현 실험에서는 `PORT_RANGE: [18000, 18000]`을 사용했다.
+
+---
 
 ### 4. gpload와 gpfdist의 포트 선택 흐름
 
@@ -482,6 +495,8 @@ if port in availablePorts:  # 실제 bind된 port가 내부 후보 set에 남아
 
 그 경우 최종 판정은 결국 `gpfdist`의 `bind()`다.
 
+---
+
 ### 5. 포트 충돌 문제
 
 #### 5.1 병렬 gpload 실행 시 충돌이 발생하는 이유
@@ -532,6 +547,8 @@ port 사용 가능 여부의 최종 판정자는 `flock`도 아니고 lease file
 `flock` 기반 allocator는 이 repo의 script들이 서로 양보하게 만드는 사전 조율 장치다. 하지만 외부 프로세스가 port를 직접 bind할 수도 있다. 따라서 allocator가 port를 골랐더라도 최종적으로는 `gpfdist`의 `bind()`/`listen()` 결과를 신뢰해야 한다.
 
 allocator가 lease file과 실제 listener를 함께 확인하는 구현은 해결 방법 1에서 다룬다.
+
+---
 
 ### 6. 해결 방법 1: flock 기반 port lease
 
@@ -819,6 +836,8 @@ lease_port로 port 확보
 
 port 범위를 하나로 고정하고 두 작업을 동시에 실행하면 한 작업은 port를 받고, 다른 작업은 `no port available`로 gpload 실행 전 실패한다. 이것은 의도한 동작이다. 충돌을 gpfdist bind 실패까지 끌고 가지 않고, ETL wrapper 단계에서 선제적으로 거절한 것이다.
 
+---
+
 ### 7. 해결 방법 2: gpload PORT_RANGE 사용
 
 #### 7.1 넓은 PORT_RANGE를 주고 gpfdist bind에 맡기는 방식
@@ -855,6 +874,8 @@ PORT_RANGE: [18000, 18100]
 - 여러 종류의 local service port를 하나의 정책으로 관리하고 싶다.
 
 이런 경우에는 `flock` 기반 lease가 의미를 가진다.
+
+---
 
 ### 8. 두 방식 비교
 
@@ -925,6 +946,8 @@ ETL host가 여러 대라면 host A의 `/tmp/etl-port-leases.lock`과 host B의 
 - 실패 시 ETL scheduler가 retry해도 된다.
 
 이 경우에는 별도 allocator를 붙이는 것이 오히려 복잡도를 늘릴 수 있다.
+
+---
 
 ### 9. 최종 정리
 
