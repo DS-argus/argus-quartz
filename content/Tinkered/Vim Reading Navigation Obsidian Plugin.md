@@ -5,7 +5,7 @@ tags:
   - vim
 created: 2026-06-18T22:18:16
 updated: 2026-06-18T22:33:02
-permalink: /Obsidian/vim-reading-navigation-plugin
+permalink: /Tinkered/vim-reading-navigation-plugin
 ---
 > [!abstract]+ TL;DR
 > - 읽기 모드에서 죽어버리는 vim 내비게이션을 되살리는 Obsidian 플러그인
