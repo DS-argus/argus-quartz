@@ -1,21 +1,26 @@
 ---
 title: README.md
 created: 2025-05-14
-updated: 2026-06-29T10:00:00
+updated: 2026-07-01T10:00:00
 ---
 ![[index - 2026-06-01 - 20-22-25.png|800x420]]
 
-A blog where I organize what I study and what I'm into.
-A "second brain" if you want to sound fancy — honestly, just a place to jot things down before I forget them.
+### Who am I 👋
+- **Trees** 🌳 — a nature person at heart; I can name most of the ones that grow in Korea.
+- **Running** 🏃 — a few 10Ks and a half marathon done, with a *full marathon* next on the list.
+- **Careful with "know"** — I don't say I *know* things lightly; I'd rather say I've *tried* them, *looked into* them, or *heard of* them.
 
-These days, thanks to Claude and Codex, I pick up new things way faster than I used to. So most of the posts here are written with an agent's help.
-That said, it's not copy-paste — the step-by-step explanations, the links, the analogies all pass through my hands once. I trust autocomplete, but I'm the one who guards the main branch.
+---
 
-I gave up on perfect verification a long time ago. Some of it is probably wrong. Instead I stack things fast and pull them back out whenever I need them. The horse may run fast, but I keep the reins.
+### About this place 🧠
+- **A second brain** — where I organize what I study and what I'm into, and jot things down before I forget them.
+- **Agent-assisted, not copy-paste** — Claude and Codex speed me up, but the explanations, links, and analogies all pass through my hands once. *I'm the one who guards the main branch.*
+- **Fast over perfect** — I gave up on perfect verification, so some of it is probably wrong; I'd rather stack things fast and pull them back out when I need them. *The horse may run fast, but I keep the reins.*
+- **Where things live** — study notes are the main act, `Logs/` holds lighter updates, and `Tinkered/` is for things I've built.
 
-Study notes are the main act; lighter updates live in `Logs/`, and things I've built or tinkered with go in `Tinkered/`.
+---
 
-Interests
+### Interests 🧭
 - Data Engineering : #airflow #spark #kafka #database
 - Dev Settings : #linux #git #tmux #multiplexer #terminal #TUI #CLI #neovim
 - Languages : #python #golang
