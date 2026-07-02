@@ -6,14 +6,12 @@ created: 2026-06-05T00:00:00
 updated: 2026-06-05T00:00:00
 permalink: /Dev/web/vite-fast-frontend-build-tool
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Vite는 ES Modules 기반의 프론트엔드 빌드 도구
-> - 개발 서버는 번들링 없이 즉시 시작, 프로덕션 빌드는 Rollup 사용
-> - esbuild로 의존성 사전 번들링하여 속도 확보
-> - React, Vue, Svelte 등 주요 프레임워크 지원
+> - Vite는 ES Modules 기반 프론트엔드 빌드 도구로 React, Vue, Svelte 등 주요 프레임워크 지원
+> - 개발 서버는 번들링 없이 즉시 시작하고, 프로덕션 빌드는 Rollup 사용
+> - esbuild로 의존성을 사전 번들링해 속도 확보
+
+> *AI-assisted*
 
 > [!info]+ Vite?
 > - 프랑스어로 "빠르다"는 뜻의 프론트엔드 빌드 도구

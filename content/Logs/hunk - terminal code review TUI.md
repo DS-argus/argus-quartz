@@ -9,14 +9,12 @@ updated: 2026-06-22T00:00:00
 permalink: /Logs/hunk-terminal-code-review-tui
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - `hunk`은 터미널에서 diff를 GitHub처럼 보여주는 코드 리뷰 TUI — Sentry 공동창업자 Ben Vinegar 제작
-> - syntax highlighting, side-by-side/stacked 뷰, vim 모션, 라인 단위 노트(코멘트) 제공
-> - 핵심은 **AI 에이전트가 코드에 코멘트를 남기는** 워크플로 — 사람 노트와 에이전트 노트가 나란히 표시
-> - git과 Jujutsu(jj)를 둘 다 first-class로 지원, 하지만 세션이 끝나면 코멘트가 휘발돼 협업 공유는 약함
+> - `hunk`은 터미널에서 diff를 GitHub처럼 보여주는 코드 리뷰 TUI, Sentry 공동창업자 Ben Vinegar 제작
+> - syntax highlighting, side-by-side/stacked 뷰, vim 모션, 라인 단위 노트 제공
+> - AI 에이전트가 사람과 나란히 코멘트를 남기는 워크플로가 핵심, 다만 세션 종료 시 코멘트 휘발
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/-4fJbIF8WAs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

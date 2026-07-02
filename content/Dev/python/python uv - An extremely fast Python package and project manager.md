@@ -7,6 +7,12 @@ created: 2026-01-31T17:59:32
 updated: 2026-06-11T21:22:35
 permalink: /Dev/python/python-uv-an-extremely-fast-python-package-and-project-manager
 ---
+
+> [!abstract]+ TL;DR
+> - pip·pyenv·poetry 등을 대체하는 Rust 기반 파이썬 올인원 관리 도구
+> - uv init·add·lock·sync·run 5개 핵심 명령어로 프로젝트 관리
+> - 기존 도구 호환 명령어, ruff 포매팅, uv audit 보안 검사까지 제공
+
 > [!info]+ UV?
 > - 파이썬 프로젝트 관리 all in one 도구
 > - rust기반으로 매우 빠름

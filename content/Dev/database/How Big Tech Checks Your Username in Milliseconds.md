@@ -5,6 +5,12 @@ created: 2025-06-25T22:33:27
 updated: 2026-06-06T12:49:54
 permalink: /Dev/database/how-big-tech-checks-your-username-in-milliseconds
 ---
+
+> [!abstract]+ TL;DR
+> - 대규모 서비스가 유저네임 중복 체크를 수 ms에 처리하는 자료구조와 아키텍처 정리
+> - Redis Hashmap, Trie, B+ Tree, Bloom Filter의 특성과 트레이드오프 비교
+> - Bloom Filter, In-memory Cache, 분산 DB로 이어지는 계층적 필터링 구조 정리
+
 > [!success]+ 참고영상 
 ><iframe width="560" height="315" src="https://www.youtube.com/embed/_l5Q5kKHtR8?si=YxlAJuo1AR5VJkzq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
 > 

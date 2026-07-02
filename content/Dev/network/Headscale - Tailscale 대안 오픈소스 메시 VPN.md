@@ -7,14 +7,12 @@ created: 2026-05-31T00:00:00
 updated: 2026-05-31T23:25:41
 permalink: /Dev/network/headscale-tailscale-alternative
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Tailscale은 WireGuard 기반 메시 VPN이지만 컨트롤 서버가 SaaS로 운영되어 사용자/정책 제한 존재
-> - Headscale은 Tailscale 컨트롤 서버를 대체하는 오픈소스 프로젝트. Tailscale 클라이언트를 그대로 사용 가능
-> - 자체 호스팅하면 무제한 사용자/정책, 낮은 지연시간, 완전한 네트워크 제어권 확보
-> - K3s 클러스터 위에 Headscale 서버 + Tailscale 클라이언트 + Headplane UI로 구성 가능
+> - Tailscale은 WireGuard 기반 메시 VPN이지만 컨트롤 서버가 SaaS라 사용자/정책 제한 존재
+> - Headscale은 그 컨트롤 서버를 대체하는 오픈소스, Tailscale 클라이언트를 그대로 사용
+> - 자체 호스팅으로 무제한 사용자/정책과 완전한 네트워크 제어권 확보
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Stop Using Tailscale. Use Open Source Instead. - DevOps Toolbox](https://youtube.com/watch?v=7Jja20nWcqo)

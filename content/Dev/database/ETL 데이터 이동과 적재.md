@@ -9,14 +9,12 @@ created: 2026-06-06T10:00:00
 updated: 2026-06-07T08:02:03
 permalink: /Dev/database/etl-data-movement-and-loading
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - File to DB는 파싱과 입력 품질이 핵심 난이도, DB to DB는 소스 부하와 증분 추출이 핵심 난이도
+> - File to DB는 파싱과 입력 품질이, DB to DB는 소스 부하와 증분 추출이 핵심 난이도
 > - 적재 성능은 row-by-row INSERT → batch INSERT → bulk load → 병렬 외부 테이블 순으로 차이가 큼
 > - ORACLE_LOADER는 Oracle 외부 테이블 access driver, gpload/gpfdist는 Greenplum 병렬 적재 유틸리티
-> - 같은 source-target 매핑이라도 적재 경로에 따라 성능이 수십~수백 배 다를 수 있음
+
+> *AI-assisted*
 
 ---
 

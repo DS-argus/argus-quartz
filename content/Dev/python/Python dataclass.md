@@ -5,13 +5,12 @@ created: 2026-04-12T00:00:00
 updated: 2026-04-12T21:53:16
 permalink: /Dev/python/python-dataclass
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - `@dataclass`는 데이터를 담는 클래스의 boilerplate(`__init__`, `__repr__`, `__eq__` 등)를 자동 생성해주는 데코레이터
 > - Python 3.7에서 도입 (PEP 557), "기본값이 있는 mutable namedtuple"로 이해하면 쉽다
 > - 설정 객체, API 응답 매핑, DTO 등 **값을 구조화해서 담는 모든 곳**에서 유용하다
+
+> *AI-assisted*
 
 > [!info]+ Sources
 > - [Python 공식 문서 — dataclasses](https://docs.python.org/3/library/dataclasses.html)

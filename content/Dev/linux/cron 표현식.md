@@ -7,6 +7,12 @@ created: 2025-06-13T12:43:41
 updated: 2025-06-14T23:27:12
 permalink: /Dev/linux/cron-expressions
 ---
+
+> [!abstract]+ TL;DR
+> - cron 표현식은 분, 시, 일, 월, 요일 5개 필드로 실행 시간을 지정하는 포맷
+> - `*` `,` `-` `/` 등 특수 기호와 일-요일 OR 평가 방식 정리
+> - 목적별 표현식 예시 모음 제공
+
 ### 크론(cron) 표현식이란?  
 - 일정 기반 자동화에 쓰는 시간 예약 포맷
 - 주로 리눅스 crontab, Apache Airflow, Kubernetes CronJob, Jenkins 등 워크플로/스케줄러에서 작업 실행 시간을 지정할 때 사용

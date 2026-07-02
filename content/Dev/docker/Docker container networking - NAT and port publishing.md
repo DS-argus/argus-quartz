@@ -8,15 +8,12 @@ created: 2026-06-16T09:15:00
 updated: 2026-06-17T18:09:33
 permalink: /Dev/docker/docker-container-networking-nat
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - 컨테이너는 자신만의 격리된 네트워크 세계에 있어 호스트의 NIC를 직접 쓰지 못함
-> - bridge 네트워크는 도커가 호스트 안에 만드는 소프트웨어 스위치, veth pair로 컨테이너와 연결
-> - 아웃바운드는 출발지 IP를 호스트 IP로 바꾸는 NAT(masquerade)로 인터넷에 나감
-> - 인바운드는 기본 차단, `-p 8080:80`로 포트를 열어야 DNAT 규칙이 생겨 외부에서 도달
-> - 컨테이너 앱은 `127.0.0.1`이 아니라 `0.0.0.0`에 바인딩해야 포워딩된 트래픽을 받음
+> - 컨테이너는 격리된 네트워크에 있고, bridge 네트워크와 veth pair로 호스트에 연결
+> - 아웃바운드는 출발지 IP를 호스트 IP로 바꾸는 NAT(masquerade)로 인터넷에 도달
+> - 인바운드는 `-p`로 포트를 열어 DNAT 규칙을 만들고, 앱은 `0.0.0.0`에 바인딩 필요
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/W7X6u2BGVRY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

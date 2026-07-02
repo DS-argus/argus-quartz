@@ -12,14 +12,12 @@ created: 2026-04-20T00:00:00
 updated: 2026-04-20T22:16:02
 permalink: /Dev/web/was-cgi-wsgi-asgi-web-server-architecture-evolution
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - 운영 환경에서는 웹 서버 / 게이트웨이 인터페이스(WAS) / 웹 프레임워크 3계층으로 분리하여 각자 전문 영역에 집중
-> - 게이트웨이 인터페이스는 C로 작성된 웹 서버와 Python 앱 사이의 **통역사** 역할
-> - CGI(수동 게이트) → WSGI(자동 게이트, 정규직) → ASGI(AI 스마트 게이트, 비동기) 순으로 발전
-> - ML 엔지니어가 FastAPI를, 백엔드 엔지니어가 Django를 선호하는 이유는 각자 업무 특성에 최적화된 기술 스택을 선택한 것
+> - 운영 환경은 웹 서버 / 게이트웨이 인터페이스 / 웹 프레임워크 3계층으로 분리
+> - 게이트웨이 인터페이스는 C 기반 웹 서버와 Python 앱 사이의 통역사 역할
+> - CGI → WSGI → ASGI 순으로 발전하며 비동기 지원까지 확장
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - 🔗 [Django vs FastAPI 차이점 | CGI부터 WSGI, ASGI까지 - 코딩하는초롱](https://youtube.com/watch?v=1BDV1PpByG8)

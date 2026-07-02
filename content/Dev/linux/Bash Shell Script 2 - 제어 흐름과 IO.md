@@ -7,16 +7,12 @@ created: 2026-06-01T00:00:00
 updated: 2026-06-14T00:43:21
 permalink: /Dev/linux/bash-shell-script-2-control-flow-and-io
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - 조건문(`if`, `case`, `[[ ]]`)과 반복문(`for`, `while`, `until`)으로 흐름을 제어
-> - 함수 정의와 호출, `local` 변수, 반환값 패턴
-> - 파일 디스크립터(FD 0/1/2) 이해와 리다이렉션 심화 (`2>&1`, 로그 패턴)
-> - Here Document 실무 활용 (`<< EOF` vs `<< 'EOF'`, SQL 패턴)
-> - 파이프, 프로세스 치환, `tee`, PIPESTATUS
-> - 특수 변수(`$@`, `$?`, `$$`)와 인자 파싱 패턴
+> - 조건문(`if`, `case`, `[[ ]]`)·반복문(`for`, `while`, `until`)·함수와 `local` 변수로 흐름 제어
+> - 파일 디스크립터(FD 0/1/2)와 리다이렉션(`2>&1`), Here Document, 파이프·프로세스 치환·`tee` 활용
+> - 특수 변수(`$@`, `$?`, `$$`)와 인자 파싱 패턴 정리
+
+> *AI-assisted*
 
 ---
 

@@ -8,11 +8,10 @@ created: 2026-04-29T00:00:00
 updated: 2026-04-29T20:35:09
 permalink: /Dev/workflow/tmux-plugin-panel
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > Tmux Plugin Panel은 Rust로 만든 TUI 기반 tmux 플러그인 매니저다. 기존 TPM(Tmux Plugin Manager)의 대안으로, 설정 파일 수정 없이 플러그인 설치/제거/업데이트가 가능하다.
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [psmux/Tmux-Plugin-Panel - GitHub](https://github.com/psmux/Tmux-Plugin-Panel)

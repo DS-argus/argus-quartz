@@ -9,14 +9,12 @@ updated: 2026-05-21T00:00:00
 permalink: /Dev/workflow/cli-tui-dev-tools
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - CLI 프레임워크: Click/Typer(Python), Cobra(Go), Clap(Rust)
-> - TUI 프레임워크: Textual(Python), Bubbletea(Go), Ratatui(Rust)
-> - 빠른 프로토타이핑은 Python, 배포 편의성은 Go, 극한 성능은 Rust
-> - Go의 Charm 생태계(Bubbletea + Lipgloss + Bubbles)가 TUI 개발 경험에서 가장 균형 잡힘
+> - CLI 프레임워크는 Click/Typer(Python), Cobra(Go), Clap(Rust)
+> - TUI 프레임워크는 Textual(Python), Bubbletea(Go), Ratatui(Rust)
+> - 빠른 프로토타이핑은 Python, 배포는 Go, 극한 성능은 Rust, TUI는 Go Charm 생태계가 균형적
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Go vs. Rust for TUI Development: Bubbletea and Ratatui](https://blog.tng.sh/2026/03/go-vs-rust-for-tui-development-deep.html)

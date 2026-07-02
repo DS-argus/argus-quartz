@@ -6,13 +6,12 @@ created: 2026-04-12T00:00:00
 updated: 2026-04-12T00:00:00
 permalink: /Dev/python/python-pydantic
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - pydantic은 Python의 타입 힌트를 **런타임에 강제**하는 데이터 검증 라이브러리
 > - [[Python dataclass|dataclass]]는 타입 힌트가 힌트일 뿐이지만, pydantic은 실제로 검증하고 변환한다
 > - [[Python fastapi]]의 요청/응답 처리, 설정 관리, 외부 데이터 파싱 등에서 핵심적으로 사용된다
+
+> *AI-assisted*
 
 > [!info]+ Sources
 > - [Pydantic 공식 문서](https://docs.pydantic.dev/latest/)

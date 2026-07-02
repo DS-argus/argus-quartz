@@ -8,14 +8,12 @@ created: 2026-05-31T00:00:00
 updated: 2026-05-31T00:00:00
 permalink: /Dev/network/reverse-proxy-vs-load-balancer-vs-api-gateway
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Reverse Proxy: 백엔드 서버 앞에서 SSL 종료, 캐싱, 압축, 보안을 처리하는 중개 계층
-> - Load Balancer: Reverse Proxy에 지능적 트래픽 분배 능력이 추가된 것. L4(TCP)와 L7(HTTP) 방식 존재
-> - API Gateway: HTTP를 이해하는 것을 넘어 API 비즈니스 로직(인증, 속도 제한, 버전 관리)까지 중앙 처리
-> - 실제 도구들(Nginx, Kong, Envoy)은 세 역할의 경계를 넘나들며 동작
+> - Reverse Proxy는 백엔드 앞에서 SSL 종료, 캐싱, 압축, 보안을 처리하는 중개 계층
+> - Load Balancer는 여기에 트래픽 분배가 더해진 것, API Gateway는 인증과 속도 제한 등 API 로직까지 중앙 처리
+> - 셋은 진화 관계이며 Nginx, Kong 같은 실제 도구는 역할 경계를 넘나들며 동작
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Reverse Proxy vs Load Balancer vs API Gateway: The Real Difference? - CsMadeEz](https://youtube.com/watch?v=-R5ak7-LiVY)

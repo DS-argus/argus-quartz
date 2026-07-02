@@ -7,15 +7,12 @@ created: 2026-05-31T00:00:00
 updated: 2026-06-07T08:55:00
 permalink: /Dev/network/websocket-protocol-design-secrets
 ---
-> [!warning]+ Alert
-> 이 글은 AI 코딩 에이전트의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - WebSocket은 HTTP 업그레이드를 통해 단일 TCP 연결에서 양방향 통신을 제공하는 프로토콜
-> - Sec-WebSocket-Key + SHA-1 해싱은 캐시 오염을 "방지"가 아니라 클라이언트가 "탐지"하는 구조
-> - HTTP 업그레이드 과정이 TCP slow start를 사전에 워밍업하여 성능 이점 확보
-> - 클라이언트→서버 메시지만 XOR 마스킹하는 이유는 캐시 포이즈닝 공격 방지
-> - HTTP/2의 멀티플렉싱이 WebSocket보다 효율적인 경우가 많아, 서버→클라이언트 단방향은 SSE가 대안
+> - WebSocket은 HTTP 업그레이드로 단일 TCP 연결에서 양방향 통신을 제공하는 프로토콜
+> - Sec-WebSocket-Key 해싱은 프록시 캐시를 탐지하고, HTTP 업그레이드는 TCP slow start를 미리 워밍업
+> - 클라이언트 메시지만 XOR 마스킹해 캐시 포이즈닝을 막고, 서버 단방향 푸시는 HTTP/2 + SSE가 대안
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [WebSockets Explained: 5 Things Most Developers Never Learn - ByteMonk](https://youtube.com/watch?v=BKonNa7XPdg)

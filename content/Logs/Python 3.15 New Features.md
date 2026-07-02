@@ -5,15 +5,12 @@ created: 2026-06-28T11:00:00
 updated: 2026-06-28T11:00:00
 permalink: /Logs/python-3-15-new-features
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Python 3.15는 `lazy` 키워드 기반 지연 import(PEP 810)로 콜드 스타트 시간을 단축
-> - 불변 딕셔너리 `frozendict`(PEP 814)와 고유값 `sentinel`(PEP 661)이 내장 타입으로 추가
-> - 컴프리헨션·제너레이터 식 안에서 `*`/`**` 언패킹 허용(PEP 798)
-> - JIT 성능 향상, 샘플링 프로파일러 추가, 3.14의 incremental GC는 철회
-> - 작성 시점 3.15는 beta(3.15.0b3) 단계로, 2026년 6월 기능 동결 후 확정된 항목 기준
+> - `lazy` 키워드 지연 import(PEP 810)와 컴프리헨션 내 `*`/`**` 언패킹(PEP 798) 등 문법 변화
+> - 불변 딕셔너리 `frozendict`(PEP 814), 고유값 `sentinel`(PEP 661) 내장 타입 추가
+> - JIT 성능 향상과 샘플링 프로파일러 추가, 3.14 incremental GC 철회
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [The best new features in Python 3.15 (InfoWorld)](https://www.infoworld.com/article/4166693/the-best-new-features-in-python-3-15.html)

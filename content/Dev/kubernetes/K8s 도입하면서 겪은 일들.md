@@ -5,6 +5,12 @@ created: 2025-06-25T23:57:54
 updated: 2025-06-26T00:20:22
 permalink: /Dev/kubernetes/lessons-from-adopting-k8s
 ---
+
+> [!abstract]+ TL;DR
+> - VM 서버 비용 문제 해결을 위해 신규 서비스부터 점진적으로 k8s 도입
+> - Jenkins, Nexus, NHN 클라우드 디플로이 기반 3단계 CI/CD 배포 구조 설계
+> - Taint, 리소스 Limit, Anti-affinity, Liveness/Readiness Probe 등 실제 문제 10가지와 해결법 정리
+
 > [!success]+ 참고영상
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/JBGsqsoGxEo?si=va7pReYihQmhFqYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

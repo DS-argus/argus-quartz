@@ -6,14 +6,12 @@ created: 2026-06-04T00:00:00
 updated: 2026-06-04T00:00:00
 permalink: /Dev/python/python-alembic-database-migration-tool-for-sqlalchemy
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Alembic은 SQLAlchemy 전용 DB 마이그레이션 도구
-> - 모델 변경 사항을 자동 감지해서 마이그레이션 스크립트 생성 가능
+> - Alembic은 SQLAlchemy 전용 DB 마이그레이션 도구로 FastAPI 조합에서 사실상 표준
+> - 모델 변경을 자동 감지해 마이그레이션 스크립트 생성 가능
 > - `upgrade`/`downgrade`로 스키마 버전 관리 및 롤백 지원
-> - FastAPI + SQLAlchemy 조합에서 사실상 표준
+
+> *AI-assisted*
 
 > [!info]+ Alembic?
 > - SQLAlchemy 프로젝트의 DB 스키마를 버전 관리하는 마이그레이션 도구

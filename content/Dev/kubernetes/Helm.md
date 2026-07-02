@@ -6,6 +6,12 @@ created: 2025-06-12T14:02:14
 updated: 2025-06-12T14:03:08
 permalink: /Dev/kubernetes/helm
 ---
+
+> [!abstract]+ TL;DR
+> - Helm은 Kubernetes 리소스를 차트로 패키징해 배포하는 패키지 매니저
+> - 차트, 릴리스, 레포지토리 핵심 개념과 install/upgrade/uninstall 명령어 정리
+> - Kubernetes 환경에서 Docker Compose 같은 역할 수행
+
 ### Helm이란?
 
 Helm은 Kubernetes에서 사용되는 애플리케이션 패키지 매니저임  

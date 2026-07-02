@@ -6,6 +6,12 @@ created: 2025-06-04T08:59:41
 updated: 2025-06-04T00:38:37
 permalink: /Dev/docker/docker-networking
 ---
+
+> [!abstract]+ TL;DR
+> - 드라이버, IPAM, sandbox, endpoint로 이어지는 Docker 네트워크 계층 구조 정리
+> - bridge, host, none, overlay, macvlan, ipvlan 드라이버별 용도 비교
+> - macOS는 VM 경유 구조라 Linux와 네트워크 동작, 성능이 다른 점 정리
+
 ### Docker 네트워크의 기본 구조
 
 도커 네트워크는 실제 리눅스 네트워크 인프라 위에 다양한 네트워크 드라이버와 IPAM 드라이버가 계층처럼 올라가고, 그 위에서 도커 엔진이 논리적 네트워크를 만들어 컨테이너와 연결한다.

@@ -9,13 +9,12 @@ created: 2025-07-17T17:45:46
 updated: 2026-04-08T22:07:46
 permalink: /Dev/java/fat-jar-vs-thin-jar-and-shading
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - JAR은 Java의 패키징 포맷이고, DE 도구(Flink, Spark, Kafka 등)가 JVM 기반이라 자주 마주친다
 > - Fat JAR은 의존성을 몽땅 담은 단일 실행 파일, Thin JAR은 자기 코드만 담은 가벼운 파일
 > - Shading은 Fat JAR을 만들 때 패키지 충돌을 피하기 위해 경로를 재배치하는 기술
+
+> *AI-assisted*
 
 ---
 ### 1. JAR이 뭔데, 왜 DE에서 자꾸 나와?

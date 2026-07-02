@@ -7,14 +7,12 @@ created: 2026-05-16T10:00:00
 updated: 2026-05-16T10:00:00
 permalink: /Dev/docker/dozzle
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Dozzle은 Docker 소켓 마운트만으로 컨테이너 로그를 실시간 조회하는 경량 웹 UI
-> - ELK 스택 같은 풀 옵저버빌리티 파이프라인 없이 빠르게 로그 확인 가능
-> - JSON 구조화 로그에 SQL 쿼리, 로그 레벨 필터링, ntfy 알림 연동 지원
-> - Docker Compose / Swarm / Kubernetes(K3s) 모두 지원
+> - ELK 같은 풀 옵저버빌리티 스택 없이 빠르게 로그를 확인하는 대안
+> - JSON 로그 SQL 쿼리, 로그 레벨 필터링, ntfy 알림, Compose/Swarm/K3s 지원
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Stop Overengineering Logs. Use This Instead - DevOps Toolbox](https://youtube.com/watch?v=ztjlsmJcVnE)

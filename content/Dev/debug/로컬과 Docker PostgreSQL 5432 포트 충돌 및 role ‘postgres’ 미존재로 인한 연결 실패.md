@@ -7,6 +7,12 @@ created: 2025-05-28T22:18:21
 updated: 2025-05-28T22:22:55
 permalink: /Dev/debug/postgresql-5432-port-conflict-and-missing-postgres-role
 ---
+
+> [!abstract]+ TL;DR
+> - 로컬 PostgreSQL이 5432 포트를 선점해 Docker 컨테이너 대신 로컬로 연결되며 role "postgres" 오류 발생
+> - 로컬 postgres 데몬 중지 후 컨테이너를 재생성해 해결
+> - 연결 전 lsof로 5432 포트 점유 주체 확인 필요
+
 ### 문제
 
 FastAPI에서 PostgreSQL 데이터베이스에 연결할 때 다음 에러 발생

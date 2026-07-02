@@ -4,6 +4,12 @@ created: 2025-06-04T19:42:42
 updated: 2025-06-03T22:26:23
 permalink: /Dev/docker/docker-limitations-and-alternative-container-runtimes
 ---
+
+> [!abstract]+ TL;DR
+> - 데몬 의존, Dockershim 제거, 라이선스 리스크로 부각된 탈 Docker 흐름
+> - containerd, Podman, CRI-O, Kata, Firecracker 5대 대안 런타임 비교
+> - 개발 PC부터 K8s, 고보안, 서버리스까지 상황별 런타임 선택 기준 정리
+
 > [!success] 참고영상
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/NGAxHC0f1wU?si=lP6eWK_NLg_txMPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

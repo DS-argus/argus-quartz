@@ -8,13 +8,12 @@ created: 2026-06-05T10:00:00
 updated: 2026-06-05T10:00:00
 permalink: /Dev/java/maven-vs-gradle
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Maven은 XML 기반의 선언적 빌드 도구로 컨벤션 중심, Gradle은 Kotlin/Groovy DSL 기반으로 유연성 중심
 > - Gradle이 증분 빌드, 빌드 캐시, 데몬 덕분에 대부분의 시나리오에서 2배 이상 빠름
 > - 소규모 프로젝트는 Maven의 단순함이 장점, 대규모/멀티모듈 프로젝트는 Gradle이 유리
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Gradle and Maven Comparison (gradle.org)](https://gradle.org/maven-and-gradle/)

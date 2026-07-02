@@ -9,11 +9,10 @@ updated: 2026-06-11T21:30:00
 permalink: /Dev/web/package-manager-landscape-why-npm-and-how-tools-get-distributed
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > 새로운 CLI 도구를 설치할 때 `npm install -g`가 가장 흔한 이유는 기술적 우위가 아니라 네트워크 효과(Node.js가 이미 깔려 있으니까)와 배포 마찰의 최소화 때문이다. 하지만 Rust/Go 바이너리 배포가 빠르게 늘고 있고, brew·cargo-binstall·mise 같은 대안 채널도 성숙해지고 있다. 이 글은 npm부터 시스템 패키지 매니저, 메타 툴 매니저, 직접 바이너리 배포까지 전체 생태계를 조망한다.
+
+> *AI-assisted*
 
 ---
 ### 동기: 왜 전부 npm install인가

@@ -6,19 +6,9 @@ updated: 2025-07-03T22:32:47
 permalink: /AI/recsys/2018-collaborative-memory-network-for-recommendation-systems
 ---
 > [!abstract]+ TL;DR
-> - source : https://arxiv.org/pdf/1804.10862
-> - code : https://github.com/tebesu/CollaborativeMemoryNetwork/tree/master
-> - 일반적으로 Collaborative Filtering는 크게 두 가지
-> 	- Latent factor 모델 : MF같은 것으로 global 구조 잘 학습
-> 	- Neighborhood 기반 모델 : Local 구조 잘 학습  
-> 	- (SVD++같이 2개를 합친 hybrid도 있음)
-> - Latent factor와 Neighborhood 기반 모델을 딥러닝으로 결합
-> 	- Memory Network라는 구조를 도입해서 유사한 user에 대한 정보를 처리ㅁ
-> - **Contributions**
-> 	- External memory와 neural attention을 이용한 Collaborative Memory Network (CMN) 구조 제시. 
-> 		- attention 메커니즘이 이웃 정보에 대한 nonlinear한 weight를 adaptive하게 학습
-> 		- output module은 이웃에 대한 정보와 user, item 정보를 nonlinear하게 결합
-> 	- CMN과 대표적인 2개의 CF 모델 (latent factor, neighborhood-based)과의 관련성 밝혀냄
+> - Latent factor와 neighborhood 기반 CF를 딥러닝으로 결합한 Collaborative Memory Network (CMN) 논문([arXiv](https://arxiv.org/pdf/1804.10862), [코드](https://github.com/tebesu/CollaborativeMemoryNetwork/tree/master))
+> - external memory와 neural attention으로 이웃 정보의 nonlinear weight를 adaptive하게 학습하는 구조 제시
+> - CMN과 대표적인 latent factor·neighborhood 기반 CF 모델 두 가지의 관련성 규명
 
 ---
 ### Memory Augmented Neural Networks

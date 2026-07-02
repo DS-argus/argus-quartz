@@ -8,6 +8,12 @@ updated: 2025-05-23T23:19:30
 permalink: /Dev/workflow/terminal-multiplexers-and-tmux
 related: 
 ---
+
+> [!abstract]+ TL;DR
+> - 한 터미널에서 여러 세션을 다루고 연결이 끊겨도 작업이 유지되는 멀티플렉서 개념
+> - tmux의 Session·Window·Pane 구조와 핵심 명령어 정리
+> - .tmux.conf 설정과 tpm 플러그인 적용 방법 소개
+
 ### 터미널 멀티플렉서란? 
 
 **터미널 멀티플렉서 (Terminal Multiplexer)** 는 하나의 터미널 창 안에서 여러 개의 터미널 세션을 동시에 실행하고 관리할 수 있게 해주는 도구이다  

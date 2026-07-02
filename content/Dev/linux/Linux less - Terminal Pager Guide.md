@@ -6,14 +6,12 @@ created: 2026-06-13T22:12:48
 updated: 2026-06-30T00:00:00
 permalink: /Dev/linux/linux-less-terminal-pager-guide
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - `less`는 긴 출력을 한 화면씩 끊어서 보여주는 페이저 — `cat`과 달리 멈춰 세우고 위아래로 탐색 가능
-> - 기본 사용은 `less 파일` 또는 `명령 | less`, 종료는 `q`, 검색은 `/패턴` 후 `n`/`N`
-> - 자주 쓰는 옵션은 `-N`(줄번호), `-S`(긴 줄 자르기), `+F`(따라가기), `-i`(대소문자 무시)
+> - `less`는 긴 출력을 한 화면씩 끊어 보여주는 페이저 — `cat`과 달리 멈춰 세우고 탐색 가능
+> - 기본은 `less 파일` 또는 `명령 | less`, 종료 `q`·검색 `/패턴`, 옵션 `-N`·`-S`·`+F`·`-i` 활용
 > - `git log`·`man`이 내부적으로 `$PAGER`(보통 less)를 호출하는 구조
+
+> *AI-assisted*
 
 ### 1. less란 무엇인가
 

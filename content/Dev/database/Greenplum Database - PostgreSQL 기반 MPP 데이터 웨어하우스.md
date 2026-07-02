@@ -8,14 +8,12 @@ created: 2026-06-06T10:00:00
 updated: 2026-06-06T17:30:12
 permalink: /Dev/database/greenplum-database-mpp-data-warehouse
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Greenplum은 PostgreSQL을 기반으로 한 MPP(대규모 병렬 처리) 데이터 웨어하우스
-> - Coordinator(마스터)가 쿼리를 받아 여러 Segment(워커)에 분산 처리
+> - Greenplum은 PostgreSQL 기반 MPP 데이터 웨어하우스로, Coordinator가 쿼리를 받아 여러 Segment에 분산 처리
 > - PostgreSQL과 SQL 호환성을 유지하면서 대규모 분석 워크로드에 특화
-> - OLTP는 PostgreSQL, OLAP/대규모 분석은 Greenplum이 적합
+> - OLTP는 PostgreSQL, OLAP과 대규모 분석은 Greenplum이 적합
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [About the Greenplum Architecture - Broadcom TechDocs](https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/7/greenplum-database/admin_guide-intro-arch_overview.html)

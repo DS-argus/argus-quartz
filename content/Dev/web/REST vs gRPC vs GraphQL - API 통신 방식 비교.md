@@ -8,14 +8,12 @@ created: 2026-04-29T00:00:00
 updated: 2026-04-29T00:00:00
 permalink: /Dev/web/rest-vs-grpc-vs-graphql
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - REST, gRPC, GraphQL은 각각 다른 문제를 해결하기 위해 만들어진 API 통신 방식. Big Tech는 대부분 이 셋을 섞어서 사용
-> - SOAP은 엔터프라이즈 보안/신뢰성이 필요한 곳(금융, 의료)에서 여전히 사용
-> - Webhooks는 폴링 대신 이벤트 발생 시 서버가 클라이언트를 호출하는 "역방향 API"
-> - WebSocket은 양방향 실시간 통신(채팅, 주식), WebRTC는 서버 없이 P2P 직접 통신(화상회의)
+> - REST, gRPC, GraphQL은 서로 다른 문제를 푸는 API 통신 방식이며 Big Tech는 셋을 혼용
+> - SOAP은 금융, 의료 등 엔터프라이즈 보안과 신뢰성이 필요한 곳에서 여전히 사용
+> - Webhooks는 역방향 API, WebSocket은 양방향 실시간 통신, WebRTC는 P2P 직접 통신
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Why Big Tech Doesn't Always Use REST? - ByteMonk](https://youtube.com/watch?v=KdZ3g_-hkA0)

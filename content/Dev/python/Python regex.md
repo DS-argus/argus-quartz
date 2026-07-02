@@ -7,13 +7,12 @@ created: 2026-04-12T00:00:00
 updated: 2026-04-13T07:36:36
 permalink: /Dev/python/python-regex
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - 정규 표현식(regex)은 문자열에서 패턴을 찾기 위한 미니 언어다
 > - Python에서는 `re` 모듈로 사용하며, 패턴 문법을 이해하면 로그 파싱, 입력 검증, 텍스트 추출 등에 바로 활용할 수 있다
 > - 이 글은 패턴 문법부터 단계별로 따라가며 익히는 구성이다
+
+> *AI-assisted*
 
 > [!info]+ Sources
 > - [Python 공식 문서 — re](https://docs.python.org/3/library/re.html)

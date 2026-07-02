@@ -7,11 +7,10 @@ created: 2026-04-22T00:00:00
 updated: 2026-04-22T00:00:00
 permalink: /Logs/neovim-0-12-release-notes
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > Neovim 0.12(2026-03-29)는 네이티브 플러그인 매니저 `vim.pack`, 빌트인 자동완성, LSP 대폭 개선, UI2 실험 기능 등을 포함한 대형 릴리즈다. 서드파티 플러그인 매니저 없이도 기본 설정이 가능해졌다.
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Neovim 0.12 Is Game Changing + How To VimPack - Seth Phaeno](https://youtu.be/h1sCwi0pNyM)

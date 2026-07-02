@@ -6,6 +6,12 @@ created: 2025-08-06T00:00:00
 updated: 2025-08-07T09:54:23
 permalink: /Dev/database/postgresql-installation-and-setup
 ---
+
+> [!abstract]+ TL;DR
+> - PostgreSQL의 주요 장점, 활용 사례, 연관 생태계 프로젝트 정리
+> - brew, Docker, Docker Compose로 PostgreSQL을 설치하고 실행하는 방법 정리
+> - psql 접속 방법과 전용 명령어, 관리용 SQL 정리
+
 ### 1. Why PostgreSQL?
 
 ![[PostgreSQL 설치 및 세팅 - 2025-08-06 - 13-00-53.png|753x471]]

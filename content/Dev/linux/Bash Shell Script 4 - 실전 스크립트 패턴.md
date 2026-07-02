@@ -7,17 +7,12 @@ created: 2026-06-01T00:00:00
 updated: 2026-06-21T00:00:00
 permalink: /Dev/linux/bash-shell-script-4-practical-patterns
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - 파일 수정은 `mktemp` 임시 파일에 쓰고 `mv`로 교체하거나 `sed -i`로 처리
-> - Job Control(`&`, `wait`, `jobs`)로 여러 작업을 병렬 실행하고 대기
-> - `exec`로 FD를 영구 조작하고, `flock`(또는 `mkdir` 잠금)으로 동시 실행을 막음
-> - `set -euo pipefail`과 `trap`으로 실패·정리를 자동화해 견고하게
-> - `date`·`ss` 등 텍스트 도구는 아니지만 스크립트에서 자주 쓰는 명령
-> - BashPitfalls 핵심 실수들을 알면 디버깅 시간이 줄어듦
-> - `sh`/`bash`/`zsh` 차이를 알고 실전 템플릿으로 마무리
+> - 파일 수정은 `mktemp` 임시 파일에 쓰고 `mv`로 교체, Job Control과 `exec`, `flock`으로 병렬 실행과 동시 실행 제어
+> - `set -euo pipefail`과 `trap`으로 실패와 정리를 자동화해 견고한 스크립트 작성
+> - BashPitfalls 흔한 실수와 `sh`/`bash`/`zsh` 차이를 짚고 실전 템플릿 제공
+
+> *AI-assisted*
 
 [[Bash Shell Script 3 - 텍스트 처리|3편]]에서 텍스트를 읽고 바꾸고 골라내는 도구를 다뤘다면, 이 글은 그 도구들로 **견고한 스크립트를 짜는 실전 패턴**을 모은다. 임시 파일을 안전하게 다루는 법부터 Job Control, 에러 핸들링, 자주 쓰는 명령, 흔한 함정, 이식성, 그리고 실전 템플릿까지 본다.
 

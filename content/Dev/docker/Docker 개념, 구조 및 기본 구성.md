@@ -5,6 +5,12 @@ created: 2025-06-04T20:49:30
 updated: 2025-06-04T00:19:39
 permalink: /Dev/docker/docker-concepts-architecture-and-basics
 ---
+
+> [!abstract]+ TL;DR
+> - 커널 공유로 VM보다 가벼운 컨테이너와 VM의 격리 계층 차이 정리
+> - docker CLI, dockerd, containerd, shim, runc로 이어지는 요청 파이프라인 구조
+> - 이미지, 컨테이너, 네트워크, 볼륨 등 핵심 객체와 소켓 마운트 보안 주의점
+
 ### Docker란?  
 애플리케이션과 그 실행 환경을 한데 묶어 **어디서든 동일하게 실행**할 수 있도록 해 주는 컨테이너 기술 스택.   
 커널을 공유하므로 VM보다 가볍고 빨리 뜬다.

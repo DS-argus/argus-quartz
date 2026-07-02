@@ -7,15 +7,12 @@ created: 2026-06-22T12:00:00
 updated: 2026-06-23T06:58:48
 permalink: /Dev/observability/opentelemetry-vendor-neutral-observability-standard
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - OpenTelemetry(OTel)는 관측 데이터를 어떤 모양으로 만들고 어떤 약속으로 전송할지를 정한 CNCF 표준이자 도구 모음
-> - 다루는 신호는 Metrics, Logs, Traces 세 가지이며, 속성 이름까지 통일한 Semantic Conventions가 핵심
-> - 전송은 OTLP(protobuf 직렬화 + gRPC/HTTP) 프로토콜로 표준화, 단 디스크 저장 포맷은 표준이 정하지 않고 백엔드가 결정
-> - 구성은 코드 계측용 API/SDK와 수집·가공·전달을 맡는 Collector로 나뉨
-> - 가장 큰 가치는 벤더 중립성 — 코드를 OTel 방식으로 계측해두면 백엔드(Jaeger, Tempo, Prometheus 등)를 자유롭게 교체 가능
+> - OpenTelemetry(OTel)는 관측 데이터의 생성·전송 방식을 정한 CNCF 표준으로, Metrics·Logs·Traces 세 신호와 Semantic Conventions가 핵심
+> - 전송은 OTLP 프로토콜로 표준화하고, 구성은 계측용 API/SDK와 수집·전달을 맡는 Collector로 구분
+> - 가장 큰 가치는 벤더 중립성 — 백엔드(Jaeger, Tempo, Prometheus 등)를 자유롭게 교체 가능
+
+> *AI-assisted*
 
 ---
 

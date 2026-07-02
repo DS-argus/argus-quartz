@@ -9,9 +9,6 @@ updated: 2026-04-05T21:48:05
 permalink: /Dev/web/html-css-and-javascript-basics
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > 1. 웹 페이지의 3요소 — HTML, CSS, JavaScript
 > 2. HTML — 구조와 콘텐츠
@@ -20,6 +17,8 @@ permalink: /Dev/web/html-css-and-javascript-basics
 > 5. 셋이 어떻게 합쳐지는가
 > 6. TypeScript
 > 7. 프론트엔드 프레임워크 — React, Vue, Next.js
+
+> *AI-assisted*
 
 ---
 ### 웹 페이지의 3요소

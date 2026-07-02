@@ -7,8 +7,12 @@ updated: 2026-03-31T00:00:00
 permalink: /Dev/linux/nice-and-renice
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
+> [!abstract]+ TL;DR
+> - nice는 프로세스 시작 시, renice는 실행 중인 프로세스의 CPU 우선순위를 변경하는 명령어
+> - nice 값 범위는 -20부터 19까지로 값이 클수록 CPU 양보, 기본값은 0이며 우선순위 높이기는 root 권한 필요
+> - 디스크 I/O 우선순위는 ionice, 사용률 제한은 cpulimit·cgroups로 별도 제어
+
+> *AI-assisted*
 
 ### nice와 renice : 프로세스 우선순위 제어
 

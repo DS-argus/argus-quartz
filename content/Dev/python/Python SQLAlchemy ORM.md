@@ -6,14 +6,12 @@ created: 2026-06-05T00:00:00
 updated: 2026-06-05T00:00:00
 permalink: /Dev/python/python-sqlalchemy-orm
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - SQLAlchemy는 Python의 사실상 표준 ORM
-> - Core(SQL 표현식)와 ORM(객체 매핑) 두 레이어로 구성
+> - SQLAlchemy는 Python의 사실상 표준 ORM으로 Core와 ORM 두 레이어로 구성
 > - 2.0 스타일에서 select() 기반 쿼리가 기본
 > - Alembic으로 마이그레이션 관리
+
+> *AI-assisted*
 
 > [!info]+ SQLAlchemy?
 > - Python에서 가장 널리 쓰이는 데이터베이스 툴킷 겸 ORM

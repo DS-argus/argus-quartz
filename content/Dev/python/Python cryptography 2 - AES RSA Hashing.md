@@ -6,14 +6,12 @@ created: 2026-06-05T10:00:00
 updated: 2026-06-15T10:00:00
 permalink: /Dev/python/python-cryptography-2-aes-rsa-hashing
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - AES-GCM은 Fernet보다 유연한 대칭 키 암호화 방식
-> - RSA는 공개 키/개인 키 쌍을 사용하는 비대칭 암호화. 소수 p, q에서 n, e, d가 결정되는 구조
-> - 실무에서는 데이터는 AES로, AES 키는 RSA로 암호화하는 하이브리드 방식을 사용
-> - 해싱은 단방향 변환으로 비밀번호 저장 등에 사용
+> - AES-GCM은 Fernet보다 유연한 대칭 키 암호화, RSA는 공개 키/개인 키 쌍의 비대칭 암호화
+> - 실무에서는 데이터는 AES로, AES 키는 RSA로 암호화하는 하이브리드 방식 사용
+> - 해싱은 단방향 변환으로 비밀번호 저장 등에 사용, bcrypt/argon2 권장
+
+> *AI-assisted*
 
 > [!info]+ 이전 글
 > [[Python cryptography 1 - Fernet]]에서 Fernet 기반 대칭 키 암호화를 다뤘다. 이 글에서는 Fernet으로 해결하기 어려운 상황에서 사용할 수 있는 저수준 API를 다룬다.

@@ -7,15 +7,12 @@ created: 2026-06-16T09:20:00
 updated: 2026-06-16T09:20:00
 permalink: /Dev/network/rustdesk-over-tailscale
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Rustdesk는 TeamViewer 대안인 오픈소스 원격 데스크톱. Windows·macOS·Linux 모두 지원
-> - 일반적으로 NAT를 넘기 위해 자체 relay 서버를 VPS에 띄워야 함
-> - Tailscale을 연결 패브릭으로 쓰면 노드끼리 직접 연결되어 relay 서버가 필요 없음
-> - 설정 핵심은 permanent password 지정 + enable direct IP access 체크
-> - tailnet IP를 입력해 접속하며, Magic DNS 이름은 인식하지 못함
+> - Rustdesk는 TeamViewer 대안 오픈소스 원격 데스크톱으로 Windows·macOS·Linux 지원
+> - 보통 NAT 통과를 위해 자체 relay 서버가 필요하지만 Tailscale을 쓰면 노드 직접 연결로 relay 불필요
+> - 설정 핵심은 permanent password 지정과 enable direct IP access 체크, tailnet IP로 접속
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/27apZcZrwks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

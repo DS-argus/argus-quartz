@@ -7,14 +7,12 @@ updated: 2026-05-21T00:00:00
 permalink: /Dev/python/python-polars
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Polars는 Rust로 작성된 고성능 DataFrame 라이브러리로, Python/R/Node.js API 제공
-> - Apache Arrow 컬럼 포맷, 멀티스레딩, Lazy Evaluation으로 Pandas 대비 5~30배 빠름
-> - 인덱스 없음, 표현식(Expression) 기반 API, 메서드 체이닝이 핵심 설계 철학
-> - Pandas를 완전히 대체하기보다, 대용량 데이터 처리와 ETL 파이프라인에서 강점 발휘
+> - Polars는 Rust로 작성된 고성능 DataFrame 라이브러리, Python/R/Node.js API 제공
+> - Apache Arrow 컬럼 포맷, 멀티스레딩, Lazy Evaluation으로 Pandas 대비 5배에서 30배 빠른 속도
+> - 인덱스 없는 표현식 기반 API가 설계 철학, 대용량 처리와 ETL에서 강점
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Polars 공식 문서](https://docs.pola.rs/)

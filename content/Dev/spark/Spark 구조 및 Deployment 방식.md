@@ -70,6 +70,17 @@ permalink: /Dev/spark/spark-architecture-and-deployment-models
 	- Kubernetes : 컨테이너화된 애플리케이션의 배포, 확장 및 관리를 자동화하는 오픈 소스 시스템
 	- ~~Apache Mesos : 4.0에서부터 지원하지 않음~~
 
+> [!note]+ Spark는 저장소가 아니다
+> - Spark는 **계산 엔진**일 뿐 자체 저장소가 없다. 데이터는 외부 저장소에서 읽고 쓴다.
+> - 어디서 읽을지는 경로 scheme이 결정: `file://`(로컬 FS), `hdfs://`(HDFS), `s3a://`(S3·MinIO)
+> - Cluster Manager(자원 관리)와 저장소(HDFS/S3)는 별개의 축이다. YARN 위에서 돌면서 S3를 읽을 수도 있다.
+
+> [!note]+ Data Locality (Executor ↔ 저장소 거리)
+> - 성능을 위해 Spark는 **데이터가 있는 노드에 task를 배치**하려 한다.
+> - HDFS와 함께 쓸 때는 Executor를 DataNode와 같은 노드에 두는 colocation이 정석 → 블록을 로컬 디스크에서 읽음 (NODE_LOCAL)
+> - locality 단계: PROCESS_LOCAL > NODE_LOCAL > RACK_LOCAL > ANY. `spark.locality.wait`(기본 3초) 동안 로컬 슬롯을 기다리다 한 단계씩 낮춘다.
+> - 단, S3처럼 컴퓨팅·스토리지가 분리된 환경에서는 colocation이 안 돼 locality 이점이 사라진다.
+
 ---
 ### Local 모드 및 Cluster Manager를 이용한 다양한 Deployment Modes
 Spark는 간단한 local 모드는 물론 다양한 Cluster manager와 함께 다양한 배포 방식을 지원하는데 먼저 요약하면 다음과 같다  

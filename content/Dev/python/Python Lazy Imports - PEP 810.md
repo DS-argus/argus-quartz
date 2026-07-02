@@ -7,13 +7,12 @@ updated: 2026-05-23T00:00:00
 permalink: /Dev/python/python-lazy-imports-pep-810
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Python 3.15(PEP 810)부터 `lazy` 키워드로 명시적 지연 import 가능
 > - 용도 3가지: 시작 시간 최적화, 타입 어노테이션 전용 import, 순환 import 해결
 > - 주의: lazy import는 import 시점에 유효성 검사를 하지 않아 런타임 에러 위험
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [python lazy imports (PEP 810) — anthonywritescode](https://youtube.com/watch?v=xnZ90CYYF-0)

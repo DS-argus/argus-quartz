@@ -8,11 +8,10 @@ updated: 2026-04-23T00:00:00
 permalink: /Dev/workflow/harness-engineering
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > 하네스 엔지니어링은 AI 에이전트가 안정적으로 작동하도록 감싸는 전체 환경(저장소 구조, CI, 포맷 규칙, 외부 도구 연결 등)을 설계하는 방법론이다. 단일 에이전트의 실패 관찰에서 출발해, 역할 분리 → 평가 기준 설계 → 피드백 루프 → 경량화까지 8단계로 멀티 에이전트 시스템을 체계적으로 구축한다.
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - 🔗 [하네스 엔지니어링으로 본 Deep Insight – 로컬 개발에서 프로덕션 운영까지의 설계 여정](https://aws.amazon.com/ko/blogs/tech/harness-engineering-from-deep-insight/)

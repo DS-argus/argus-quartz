@@ -6,14 +6,12 @@ created: 2026-04-26T00:00:00
 updated: 2026-05-27T21:19:14
 permalink: /Dev/python/python-dependency-injection
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Dependency Injection(DI)은 클래스가 의존성을 직접 생성하지 않고 외부에서 주입받는 설계 패턴
-> - Strategy 패턴과 결합하면 Open/Closed Principle을 지키면서 기능을 확장 가능
-> - Python에서는 Protocol(구조적 서브타이핑)로 인터페이스를 정의하고, 전략 객체 또는 functools.partial 튜플로 경량 구현도 가능
-> - 규모가 커지면 `dependency-injector` 같은 라이브러리로 의존성 그래프를 선언적으로 관리
+> - Dependency Injection(DI)은 의존성을 직접 생성하지 않고 외부에서 주입받는 설계 패턴
+> - Strategy 패턴과 결합하면 Open/Closed Principle을 지키며 기능 확장 가능, Protocol로 인터페이스 정의
+> - 규모가 커지면 `dependency-injector`로 의존성 그래프를 선언적으로 관리
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Dependency Injection in Python is Awesome - Indently](https://youtube.com/watch?v=J1adhPWc-1c)

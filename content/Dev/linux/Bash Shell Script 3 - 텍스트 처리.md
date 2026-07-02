@@ -7,15 +7,12 @@ created: 2026-06-01T00:00:00
 updated: 2026-06-21T00:00:00
 permalink: /Dev/linux/bash-shell-script-3-text-processing
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - 텍스트 도구는 **바꾸는 것**(`tr`·`sed`·`awk`, 표현력이 커서 따로)과 **골라내는 것**(`grep`·`head`/`tail`·`cut`·`sort`/`uniq`·`shuf`, 파이프로 조합)으로 나뉨
-> - `printf`는 `echo`보다 안전하고 이식성이 좋음 (특수문자, 포맷 제어)
-> - 변형 도구는 `tr`(문자) → `sed`(줄) → `awk`(필드)로 복잡도가 올라감
-> - `read`로 한 줄씩 읽고, `IFS="$DELIM" read -ra`로 구분자 기반 파싱
-> - 같은 일은 간단한 도구부터: `grep`/`cut`으로 될 일에 `awk`를 꺼내지 않기
+> - 텍스트 도구는 바꾸는 것(`tr`, `sed`, `awk`)과 골라내는 것(`grep`, `cut`, `sort`, `uniq` 등)으로 구분
+> - `printf`는 특수문자와 포맷 제어에서 `echo`보다 안전하고 이식성이 좋은 선택
+> - 변형 도구는 `tr`에서 `sed`, `awk` 순으로 복잡도 상승, 간단한 도구부터 쓰는 원칙
+
+> *AI-assisted*
 
 ---
 

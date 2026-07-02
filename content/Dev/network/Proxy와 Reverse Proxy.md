@@ -7,6 +7,12 @@ created: 2025-06-11T13:07:45
 updated: 2025-06-11T13:17:50
 permalink: /Dev/network/proxy-and-reverse-proxy
 ---
+
+> [!abstract]+ TL;DR
+> - Forward Proxy는 클라이언트를 대신해 요청을 전달하며 클라이언트를 보호
+> - Reverse Proxy는 클라이언트 요청을 받아 내부 서버로 전달하며 서버를 보호
+> - 사용 주체, 요청 방향, 주요 역할 기준 차이 정리
+
 ### Proxy (Forward Proxy)
 클라이언트를 대신하여 인터넷에 요청을 전달하고 응답을 클라이언트로 되돌려주는 중개 서버
 

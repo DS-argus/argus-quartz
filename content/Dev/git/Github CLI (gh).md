@@ -7,6 +7,12 @@ created: 2025-05-14
 updated: 2025-05-21T22:21:11
 permalink: /Dev/git/github-cli-gh
 ---
+
+> [!abstract]+ TL;DR
+> - gh는 PR, 이슈, 저장소, Actions를 터미널에서 처리하는 GitHub 공식 CLI
+> - 인증부터 저장소, PR, 이슈, 워크플로우, Gist까지 자주 쓰는 명령어 모음
+> - alias, extension으로 워크플로우 커스터마이징 가능
+
 > [!info] gh란?
 >- GitHub에서 공식 제공하는 **CLI(Command Line Interface)** 도구
 >- 터미널에서 _GitHub와 관련된 작업(예: PR 생성, 이슈 관리, 저장소 복제 등)_ 을 처리할 수 있게 해주는 툴

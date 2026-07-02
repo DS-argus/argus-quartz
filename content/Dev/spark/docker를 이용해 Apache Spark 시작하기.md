@@ -7,6 +7,12 @@ created: 2025-06-07T22:10:36
 updated: 2025-06-15T22:11:48
 permalink: /Dev/spark/getting-started-with-apache-spark-using-docker
 ---
+
+> [!abstract]+ TL;DR
+> - Docker 공식 spark 이미지로 로컬에 Spark 환경 구성하는 방법 정리
+> - mnmcount.py 예제를 spark-submit으로 실행해 동작 확인
+> - Dockerfile과 entrypoint.sh 구조 및 Kubernetes 전제 설계 분석
+
 ### docker로 spark 실행하기
 기본적으로 Apache Spark는 [여기](https://spark.apache.org/downloads.html)에서 직접 다운받을 수 있다  
 하지만 역시나 로컬에 설치하는 것은 귀찮아질 가능성이 농후하기 때문에 docker를 이용해서 설치해보자  
@@ -44,6 +50,11 @@ docker run -it --name spark-container -v ./:/opt/spark/work-dir spark:python3-ja
 > 		- `jps -l`로 잘 실행되었는지 확인 가능
 > 	- spark-submit할 때 `--master` 옵션 추가
 > - 자세한 내용은 [[Spark 구조 및 Deployment 방식]]
+
+> [!warning]+ 주의: 단일 컨테이너 standalone과 데이터 저장 위치
+> - 위처럼 한 컨테이너 안에서 master+worker를 같이 띄우는 건 **학습용**이다. 실제 분산 구성은 master/worker를 별도 컨테이너(또는 노드)로 나누고 7077 포트로 연결해야 한다.
+> - Spark 이미지에는 **HDFS가 없다.** Spark는 계산 엔진일 뿐 저장소가 없어서, 데이터는 `file://`(컨테이너 로컬)·`hdfs://`(별도 HDFS)·`s3a://`(MinIO·S3) 중 어디서 읽을지 지정해야 한다.
+> - master/worker가 여러 컨테이너로 나뉜 상태에서 `file://` 로컬 경로를 쓰면 **컨테이너마다 파일시스템이 따로**라 데이터가 흩어진다. 공유 volume을 같은 경로로 마운트하거나 HDFS/MinIO 같은 공유 저장소를 써야 한다.
 
 ---
 ### 예제 실행 해보기
@@ -226,7 +237,7 @@ USER spark
 - apt의 패키지 인덱스 파일 (캐시) 삭제해 이미지 용량 최적화
 
 ##### `spark:4.0.0-scala2.13-java17-ubuntu` Dockerfile
-그럼 저 base image의 [Dockerfile](https://github.com/apache/spark-docker/tree/master/4.0.0/scala2.13-java21-ubuntu)을 살펴보자
+그럼 저 base image의 [Dockerfile](https://github.com/apache/spark-docker/tree/master/4.0.0/scala2.13-java17-ubuntu)을 살펴보자
 ```dockerfile
 FROM eclipse-temurin:17-jammy
 
@@ -459,5 +470,10 @@ esac
 	- 예시 1 (driver): `docker run -it spark:python3-java17 driver --class org.apache.spark.examples.SparkPi local:///opt/spark/examples/jars/spark-examples.jar 10`
 	- 예시 2 (executor): `docker run -it spark:python3-java17 executor`
 	- 예시 3 (pass-through): `docker run -it spark:python3-java17 /bin/bash`
+
+> [!note]+ 이 entrypoint는 Kubernetes 중심 설계다
+> - `executor` 분기가 `KubernetesExecutorBackend`를 쓰는 데서 보이듯, 공식 `spark` 이미지의 entrypoint는 **Spark on Kubernetes 배포를 전제**로 만들어졌다.
+> - 그래서 위 `executor` 예시는 `SPARK_DRIVER_URL`·`SPARK_EXECUTOR_ID` 같은 필수 환경변수 없이는 단독으로 동작하지 않는다. (보통 k8s가 이 값들을 주입)
+> - docker compose로 standalone master/worker를 직접 띄우는 실습에는 환경변수(`SPARK_MODE` 등) 기반인 `bitnami/spark` 이미지가 더 간편하다.
 
 

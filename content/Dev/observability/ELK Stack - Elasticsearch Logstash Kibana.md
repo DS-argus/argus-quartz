@@ -7,14 +7,12 @@ created: 2026-06-22T12:00:00
 updated: 2026-06-22T12:00:00
 permalink: /Dev/observability/elk-stack-elasticsearch-logstash-kibana
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - ELK Stack은 Elasticsearch + Logstash + Kibana로 구성된 로그 수집·검색·시각화 오픈소스 스택
-> - Beats 추가 후 Elastic Stack으로 명칭 확장, Filebeat가 경량 로그 수집 담당
-> - Elasticsearch는 역인덱스 기반 분산 검색 엔진, Logstash는 파이프라인 기반 데이터 변환, Kibana는 웹 대시보드
-> - 로그 전문 검색과 영구 보관이 중요한 중대규모 운영 환경에 적합 (소규모에는 다소 과한 편)
+> - Elasticsearch는 역인덱스 기반 분산 검색 엔진, Logstash는 데이터 변환 파이프라인, Kibana는 웹 대시보드이며 Beats 추가 후 Elastic Stack으로 확장
+> - 로그 전문 검색과 영구 보관이 중요한 중대규모 운영 환경에 적합
+
+> *AI-assisted*
 
 ---
 

@@ -6,15 +6,12 @@ created: 2026-06-05T10:00:00
 updated: 2026-06-05T10:00:00
 permalink: /Dev/python/python-cryptography-1-fernet
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - `cryptography`는 Python 대표 암호화 라이브러리
-> - `Fernet`은 대칭 키 기반의 간편한 암호화 도구
-> - 키 생성 → 암호화 → 복호화 3단계로 동작
-> - 키 관리(환경변수, 파일 분리)가 보안의 핵심
-> - 대용량 데이터나 세밀한 제어가 필요하면 AES-GCM 등 저수준 API 사용
+> - `cryptography`의 High-level 도구 `Fernet`은 대칭 키 기반 간편 암호화 제공
+> - 키 생성 → 암호화 → 복호화 3단계로 동작하며 키 관리가 보안의 핵심
+> - 대용량·세밀한 제어가 필요하면 AES-GCM 등 저수준 API 사용
+
+> *AI-assisted*
 
 ---
 ### 1. cryptography 라이브러리란

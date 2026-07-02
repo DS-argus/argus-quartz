@@ -5,6 +5,12 @@ created: 2025-06-14T21:31:52
 updated: 2025-06-14T23:32:27
 permalink: /Dev/airflow/manage-variable-and-connection-with-env-file
 ---
+
+> [!abstract]+ TL;DR
+> - Airflow Variable, Connection을 UI 대신 .env 환경변수로 관리하는 방법 정리
+> - AIRFLOW_VAR_{VAR_ID}, AIRFLOW_CONN_{CONN_ID} 네이밍 규칙과 url/json 스타일 작성법 정리
+> - docker-compose.yaml에 환경변수를 반영해 DAG에서 바로 사용
+
 ### Variable, Connection을 .env로 관리
 
 docker compose로 airflow를 돌리고 있는데 필요한 variable, connection을 매번 UI에 들어가서 넣기 귀찮아서 직접 넣을 수 있는 방법을 정리해본다  

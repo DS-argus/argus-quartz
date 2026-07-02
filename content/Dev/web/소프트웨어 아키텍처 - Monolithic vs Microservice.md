@@ -8,11 +8,9 @@ updated: 2026-06-07T08:47:13
 permalink: /Dev/web/software-architecture-monolithic-vs-microservices
 ---
 > [!abstract]+ TL;DR
-> - 모놀리식은 하나의 코드베이스·배포 단위, MSA는 독립적인 서비스 단위로 분리하는 아키텍처
-> - MSA 운영에는 API Gateway, 서비스 메시, 분산 추적, 메시지 브로커 등 부수 인프라가 필수
-> - MSA를 제대로 운영하려면 Kubernetes 같은 컨테이너 오케스트레이터가 사실상 필수
-> - 모놀리식 → MSA 전환 시 Strangler Fig 패턴으로 점진적 마이그레이션이 일반적
-> - 분산 환경에서는 Saga 패턴, Eventual Consistency, 서비스 디스커버리 등 고유한 문제를 다뤄야 함
+> - 모놀리식은 하나의 코드베이스·배포 단위, MSA는 독립 서비스 단위로 분리하는 아키텍처
+> - MSA 운영에는 API Gateway, 서비스 메시, 분산 추적, Kubernetes 오케스트레이터가 사실상 필수
+> - 전환은 Strangler Fig 패턴으로 점진적 진행, 분산 환경 고유의 Saga·Eventual Consistency 문제 존재
 
 ### 1. 개요
 

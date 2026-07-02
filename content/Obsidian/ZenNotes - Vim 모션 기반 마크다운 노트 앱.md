@@ -7,15 +7,12 @@ created: 2026-06-10T00:00:00
 updated: 2026-06-10T20:46:48
 permalink: /Obsidian/zennotes
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - ZenNotes는 Vim 모션을 네이티브로 지원하는 키보드 중심 로컬 마크다운 노트 앱
-> - CodeMirror 6 기반 에디터에 KaTeX, Mermaid, TikZ 등 라이브 프리뷰 지원
-> - 데스크톱(Electron), 셀프호스트(Docker), 웹 세 가지 런타임 제공
-> - MCP 서버 내장으로 Claude 등 AI 도구와 볼트 직접 연동 가능
-> - Obsidian 볼트 호환을 지원하면서도 Vim 사용자에 최적화된 워크플로우 제공
+> - CodeMirror 6 기반 에디터에 KaTeX·Mermaid·TikZ 라이브 프리뷰, 데스크톱·셀프호스트·웹 런타임 제공
+> - MCP 서버 내장으로 Claude 등 AI 도구와 볼트 연동, Obsidian 볼트 호환 지원
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/661XzULWfVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

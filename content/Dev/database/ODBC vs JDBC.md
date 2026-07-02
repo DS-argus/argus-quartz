@@ -8,14 +8,12 @@ created: 2026-06-06T10:00:00
 updated: 2026-06-06T10:00:00
 permalink: /Dev/database/odbc-vs-jdbc
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - ODBC는 언어 무관 DB 연결 API, JDBC는 Java 전용 DB 연결 API
-> - 둘 다 "DB에 붙는 방법"을 다루는 것이지 "데이터를 빠르게 넣는 방법"이 아님
-> - ODBC는 Driver Manager + DB별 드라이버 구조, JDBC는 Java API + JDBC Driver 구조
-> - Windows/레거시 환경은 ODBC, JVM 기반 애플리케이션은 JDBC가 일반적
+> - 둘 다 DB 접속 방법을 다루는 규격이지 데이터 적재 성능과는 무관
+> - Windows·레거시 환경은 ODBC, JVM 기반 애플리케이션은 JDBC가 일반적
+
+> *AI-assisted*
 
 ---
 

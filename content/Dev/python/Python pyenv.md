@@ -8,6 +8,12 @@ created: 2025-05-27T22:53:24
 updated: 2026-01-31T23:52:01
 permalink: /Dev/python/python-pyenv
 ---
+
+> [!abstract]+ TL;DR
+> - 여러 Python 버전을 설치·전환·고정 관리하는 pyenv 명령어 정리
+> - pyenv-virtualenv로 버전별 격리 가상환경 구성
+> - pyenv와 conda의 관리 범위·강점 비교
+
 > 이젠 [[Python uv - An extremely fast Python package and project manager|uv]] 사용합시다
 
 ---

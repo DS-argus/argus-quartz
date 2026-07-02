@@ -7,14 +7,12 @@ updated: 2026-05-21T00:00:00
 permalink: /Dev/python/python-click
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - Click은 Python CLI 애플리케이션을 빠르게 만들 수 있는 데코레이터 기반 프레임워크 (Pallets 프로젝트)
-> - `@click.command`, `@click.option`, `@click.argument` 데코레이터로 선언형 CLI 구성
-> - `@click.group`으로 서브커맨드를 구성하고, Context 객체로 상태를 전달
-> - Typer는 Click 위에 구축된 모던 대안으로, type hint 기반 선언이 특징
+> - Click은 Python CLI를 빠르게 만드는 데코레이터 기반 프레임워크 (Pallets 프로젝트)
+> - `@click.command`·`@click.option`·`@click.argument`로 선언형 CLI 구성, `@click.group`으로 서브커맨드와 Context 전달
+> - Typer는 Click 위에 구축된 type hint 기반 모던 대안
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [Click 공식 문서](https://click.palletsprojects.com/)

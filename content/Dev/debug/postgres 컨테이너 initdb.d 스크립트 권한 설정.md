@@ -6,6 +6,12 @@ created: 2025-06-27T14:48:31
 updated: 2025-06-27T15:00:50
 permalink: /Dev/debug/postgres-container-initdb-script-permissions
 ---
+
+> [!abstract]+ TL;DR
+> - /docker-entrypoint-initdb.d/ 스크립트가 chmod +x만으로 permission denied 나는 원인 정리
+> - root 소유 700 파일을 postgres 계정이 읽지 못하는 것이 원인
+> - COPY --chown=postgres:postgres와 chmod -R 755로 읽기·실행 권한 부여
+
 ### 상황
 - database 및 table 생성 스크립트 (.sh, .sql)을 컨테이너 시작할 때 바로 실행시키기 위해 `/docker-entrypoint.initdb.d/`에 복사
 - 권한을 부여하기 위해 다음과 같이 실행했으나  permission denied 오류 발생  

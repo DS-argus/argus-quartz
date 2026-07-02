@@ -5,13 +5,12 @@ created: 2026-06-06T00:00:00
 updated: 2026-06-06T00:00:00
 permalink: /Logs/go-1-26-green-tea-garbage-collector
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Go 1.25에서 실험적 도입, Go 1.26에서 기본 탑재된 새 GC
 > - 기존 mark-sweep 방식을 유지하되, 메모리 페이지 단위로 스캔하여 최대 40% GC 성능 향상
 > - 512바이트 미만 소형 객체를 8KiB span 단위로 처리하여 CPU 캐시 효율 개선
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/l4lneZYtjQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

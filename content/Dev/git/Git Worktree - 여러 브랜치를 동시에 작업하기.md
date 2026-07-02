@@ -6,14 +6,12 @@ created: 2026-05-10T00:00:00
 updated: 2026-05-10T00:00:00
 permalink: /Dev/git/git-worktree
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - git worktree는 하나의 저장소에서 여러 브랜치를 각각 별도 디렉토리로 동시에 체크아웃하는 기능
-> - `git stash` + `git checkout` 반복 없이 브랜치 간 병렬 작업 가능
-> - 긴급 핫픽스, 코드 리뷰, AI 에이전트 병렬 실행 등에 유용
-> - 대안 도구(Worktrunk, GitButler)는 worktree 관리의 번거로움을 줄여주는 래퍼/가상 브랜치 방식 제공
+> - git worktree는 한 저장소에서 여러 브랜치를 별도 디렉토리로 동시에 체크아웃하는 기능
+> - `git stash` + `git checkout` 반복 없이 병렬 작업 가능하며 핫픽스·코드 리뷰·AI 에이전트 실행에 유용
+> - 대안 도구 Worktrunk, GitButler는 worktree 관리 번거로움을 줄이는 래퍼·가상 브랜치 방식 제공
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [learn git worktrees in under 5 minutes - bashbunni](https://youtube.com/watch?v=8vsRb2mTBA8)

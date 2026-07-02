@@ -8,15 +8,12 @@ created: 2026-06-11T21:22:35
 updated: 2026-06-11T21:22:35
 permalink: /Dev/web/bun
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Bun은 런타임 + 패키지 매니저 + 번들러 + 테스트 러너를 하나로 합친 JavaScript 올인원 도구
-> - Zig와 JavaScriptCore 엔진 기반으로 Node.js 대비 약 4배 빠른 실행 속도 주장
-> - SQLite/Redis/S3 바인딩, WebSocket, 비밀번호 해싱, FFI까지 내장되어 외부 의존성 없이 풀스택 서버 구축 가능
-> - `bun build --compile`로 단독 실행 바이너리 생성, Jest 호환 테스트 러너 내장
-> - 패키지 매니저는 npm/yarn/pnpm과 호환되면서 10배 이상 빠름
+> - Zig와 JavaScriptCore 기반으로 Node.js 대비 약 4배 빠른 실행 속도 주장, npm/yarn/pnpm 호환 패키지 매니저는 10배 이상
+> - SQLite/Redis/S3 바인딩, WebSocket, FFI 내장으로 외부 의존성 없이 풀스택 서버 구축 가능
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > <iframe width="560" height="315" src="https://www.youtube.com/embed/B7UltNLuqPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

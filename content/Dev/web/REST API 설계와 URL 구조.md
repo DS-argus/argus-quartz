@@ -9,14 +9,12 @@ updated: 2026-05-23T00:00:00
 permalink: /Dev/web/rest-api-design-and-url-structure
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - URL은 scheme, host, port, path, query string, fragment로 구성되며 각 요소가 라우팅과 처리에 관여
+> - URL은 scheme, host, port, path, query string, fragment로 구성되며 각 요소가 라우팅에 관여
 > - REST API는 리소스를 URL로, 행위를 HTTP 메서드로 표현하는 설계 원칙
-> - API Gateway / Reverse Proxy가 외부 URL을 내부 서비스 경로로 변환 (path rewrite)
-> - Base path, endpoint path, path prefix의 차이를 이해하면 Ingress/Proxy 설정이 쉬워짐
+> - API Gateway / Reverse Proxy가 외부 URL을 내부 경로로 바꾸는 path rewrite와 각종 path 개념 정리
+
+> *AI-assisted*
 
 ---
 

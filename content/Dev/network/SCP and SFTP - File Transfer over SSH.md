@@ -8,15 +8,12 @@ created: 2026-06-30T00:00:00
 updated: 2026-06-30T22:55:54
 permalink: /Dev/network/scp-and-sftp-file-transfer-over-ssh
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - SCP와 SFTP는 SSH 위에서 동작하는 파일 전송 프로토콜
+> - SCP와 SFTP는 SSH 위에서 동작하는 파일 전송 프로토콜, SCP는 단발성 복사, SFTP는 인터랙티브 관리에 특화
 > - 파일 전송의 본질은 직렬화 → 패킷 분할 → 암호화 → 라우팅 → 재조립 과정
-> - SCP는 단발성 복사에 특화, SFTP는 인터랙티브 파일 관리에 특화
-> - OpenSSH 9.0부터 SCP 내부도 SFTP 프로토콜로 전환
-> - 대안으로 rsync, rclone 등 상황에 맞는 도구 선택 필요
+> - OpenSSH 9.0부터 SCP 내부도 SFTP로 전환, 대안으로 rsync·rclone 선택 가능
+
+> *AI-assisted*
 
 ---
 

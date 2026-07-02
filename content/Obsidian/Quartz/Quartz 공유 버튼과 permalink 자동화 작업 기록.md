@@ -9,11 +9,10 @@ created: 2026-04-23T00:00:00
 updated: 2026-04-23T23:08:38
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > Quartz 블로그에 공유 버튼을 추가하고, permalink 기반 URL 복사, 링크 미리보기 OG 메타 삽입, permalink pre-commit 자동화를 구현한 작업 기록이다.
+
+> *AI-assisted*
 
 ---
 

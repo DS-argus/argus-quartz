@@ -7,14 +7,12 @@ created: 2026-04-15T21:00:00
 updated: 2026-05-31T23:22:37
 permalink: /Dev/database/guid-and-uuid
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - GUID/UUID는 분산 시스템에서 고유 ID를 만들기 위한 표준이지만, RDBMS에 강한 건 아님
-> - 랜덤 UUID를 PK로 무분별하게 사용하면서 인덱스 파편화와 성능 저하라는 업계 전반의 삽질이 발생
-> - 업계는 프리픽스 붙이기, ASCII art, 비트 패킹 등 다양한 꼼수를 시도했지만 근본적 해결은 아니었음
-> - 현재는 UUIDv7이 대안으로 부상 중이며, RDBMS 중심이라면 규칙 기반 정수 조합이 더 합리적일 수 있음
+> - GUID/UUID는 분산 시스템의 고유 ID 표준이지만 RDBMS PK로는 강하지 않음
+> - 랜덤 UUID를 PK로 남용해 인덱스 파편화와 성능 저하를 부른 업계 전반의 삽질
+> - 대안으로 UUIDv7 부상, RDBMS 중심이면 규칙 기반 정수 조합이 더 합리적인 선택
+
+> *AI-assisted*
 
 > [!tip]+ Source
 > [GUID로 업계가 집단 삽질했던 썰... 왜 그랬을까 - 포프TV](https://youtube.com/watch?v=Yk2CBVkuEdo)

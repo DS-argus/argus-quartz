@@ -6,13 +6,12 @@ created: 2026-04-13T00:00:00
 updated: 2026-04-14T21:53:32
 permalink: /Dev/python/python-typing
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Python은 동적 타입 언어라 변수에 아무 타입이나 넣을 수 있지만, 프로젝트가 커지면 "이 변수가 뭔지" 알기 어려워진다
 > - `typing` 모듈은 타입 힌트를 선언하는 도구 모음이며, 런타임에는 아무 영향이 없고 **IDE 자동완성과 타입 체커(mypy)를 위한 것**이다
 > - 함수 인자/반환값, 변수, 컬렉션의 원소 타입까지 명시할 수 있다
+
+> *AI-assisted*
 
 > [!info]+ Sources
 > - [Python 공식 문서 — typing](https://docs.python.org/3/library/typing.html)

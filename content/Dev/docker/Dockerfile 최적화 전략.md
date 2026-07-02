@@ -5,6 +5,12 @@ created: 2025-06-04T11:19:33
 updated: 2025-06-04T00:07:39
 permalink: /Dev/docker/dockerfile-optimization-strategies
 ---
+
+> [!abstract]+ TL;DR
+> - 레이어는 압축 스택이라 파일을 삭제해도 이미지 용량이 회수되지 않는 원리
+> - 멀티스테이지 빌드, .dockerignore, RUN 합치기로 이미지 용량 최소화
+> - 레이어 캐시 최적화와 slim, alpine 베이스로 빌드 속도, 크기 개선
+
 ### 레이어 동작 방식
 
 ##### 1. tar → gzip 저장

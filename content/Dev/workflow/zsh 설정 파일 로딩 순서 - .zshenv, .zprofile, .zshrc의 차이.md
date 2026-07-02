@@ -7,11 +7,10 @@ created: 2026-04-20T00:00:00
 updated: 2026-06-22T00:00:00
 permalink: /Dev/workflow/zsh-startup-file-loading-order
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > zsh는 셸이 시작될 때 여러 설정 파일을 순서대로 읽는다. `.zshenv` → `.zprofile` → `.zshrc` → `.zlogin` → `.zlogout` 순서이며, 셸 유형(로그인/비로그인, 인터랙티브/비인터랙티브)에 따라 읽히는 파일이 다르다. 대부분의 설정은 `.zshrc`에, 환경 변수는 `.zshenv`에 넣으면 된다.
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - 🔗 [How Do Zsh Configuration Files Work? - freeCodeCamp](https://www.freecodecamp.org/news/how-do-zsh-configuration-files-work/)

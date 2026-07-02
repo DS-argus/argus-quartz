@@ -8,7 +8,7 @@ created: 2025-06-02T23:05:13
 updated: 2025-06-02T23:17:20
 permalink: /Dev/docker/bitnami-docker-images
 ---
-> [!abstract] TL;DR
+> [!abstract]+ TL;DR
 >-  Bitnami 이미지는 **“비전문가도 운영 가능한 수준까지 자동화된, 보안 강화·멀티아키 지원 컨테이너 스택”**
 >- Spark·Airflow·Kafka처럼 구성 요소 많은 시스템을 **빠르게 실습**하거나 **K8s-Helm 배포를 표준화**하려면 Bitnami가 효율적 
 >- 반면 **미세 조정이 필요하거나 초경량 이미지**가 목표라면 Apache 공식이 더 적합

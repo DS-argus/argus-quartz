@@ -9,10 +9,9 @@ updated: 2026-06-29T10:00:00
 permalink: /Tinkered/greenplum-gpload-gpfdist-port-collision
 ---
 > [!abstract]+ TL;DR
-> - gpload를 병렬 실행하면 내부에서 함께 뜨는 gpfdist의 포트가 충돌할 수 있음
-> - 두 가지 해법을 비교 — 직접 구현한 flock 기반 사전 port lease와 gpload 내장 PORT_RANGE
->   - 포트 사용 가능 여부의 최종 판정자는 OS의 bind()라서, 넓은 PORT_RANGE만으로도 충돌 회피는 충분한 경우가 많음
->   - flock lease는 실행 전 포트 확정·할당 실패 기록·동시성 제한 같은 운영 관측성이 필요할 때 의미가 있음
+> - gpload를 병렬 실행하면 내부에서 함께 뜨는 gpfdist의 포트가 충돌할 수 있는 문제
+> - flock 기반 사전 port lease와 gpload 내장 PORT_RANGE 두 해법을 비교
+> - 포트 최종 판정자는 OS의 bind()라 넓은 PORT_RANGE로 충분하나, 운영 관측성이 필요하면 flock lease가 유효한 선택
 
 ---
 

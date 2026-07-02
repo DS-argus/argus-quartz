@@ -8,11 +8,10 @@ updated: 2026-04-23T00:00:00
 permalink: /Dev/git/git-hook
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > Git Hook은 커밋, 푸시, 머지 등 Git 동작의 특정 시점에 자동으로 스크립트를 실행하는 이벤트 시스템이다. 린트 검사, 커밋 메시지 규칙 강제, 민감 정보 유출 방지, 배포 자동화 등 다양한 용도로 활용하며, Husky·pre-commit·Lefthook 같은 도구로 팀 전체가 동일한 Hook을 공유할 수 있다.
+
+> *AI-assisted*
 
 ---
 

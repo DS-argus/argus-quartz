@@ -9,6 +9,12 @@ created: 2025-06-06T18:18:03
 updated: 2026-05-31T23:23:11
 permalink: /Dev/python/python-fastapi
 ---
+
+> [!abstract]+ TL;DR
+> - 타입 힌트·비동기·자동 문서화를 지원하는 Python 웹 프레임워크
+> - ASGI, Starlette, Uvicorn, Gunicorn의 역할과 관계 정리
+> - Path/Query Parameter와 Pydantic 기반 CRUD 구현 예시 제공
+
 ### FastAPI란?
 
 FastAPI는 Python으로 만든 최신 웹 프레임워크이다  

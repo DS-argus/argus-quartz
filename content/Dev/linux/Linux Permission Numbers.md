@@ -7,9 +7,6 @@ updated: 2026-04-06T22:07:52
 permalink: /Dev/linux/linux-permission-numbers
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > 1. 권한의 기본 구조 — 누가, 무엇을
 > 2. 숫자 표기법
@@ -20,6 +17,8 @@ permalink: /Dev/linux/linux-permission-numbers
 > 7. 디렉토리 권한의 차이
 > 8. umask — 기본 권한 설정
 > 9. 특수 비트 — setuid, setgid, sticky
+
+> *AI-assisted*
 
 ---
 ### 권한의 기본 구조 — 누가, 무엇을

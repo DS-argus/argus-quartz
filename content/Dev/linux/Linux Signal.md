@@ -8,8 +8,12 @@ updated: 2026-03-31T22:40:35
 permalink: /Dev/linux/linux-signal
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
+> [!abstract]+ TL;DR
+> - Signal은 커널이나 다른 프로세스가 특정 프로세스에 이벤트를 알리는 비동기 통지
+> - 종료는 SIGTERM으로 정리 기회를 준 뒤 안 죽으면 SIGKILL을 쓰는 순서가 원칙
+> - SIGKILL(9)과 SIGSTOP(19)은 핸들링·무시가 불가능한 유일한 시그널
+
+> *AI-assisted*
 
 ### Signal : 프로세스에 보내는 소프트웨어 인터럽트
 - 커널 또는 다른 프로세스가 특정 프로세스에게 **이벤트를 알리기 위해** 보내는 비동기적 통지

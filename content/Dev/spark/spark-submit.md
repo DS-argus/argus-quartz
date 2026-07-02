@@ -5,6 +5,12 @@ created: 2025-06-14T23:42:21
 updated: 2025-06-15T22:40:50
 permalink: /Dev/spark/spark-submit
 ---
+
+> [!abstract]+ TL;DR
+> - 모든 cluster manager를 동일 인터페이스로 다루는 Spark job 실행 CLI 런처
+> - --master·--deploy-mode·--conf 등 주요 옵션과 의미 정리
+> - local·standalone·YARN·Kubernetes별 실행 예시 스크립트 제공
+
 ### Spark-Submit이란?
 Spark job을 배치 혹은 스트리밍 형태로 실행하기 위한 공식 CLI 런처로 notebook이나 spark-shell과 함께 Spark job을 실행할 수 있는 방법 중 하나  
 Spark에서 지원하는 모든 cluster manager를 동일한 인터페이스를 통해 사용할 수 있어서 유용
@@ -56,7 +62,7 @@ spark-submit \
 	- spark://HOST1:PORT1,HOST2:PORT2 : Zookeeper 사용해서 대기 master가 있는 standalone cluster에 연결
 	- yarn : client 혹은 cluster 모드로 YARN 클러스터에 연결. cluster location 환경변수로 주입필요
 	- k8s://HOST:PORT : client 혹은 cluster 모드로 k8s cluster에 연결
-- `--deploy-mode` : Spark Driver를 worker node에 배포할지 (cluster) 아님 외부 client에 배포할지 (client, 기본값) 
+- `--deploy-mode` : Spark Driver를 클러스터 내부 노드(worker·컨테이너·Pod)에 배포할지 (cluster) 아님 외부 client(제출 머신)에 배포할지 (client, 기본값)
 	- [[Spark 구조 및 Deployment 방식#Local 모드 및 Cluster Manager를 이용한 다양한 Deployment Modes|자세한 내용]]
 - `--conf` : key=value 형태의 spark configuration. 여러개를 반복해서 입력 가능
 	- spark.app.name=name : 앱 이름 오버라이드
@@ -71,9 +77,11 @@ spark-submit \
 
 - `--executor-memory` : Executor JVM Heap (예 `4g`, `512m`)
 - `--executor-cores` : Executor 당 CPU 코어 수
-- `--num-executors` : Executor 개수 (Stand‑alone·YARN)
-- `--driver-memory` : Driver Heap
-- `--total-executor-cores` : Mesos 전용 총 코어 수
+- `--num-executors` : Executor 개수 (YARN·K8s 전용. Standalone에서는 무시되고 `--total-executor-cores`/`--executor-cores`로 결정)
+- `--driver-memory` : Driver Heap (예 `2g`)
+- `--driver-cores` : Driver가 쓸 코어 수 (기본 1). **cluster deploy mode에서만 적용**되고 client 모드에서는 무시
+- `--total-executor-cores` : 모든 Executor의 총 코어 수 (Standalone·K8s 전용. 과거 Mesos 포함)
+- `--supervise` : Standalone cluster 모드에서 Driver 실패 시 자동 재시작
 - `--jars`  : 추가 JAR classpath
 - `--packages` : Maven Central Ivy 다운로드
 - `--repositories` : 사설 Maven 저장소 URL

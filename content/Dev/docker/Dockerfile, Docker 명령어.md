@@ -6,6 +6,12 @@ created: 2025-06-04T00:00:00
 updated: 2025-06-04T23:40:29
 permalink: /Dev/docker/dockerfile-and-docker-commands
 ---
+
+> [!abstract]+ TL;DR
+> - FROM, RUN, CMD, ENTRYPOINT 등 Dockerfile 주요 명령어 레퍼런스
+> - 이미지, 컨테이너, 네트워크, 볼륨 관리용 docker CLI 명령어 정리
+> - docker run, exec 주요 옵션과 헬스체크 설정 예시 제공
+
 ### Dockerfile 명령어
 ##### 기본 명령어
 - **FROM** : 베이스 이미지 지정 (필수)

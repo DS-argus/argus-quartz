@@ -9,11 +9,12 @@ updated: 2026-06-01T00:00:00
 permalink: /Dev/workflow/zerobrew-a-5-20x-faster-experimental-homebrew-alternative
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> zerobrew는 Homebrew의 Rust 기반 대안으로, 동일한 패키지를 5~20배 빠르게 설치한다. 기존 `brew` 명령어를 그대로 쓸 수 있는 drop-in 구조이며, Homebrew와 별도 경로(`/opt/zerobrew`)에서 동작하므로 안전하게 병행 사용이 가능하다.
+> - zerobrew는 동일 패키지를 5-20배 빠르게 설치하는 Homebrew의 Rust 기반 대안
+> - 기존 `brew` 명령어를 그대로 쓰는 drop-in 구조
+> - `/opt/zerobrew` 별도 경로에서 동작해 Homebrew와 안전하게 병행 사용 가능
+
+> *AI-assisted*
 
 ### 1. 패키지 매니저가 느린 이유
 
@@ -21,7 +22,7 @@ macOS에서 개발 도구를 설치할 때 대부분 Homebrew(`brew`)를 사용�
 
 특히 아래 상황에서 답답함을 느끼게 된다.
 
-- `brew install`이 수십 초~수 분 걸리는 경우
+- `brew install`이 수십 초에서 수 분 걸리는 경우
 - `brew update` 자체가 느린 경우
 - CI/CD 파이프라인에서 패키지 설치가 병목이 되는 경우
 

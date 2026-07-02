@@ -5,6 +5,12 @@ created: 2025-05-28T23:59:29
 updated: 2025-05-29T07:40:22
 permalink: /Dev/workflow/yaml-and-anchors
 ---
+
+> [!abstract]+ TL;DR
+> - 들여쓰기로 구조를 표현하는 config 파일 포맷 YAML 개념
+> - Map·Sequence·Scalar 노드 타입과 기본 문법 정리
+> - & 앵커와 * alias의 적용 범위가 동일 인덴트 블록 전체임을 설명
+
 ### YAML 파일이란?
 
 YAML(YAML Ain't Markup Language, 이전에는 Yet Another Markup Language)은 사람이 읽기 쉽고, 다양한 환경에서 널리 쓰이는 구성(config) 파일 포맷이다.

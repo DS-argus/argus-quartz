@@ -8,10 +8,9 @@ updated: 2026-06-05T10:00:00
 permalink: /Dev/network/ssl-secure-sockets-layer
 ---
 > [!abstract]+ TL;DR
-> - SSL은 인터넷 통신 암호화 프로토콜이지만 현재는 보안 취약점으로 폐기된 상태
-> - TLS는 SSL의 후속 프로토콜로 현재 표준 (TLS 1.2, 1.3)
-> - 일상적으로 "SSL"이라 부르지만 실제로는 TLS가 동작하는 경우가 대부분
-> - TLS 1.3은 handshake 간소화, 취약한 암호 스위트 제거 등 성능과 보안을 모두 개선
+> - SSL은 통신 암호화 프로토콜이지만 보안 취약점으로 폐기된 상태
+> - TLS는 SSL의 후속 표준으로, 흔히 "SSL"이라 불러도 실제로는 TLS가 동작
+> - TLS 1.3은 handshake 간소화와 취약 암호 스위트 제거로 성능과 보안 개선
 
 ---
 ### 1. SSL이란

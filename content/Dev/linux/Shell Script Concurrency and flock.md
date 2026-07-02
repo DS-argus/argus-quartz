@@ -7,16 +7,12 @@ created: 2026-06-23T00:00:00
 updated: 2026-06-23T00:00:00
 permalink: /Dev/linux/shell-script-concurrency-and-flock
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - shell script 동시성 문제는 cron 중복 실행·공유 파일 동시 수정에서 발생
-> - `flock`은 파일에 잠금을 걸어 한 번에 하나만 임계 구역에 진입시키는 도구
-> - flock은 **advisory lock** — 모두가 호출해야 의미가 있고 강제 차단은 아님
-> - 잠금 소유자는 프로세스가 아니라 open file description(OFD), 충돌 판정은 inode 단위
-> - 프로세스 종료 시 FD가 닫히며 잠금 자동 해제 — stale lock 위험이 낮음
-> - 이식성 환경에선 `mkdir`·`set -o noclobber`·`ln`의 원자성으로 대체
+> - shell script 동시성 문제는 cron 중복 실행과 공유 파일 동시 수정에서 발생하며, `flock`으로 임계 구역을 하나씩 진입
+> - flock은 advisory lock이라 모두가 호출해야 효력이 있고, 잠금 소유자는 프로세스가 아니라 OFD, 충돌 판정은 inode 단위
+> - 프로세스 종료 시 FD가 닫히며 자동 해제되고, macOS 등 이식성 환경에선 `mkdir`·`noclobber`·`ln`으로 대체
+
+> *AI-assisted*
 
 ---
 

@@ -6,13 +6,12 @@ created: 2026-06-05T10:00:00
 updated: 2026-06-05T23:33:15
 permalink: /Logs/big-tech-switching-to-go
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - Microsoft, Reddit, Lovable, Uber가 Python/TypeScript에서 Go로 전환한 사례 정리
 > - 공통 이유: 동시성 처리 성능, 단순한 문법, 네이티브 바이너리 컴파일, 서버 비용 절감
 > - Go는 완전한 재작성 없이 포팅이 가능한 실용적 선택지로 부상
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [The Real Reason Big Tech Is Switching to Go - Coding with Patrik (YouTube)](https://youtube.com/watch?v=-Z813pHqSFI)

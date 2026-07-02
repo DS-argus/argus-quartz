@@ -5,13 +5,12 @@ created: 2026-04-12T00:00:00
 updated: 2026-04-12T00:00:00
 permalink: /Dev/python/python-serialization
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > - 직렬화(Serialization)는 메모리에 있는 객체를 저장하거나 전송할 수 있는 형태로 변환하는 것
 > - JSON은 사람이 읽을 수 있고 언어 간 호환이 되는 텍스트 포맷, pickle은 Python 전용 바이너리 포맷
 > - 외부 시스템과 통신하면 JSON, Python 내부 저장이면 pickle, 대규모 데이터 파이프라인이면 Avro/Protobuf
+
+> *AI-assisted*
 
 > [!info]+ Sources
 > - [Python 공식 문서 — json](https://docs.python.org/3/library/json.html)

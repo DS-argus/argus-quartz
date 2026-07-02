@@ -6,6 +6,12 @@ created: 2025-06-02T17:00:00
 updated: 2025-06-02T17:55:14
 permalink: /Dev/airflow/dumb-init-setsid
 ---
+
+> [!abstract]+ TL;DR
+> - Celery worker의 종료 시그널이 전달되지 않는 문제를 해결하는 DUMB_INIT_SETSID="0" 설정 정리
+> - PID 1로 실행되는 dumb-init이 자식 프로세스로 시그널을 전달하는 원리 정리
+> - setsid 호출 비활성화로 시그널을 Celery까지 그대로 전달
+
 > [!abstract] DUMB_INIT_SETSID: "0" 의 의미
 > - Celery worker 컨테이너가 **정상적으로 종료되도록** 돕는 설정
 > - Docker 컨테이너 안에서 **종료 시그널이 제대로 전달되지 않는 문제**를 해결하기 위해 사용됨

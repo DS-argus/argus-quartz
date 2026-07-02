@@ -7,9 +7,6 @@ updated: 2026-04-05T00:00:00
 permalink: /Dev/python/python-logging
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
 > 1. 왜 print가 아니라 logging인가
 > 2. 로그 레벨과 실무 기준
@@ -17,6 +14,8 @@ permalink: /Dev/python/python-logging
 > 4. 실전 코드 스니펫
 > 5. 흔한 실수와 베스트 프랙티스
 > 6. 운영 환경에서의 로깅
+
+> *AI-assisted*
 
 > [!info]+ Reference
 > - Python Logging HOWTO [Python Docs](https://docs.python.org/3/howto/logging.html)

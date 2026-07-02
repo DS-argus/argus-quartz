@@ -8,15 +8,12 @@ updated: 2026-06-14T18:00:00
 permalink: /Dev/python/python-pytest-a-practical-guide-to-testing-and-plugins
 ---
 
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> - pytest는 Python 테스트 프레임워크. `assert` 한 줄로 검증하고, `pytest` 명령으로 테스트를 자동으로 찾아 실행
-> - 핵심 기능 4가지: 테스트 자동 탐색, fixture(준비 작업 재사용), parametrize(입력만 바꿔 반복), 풍부한 실행 옵션
-> - mocking은 `pytest-mock`, 커버리지는 `pytest-cov`처럼 기능을 플러그인으로 확장
-> - 본체는 "플러그인을 끼우는 프레임워크"이고 생태계가 넓어서 비동기·Django·병렬 실행까지 전부 커버
-> - unittest는 표준 라이브러리라는 점 외엔 우위가 없고, hypothesis는 경쟁자가 아니라 pytest 위에 얹는 보완재
+> - pytest는 `assert` 한 줄로 검증하고 `pytest` 명령으로 테스트를 자동 탐색해 실행하는 프레임워크
+> - 핵심은 테스트 자동 탐색, fixture, parametrize, 풍부한 실행 옵션
+> - pytest-mock, pytest-cov 등 플러그인으로 기능을 확장하는 넓은 생태계
+
+> *AI-assisted*
 
 > [!info]+ pytest?
 > - Python에서 가장 널리 쓰이는 테스트 프레임워크

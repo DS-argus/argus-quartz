@@ -7,6 +7,12 @@ updated: 2025-05-25T00:05:13
 permalink: /Dev/git/git-mv
 related: 
 ---
+
+> [!abstract]+ TL;DR
+> - 폴더, 파일 이름 변경을 git이 추적하게 하는 git mv 명령어 사용법
+> - macOS case-insensitive 파일시스템에서 대소문자만 바꿀 때 발생하는 오류
+> - 중간 임시 폴더명을 거쳐 대소문자 변경을 우회하는 방법
+
 ### 문제
 
 만약 기존 git repository 에 속한 폴더 하나가 "Git/" 이었는데 이것을 "git/"으로 바꾸고 싶다고 해보자  

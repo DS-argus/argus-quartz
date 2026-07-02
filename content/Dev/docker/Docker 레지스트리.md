@@ -6,7 +6,7 @@ created: 2025-06-04T12:39:56
 updated: 2025-06-03T23:54:51
 permalink: /Dev/docker/docker-registry
 ---
-> [!abstract] TL;DR
+> [!abstract]+ TL;DR
 > - 이미지는 레이어 묶음, 레지스트리는 그 보관소 → 캐시 덕에 Pull·Push 때 필요한 레이어만 이동
 > - 매니페스트 (+ 리스트)가 “내 플랫폼에 필요한 레이어”만 가이드해 전송 최적화
 > - Verified/Official/Golden 이미지로 신뢰도 확보

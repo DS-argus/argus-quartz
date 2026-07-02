@@ -7,11 +7,11 @@ created: 2026-04-22T00:00:00
 updated: 2026-05-10T17:40:42
 permalink: /Dev/network/latency-numbers
 ---
-> [!warning]+ Alert
-> 이 글은 Claude Code의 도움을 받아 작성되었습니다
-
 > [!abstract]+ TL;DR
-> 컴퓨터의 각 저장 계층(L1 캐시 ~ HDD)은 한 단계 내려갈 때마다 10~100배씩 느려진다. 이 숫자 감각이 있어야 캐시, DB 선택, 시스템 설계에서 올바른 판단을 내릴 수 있다.
+> - 저장 계층은 L1 캐시부터 HDD까지 한 단계 내려갈 때마다 10-100배씩 느려지는 구조
+> - 이 숫자 감각이 캐시, DB 선택, 시스템 설계 판단의 기준
+
+> *AI-assisted*
 
 > [!cite]+ Source
 > - [메모리,SSD,HDD 레이턴시 제대로 말할 수 있나요? - 코딩하는기술사](https://youtube.com/watch?v=jNwI1ABWmbQ)
