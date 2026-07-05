@@ -6,7 +6,7 @@ tags:
   - concurrency
   - parallelism
 created: 2026-06-19T00:00:00
-updated: 2026-07-05T23:35:01
+updated: 2026-07-05T23:37:46
 permalink: /Dev/CS/concurrency-and-parallelism
 ---
 > [!abstract]+ TL;DR
@@ -112,7 +112,7 @@ run queue는 보통 **논리 코어마다 하나씩** 있다(per-core run queue)
 
 바구니가 채워지는 경로는 셋이다. 새로 생성된 thread, 선점당해 내려온 thread, 보류함에서 답변이 와 깨어난 thread다.
 
-상태 전이를 그림으로 나타내면 이렇다. `[*]`은 thread의 생성과 종료를 나타내는 시작·끝 지점이다.
+상태 전이를 그림으로 나타내면 이렇다. 
 
 ```mermaid
 stateDiagram-v2
@@ -448,12 +448,12 @@ flowchart LR
     RQ -->|실행 후 반복| TH
 
     style EL fill:none,stroke:#495057,stroke-dasharray: 5 5
-    style CL fill:#ffec99,stroke:#f08c00,color:#1e1e1e
-    style TH fill:#ffec99,stroke:#f08c00,color:#1e1e1e
-    style AR fill:#a5d8ff,stroke:#1971c2,color:#1e1e1e
-    style SEL fill:#a5d8ff,stroke:#1971c2,color:#1e1e1e
-    style CS fill:#b2f2bb,stroke:#2f9e44,color:#1e1e1e
-    style RQ fill:#b2f2bb,stroke:#2f9e44,color:#1e1e1e
+    style CL fill:#4d3f18,stroke:#ebcb8b,color:#eceff4
+    style TH fill:#4d3f18,stroke:#ebcb8b,color:#eceff4
+    style AR fill:#294764,stroke:#88c0d0,color:#eceff4
+    style SEL fill:#294764,stroke:#88c0d0,color:#eceff4
+    style CS fill:#34502a,stroke:#a3be8c,color:#eceff4
+    style RQ fill:#34502a,stroke:#a3be8c,color:#eceff4
 ```
 
 이 세 구조의 협력 골격은 asyncio 전용이 아니라 **reactor 패턴**으로, Node의 libuv·Go 런타임·nginx도 이름만 달리 같은 구조를 쓴다.  
