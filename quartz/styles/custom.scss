@@ -329,11 +329,11 @@ code.mermaid svg { background: transparent !important; }
 // mermaid가 classDef fill/stroke 색을 id-scoped !important로 걸어 외부 CSS 색
 // override가 안 먹는다. 색 대신 mermaid가 안 건드리는 속성으로 우회:
 // fill-opacity로 어둡게(흰 글자 읽히게), stroke-width로 테두리 굵게.
-code.mermaid :is(.srcYellow, .srcBlue, .srcGreen) :is(rect, path, polygon) {
+:is(.srcYellow, .srcBlue, .srcGreen) :is(rect, path, polygon) {
   fill-opacity: 0.2 !important;
   stroke-width: 2px !important;
 }
-// event loop 점선 박스 굵게
-code.mermaid .cluster :is(rect, path) {
+// event loop 점선 박스 굵게 (인라인+확대 팝업 공통)
+.cluster :is(rect, path) {
   stroke-width: 1.6px !important;
 }
