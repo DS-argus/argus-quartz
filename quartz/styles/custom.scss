@@ -326,9 +326,14 @@ pre > code.mermaid {
 code.mermaid svg { background: transparent !important; }
 
 // 색 노드: fill 진하게 + 테두리 선명하게 (Obsidian의 쨍한 느낌, 글자 흰색 유지)
-code.mermaid .srcYellow :is(rect, path, polygon) { fill: #4d3f18 !important; stroke: #e0a82e !important; }
-code.mermaid .srcBlue   :is(rect, path, polygon) { fill: #294764 !important; stroke: #4a9eff !important; }
-code.mermaid .srcGreen  :is(rect, path, polygon) { fill: #34502a !important; stroke: #40c057 !important; }
-
-// event loop 점선 박스 테두리 잘 보이게
-code.mermaid .cluster :is(rect, path) { stroke: #7a8496 !important; }
+// mermaid가 classDef fill/stroke 색을 id-scoped !important로 걸어 외부 CSS 색
+// override가 안 먹는다. 색 대신 mermaid가 안 건드리는 속성으로 우회:
+// fill-opacity로 어둡게(흰 글자 읽히게), stroke-width로 테두리 굵게.
+code.mermaid :is(.srcYellow, .srcBlue, .srcGreen) :is(rect, path, polygon) {
+  fill-opacity: 0.2 !important;
+  stroke-width: 2px !important;
+}
+// event loop 점선 박스 굵게
+code.mermaid .cluster :is(rect, path) {
+  stroke-width: 1.6px !important;
+}
