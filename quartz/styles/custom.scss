@@ -316,3 +316,8 @@ footer {
 .darkmode {
   display: none !important;
 }
+
+// mermaid 다이어그램 가운데 정렬 (로컬 Obsidian과 통일)
+pre > code.mermaid {
+  justify-items: center;
+}
