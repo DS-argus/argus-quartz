@@ -35,6 +35,7 @@ quartz/cli/tui/dist/
 /.playwright-mcp/
 /.smtcmp_json_db/
 /.trash/
+/_workspace/
 /AGENTS.md
 /CLAUDE.md
 /QUARTZ_CUSTOMIZATIONS.md
