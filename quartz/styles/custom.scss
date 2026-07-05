@@ -321,3 +321,9 @@ footer {
 pre > code.mermaid {
   justify-items: center;
 }
+
+// mermaid: Quartz는 색 노드의 파스텔 fill을 Obsidian보다 밝게 렌더해
+// 흰 글자가 묻힌다. 해당 노드의 fill만 진하게 override (글자는 흰색 유지).
+code.mermaid .srcYellow :is(rect, path, polygon) { fill: #4d3f18 !important; }
+code.mermaid .srcBlue :is(rect, path, polygon) { fill: #294764 !important; }
+code.mermaid .srcGreen :is(rect, path, polygon) { fill: #34502a !important; }

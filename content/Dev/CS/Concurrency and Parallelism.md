@@ -6,7 +6,7 @@ tags:
   - concurrency
   - parallelism
 created: 2026-06-19T00:00:00
-updated: 2026-07-05T23:37:46
+updated: 2026-07-05T23:44:11
 permalink: /Dev/CS/concurrency-and-parallelism
 ---
 > [!abstract]+ TL;DR
@@ -448,12 +448,12 @@ flowchart LR
     RQ -->|실행 후 반복| TH
 
     style EL fill:none,stroke:#495057,stroke-dasharray: 5 5
-    style CL fill:#4d3f18,stroke:#ebcb8b,color:#eceff4
-    style TH fill:#4d3f18,stroke:#ebcb8b,color:#eceff4
-    style AR fill:#294764,stroke:#88c0d0,color:#eceff4
-    style SEL fill:#294764,stroke:#88c0d0,color:#eceff4
-    style CS fill:#34502a,stroke:#a3be8c,color:#eceff4
-    style RQ fill:#34502a,stroke:#a3be8c,color:#eceff4
+    classDef srcYellow fill:#ffec99,stroke:#f08c00
+    classDef srcBlue fill:#a5d8ff,stroke:#1971c2
+    classDef srcGreen fill:#b2f2bb,stroke:#2f9e44
+    class CL,TH srcYellow
+    class AR,SEL srcBlue
+    class CS,RQ srcGreen
 ```
 
 이 세 구조의 협력 골격은 asyncio 전용이 아니라 **reactor 패턴**으로, Node의 libuv·Go 런타임·nginx도 이름만 달리 같은 구조를 쓴다.  
