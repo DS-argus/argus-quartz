@@ -5,7 +5,7 @@ tags:
   - golang
   - concurrency
   - parallelism
-created: 2026-06-19T00:00:00
+created: 2026-06-30T00:00:00
 updated: 2026-07-05T23:44:11
 permalink: /Dev/CS/concurrency-and-parallelism
 ---
