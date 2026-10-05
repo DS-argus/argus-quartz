@@ -3,7 +3,7 @@ tags:
   - Rust
   - Cargo
 created: 2026-10-02T13:25:38
-updated: 2026-10-02T18:32:46
+updated: 2026-10-04T13:45:53
 permalink: /Dev/rust/rust-project-structure
 ---
 
@@ -69,7 +69,7 @@ shop/
 
 ---
 
-### 2. 배송비 계산을 추가하면서 module로 묶는다
+### 2. 배송비 계산과 module 구성
 
 계산에 배송비 규칙을 추가한다. 상품 합계가 5,000 미만이면 배송비 300을 붙이고 그 이상이면 배송비를 받지 않는다.
 
@@ -112,7 +112,7 @@ fn main() {
 
 ---
 
-### 3. 파일을 나눠도 crate는 하나다
+### 3. Module 파일 분리와 crate 단위
 
 가격 계산이 길어지면 `main.rs`에서 별도 파일로 옮긴다. 같은 module의 코드를 다른 파일에 보관하는 변화다.
 
@@ -184,7 +184,7 @@ fn shipping_fee(subtotal: u32) -> u32 {
 
 ---
 
-### 4. 주문과 견적 프로그램이 계산 library를 공유한다
+### 4. 주문·견적 프로그램의 library 공유
 
 주문 CLI에 더해 견적 프로그램도 별도로 실행할 필요가 생겼다. 주문 CLI는 상품 3개의 금액을 출력하고 견적 프로그램은 상품 5개의 예상 금액을 출력한다. 가격과 배송비 규칙은 두 프로그램에 동일하게 적용한다.
 
@@ -273,7 +273,7 @@ cargo run --bin quote
 
 ---
 
-### 5. 여러 package를 함께 개발할 때 workspace로 묶는다
+### 5. 여러 package의 workspace 구성
 
 주문·견적 CLI는 `app` package에 함께 두고 가격 계산은 의존성·버전 설정을 별도로 관리하는 `pricing` package로 나눈다. 두 package를 같은 저장소에서 함께 빌드하고 테스트하려면 [Cargo workspace](https://doc.rust-kr.org/ch14-03-cargo-workspaces.html)를 사용한다. Workspace는 Rust Book 14.3절에서 다룬다.
 
@@ -307,7 +307,7 @@ shop-workspace/
         └── calculation.rs
 ```
 
-#### 5.1 Workspace root는 member를 지정한다
+#### 5.1 Workspace root의 member 지정
 
 `shop-workspace/Cargo.toml`을 새로 작성한다.
 
@@ -321,7 +321,7 @@ resolver = "3"
 - **Virtual workspace**: 이 root에는 `[package]`가 없다. root 자체는 package나 crate가 아니며 member의 구성을 관리한다.
 - **Resolver**: 예제는 Rust 2024 edition을 사용하며 virtual workspace에는 의존성 resolver를 명시한다.
 
-#### 5.2 Pricing package는 계산 library를 제공한다
+#### 5.2 Pricing package의 계산 library
 
 `pricing/Cargo.toml`을 다음으로 바꾼다.
 
@@ -342,7 +342,7 @@ pub use calculation::total;
 
 `calculation.rs`는 앞 명령으로 복사한 가격·배송비 계산 코드다. Library 내부 module 이름은 `calculation`, library crate 이름은 `pricing`이다.
 
-#### 5.3 App package는 pricing을 dependency로 선언한다
+#### 5.3 App package의 pricing dependency 선언
 
 `app/Cargo.toml`을 다음으로 바꾼다.
 
@@ -417,7 +417,7 @@ binary crate quote ── dependency ──> library crate pricing
 
 ---
 
-### 6. 계산 테스트를 library에 두고 함께 실행한다
+### 6. Library의 계산 테스트와 workspace 실행
 
 가격 규칙의 테스트를 CLI와 분리하면 출력 처리 없이 계산 결과를 확인한다. `pricing/src/lib.rs` 끝에 다음을 추가한다.
 
@@ -451,7 +451,7 @@ cargo test --workspace
 
 ---
 
-### 7. 구조는 필요한 경계부터 나눈다
+### 7. 필요한 경계와 구조 선택
 
 예제의 계산 코드는 2절부터 같은 규칙을 유지했다. 이후 확장은 구현 위치, 공개 API, 컴파일 단위, Cargo 관리 단위를 바꾸는 과정이었다.
 
