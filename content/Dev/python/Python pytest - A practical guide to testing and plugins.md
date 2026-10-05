@@ -4,7 +4,7 @@ tags:
   - pytest
   - test
 created: 2026-06-12T20:35:00
-updated: 2026-06-14T18:00:00
+updated: 2026-10-05T13:42:58
 permalink: /Dev/python/python-pytest-a-practical-guide-to-testing-and-plugins
 ---
 
@@ -64,7 +64,7 @@ test_calculator.py .                                        [100%]
 
 ---
 
-### 2. assert — pytest의 핵심
+### 2. assert 검증
 
 pytest의 가장 큰 장점은 단언(assertion)을 그냥 파이썬 `assert` 문으로 한다는 데 있다. 별도 메서드를 외울 필요가 없다.
 
@@ -102,7 +102,7 @@ def test_with_message():
     assert result == 3, f"기대값 3, 실제값 {result}"
 ```
 
-#### 부동소수점 비교 — pytest.approx
+#### pytest.approx와 부동소수점 비교
 
 부동소수점은 `==`로 비교하면 안 된다. `0.1 + 0.2`는 정확히 `0.3`이 아니기 때문이다. 이럴 때 `pytest.approx`를 쓴다.
 
@@ -168,7 +168,7 @@ testpaths = ["tests"]
 
 ---
 
-### 4. 테스트 실행 — 알아두면 좋은 옵션
+### 4. 테스트 실행 옵션
 
 `pytest`는 옵션으로 실행 범위와 출력을 세밀하게 조절한다. 실무에서 자주 쓰는 것들이다.
 
@@ -205,7 +205,7 @@ uv run pytest -k "user and not delete"
 
 ---
 
-### 5. Fixture — 준비 작업 재사용
+### 5. Fixture와 준비 작업 재사용
 
 테스트마다 똑같은 준비 작업(DB 연결, 임시 파일, 객체 생성)을 반복하면 코드가 지저분해진다.
 
@@ -242,7 +242,7 @@ def test_user_email(sample_user):      # 다른 테스트에서도 재사용
 
 `test_user_name(sample_user)`처럼 인자에 fixture 이름을 적기만 하면, pytest가 `sample_user()`를 실행해 그 반환값을 넘겨준다. 테스트마다 새로 호출되므로 테스트 간 상태가 섞이지 않는다.
 
-#### setup/teardown — yield로 뒷정리
+#### yield를 사용한 setup과 teardown
 
 준비뿐 아니라 정리(파일 삭제, 연결 종료)가 필요하면 `yield`를 쓴다. `yield` 앞은 준비, 뒤는 정리다.
 
@@ -258,7 +258,7 @@ def test_read_file(temp_file):
     assert temp_file.read_text() == "hello"
 ```
 
-#### scope — fixture 생성 빈도 조절
+#### Fixture scope와 생성 빈도
 
 비싼 준비 작업(DB 연결 등)을 매 테스트마다 새로 만들면 느리다. `scope`로 생성 빈도를 조절한다.
 
@@ -296,7 +296,7 @@ def test_builtin(tmp_path, capsys, monkeypatch):
 
 ---
 
-### 6. parametrize — 입력만 바꿔 반복 실행
+### 6. parametrize와 입력별 반복 실행
 
 같은 로직을 여러 입력으로 검증할 때는 테스트 함수를 복사하지 말고 `@pytest.mark.parametrize`로 입력 목록을 넘기면 된다. 입력 개수만큼 테스트가 자동 생성된다.
 
@@ -335,7 +335,7 @@ def test_truthiness(value, expected):
 
 ---
 
-### 7. 예외 테스트 — pytest.raises
+### 7. pytest.raises와 예외 검증
 
 "이 입력에서는 에러가 나야 한다"를 검증할 때는 `pytest.raises`를 `with` 블록으로 쓴다.
 
@@ -361,7 +361,7 @@ def test_error_message():
 
 ---
 
-### 8. Mocking — pytest-mock
+### 8. pytest-mock을 사용한 Mocking
 
 외부 API 호출, DB, 현재 시각처럼 테스트에서 직접 실행하기 곤란한 부분은 가짜(mock)로 바꿔치기한다. 표준 라이브러리 `unittest.mock`을 그대로 써도 되지만, `pytest-mock`을 설치하면 `mocker` fixture로 한결 깔끔해진다.
 
@@ -437,7 +437,7 @@ def test_fetch_user(mocker):
 
 ---
 
-### 9. 마커 — 테스트에 표시 달기
+### 9. 마커와 테스트 실행 제어
 
 마커(marker)는 테스트에 꼬리표를 붙여 분류하거나 동작을 바꾼다. `@pytest.mark.이름` 형태다.
 
@@ -485,7 +485,7 @@ uv run pytest -m "not slow"    # slow 빼고 실행 (평소 빠른 실행용)
 
 ---
 
-### 10. conftest.py — fixture 공유
+### 10. conftest.py와 fixture 공유
 
 여러 테스트 파일에서 같은 fixture를 쓰고 싶으면 `conftest.py`라는 특별한 파일에 정의한다. 이 파일의 fixture는 **import 없이** 같은 폴더와 하위 폴더의 모든 테스트에서 자동으로 쓸 수 있다.
 
@@ -510,7 +510,7 @@ def test_get_user(api_client):
 
 ---
 
-### 11. 커버리지 — pytest-cov
+### 11. pytest-cov와 커버리지 측정
 
 테스트가 코드의 어느 부분을 실제로 실행했는지 측정하려면 `pytest-cov`를 쓴다.
 
@@ -551,7 +551,7 @@ uv run pytest --cov=src --cov-fail-under=80   # 80% 미만이면 실패 처리
 
 이 글의 출발점이었던 TDD를 pytest로 어떻게 도는지 정리한다. TDD는 **실패하는 테스트 먼저 → 통과하는 최소 코드 → 정리**의 반복이다.
 
-#### Red — 실패하는 테스트 먼저
+#### Red: 실패 테스트 작성
 
 아직 없는 함수에 대한 테스트부터 쓴다.
 
@@ -571,7 +571,7 @@ uv run pytest -x
 # ImportError: cannot import name 'is_valid_password'  ← 의도된 실패
 ```
 
-#### Green — 통과하는 최소 코드
+#### Green: 최소 구현
 
 테스트를 통과시킬 만큼만 구현한다.
 
@@ -586,11 +586,11 @@ uv run pytest -x
 # 2 passed  ← 초록불
 ```
 
-#### Refactor — 정리
+#### Refactor: 코드 정리
 
 테스트가 지켜주는 상태에서 안심하고 코드를 다듬는다. 그리고 다음 요구사항을 다시 Red부터 시작한다.
 
-#### 자동 재실행 — pytest-watcher
+#### pytest-watcher와 자동 재실행
 
 저장할 때마다 수동으로 `pytest`를 치는 건 번거롭다. `pytest-watcher`를 깔면 파일을 저장할 때마다 자동으로 테스트가 돌아간다. 레드-그린 사이클의 필수 도구다.
 
@@ -629,7 +629,7 @@ uv run pytest -n auto      # CPU 코어 수만큼 분산 실행
 > [!note]+ 병렬 실행의 전제
 > 테스트끼리 전역 상태(파일, DB, 환경변수)를 공유하면 병렬 실행에서 깨진다. `pytest-randomly`로 실행 순서를 섞어 숨은 의존성을 먼저 잡아낸 뒤 병렬화하는 것이 안전하다.
 
-#### 비동기 테스트 — pytest-asyncio
+#### pytest-asyncio와 비동기 테스트
 
 pytest는 기본적으로 `async def` 테스트를 실행하지 못한다. `pytest-asyncio`가 이벤트 루프 관리를 맡는다.
 
@@ -644,7 +644,7 @@ async def test_fetch_data():
     assert result["status"] == "ok"
 ```
 
-#### 자작 플러그인은 conftest.py에서 시작
+#### conftest.py 기반 플러그인 작성
 
 `conftest.py`에 정해진 이름의 hook 함수를 정의하면 그것이 곧 플러그인이다. 느린 테스트를 자동 리포트하는 예시다.
 
@@ -703,7 +703,7 @@ def test_add(calc):
 
 ---
 
-### 15. hypothesis — 경쟁자가 아닌 보완재
+### 15. hypothesis와 property-based testing
 
 hypothesis는 pytest를 대체하는 도구가 아니라 pytest 위에서 도는 property-based testing 라이브러리다. 먼저 솔직히 말하면 pytest만큼 모두가 쓰는 도구는 아니다. 라이브러리(파서·직렬화·자료구조), 금융·과학 계산처럼 입력이 다양하고 규칙이 명확한 코드에서 주로 쓰고, 일반적인 웹 CRUD 로직에는 굳이 안 쓰는 경우가 많다. 그래도 알아두면 좋은 이유를 예시로 본다.
 
@@ -711,11 +711,11 @@ hypothesis는 pytest를 대체하는 도구가 아니라 pytest 위에서 도는
 uv add --dev hypothesis
 ```
 
-#### 왜 필요한가 — 예시 테스트의 한계
+#### 예시 테스트의 한계
 
 버그는 보통 **내가 생각 못 한 입력**에 숨어 있다. 예시 테스트(`parametrize` 포함)는 내가 떠올린 케이스만 막는데, hypothesis는 입력을 자동으로 만들어내며 내가 안 떠올린 걸 공격한다. 사용법은 "이 성질은 어떤 입력에도 성립해야 한다"는 규칙을 `@given`으로 선언하는 것이다.
 
-#### 예시 1 — 내가 빠뜨린 입력을 찾아준다
+#### 예시 1: 빈 리스트 반례
 
 평균 구하는 함수다. 멀쩡해 보이고 예시 테스트도 통과한다.
 
@@ -748,7 +748,7 @@ ZeroDivisionError: division by zero
 
 빈 리스트 `[]`. 평소 테스트에 `average([])`를 넣을 생각은 잘 안 한다. hypothesis는 이런 경계값을 알아서 시도해 "빈 입력 처리를 안 했네"를 드러낸다.
 
-#### 예시 2 — 내가 몰랐던 버그를 찾아준다
+#### 예시 2: JSON 왕복 변환의 반례
 
 진짜 강력한 건 **왕복(round-trip) 성질** 검증이다. "저장했다가 다시 읽으면 원본과 같아야 한다" 같은 규칙이다.
 
@@ -781,11 +781,11 @@ assert {'0': ''} == {0: ''}
 
 `{0: ''}`에서 깨진다. **JSON은 dict의 키를 무조건 문자열로 바꾸기 때문**이다. `{0: ''}`을 저장하면 `'{"0": ""}'`가 되고, 다시 읽으면 키가 정수 `0`이 아니라 문자열 `"0"`이 된다. 모르면 예시 테스트로는 절대 못 잡는 함정인데, 정수 키 dict를 일부러 테스트에 넣을 이유가 없기 때문이다. hypothesis는 그걸 알아서 찾아낸다.
 
-#### shrinking — 반례를 최소 형태로 줄여준다
+#### shrinking과 반례 최소화
 
 위에서 hypothesis가 보여준 게 `{12345: "qwerty"}` 같은 복잡한 입력이 아니라 `{0: ''}`였던 점을 주목하자. hypothesis는 실패를 찾으면 원인을 가장 단순한 형태로 깎아서(shrinking) 보여준다. "정수 키 하나면 깨지는구나"가 바로 보이니 디버깅이 쉽다.
 
-#### 언제 쓸 가치가 있나
+#### 적용 대상과 선택 기준
 
 | 잘 맞는 경우 | 굳이 안 써도 되는 경우 |
 | --- | --- |

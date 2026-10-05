@@ -152,13 +152,13 @@ function exactCanonicalTarget(dest, lookup) {
 function fullSlugFromResolvedLink(src, href) {
   const curSlug = simplifySlug(src)
   const url = new URL(href, "https://base.com/" + stripSlashes(curSlug, true))
-  const [canonicalRaw, anchor] = splitAnchor(url.pathname)
+  const [canonicalRaw] = splitAnchor(url.pathname)
   let canonical = canonicalRaw
   if (canonical.endsWith("/")) {
     canonical += "index"
   }
 
-  return [decodeURIComponent(stripSlashes(canonical, true)), anchor]
+  return [decodeURIComponent(stripSlashes(canonical, true)), url.hash]
 }
 
 function transformPermalinkAwareLink(src, target, opts, permalinkLookup) {
