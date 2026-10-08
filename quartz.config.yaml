@@ -23,9 +23,9 @@ configuration:
       code: JetBrains Mono
     colors:
       lightMode:
-        light: "#2e3440"
-        lightgray: "#3b4252"
-        gray: "#58647b"
+        light: "#333945"
+        lightgray: "#404758"
+        gray: "#9ca7b9"
         darkgray: "#d8dee9"
         dark: "#eceff4"
         secondary: "#81a1c1"
@@ -33,9 +33,9 @@ configuration:
         highlight: rgba(135, 152, 190, 0.15)
         textHighlight: rgba(208, 135, 112, 0.35)
       darkMode:
-        light: "#2e3440"
-        lightgray: "#3b4252"
-        gray: "#58647b"
+        light: "#333945"
+        lightgray: "#404758"
+        gray: "#9ca7b9"
         darkgray: "#d8dee9"
         dark: "#eceff4"
         secondary: "#81a1c1"
@@ -163,7 +163,7 @@ plugins:
     enabled: true
     options:
       globalGraph:
-        currentNodeColor: "#ef4444"
+        currentNodeColor: "#e7c2f0"
     layout:
       position: right
       priority: 10

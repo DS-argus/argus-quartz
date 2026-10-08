@@ -1,26 +1,40 @@
 @use "./variables.scss" as *;
 
-// Minimal Nord dark-only surface, matched to the local Obsidian Minimal setup.
+// Nord dark-only surface.
+// Color roles: Snow Storm for body text, Frost for links and UI accents,
+// Aurora only for callout states, and one lilac ramp for headings.
 :root,
 :root[saved-theme="dark"],
 :root[saved-theme="light"] {
   color-scheme: dark;
 
-  --minimal-nord-red: #bf616a;
-  --minimal-nord-orange: #d08770;
-  --minimal-nord-yellow: #ebcb8b;
-  --minimal-nord-green: #a3be8c;
-  --minimal-nord-cyan: #88c0d0;
-  --minimal-nord-blue: #81a1c1;
-  --minimal-nord-purple: #b48ead;
-  --minimal-inline-title: #cfa2da;
-  --minimal-bold: #5abaf2;
-  --minimal-italic: #8db700;
+  // Surfaces sit 0.02 OKLCH lightness above stock Nord to match the lifted page background.
+  --nord1: #404758;
+  --nord3: #4c566a;
+  --nord3-bright: #616e88;
+  --nord5: #e5e9f0;
+  --nord8: #88c0d0;
+  --nord9: #81a1c1;
+  --nord10: #5e81ac;
+  --nord11: #bf616a;
+  --nord12: #d08770;
+  --nord13: #ebcb8b;
+  --nord14: #a3be8c;
+  --nord15: #b48ead;
 
-  --tag-background: rgba(135, 152, 190, 0.15);
-  --tag-color: var(--minimal-nord-cyan);
-  --tag-background-hover: rgba(136, 192, 208, 0.16);
-  --quartz-text-highlight: rgba(208, 135, 112, 0.35);
+  // OKLCH hue 320, chroma 0.075, lightness 0.91 -> 0.71 in 0.05 steps.
+  --heading-title: #f8d2ff;
+  --heading-3: #e7c2f0;
+  --heading-4: #d7b2df;
+  --heading-5: #c7a2cf;
+  --heading-6: #b793bf;
+
+  --bold-color: #f0d8a6;
+  --italic-color: #bce3c3;
+
+  --tag-background: color-mix(in srgb, var(--nord8) 12%, transparent);
+  --tag-color: var(--nord8);
+  --tag-background-hover: color-mix(in srgb, var(--nord8) 22%, transparent);
 }
 
 html,
@@ -48,10 +62,10 @@ body {
 }
 
 .article-title {
-  color: var(--minimal-inline-title);
+  color: var(--heading-title);
   font-size: 1.75rem;
-  font-style: italic;
-  font-weight: 900;
+  font-style: normal;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.4rem;
 }
@@ -95,53 +109,42 @@ body {
   margin-block-end: 1rem;
 }
 
-.center h1:not(.article-title),
-.center h2,
-.center h3,
-.center h4,
-.center h5,
-.center h6 {
-  font-style: italic;
-  font-weight: 900;
+// Headings share one hue; size and a small lightness step carry the level.
+.center :is(h1, h2, h3, h4, h5, h6):not(.article-title) {
+  font-style: normal;
+  font-weight: 700;
   letter-spacing: 0;
 }
 
-.center h1:not(.article-title) {
-  color: var(--minimal-nord-red);
+.center h1:not(.article-title),
+.center h2,
+.center h3 {
+  color: var(--heading-3);
   font-size: 1.35em;
 }
 
-.center h2 {
-  color: var(--minimal-nord-orange);
-  font-size: 1.3em;
-}
-
-.center h3 {
-  color: var(--minimal-nord-yellow);
-  font-size: 1.25em;
-}
-
 .center h4 {
-  color: var(--minimal-nord-green);
-  font-size: 1.2em;
+  color: var(--heading-4);
+  font-size: 1.18em;
 }
 
 .center h5 {
-  color: var(--minimal-nord-blue);
-  font-size: 1.15em;
+  color: var(--heading-5);
+  font-size: 1.06em;
 }
 
 .center h6 {
-  color: var(--minimal-nord-purple);
-  font-size: 1.1em;
+  color: var(--heading-6);
+  font-size: 1em;
 }
 
 .markdown-preview-view strong {
-  color: var(--minimal-bold);
+  color: var(--bold-color);
+  font-weight: 700;
 }
 
 .markdown-preview-view em {
-  color: var(--minimal-italic);
+  color: var(--italic-color);
 }
 
 .markdown-preview-view a.internal:not(.tag-link) {
@@ -173,7 +176,7 @@ body {
 a.internal.tag-link {
   align-items: center;
   background: var(--tag-background);
-  border: 1px solid rgba(136, 192, 208, 0.25);
+  border: 0;
   border-radius: 8px;
   color: var(--tag-color);
   display: inline-flex;
@@ -190,7 +193,7 @@ a.internal.tag-link:hover {
 }
 
 a.internal.tag-link::before {
-  color: var(--minimal-nord-blue);
+  color: var(--nord9);
   font-weight: 800;
 }
 
@@ -281,19 +284,96 @@ button.toc-header h3,
 
 pre,
 figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
-  background: #2b303b;
+  background: #303540;
   border-color: var(--lightgray);
+}
+
+// Code title sits on the block as a header strip instead of a floating tab.
+figure[data-rehype-pretty-code-figure] > [data-rehype-pretty-code-title] {
+  width: auto;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  border-bottom-style: dashed;
+  border-radius: 5px 5px 0 0;
+  color: var(--gray);
+  font-size: 0.76rem;
+
+  & + pre {
+    margin-top: 0;
+    border-top: 0;
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 pre > code {
   font-size: 0.82rem;
   line-height: 1.45rem;
+
+  & > [data-line]::before {
+    color: var(--nord3-bright);
+  }
+
+  // A lone "1" adds nothing and indents one-line commands.
+  &:has(> [data-line]:only-child) > [data-line]::before {
+    display: none;
+  }
 }
 
-code {
-  background: rgba(59, 66, 82, 0.72);
-  color: var(--minimal-nord-cyan);
+// Nord's comment color is 2.6:1 on the code background; --gray is 4.9:1.
+[saved-theme="dark"] code[data-theme*=" "] span[data-token-type="comment"] {
+  color: var(--gray);
+}
+
+// Inline code only. A bare `code` selector also painted the <code> inside <pre>,
+// which drew a second box inside fenced blocks without a language.
+:not(pre) > code {
+  background: var(--nord1);
+  color: var(--nord5);
   font-size: 0.86em;
+}
+
+pre > code:not([data-theme]) {
+  color: var(--darkgray);
+}
+
+// Tables line up with body text instead of sitting 1rem inside it.
+.table-container > table {
+  margin: 1rem 0;
+}
+
+th {
+  border-bottom-color: var(--nord3);
+}
+
+// Plain quotes (mostly *AI-assisted*) get a neutral rule so they don't read as callouts.
+blockquote:not(.callout) {
+  border-left-color: var(--nord3);
+}
+
+// GFM emits a visually-hidden "Footnotes" heading; Quartz ships no rule to hide it.
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.footnotes {
+  font-size: 0.86rem;
+
+  li {
+    color: var(--gray);
+  }
+}
+
+// macOS draws ↩ as a blue emoji tile unless asked for the text glyph.
+a[data-footnote-backref] {
+  font-variant-emoji: text;
 }
 
 .page-listing,
@@ -317,13 +397,88 @@ footer {
   display: none !important;
 }
 
+// Callouts: Nord colors on the left rule, icon, and title; body stays on a faint tint.
+.callout {
+  border: 0;
+  border-left: 3px solid var(--color);
+  border-radius: 2px 6px 6px 2px;
+  background: color-mix(in srgb, var(--color) 8%, var(--light));
+
+  &[data-callout] {
+    --color: var(--nord9);
+    --callout-title-color: var(--color);
+  }
+
+  &[data-callout="abstract"] {
+    --color: var(--nord8);
+  }
+
+  // nord10 is too dark for text, so info keeps a darker rule with a nord9 title.
+  &:is([data-callout="info"], [data-callout="todo"]) {
+    --color: var(--nord10);
+    --callout-title-color: var(--nord9);
+  }
+
+  &:is([data-callout="tip"], [data-callout="success"]) {
+    --color: var(--nord14);
+  }
+
+  &[data-callout="question"] {
+    --color: var(--nord13);
+  }
+
+  &[data-callout="warning"] {
+    --color: var(--nord12);
+  }
+
+  &:is([data-callout="failure"], [data-callout="danger"], [data-callout="bug"]) {
+    --color: var(--nord11);
+  }
+
+  &[data-callout="example"] {
+    --color: var(--nord15);
+  }
+
+  &[data-callout="quote"] {
+    --color: var(--gray);
+  }
+}
+
+.callout-title > .callout-title-inner > p {
+  color: var(--callout-title-color);
+  font-weight: 700;
+}
+
+// Desktop sidebars recede while reading. Hover, keyboard focus, or an open
+// search/global-graph overlay brings them back. Reader mode keeps its own opacity: 0.
+@media all and ($desktop) {
+  .page > #quartz-body .sidebar {
+    padding-inline: 1.25rem;
+  }
+
+  :root:not([reader-mode="on"]) .page > #quartz-body .sidebar {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+
+    &:hover,
+    &:has(:focus-visible),
+    &:has(.search-container.active, .global-graph-outer.active) {
+      opacity: 1;
+    }
+  }
+}
+
 // mermaid: 배경을 페이지와 동일하게(코드블럭 패널 제거) + 가운데 정렬
-pre:has(> code.mermaid) { background: transparent !important; }
+pre:has(> code.mermaid) {
+  background: transparent !important;
+}
 pre > code.mermaid {
   background: transparent !important;
   justify-items: center;
 }
-code.mermaid svg { background: transparent !important; }
+code.mermaid svg {
+  background: transparent !important;
+}
 
 // 색 노드: fill 진하게 + 테두리 선명하게 (Obsidian의 쨍한 느낌, 글자 흰색 유지)
 // mermaid가 classDef fill/stroke 색을 id-scoped !important로 걸어 외부 CSS 색

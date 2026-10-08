@@ -25,7 +25,11 @@ quartz/cli/tui/dist/
 /700. Project/
 /999. ETC/
 
+# Local review artifacts.
+/.reviews/
+
 # Local agent/tool state.
+/.codex/
 /.claude/
 /.ignore
 /.npm-local-cache/
@@ -36,6 +40,8 @@ quartz/cli/tui/dist/
 /.smtcmp_json_db/
 /.trash/
 /_workspace/
+/tmp/
 /AGENTS.md
 /CLAUDE.md
 /QUARTZ_CUSTOMIZATIONS.md
+/docs/
