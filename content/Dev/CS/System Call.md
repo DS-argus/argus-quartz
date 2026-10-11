@@ -133,7 +133,7 @@ strace -f python app.py # 자식 프로세스까지 추적
 
 ---
 ### 8. blocking과 syscall — 대기는 syscall 안에서 일어난다
-[[Concurrency and Parallelism#blocking / non-blocking — "기다리는 동안 호출자의 흐름이 멈추나"|blocking / non-blocking]]에서  "블로킹 대기"가 실제로 벌어지는 자리가 바로 syscall 내부다.   
+[[Concurrency and Parallelism#blocking / non-blocking (호출 흐름의 중단 여부)|blocking / non-blocking]]에서  "블로킹 대기"가 실제로 벌어지는 자리가 바로 syscall 내부다.
 blocking `read`·`accept`·`futex`는 조건이 안 맞으면 **syscall 안에서 커널이 호출 스레드를 재운다**(Blocked). 커널이 그 스레드를 해당 자원의 대기 큐에 걸고 sleep시켰다가, 준비되면 깨워 syscall을 마저 진행시킨다.
 
 - **blocking**: syscall이 조건 충족까지 안 돌아온다. 그동안 스레드는 커널 안에서 잠들어 CPU를 놓는다

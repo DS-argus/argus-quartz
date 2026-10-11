@@ -3,7 +3,7 @@ tags:
   - python
   - backend
 created: 2026-04-26T00:00:00
-updated: 2026-05-27T21:19:14
+updated: 2026-10-11T09:05:55
 permalink: /Dev/python/python-dependency-injection
 ---
 > [!abstract]+ TL;DR
@@ -210,7 +210,7 @@ test_repo = UserRepository(MockDatabase())
 
 Python에서 DI를 구현하는 방법은 크게 세 가지다.
 
-#### 4-1. Constructor Injection (생성자 주입)
+#### 6-1. Constructor Injection (생성자 주입)
 
 가장 일반적이고 권장되는 방식이다. 객체 생성 시점에 의존성을 넘긴다.
 
@@ -227,7 +227,7 @@ class UserRepository:
 - 불변 상태를 유지하기 좋다
 - 대부분의 경우 이 방식이면 충분하다
 
-#### 4-2. Setter Injection (세터 주입)
+#### 6-2. Setter Injection (세터 주입)
 
 객체 생성 후에 의존성을 설정한다.
 
@@ -246,7 +246,7 @@ class UserRepository:
 - 선택적 의존성에 적합하다
 - 의존성이 설정되기 전에 호출되면 에러가 날 수 있다
 
-#### 4-3. Method Injection (메서드 주입)
+#### 6-3. Method Injection (메서드 주입)
 
 메서드 호출 시마다 의존성을 넘긴다.
 

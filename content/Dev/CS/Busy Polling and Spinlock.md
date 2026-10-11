@@ -18,7 +18,7 @@ permalink: /Dev/CS/busy-polling-and-spinlock
 ---
 ### 1. busy polling이란
 
-[[Concurrency and Parallelism#8. 직교하는 두 축 — synchronous/asynchronous, blocking/non-blocking|Concurrency and Parallelism]]에서 동기/비동기와 블로킹/논블로킹을 직교하는 두 축으로 갈랐다.   
+[[Concurrency and Parallelism#8. 직교하는 두 축 (synchronous/asynchronous, blocking/non-blocking)|Concurrency and Parallelism]]에서 동기/비동기와 블로킹/논블로킹을 직교하는 두 축으로 갈랐다.
 그중 **synchronous + non-blocking** 조합이 busy polling의 뿌리다.
 
 - non-blocking 호출은 지금 끝낼 수 없으면 즉시 돌아온다

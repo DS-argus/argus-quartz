@@ -210,7 +210,7 @@ process는 메모리가 격리돼 있어 공유 변수로 값을 못 넘긴다. 
 
 - **Executor**: 작업을 맡는 풀. `ThreadPoolExecutor`(thread 풀)와 `ProcessPoolExecutor`(process 풀) 둘.
 - **`submit(func, *args)`**: 작업을 풀에 던지고 즉시 **`Future`를 반환**한다.
-- **`Future`**: "미래에 채워질 결과"를 담는 객체. 지금은 비어 있고 작업이 끝나면 결과나 예외가 담긴다. 실행 흐름이 아니라 **[[Concurrency and Parallelism#8. 직교하는 두 축 — synchronous/asynchronous, blocking/non-blocking|결과를 담는 그릇]]** 이다.
+- **`Future`**: "미래에 채워질 결과"를 담는 객체. 지금은 비어 있고 작업이 끝나면 결과나 예외가 담긴다. 실행 흐름이 아니라 **[[Concurrency and Parallelism#8. 직교하는 두 축 (synchronous/asynchronous, blocking/non-blocking)|결과를 담는 그릇]]** 이다.
 
 ```python
 from concurrent.futures import ThreadPoolExecutor
