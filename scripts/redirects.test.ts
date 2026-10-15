@@ -10,7 +10,7 @@ import type { BuildCtx } from "../quartz/util/ctx"
 
 const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..")
 const redirectsPath = path.join(repositoryRoot, "content", "_redirects")
-const auditPath = path.join(repositoryRoot, ".seo-audit", "url-mapping-2026-10-15.csv")
+const auditPath = path.join(repositoryRoot, "scripts", "fixtures", "url-mapping-2026-10-15.csv")
 
 type AuditRow = {
   old_url: string
