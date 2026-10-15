@@ -4,6 +4,7 @@ tags:
 created: 2025-06-15T09:26:27
 updated: 2025-06-17T17:14:45
 permalink: /Dev/spark/spark-architecture-and-deployment-models
+description: "Spark 애플리케이션의 Driver, Executor, SparkSession, Cluster Manager 역할을 정리하고 local·Standalone·YARN·Kubernetes 환경의 client 및 cluster 배포 방식과 데이터 locality를 비교한다."
 ---
 
 > [!note]+ 정리한 이유

@@ -5,6 +5,7 @@ tags:
 created: 2026-07-04T00:00:00
 updated: 2026-07-05T14:30:14
 permalink: /Dev/CS/system-call
+description: "시스템 콜이 유저 모드에서 커널에 특권 작업을 요청하는 방식과 모드 전환 비용을 설명하고, 라이브러리 래퍼·strace 및 blocking I/O에서 커널이 스레드를 재우고 깨우는 흐름을 살펴본다."
 ---
 > [!abstract]+ TL;DR
 > - syscall은 권한이 제한된 유저 프로그램이 커널에게 특권 작업을 요청하는 유일한 공식 통로

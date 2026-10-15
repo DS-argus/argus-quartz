@@ -7,6 +7,7 @@ tags:
 created: 2025-06-02T23:27:34
 updated: 2025-06-14T21:55:57
 permalink: /Dev/debug/bitnami-spark-docker-compose-ivy2-path-error
+description: "Bitnami Spark에서 spark-submit이 ?/.ivy2/local 경로 오류를 내는 원인을 UID 1001의 사용자 정보 부재에서 찾고, Ivy 경로 지정·nss-wrapper·사용자 등록 방법을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

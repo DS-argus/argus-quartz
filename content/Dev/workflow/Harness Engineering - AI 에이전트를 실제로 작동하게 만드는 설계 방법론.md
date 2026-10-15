@@ -6,6 +6,7 @@ tags:
 created: 2026-04-23T00:00:00
 updated: 2026-04-23T00:00:00
 permalink: /Dev/workflow/harness-engineering
+description: "AI 에이전트를 둘러싼 저장소·도구·평가·피드백 환경을 하네스로 보고, 단일 에이전트의 실패 관찰부터 역할 분리와 지속적 개선까지 8가지 설계 원칙을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

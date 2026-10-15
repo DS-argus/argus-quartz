@@ -7,6 +7,7 @@ tags:
 created: 2026-06-06T10:00:00
 updated: 2026-06-06T17:30:12
 permalink: /Dev/database/greenplum-database-mpp-data-warehouse
+description: "Greenplum의 Coordinator·Segment 구조와 분산 키에 따른 MPP 처리, PostgreSQL과의 차이, 열 지향·Append-Optimized 저장 및 gpfdist/gpload를 설명하고 분석·적재 업무에 맞는 사용처를 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - Greenplum은 PostgreSQL 기반 MPP 데이터 웨어하우스로, Coordinator가 쿼리를 받아 여러 Segment에 분산 처리

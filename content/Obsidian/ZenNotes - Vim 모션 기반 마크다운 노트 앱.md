@@ -6,6 +6,7 @@ tags:
 created: 2026-06-10T00:00:00
 updated: 2026-06-10T20:46:48
 permalink: /Obsidian/zennotes
+description: "ZenNotes의 Vim 모션 중심 편집 경험과 Markdown 렌더링·검색·MCP 기능, 데스크톱·웹 런타임을 소개하고 Obsidian과의 차이를 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - ZenNotes는 Vim 모션을 네이티브로 지원하는 키보드 중심 로컬 마크다운 노트 앱

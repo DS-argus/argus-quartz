@@ -5,6 +5,7 @@ tags:
 created: 2025-06-21T20:17:32
 updated: 2025-06-26T00:13:02
 permalink: /Dev/python/python-faker
+description: "Faker로 이름·주소·연락처, 날짜, 금융·인터넷·장소 정보 등 테스트용 가짜 데이터를 생성하는 방법을 정리한다. 로케일 설정과 시드 고정, unique 값 및 사용자 정의 provider 활용 예제를 포함한다."
 ---
 
 > [!abstract]+ TL;DR

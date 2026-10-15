@@ -7,6 +7,7 @@ tags:
 created: 2026-08-17T00:00:00
 updated: 2026-09-18T12:58:12
 permalink: /Dev/database/concurrency-control-mvcc-occ-and-locking
+description: "동시성 제어를 락 기반 2PL, MVCC의 버전 가시성, OCC의 충돌 검증으로 구분하고, PostgreSQL의 구현과 객체 스토리지 테이블 포맷 사례 및 선택 기준을 설명한다."
 ---
 
 > [!abstract]+ TL;DR

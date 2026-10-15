@@ -7,6 +7,7 @@ tags:
 created: 2026-08-17T00:00:00
 updated: 2026-09-05T19:27:49
 permalink: /Dev/database/transaction-boundaries-and-pitfalls
+description: "클라이언트별 트랜잭션 시작·종료 방식과 경계 설정을 설명하고, DB별 실패·롤백 차이, 시퀀스와 외부 부수 효과, DDL 및 재시도 설계의 주의점을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

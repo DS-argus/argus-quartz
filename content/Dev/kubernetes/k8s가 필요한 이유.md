@@ -5,6 +5,7 @@ tags:
 created: 2025-06-14T14:06:01
 updated: 2026-05-03T12:13:44
 permalink: /Dev/kubernetes/why-k8s-is-needed
+description: "컨테이너만 운영할 때의 확장·수동 관리·배포 한계를 살펴보고, Kubernetes의 주요 기능과 Control Plane·Node 구성 요소가 클러스터를 운영하는 방식을 설명한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -4,6 +4,7 @@ tags:
 created: 2025-06-26T09:37:38
 updated: 2025-06-26T09:44:47
 permalink: /AI/recsys/2017-deep-matrix-factorization
+description: "추천 시스템의 Deep Matrix Factorization에서 사용자·아이템 상호작용 행렬을 입력으로 사용하는 구성과 명시적·암묵적 피드백을 함께 처리하기 위한 손실 함수를 간단히 정리한다."
 ---
 > [!abstract]+ TL;DR
 >- source : https://www.ijcai.org/proceedings/2017/0447.pdf

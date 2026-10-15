@@ -5,6 +5,7 @@ tags:
 created: 2026-04-13T00:00:00
 updated: 2026-04-14T21:53:32
 permalink: /Dev/python/python-typing
+description: "Python 타입 힌트의 기본 문법부터 컬렉션, Union, Callable, Literal, TypedDict, Protocol, 제네릭까지 다루고, 런타임 강제와 정적 타입 검사의 차이를 예제로 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Python은 동적 타입 언어라 변수에 아무 타입이나 넣을 수 있지만, 프로젝트가 커지면 "이 변수가 뭔지" 알기 어려워진다

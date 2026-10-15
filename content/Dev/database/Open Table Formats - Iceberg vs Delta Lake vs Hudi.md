@@ -8,6 +8,7 @@ tags:
 created: 2026-08-05T00:00:00
 updated: 2026-09-18T20:53:36
 permalink: /Dev/database/open-table-formats-iceberg-vs-delta-lake-vs-hudi
+description: "Iceberg, Delta Lake, Hudi의 메타데이터 구조와 커밋 동시성, 카탈로그, 파티션 및 업데이트 처리 방식을 비교하고 워크로드별 선택 기준을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

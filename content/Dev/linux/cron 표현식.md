@@ -6,6 +6,7 @@ tags:
 created: 2025-06-13T12:43:41
 updated: 2025-06-14T23:27:12
 permalink: /Dev/linux/cron-expressions
+description: 'cron의 분·시·일·월·요일 5개 필드와 특수 기호의 의미, 일과 요일의 평가 방식, 목적별 실행 시각 표현 예시를 정리한다.'
 ---
 
 > [!abstract]+ TL;DR

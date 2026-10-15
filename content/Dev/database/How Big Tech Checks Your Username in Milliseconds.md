@@ -4,6 +4,7 @@ tags:
 created: 2025-06-25T22:33:27
 updated: 2026-06-06T12:49:54
 permalink: /Dev/database/how-big-tech-checks-your-username-in-milliseconds
+description: "대규모 서비스의 유저네임 중복 확인을 위해 Redis 해시맵, Trie, B+ Tree, Bloom Filter를 비교하고, 캐시와 분산 데이터베이스를 잇는 계층형 조회 구조를 설명한다."
 ---
 
 > [!abstract]+ TL;DR

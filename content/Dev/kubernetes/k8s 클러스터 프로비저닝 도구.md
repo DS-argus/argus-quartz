@@ -5,6 +5,7 @@ tags:
 created: 2025-06-04T23:16:25
 updated: 2025-06-04T23:27:14
 permalink: /Dev/kubernetes/k8s-cluster-provisioning-tools
+description: "kubeadm, kind, kOps, Kubespray의 설치 대상과 자동화 범위, 장단점을 비교해 로컬 개발부터 클라우드 운영까지 환경에 맞는 Kubernetes 클러스터 프로비저닝 도구를 고른다."
 ---
 > [!abstract]+ TL;DR
 > - **Docker Desktop** 로컬 개발 → `kind` 빠른 테스트  

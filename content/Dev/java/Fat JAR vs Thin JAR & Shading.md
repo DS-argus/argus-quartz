@@ -8,6 +8,7 @@ tags:
 created: 2025-07-17T17:45:46
 updated: 2026-04-08T22:07:46
 permalink: /Dev/java/fat-jar-vs-thin-jar-and-shading
+description: "JAR의 Fat·Thin 배포 방식과 패키지 재배치 기술인 shading이 의존성 충돌에 미치는 영향을 비교하고, Maven·Gradle 패키징과 Spring Boot 구조 및 Flink 배포 시 주의점을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - JAR은 Java의 패키징 포맷이고, DE 도구(Flink, Spark, Kafka 등)가 JVM 기반이라 자주 마주친다

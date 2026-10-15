@@ -6,6 +6,7 @@ tags:
 created: 2026-05-31T00:00:00
 updated: 2026-05-31T23:25:41
 permalink: /Dev/network/headscale-tailscale-alternative
+description: "WireGuard 기반 메시 VPN에서 Tailscale과 Headscale의 역할을 비교하고, Headscale 자체 호스팅과 노드 등록, Headplane 관리, K3s 서브넷 라우팅 및 DNS 설정 방법을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - Tailscale은 WireGuard 기반 메시 VPN이지만 컨트롤 서버가 SaaS라 사용자/정책 제한 존재

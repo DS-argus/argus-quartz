@@ -5,6 +5,7 @@ tags:
 created: 2026-06-04T00:00:00
 updated: 2026-06-04T00:00:00
 permalink: /Dev/python/python-alembic-database-migration-tool-for-sqlalchemy
+description: "SQLAlchemy 모델과 데이터베이스 스키마 변경을 Alembic 마이그레이션으로 관리하고, autogenerate, upgrade·downgrade, 주요 op 함수와 운영 절차를 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Alembic은 SQLAlchemy 전용 DB 마이그레이션 도구로 FastAPI 조합에서 사실상 표준

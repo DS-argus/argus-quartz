@@ -6,6 +6,7 @@ tags:
 created: 2026-06-22T12:00:00
 updated: 2026-06-23T06:58:48
 permalink: /Dev/observability/opentelemetry-vendor-neutral-observability-standard
+description: "OpenTelemetry의 Metrics·Logs·Traces 데이터 모델과 Semantic Conventions, OTLP 전송 방식, API/SDK·Collector 구성과 백엔드 중립성을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - OpenTelemetry(OTel)는 관측 데이터의 생성·전송 방식을 정한 CNCF 표준으로, Metrics·Logs·Traces 세 신호와 Semantic Conventions가 핵심

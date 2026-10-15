@@ -11,6 +11,7 @@ tags:
 created: 2026-04-20T00:00:00
 updated: 2026-04-20T22:16:02
 permalink: /Dev/web/was-cgi-wsgi-asgi-web-server-architecture-evolution
+description: "CGI에서 WSGI와 ASGI로 이어진 Python 웹 게이트웨이 인터페이스의 처리 모델을 설명하고, 동기·비동기 지원과 Django·FastAPI의 운영 구성을 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - 운영 환경은 웹 서버 / 게이트웨이 인터페이스 / 웹 프레임워크 3계층으로 분리

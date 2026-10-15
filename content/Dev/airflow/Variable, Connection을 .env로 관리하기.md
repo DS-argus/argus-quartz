@@ -4,6 +4,7 @@ tags:
 created: 2025-06-14T21:31:52
 updated: 2025-06-14T23:32:27
 permalink: /Dev/airflow/manage-variable-and-connection-with-env-file
+description: "Airflow Variable과 Connection을 환경변수로 관리하고 DAG에서 사용하는 방법을 다루며, AIRFLOW_VAR_ 및 AIRFLOW_CONN_ 접두사 규칙과 URL·JSON 작성 형식을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

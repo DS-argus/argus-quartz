@@ -6,6 +6,7 @@ tags:
 created: 2026-06-16T09:20:00
 updated: 2026-06-16T09:20:00
 permalink: /Dev/network/rustdesk-over-tailscale
+description: "Tailscale tailnet의 IP로 RustDesk 노드에 직접 접속해 별도 relay 서버 없이 원격 데스크톱을 구성하는 방법과 영구 비밀번호·직접 IP 접근 설정을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Rustdesk는 TeamViewer 대안 오픈소스 원격 데스크톱으로 Windows·macOS·Linux 지원

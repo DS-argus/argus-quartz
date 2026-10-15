@@ -7,6 +7,7 @@ tags:
 created: 2026-06-05T10:00:00
 updated: 2026-06-05T10:00:00
 permalink: /Dev/java/maven-vs-gradle
+description: "Maven의 XML과 고정 라이프사이클, Gradle의 Kotlin·Groovy DSL과 증분 빌드 방식을 비교하고, 의존성 충돌 해결 차이와 프로젝트 규모에 따른 도구 선택 기준을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - Maven은 XML 기반의 선언적 빌드 도구로 컨벤션 중심, Gradle은 Kotlin/Groovy DSL 기반으로 유연성 중심

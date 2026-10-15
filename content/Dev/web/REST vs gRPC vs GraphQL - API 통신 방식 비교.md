@@ -7,6 +7,7 @@ tags:
 created: 2026-04-29T00:00:00
 updated: 2026-04-29T00:00:00
 permalink: /Dev/web/rest-vs-grpc-vs-graphql
+description: "REST·gRPC·GraphQL의 데이터 형식과 통신 방식, 장단점 및 선택 기준을 비교하고, SOAP·Webhooks·WebSocket·WebRTC가 적합한 상황과 대규모 서비스의 조합 사례를 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - REST, gRPC, GraphQL은 서로 다른 문제를 푸는 API 통신 방식이며 Big Tech는 셋을 혼용

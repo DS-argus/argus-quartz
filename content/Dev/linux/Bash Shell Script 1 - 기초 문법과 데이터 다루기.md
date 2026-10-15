@@ -6,6 +6,7 @@ tags:
 created: 2026-06-01T00:00:00
 updated: 2026-06-14T00:29:14
 permalink: /Dev/linux/bash-shell-script-1-basics
+description: "Bash 명령어 해석과 특수 문자부터 변수, 따옴표, 파라미터 확장, 배열, glob·정규식 패턴까지 기초 문법과 데이터 다루기를 예제로 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Bash의 명령어 해석 과정과 특수 문자 역할을 알면 스크립트 독해·디버깅이 쉬워짐

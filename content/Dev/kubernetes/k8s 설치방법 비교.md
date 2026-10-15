@@ -4,6 +4,7 @@ tags:
 created: 2025-06-04T22:39:43
 updated: 2025-06-05T16:17:05
 permalink: /Dev/kubernetes/k8s-installation-methods-compared
+description: "Docker Desktop, Rancher Desktop, k3d, minikube, Amazon EKS의 설치·운영 방식과 기능, 장단점, 자원·호환성·비용을 비교해 로컬 실습부터 프로덕션까지의 선택 기준을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > k8s 설치의 대표적인 **다섯** 가지 방법을 비교  

@@ -7,6 +7,7 @@ tags:
 created: 2026-06-22T00:00:00
 updated: 2026-06-22T00:00:00
 permalink: /Logs/hunk-terminal-code-review-tui
+description: "터미널 코드 리뷰 TUI hunk의 설치와 주요 기능, git·Jujutsu 지원 및 AI 에이전트와의 리뷰 방식을 소개하고, 세션 노트가 공유되거나 보존되지 않는 한계를 정리한다."
 ---
 
 > [!abstract]+ TL;DR

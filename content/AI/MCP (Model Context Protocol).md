@@ -5,6 +5,7 @@ tags:
 created: 2025-05-22T17:01:52
 updated: 2025-07-12T20:48:44
 permalink: /AI/mcp-model-context-protocol
+description: "MCP(Model Context Protocol)의 등장 배경과 클라이언트·서버 기반 도구 연동 흐름을 설명하고, 기존 통합 기술과의 차이, 구현 사례, 보안·프라이버시 이슈 및 한계를 살펴본다."
 ---
 ### MCP란 무엇인가
 

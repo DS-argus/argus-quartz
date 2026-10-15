@@ -4,6 +4,7 @@ tags:
 created: 2025-06-14T23:42:21
 updated: 2025-06-15T22:40:50
 permalink: /Dev/spark/spark-submit
+description: "spark-submit의 실행 흐름과 주요 옵션을 정리하고 local·Standalone·YARN·Kubernetes 환경에서 애플리케이션을 제출하는 예시를 소개한다."
 ---
 
 > [!abstract]+ TL;DR

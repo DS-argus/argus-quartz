@@ -5,6 +5,7 @@ tags:
 created: 2026-06-05T00:00:00
 updated: 2026-06-05T00:00:00
 permalink: /Dev/python/python-sqlalchemy-orm
+description: "SQLAlchemy의 Core와 ORM 계층, 2.0 스타일의 모델·세션·select() 쿼리와 관계 설정을 예제로 다루고, Alembic 마이그레이션 및 자주 쓰는 조회 패턴을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - SQLAlchemy는 Python의 사실상 표준 ORM으로 Core와 ORM 두 레이어로 구성

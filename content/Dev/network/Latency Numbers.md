@@ -6,6 +6,7 @@ tags:
 created: 2026-04-22T00:00:00
 updated: 2026-05-10T17:40:42
 permalink: /Dev/network/latency-numbers
+description: "CPU 캐시부터 메모리·SSD·HDD·네트워크까지 주요 레이턴시 수치를 비교하고, 랜덤·순차 I/O와 캐시·병렬화·데이터 배치에 미치는 시스템 설계상의 의미를 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - 저장 계층은 L1 캐시부터 HDD까지 한 단계 내려갈 때마다 10-100배씩 느려지는 구조

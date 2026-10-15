@@ -7,6 +7,7 @@ tags:
 created: 2026-06-11T21:22:35
 updated: 2026-06-11T21:22:35
 permalink: /Dev/web/bun
+description: "Bun의 JavaScript 런타임·패키지 매니저·번들러·테스트 러너를 살펴보고 내장 웹 서버, 저장소·네트워킹·FFI 기능과 Node.js 프로젝트에서의 도입 판단을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - Bun은 런타임 + 패키지 매니저 + 번들러 + 테스트 러너를 하나로 합친 JavaScript 올인원 도구

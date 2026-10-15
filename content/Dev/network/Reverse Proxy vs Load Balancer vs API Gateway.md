@@ -7,6 +7,7 @@ tags:
 created: 2026-05-31T00:00:00
 updated: 2026-05-31T00:00:00
 permalink: /Dev/network/reverse-proxy-vs-load-balancer-vs-api-gateway
+description: "Reverse Proxy, Load Balancer, API Gateway의 역할과 기능 범위를 비교하고, 트래픽 분배 방식과 L4·L7 로드 밸런싱, 인증·속도 제한·API 버전 관리 등 계층별 책임을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Reverse Proxy는 백엔드 앞에서 SSL 종료, 캐싱, 압축, 보안을 처리하는 중개 계층

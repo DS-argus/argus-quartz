@@ -7,6 +7,7 @@ tags:
 created: 2025-06-02T23:05:13
 updated: 2025-06-02T23:17:20
 permalink: /Dev/docker/bitnami-docker-images
+description: "Bitnami 컨테이너 이미지의 비루트 실행, 멀티아키텍처, 보안 패치와 SBOM 등 특징을 Apache 공식 이미지와 비교하고, Kafka·Airflow 활용 예와 버전 고정 및 설정 경로 주의점을 다룬다."
 ---
 > [!abstract]+ TL;DR
 >-  Bitnami 이미지는 **“비전문가도 운영 가능한 수준까지 자동화된, 보안 강화·멀티아키 지원 컨테이너 스택”**

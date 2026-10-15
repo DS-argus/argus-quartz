@@ -2,6 +2,7 @@
 title: README.md
 created: 2025-05-14
 updated: 2026-07-01T10:00:00
+description: "개인 블로그의 소개 페이지로, 데이터 엔지니어링과 개발 도구 등 작성자의 관심사와 학습 노트, Logs 및 Tinkered의 구성을 안내한다."
 ---
 ![[index - 2026-06-01 - 20-22-25.png|800x420]]
 

@@ -7,6 +7,7 @@ tags:
 created: 2026-06-16T09:15:00
 updated: 2026-06-17T18:09:33
 permalink: /Dev/docker/docker-container-networking-nat
+description: "컨테이너 네트워크에서 bridge와 veth를 거치는 패킷 경로를 설명하고, 아웃바운드 masquerade NAT와 포트 게시에 따른 인바운드 DNAT, 애플리케이션의 0.0.0.0 바인딩 조건을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - 컨테이너는 격리된 네트워크에 있고, bridge 네트워크와 veth pair로 호스트에 연결

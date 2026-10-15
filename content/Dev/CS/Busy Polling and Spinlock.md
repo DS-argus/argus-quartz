@@ -7,6 +7,7 @@ tags:
 created: 2026-07-01T00:00:00
 updated: 2026-07-03T13:46:05
 permalink: /Dev/CS/busy-polling-and-spinlock
+description: "epoll의 준비 통지와 busy polling의 반복 확인을 비교하고, HFT·DPDK·SO_BUSY_POLL에서 지연을 줄이기 위해 CPU를 점유하는 이유를 설명한다. 이어 짧은 임계 구역에서 spinlock을 쓰는 조건과 blocking 대기를 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - busy polling은 non-blocking 자원을 멈추지 않고 반복 확인하는 synchronous 방식 — 보통은 CPU를 태우는 낭비

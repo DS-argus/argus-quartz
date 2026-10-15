@@ -4,6 +4,7 @@ tags:
 created: 2025-06-25T23:57:54
 updated: 2025-06-26T00:20:22
 permalink: /Dev/kubernetes/lessons-from-adopting-k8s
+description: "VM 서버 비용 문제를 계기로 신규 서비스부터 쿠버네티스를 단계적으로 도입한 배경과 Jenkins·Nexus·NHN Cloud Deploy 기반 배포 흐름, 운영 중 겪은 10가지 문제와 대응 방법을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

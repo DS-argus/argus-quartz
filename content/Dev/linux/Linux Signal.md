@@ -6,6 +6,7 @@ tags:
 created: 2026-03-31T00:00:00
 updated: 2026-03-31T22:40:35
 permalink: /Dev/linux/linux-signal
+description: "Linux 시그널의 기본 동작과 번호를 살펴보고, kill을 이용한 종료·강제 종료, 일시정지·재개, 설정 리로드와 프로세스 생존 확인 방법을 설명한다."
 ---
 
 > [!abstract]+ TL;DR

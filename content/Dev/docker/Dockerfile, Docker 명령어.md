@@ -5,6 +5,7 @@ tags:
 created: 2025-06-04T00:00:00
 updated: 2025-06-04T23:40:29
 permalink: /Dev/docker/dockerfile-and-docker-commands
+description: "주요 Dockerfile 명령어의 역할과 사용 예를 살펴보고, 이미지·컨테이너·네트워크·볼륨 관리와 실행·헬스체크에 쓰는 Docker CLI 명령을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

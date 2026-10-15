@@ -6,6 +6,7 @@ tags:
 created: 2025-06-12T17:18:43
 updated: 2025-06-12T10:17:19
 permalink: /AI/vllm
+description: "LLM 서빙 엔진 vLLM의 배경과 PagedAttention의 KV 캐시 블록 관리, 연속 배칭 스케줄러를 중심으로 추론 메모리와 요청 처리 방식을 설명한다. 성능 비교와 지원 범위, 채택 사례 및 연구 동향도 정리한다."
 ---
 > [!info]+ 참고 자료
 > - 참고 논문 : [Efficient Memory Management for Large Language Model Serving with PagedAttention](https://arxiv.org/pdf/2309.06180)

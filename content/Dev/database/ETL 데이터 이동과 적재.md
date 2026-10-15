@@ -8,6 +8,7 @@ tags:
 created: 2026-06-06T10:00:00
 updated: 2026-06-07T08:02:03
 permalink: /Dev/database/etl-data-movement-and-loading
+description: "파일·DB 간 데이터 이동에서 입력 파싱, 소스 부하와 증분 추출, 실행 계층 설계 및 적재 성능을 살펴보고 Oracle과 Greenplum의 주요 도구를 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - File to DB는 파싱과 입력 품질이, DB to DB는 소스 부하와 증분 추출이 핵심 난이도

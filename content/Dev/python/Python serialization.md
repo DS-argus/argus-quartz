@@ -4,6 +4,7 @@ tags:
 created: 2026-04-12T00:00:00
 updated: 2026-04-12T00:00:00
 permalink: /Dev/python/python-serialization
+description: "Python 객체의 직렬화와 역직렬화 개념을 설명하고 JSON·pickle의 변환 방식과 보안 차이, Avro·Protobuf의 스키마 처리, dataclass 연동 및 포맷 선택 기준을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - 직렬화(Serialization)는 메모리에 있는 객체를 저장하거나 전송할 수 있는 형태로 변환하는 것

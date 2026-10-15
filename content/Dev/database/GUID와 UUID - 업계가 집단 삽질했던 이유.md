@@ -6,6 +6,7 @@ tags:
 created: 2026-04-15T21:00:00
 updated: 2026-05-31T23:22:37
 permalink: /Dev/database/guid-and-uuid
+description: "GUID/UUID의 분산 생성 장점과 UUID v1의 정보 노출, UUID v4의 무작위 인덱스 삽입 문제를 살펴보고, UUIDv7·ULID·Snowflake ID와 규칙 기반 정수 식별자를 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - GUID/UUID는 분산 시스템의 고유 ID 표준이지만 RDBMS PK로는 강하지 않음

@@ -7,6 +7,7 @@ tags:
 created: 2026-05-23T00:00:00
 updated: 2026-05-23T00:00:00
 permalink: /Dev/web/rest-api-design-and-url-structure
+description: "URL 구성 요소와 리소스 중심 REST API의 경로·HTTP 메서드·상태 코드 설계 원칙을 설명하고, API 버전 관리와 게이트웨이 라우팅 및 path rewrite를 실무 사례로 정리한다."
 ---
 
 > [!abstract]+ TL;DR

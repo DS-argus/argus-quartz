@@ -7,6 +7,7 @@ tags:
 created: 2026-06-18T00:00:00
 updated: 2026-06-18T22:46:08
 permalink: /Dev/linux/make-and-makefile
+description: "Makefile의 rule과 의존성 그래프·타임스탬프 기반 증분 빌드부터 .PHONY, 변수, 자동 변수, 패턴 규칙, 함수와 실전 태스크 패턴까지 GNU make 사용법을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - `make`는 수정 시각을 비교해 바뀐 부분만 빌드하는 자동화 도구, `Makefile`은 그 작업 명세서

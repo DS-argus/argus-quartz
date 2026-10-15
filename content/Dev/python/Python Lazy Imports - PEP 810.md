@@ -5,6 +5,7 @@ tags:
 created: 2026-05-23T00:00:00
 updated: 2026-05-23T00:00:00
 permalink: /Dev/python/python-lazy-imports-pep-810
+description: "Python 3.15 PEP 810의 명시적 lazy import 문법과 시작 시간 최적화, 타입 어노테이션 및 순환 import 활용법, import 검증 지연에 따른 주의점과 Python 3.14 이하의 설정 방법을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

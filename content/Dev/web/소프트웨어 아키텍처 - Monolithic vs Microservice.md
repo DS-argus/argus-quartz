@@ -6,6 +6,7 @@ tags:
 created: 2025-05-29T20:06:48
 updated: 2026-06-07T08:47:13
 permalink: /Dev/web/software-architecture-monolithic-vs-microservices
+description: "모놀리식과 마이크로서비스의 구조와 장단점을 비교하고, MSA 운영 인프라와 분산 트랜잭션·최종 일관성 문제, Strangler Fig 기반의 점진적 전환을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - 모놀리식은 하나의 코드베이스·배포 단위, MSA는 독립 서비스 단위로 분리하는 아키텍처

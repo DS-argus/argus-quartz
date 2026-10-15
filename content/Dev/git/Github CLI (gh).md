@@ -6,6 +6,7 @@ tags:
 created: 2025-05-14
 updated: 2025-05-21T22:21:11
 permalink: /Dev/git/github-cli-gh
+description: "GitHub CLI gh의 설치와 인증, 저장소·PR·이슈·Actions 관리 명령을 용도별로 정리한다. Discussions와 Gist 조회·생성, alias와 확장 기능 등 터미널에서 자주 쓰는 기능도 다룬다."
 ---
 
 > [!abstract]+ TL;DR

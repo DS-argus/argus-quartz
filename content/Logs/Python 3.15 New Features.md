@@ -4,6 +4,7 @@ tags:
 created: 2026-06-28T11:00:00
 updated: 2026-06-28T11:00:00
 permalink: /Logs/python-3-15-new-features
+description: "Python 3.15의 lazy import와 컴프리헨션 언패킹 등 문법 변화, frozendict·sentinel 내장 타입, JIT 및 샘플링 프로파일러 개선과 incremental GC 철회를 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - `lazy` 키워드 지연 import(PEP 810)와 컴프리헨션 내 `*`/`**` 언패킹(PEP 798) 등 문법 변화

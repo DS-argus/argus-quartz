@@ -6,6 +6,7 @@ tags:
 created: 2025-06-02T15:22:37
 updated: 2025-06-28T11:52:29
 permalink: /Dev/airflow/getting-started-with-apache-airflow-2-10-5-using-docker-compose
+description: "공식 docker-compose.yaml을 이용해 Apache Airflow 2.10.5를 로컬에서 초기화하고 실행하는 절차를 설명하고, 9개 서비스의 역할과 공통 설정 앵커 및 주요 옵션을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

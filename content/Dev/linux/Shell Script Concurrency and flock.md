@@ -6,6 +6,7 @@ tags:
 created: 2026-06-23T00:00:00
 updated: 2026-06-23T00:00:00
 permalink: /Dev/linux/shell-script-concurrency-and-flock
+description: '셸 스크립트에서 cron 중복 실행과 공유 파일 수정 경쟁을 flock으로 막는 방법을 다루고, advisory lock의 협력 규칙과 OFD·inode 기반 동작, macOS에서도 쓸 수 있는 대안을 정리한다.'
 ---
 > [!abstract]+ TL;DR
 > - shell script 동시성 문제는 cron 중복 실행과 공유 파일 동시 수정에서 발생하며, `flock`으로 임계 구역을 하나씩 진입

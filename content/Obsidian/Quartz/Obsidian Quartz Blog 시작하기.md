@@ -5,6 +5,7 @@ tags:
 created: 2025-05-21T22:21:27
 updated: 2025-05-22T16:53:14
 permalink: /Obsidian/Quartz/getting-started-with-obsidian-quartz-blog
+description: "Obsidian Quartz 블로그를 구성하며 참고한 블로그와 공식 문서를 모으고, 초기 설정·Giscus 댓글·Google Analytics·최근 노트 운영 및 테마 자료를 참고한 맥락을 덧붙인다."
 ---
 이 블로그를 만들 때 참고한 분들의 링크를 정리한다 ^ae49b0
 

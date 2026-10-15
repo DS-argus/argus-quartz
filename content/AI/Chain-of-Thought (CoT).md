@@ -4,6 +4,7 @@ tags:
 created: 2025-06-25T23:55:02
 updated: 2025-06-26T13:00:22
 permalink: /AI/chain-of-thought-cot
+description: "Chain-of-Thought(CoT)가 프롬프트로 언어 모델의 단계적 추론을 유도하는 방식과 few-shot·zero-shot 사례, 활용 분야 및 정확도와 비용 측면의 한계를 정리한다."
 ---
 > [!abstract]+ TL;DR
 >- Chain-of-Thought(CoT)는 LLM이 중간 추론 과정을 단계별로 서술하도록 유도하는 프롬프트 기법

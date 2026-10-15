@@ -5,6 +5,7 @@ tags:
 created: 2026-04-12T00:00:00
 updated: 2026-04-12T00:00:00
 permalink: /Dev/python/python-pydantic
+description: "Pydantic의 타입 기반 데이터 검증과 자동 변환을 시작으로 Field와 커스텀 validator, 직렬화, 모델 설정, 중첩 모델 및 FastAPI 연동을 예제로 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - pydantic은 Python의 타입 힌트를 **런타임에 강제**하는 데이터 검증 라이브러리

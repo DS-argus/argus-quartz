@@ -4,6 +4,7 @@ tags:
 created: 2026-06-06T00:00:00
 updated: 2026-06-06T00:00:00
 permalink: /Logs/go-1-26-green-tea-garbage-collector
+description: "Go 1.26에서 기본 활성화된 Green Tea GC가 기존 mark-sweep 방식에 메모리 페이지와 8KiB span 단위 스캔을 적용해 포인터 추적과 캐시 미스를 줄이는 원리, 성능 개선과 적용 방법을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Go 1.25에서 실험적 도입, Go 1.26에서 기본 탑재된 새 GC

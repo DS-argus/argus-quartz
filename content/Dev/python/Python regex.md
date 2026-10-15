@@ -6,6 +6,7 @@ tags:
 created: 2026-04-12T00:00:00
 updated: 2026-04-13T07:36:36
 permalink: /Dev/python/python-regex
+description: "Python 표준 라이브러리 re를 이용해 문자 클래스, 수량자, 앵커, 그룹, 탐색 문법을 익히고 핵심 함수와 플래그, 실전 패턴, 성능 및 사용 한계를 예제로 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - 정규 표현식(regex)은 문자열에서 패턴을 찾기 위한 미니 언어다

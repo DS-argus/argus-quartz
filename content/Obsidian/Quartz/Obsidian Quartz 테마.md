@@ -5,6 +5,7 @@ tags:
 created: 2025-05-21T22:34:20
 updated: 2025-05-22T16:39:20
 permalink: /Obsidian/Quartz/obsidian-quartz-theme
+description: "Quartz 테마 저장소를 이용해 Anuppuccin 테마를 로컬 설치하는 방법과 action.sh 사용법을 소개하고, SCSS에서 헤더·배경색·글꼴을 조정한 내용을 기록한다."
 ---
 ### Quartz-Theme
 Obsidian의 가장 큰 장점은 아주 많은 테마를  선택할 수 있다는 점이다.  

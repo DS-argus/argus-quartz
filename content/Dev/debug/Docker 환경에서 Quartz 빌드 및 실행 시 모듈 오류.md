@@ -7,6 +7,7 @@ tags:
 created: 2025-06-05T10:13:36
 updated: 2025-06-05T10:21:16
 permalink: /Dev/debug/quartz-module-errors-in-docker
+description: "Docker에서 Quartz를 빌드·실행할 때 네이티브 모듈을 찾지 못하는 원인과 의존성 잠금 파일·설치 환경의 관계를 설명하고, 의존성 재설치와 이미지 실행 절차를 정리한다."
 ---
 > [!abstract]+ TL;DR
 > Quartz 원본 레포에서 [해당 pull request](https://github.com/jackyzha0/quartz/pull/1997) 참고하자...

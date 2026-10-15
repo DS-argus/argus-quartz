@@ -5,6 +5,7 @@ tags:
 created: 2025-06-02T17:00:00
 updated: 2025-06-02T17:55:14
 permalink: /Dev/airflow/dumb-init-setsid
+description: "Airflow Celery worker의 종료 시그널 전달 문제를 dumb-init의 PID 1 역할과 setsid 동작으로 설명하고, DUMB_INIT_SETSID=0 설정의 의미를 정리한다."
 ---
 
 > [!abstract]+ TL;DR

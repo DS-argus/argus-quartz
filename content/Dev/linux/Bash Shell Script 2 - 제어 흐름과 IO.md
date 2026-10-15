@@ -6,6 +6,7 @@ tags:
 created: 2026-06-01T00:00:00
 updated: 2026-06-14T00:43:21
 permalink: /Dev/linux/bash-shell-script-2-control-flow-and-io
+description: "조건문·반복문·함수로 흐름을 제어하고, 파일 디스크립터와 리다이렉션, Here Document, 파이프, 프로세스 치환 및 인자 처리 방법을 예제로 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - 조건문(`if`, `case`, `[[ ]]`)·반복문(`for`, `while`, `until`)·함수와 `local` 변수로 흐름 제어

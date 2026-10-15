@@ -8,6 +8,7 @@ tags:
 created: 2026-08-11T00:00:00
 updated: 2026-09-09T22:45:18
 permalink: /Dev/database/storage-file-formats-parquet-vs-orc-vs-avro
+description: "Parquet·ORC의 열 저장 구조와 통계·인덱스 기반 스캔 최적화, Avro의 행 저장 및 스키마 진화를 비교하고 수집·분석 단계별 파일 포맷 선택 기준을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

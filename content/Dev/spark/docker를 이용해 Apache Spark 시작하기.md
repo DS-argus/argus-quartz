@@ -6,6 +6,7 @@ tags:
 created: 2025-06-07T22:10:36
 updated: 2025-06-15T22:11:48
 permalink: /Dev/spark/getting-started-with-apache-spark-using-docker
+description: "Apache Spark 공식 Docker 이미지로 PySpark 환경을 구성하고 M&M 집계 예제를 spark-submit으로 실행한다. 이어 Dockerfile과 entrypoint.sh를 살펴보며 이미지 구성과 실행 흐름, Kubernetes 배포 전제를 설명한다."
 ---
 
 > [!abstract]+ TL;DR

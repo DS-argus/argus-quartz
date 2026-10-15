@@ -8,6 +8,7 @@ tags:
 created: 2026-08-17T00:00:00
 updated: 2026-09-09T15:43:01
 permalink: /Dev/database/from-bulk-load-to-data-lake
+description: "벌크 로더의 임시 파일이 Hadoop·Hive와 객체 스토리지를 거쳐 데이터 레이크의 원본 저장소가 된 흐름을 설명하고, 파티션 경로의 조회·재처리 역할과 테이블 포맷의 변화를 다룬다."
 ---
 
 > [!abstract]+ TL;DR

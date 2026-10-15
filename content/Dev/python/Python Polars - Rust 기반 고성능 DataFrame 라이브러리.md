@@ -5,6 +5,7 @@ tags:
 created: 2026-05-21T00:00:00
 updated: 2026-05-21T00:00:00
 permalink: /Dev/python/python-polars
+description: "Rust 기반 Polars의 Arrow 컬럼 저장, 멀티스레딩과 LazyFrame 쿼리 최적화 원리를 설명하고, 표현식 중심 API와 Pandas 비교 예제 및 Polars·Pandas·DuckDB의 실무 선택 기준을 소개한다."
 ---
 
 > [!abstract]+ TL;DR

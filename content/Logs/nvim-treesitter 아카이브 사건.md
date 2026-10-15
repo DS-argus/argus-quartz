@@ -6,6 +6,7 @@ tags:
 created: 2026-04-20T00:00:00
 updated: 2026-09-10T14:37:05
 permalink: /Logs/nvim-treesitter-archive-incident
+description: "2026년 nvim-treesitter의 아카이브와 이후 재개 상황을 정리하고, Neovim 0.12 이상을 요구하는 main과 0.11용으로 동결된 master의 차이 및 업데이트 시 주의점을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - 2026년 4월 nvim-treesitter 아카이브 사건과 유지보수 부담

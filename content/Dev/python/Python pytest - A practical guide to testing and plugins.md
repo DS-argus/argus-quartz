@@ -6,6 +6,7 @@ tags:
 created: 2026-06-12T20:35:00
 updated: 2026-10-05T13:42:58
 permalink: /Dev/python/python-pytest-a-practical-guide-to-testing-and-plugins
+description: "pytest의 자동 탐색과 assert를 시작으로 fixture, parametrize, marker, mocking, 커버리지, TDD와 플러그인 활용을 예제로 다루고 unittest 및 hypothesis와의 역할도 비교한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -7,6 +7,7 @@ tags:
 created: 2026-04-16T00:00:00
 updated: 2026-06-01T00:00:00
 permalink: /Dev/workflow/zerobrew-a-5-20x-faster-experimental-homebrew-alternative
+description: "Rust 기반 Homebrew 대안 zerobrew의 콘텐츠 주소 지정 저장소, APFS clonefile, 병렬 다운로드 등 설치 최적화 원리를 소개하고 macOS·Linux 사용법과 Homebrew 병행 시 주의점을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

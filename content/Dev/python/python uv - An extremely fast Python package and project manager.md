@@ -6,6 +6,7 @@ tags:
 created: 2026-01-31T17:59:32
 updated: 2026-06-11T21:22:35
 permalink: /Dev/python/python-uv-an-extremely-fast-python-package-and-project-manager
+description: "uv로 Python 버전과 프로젝트 환경을 관리하는 방법을 init·add·lock·sync·run 명령 중심으로 설명하고, pip 호환 명령과 Ruff 포매팅, 의존성 보안 검사도 정리한다."
 ---
 
 > [!abstract]+ TL;DR

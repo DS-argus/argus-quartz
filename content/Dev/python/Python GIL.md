@@ -7,6 +7,7 @@ tags:
 created: 2026-07-02T00:00:00
 updated: 2026-07-03T13:55:17
 permalink: /Dev/python/python-gil
+description: "CPython의 GIL이 참조 카운팅을 보호하는 유저 공간 잠금인 이유와 커널 및 애플리케이션 데이터와의 구분, CPU-bound와 I/O-bound thread 동작, free-threading의 변화를 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - GIL은 CPython 인터프리터가 유저 공간에서 관리하는 잠금 — 한 순간 하나의 thread만 바이트코드를 실행, 커널은 존재를 모름

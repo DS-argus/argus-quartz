@@ -5,6 +5,7 @@ tags:
 created: 2026-06-05T10:00:00
 updated: 2026-06-05T23:33:15
 permalink: /Logs/big-tech-switching-to-go
+description: "Microsoft의 TypeScript 컴파일러 포팅과 Reddit·Lovable·Uber의 서비스 전환 사례를 통해, 각 팀이 Go를 선택한 배경과 동시성·성능·운영 비용에서 얻은 변화를 살펴본다."
 ---
 > [!abstract]+ TL;DR
 > - Microsoft, Reddit, Lovable, Uber가 Python/TypeScript에서 Go로 전환한 사례 정리

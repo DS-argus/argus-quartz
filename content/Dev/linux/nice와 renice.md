@@ -5,6 +5,7 @@ tags:
 created: 2026-03-31T00:00:00
 updated: 2026-03-31T00:00:00
 permalink: /Dev/linux/nice-and-renice
+description: '프로세스 시작 시 nice를 지정하거나 실행 중 renice로 CPU 우선순위를 조정하는 방법, 권한 제약과 ionice·cgroups 등 관련 자원 제어 수단을 설명한다.'
 ---
 
 > [!abstract]+ TL;DR

@@ -6,6 +6,7 @@ tags:
 created: 2026-06-01T00:00:00
 updated: 2026-06-21T00:00:00
 permalink: /Dev/linux/bash-shell-script-3-text-processing
+description: "printf와 echo의 출력 차이를 살펴보고 tr·sed·awk로 텍스트를 변형하며 grep·cut·sort·uniq·shuf로 골라내는 방법과 read·IFS를 이용한 필드 처리를 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - 텍스트 도구는 바꾸는 것(`tr`, `sed`, `awk`)과 골라내는 것(`grep`, `cut`, `sort`, `uniq` 등)으로 구분

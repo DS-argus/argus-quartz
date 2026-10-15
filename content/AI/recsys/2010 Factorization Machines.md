@@ -4,6 +4,7 @@ tags:
 created: 2025-06-23T14:33:27
 updated: 2025-06-26T00:15:25
 permalink: /AI/recsys/2010-factorization-machines
+description: "Factorization Machines의 2차 상호작용 모델과 희소 데이터에서 잠재 벡터를 공유하는 원리를 설명하고, 추천 데이터 표현, 학습 예시, 선형 시간 계산 및 PyTorch 구현을 정리한다."
 ---
 > [!abstract]+ TL;DR
 >-  source : https://www.ismll.uni-hildesheim.de/pub/pdfs/Rendle2010FM.pdf

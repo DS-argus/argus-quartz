@@ -7,6 +7,7 @@ tags:
 created: 2026-02-23T23:14:27
 updated: 2026-03-10T20:34:42
 permalink: /Obsidian/Quartz/auto-organize-obsidian-blog-attachments
+description: "Obsidian 첨부파일을 로컬 전용 ignore 규칙으로 관리하고, 게시 글에서 참조하는 파일만 자동으로 stage하도록 구성한 과정과 Quartz 빌드에서 이미지가 누락된 원인을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

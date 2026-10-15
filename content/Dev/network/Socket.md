@@ -5,6 +5,7 @@ tags:
 created: 2025-05-30T08:22:15
 updated: 2026-07-04T21:43:41
 permalink: /Dev/network/socket
+description: "소켓을 프로세스 간 통신을 위한 커널 자원의 파일 인터페이스로 살펴보고, fd 구조와 스트림·세그먼트·패킷의 관계, UDS와 TCP/UDP의 선택 기준 및 보안 주의점을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -7,6 +7,7 @@ tags:
 created: 2026-04-05T00:00:00
 updated: 2026-04-05T21:48:05
 permalink: /Dev/web/html-css-and-javascript-basics
+description: "HTML로 문서 구조를 만들고 CSS로 스타일과 레이아웃을 지정하며 JavaScript로 동작을 구현하는 웹 기초를 예제와 함께 설명한다. TypeScript와 React·Vue·Next.js 등 프레임워크의 역할 및 개발 흐름도 살펴본다."
 ---
 
 > [!abstract]+ TL;DR

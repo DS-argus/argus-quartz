@@ -7,6 +7,7 @@ created: 2025-05-23T19:50:40
 updated: 2025-05-23T23:19:30
 permalink: /Dev/workflow/terminal-multiplexers-and-tmux
 related: 
+description: "터미널 멀티플렉서의 필요성과 tmux의 Session·Window·Pane 구조를 소개하고, 세션·창·패널 명령어와 개인 설정 및 TPM 플러그인 설치·활용 방법을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

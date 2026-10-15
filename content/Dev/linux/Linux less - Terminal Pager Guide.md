@@ -5,6 +5,7 @@ tags:
 created: 2026-06-13T22:12:48
 updated: 2026-06-30T00:00:00
 permalink: /Dev/linux/linux-less-terminal-pager-guide
+description: "less를 이용해 파일과 명령 출력을 페이지 단위로 읽고 이동·검색하는 방법, 주요 옵션과 cat·more의 차이, git·man의 페이저 설정을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - `less`는 긴 출력을 한 화면씩 끊어 보여주는 페이저 — `cat`과 달리 멈춰 세우고 탐색 가능

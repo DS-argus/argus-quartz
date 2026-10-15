@@ -6,6 +6,7 @@ tags:
 created: 2025-05-28T22:18:21
 updated: 2025-05-28T22:22:55
 permalink: /Dev/debug/postgresql-5432-port-conflict-and-missing-postgres-role
+description: "로컬 PostgreSQL이 5432 포트를 점유해 Docker 컨테이너 대신 호스트 서버에 연결되고, postgres role 오류가 발생한 원인과 포트 점유 확인 및 데몬·컨테이너 재생성으로 해결한 과정을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

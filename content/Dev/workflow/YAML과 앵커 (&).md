@@ -4,6 +4,7 @@ tags:
 created: 2025-05-28T23:59:29
 updated: 2025-05-29T07:40:22
 permalink: /Dev/workflow/yaml-and-anchors
+description: "YAML의 노드 종류와 기본 문법을 정리하고, 들여쓰기에 따라 달라지는 앵커와 alias의 참조 범위를 Docker Compose 예제로 설명한다."
 ---
 
 > [!abstract]+ TL;DR

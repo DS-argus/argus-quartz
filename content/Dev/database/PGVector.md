@@ -5,6 +5,7 @@ tags:
 created: 2025-08-09T13:42:56
 updated: 2025-08-19T15:10:14
 permalink: /Dev/database/pgvector
+description: "PostgreSQL 확장 pgvector의 벡터 자료형과 거리 연산, HNSW·IVFFlat 인덱스 특성을 설명하고 SQL 유사도 검색, 메타데이터 필터링과 성능 비교 실습을 다룬다."
 ---
 
 > [!abstract]+ TL;DR

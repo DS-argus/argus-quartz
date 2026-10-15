@@ -7,6 +7,7 @@ tags:
 created: 2026-04-29T00:00:00
 updated: 2026-06-11T21:30:00
 permalink: /Dev/web/package-manager-landscape-why-npm-and-how-tools-get-distributed
+description: "npm이 CLI 배포의 기본 채널이 된 네트워크 효과와 배포 마찰을 설명하고, 언어별·시스템·메타 패키지 매니저 및 직접 바이너리 배포의 특징과 보안·최근 흐름을 비교한다."
 ---
 
 > [!abstract]+ TL;DR

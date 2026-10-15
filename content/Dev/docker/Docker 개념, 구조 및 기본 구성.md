@@ -4,6 +4,7 @@ tags:
 created: 2025-06-04T20:49:30
 updated: 2025-06-04T00:19:39
 permalink: /Dev/docker/docker-concepts-architecture-and-basics
+description: "컨테이너와 가상머신의 격리·성능·운영 차이부터 Docker CLI, dockerd, containerd, shim, runc의 실행 흐름과 이미지·컨테이너·네트워크·볼륨 객체 및 Docker 소켓 노출 위험까지 설명한다."
 ---
 
 > [!abstract]+ TL;DR

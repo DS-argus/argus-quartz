@@ -8,6 +8,7 @@ tags:
 created: 2026-08-12T00:00:00
 updated: 2026-08-12T00:00:00
 permalink: /Dev/database/schema-evolution-in-data-lakes
+description: "데이터 레이크에서 파일별 스키마가 공존하는 배경과 backward·forward 호환성, 변경 유형별 위험을 설명하고 파일·테이블 포맷 및 Schema Registry의 대응과 배포 순서를 정리한다."
 ---
 
 > [!abstract]+ TL;DR

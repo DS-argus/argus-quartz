@@ -5,6 +5,7 @@ tags:
 created: 2025-06-26T13:25:07
 updated: 2026-04-05T00:00:00
 permalink: /Dev/python/python-logging
+description: "Python logging의 로그 레벨과 Logger, Handler, Formatter, Filter의 역할부터 기본 설정과 파일 회전까지 설명한다. 요청별 문맥 주입과 멀티프로세스 로깅, 운영 환경의 로그 수집 및 실무 주의점을 예제로 다룬다."
 ---
 
 > [!abstract]+ TL;DR

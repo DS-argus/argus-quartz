@@ -5,6 +5,7 @@ tags:
 created: 2025-06-12T14:02:14
 updated: 2025-06-12T14:03:08
 permalink: /Dev/kubernetes/helm
+description: "Helm의 차트·릴리스·레포지토리 개념과 기본 배포 명령을 정리하고, values.yaml·templates·Chart.yaml의 역할 및 Docker Compose와의 대응 관계를 설명한다."
 ---
 
 > [!abstract]+ TL;DR

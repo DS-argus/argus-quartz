@@ -7,6 +7,7 @@ tags:
 permalink: /Obsidian/Quartz/quartz-share-button-and-permalink-automation
 created: 2026-04-23T00:00:00
 updated: 2026-04-23T23:08:38
+description: "Quartz 블로그에 공유 버튼을 추가하고 permalink URL 복사와 OG 미리보기를 지원하며, pre-commit hook으로 permalink를 자동 생성하는 구현 과정을 기록한다."
 ---
 
 > [!abstract]+ TL;DR

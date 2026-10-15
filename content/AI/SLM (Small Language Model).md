@@ -6,6 +6,7 @@ tags:
 created: 2025-06-06T18:34:06
 updated: 2025-07-09T17:48:52
 permalink: /AI/slm-small-language-model
+description: "소형 언어 모델의 특성과 대표 모델을 소개하고, 대형 모델 대비 장단점과 엣지·온디바이스 활용, 산업 사례, 증류·양자화·LoRA 등 경량화·파인튜닝 기법 및 관련 도구를 정리한다."
 ---
 ### 1. 정의 및 등장 배경
 - 소형 언어 모델(Small Language Model, SLM)은 파라미터 수가 수백만에서 수십억으로 대규모 언어 모델(LLM)의 수천억·수조 파라미터보다 작음  

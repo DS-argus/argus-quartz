@@ -6,6 +6,7 @@ tags:
 created: 2026-06-22T12:00:00
 updated: 2026-06-22T12:00:00
 permalink: /Dev/observability/elk-stack-elasticsearch-logstash-kibana
+description: "Elasticsearch의 로그 저장·검색, Logstash의 수집·변환, Kibana의 시각화와 Beats를 잇는 데이터 흐름, Docker Compose 구성 및 운영 고려사항을 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - ELK Stack은 Elasticsearch + Logstash + Kibana로 구성된 로그 수집·검색·시각화 오픈소스 스택

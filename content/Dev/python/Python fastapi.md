@@ -8,6 +8,7 @@ tags:
 created: 2025-06-06T18:18:03
 updated: 2026-07-03T00:00:00
 permalink: /Dev/python/python-fastapi
+description: "FastAPI의 ASGI 기반 구조와 Starlette, Uvicorn, Gunicorn의 역할을 설명하고 event loop에서 요청을 처리하는 방식을 정리한다. Path/Query Parameter와 Pydantic 모델을 활용한 CRUD 예제로 API 구성 흐름도 다룬다."
 ---
 
 > [!abstract]+ TL;DR

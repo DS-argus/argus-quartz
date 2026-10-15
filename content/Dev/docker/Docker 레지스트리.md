@@ -5,6 +5,7 @@ tags:
 created: 2025-06-04T12:39:56
 updated: 2025-06-03T23:54:51
 permalink: /Dev/docker/docker-registry
+description: "Docker 이미지 레지스트리의 저장 구조와 이미지 참조, 매니페스트·레이어 기반 Pull·Push 흐름을 설명하고, 태그·digest 운영과 이미지 신뢰도 확인 기준을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - 이미지는 레이어 묶음, 레지스트리는 그 보관소 → 캐시 덕에 Pull·Push 때 필요한 레이어만 이동

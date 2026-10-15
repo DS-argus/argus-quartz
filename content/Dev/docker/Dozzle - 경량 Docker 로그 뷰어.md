@@ -6,6 +6,7 @@ tags:
 created: 2026-05-16T10:00:00
 updated: 2026-05-16T10:00:00
 permalink: /Dev/docker/dozzle
+description: "Docker 소켓을 연결해 컨테이너 로그를 웹에서 실시간 조회하는 Dozzle의 기능과 실행 방법을 소개하고, lazydocker와 인터페이스 및 용도 차이를 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - Dozzle은 Docker 소켓 마운트만으로 컨테이너 로그를 실시간 조회하는 경량 웹 UI

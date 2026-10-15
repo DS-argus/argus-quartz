@@ -7,6 +7,7 @@ tags:
 created: 2026-06-06T10:00:00
 updated: 2026-06-06T10:00:00
 permalink: /Dev/database/odbc-vs-jdbc
+description: "ODBC와 JDBC의 구조와 드라이버 유형, 설정 방식 및 사용 환경을 비교한다. JVM·비JVM 애플리케이션의 선택 기준과 DB 연결·데이터 적재의 차이를 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - ODBC는 언어 무관 DB 연결 API, JDBC는 Java 전용 DB 연결 API

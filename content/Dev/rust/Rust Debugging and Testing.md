@@ -6,6 +6,7 @@ tags:
 created: 2026-10-04T12:51:46
 updated: 2026-10-05T13:42:58
 permalink: /Dev/rust/rust-debugging-and-testing
+description: "Rust CLI 예제에서 배송비 경계 오류를 dbg!와 테스트로 찾아 고치고, Cargo의 unit·integration·doc test 실행과 필터링부터 자동화, panic backtrace, LLDB 디버깅까지 다룬다."
 ---
 
 > [!abstract]+ TL;DR

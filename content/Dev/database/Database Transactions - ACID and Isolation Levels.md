@@ -7,6 +7,7 @@ tags:
 created: 2026-08-17T00:00:00
 updated: 2026-08-17T00:00:00
 permalink: /Dev/database/database-transactions-acid-and-isolation-levels
+description: "트랜잭션의 ACID 성질과 격리 수준을 이상 현상과 DB별 동작 차이로 설명하고, PostgreSQL Serializable의 SSI 감지 방식과 재시도 등 애플리케이션 책임을 다룬다."
 ---
 
 > [!abstract]+ TL;DR

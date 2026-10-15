@@ -4,6 +4,7 @@ tags:
 created: 2026-04-12T00:00:00
 updated: 2026-04-12T21:53:16
 permalink: /Dev/python/python-dataclass
+description: "Python dataclass의 자동 생성 메서드와 기본값, 가변 필드 처리, 데코레이터 옵션 및 초기화 후처리를 예제로 설명한다. 데이터 클래스의 변환 유틸리티와 설정 객체·DTO 활용 사례를 다루고 dict, NamedTuple, Pydantic, attrs와의 선택 기준을 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - `@dataclass`는 데이터를 담는 클래스의 boilerplate(`__init__`, `__repr__`, `__eq__` 등)를 자동 생성해주는 데코레이터

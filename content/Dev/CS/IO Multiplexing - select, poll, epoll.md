@@ -6,6 +6,7 @@ tags:
 created: 2026-07-03T00:00:00
 updated: 2026-07-05T14:10:24
 permalink: /Dev/CS/io-multiplexing-select-poll-epoll
+description: "select·poll·epoll로 여러 파일 디스크립터의 준비 상태를 감시하는 원리와 커널의 대기 큐 및 깨움 흐름을 설명하고, epoll의 관심 목록·준비 목록과 level-triggered·edge-triggered 동작을 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - I/O multiplexing은 한 스레드가 여러 fd를 동시에 감시하다 준비된 것만 처리하는 기법 — 연결당 스레드의 확장 한계를 넘는 방법

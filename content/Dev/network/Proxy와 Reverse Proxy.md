@@ -6,6 +6,7 @@ tags:
 created: 2025-06-11T13:07:45
 updated: 2025-06-11T13:17:50
 permalink: /Dev/network/proxy-and-reverse-proxy
+description: "Forward Proxy와 Reverse Proxy의 요청 방향과 사용 주체를 비교하고, 접근 제어·서버 보호·로드 밸런싱·TLS 종료·캐싱 등 주요 역할과 활용 사례를 정리한다."
 ---
 
 > [!abstract]+ TL;DR

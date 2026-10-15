@@ -5,6 +5,7 @@ tags:
 created: 2026-05-21T00:00:00
 updated: 2026-05-21T00:00:00
 permalink: /Dev/python/python-click
+description: "Click의 command·option·argument, group·context로 Python CLI를 구성하는 방법과 유틸리티·테스트를 설명하고 Typer 및 argparse와 비교한다."
 ---
 
 > [!abstract]+ TL;DR

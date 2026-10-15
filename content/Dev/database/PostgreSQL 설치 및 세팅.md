@@ -5,6 +5,7 @@ tags:
 created: 2025-08-06T00:00:00
 updated: 2025-08-07T09:54:23
 permalink: /Dev/database/postgresql-installation-and-setup
+description: "PostgreSQL 주요 기능과 활용 사례 및 관련 생태계를 소개하고 Homebrew·Docker·Docker Compose 설치와 설정, psql 접속과 관리 명령을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

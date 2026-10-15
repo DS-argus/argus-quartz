@@ -7,6 +7,7 @@ tags:
 created: 2025-05-27T22:53:24
 updated: 2026-01-31T23:52:01
 permalink: /Dev/python/python-pyenv
+description: "pyenv와 pyenv-virtualenv로 Python 버전을 설치·전환하고 프로젝트별 가상환경을 관리하는 방법을 명령어로 정리하며, conda와의 역할 차이와 선택 기준을 비교한다."
 ---
 
 > [!abstract]+ TL;DR

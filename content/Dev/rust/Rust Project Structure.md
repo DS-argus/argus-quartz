@@ -5,6 +5,7 @@ tags:
 created: 2026-10-02T13:25:38
 updated: 2026-10-04T13:45:53
 permalink: /Dev/rust/rust-project-structure
+description: "함수에서 시작한 Rust Cargo 프로젝트를 module·파일·library와 여러 binary로 나눈 뒤 workspace로 확장하며, crate·package 경계와 공개 API·의존성·테스트 구성을 설명한다."
 ---
 
 > [!abstract]+ TL;DR

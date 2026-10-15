@@ -4,6 +4,7 @@ tags:
 created: 2025-06-24T22:34:17
 updated: 2025-06-26T00:18:22
 permalink: /AI/recsys/2017-neural-collaborative-filtering
+description: "내적 기반 Matrix Factorization의 표현력 한계를 보완하기 위해 GMF와 MLP를 결합한 Neural Collaborative Filtering을 설명한다. Implicit feedback의 negative sampling, 사전 학습과 leave-one-out 평가 방식을 정리한다."
 ---
 > [!abstract]+ TL;DR
 >- source : https://arxiv.org/pdf/1708.05031

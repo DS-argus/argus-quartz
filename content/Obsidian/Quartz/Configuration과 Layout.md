@@ -5,6 +5,7 @@ tags:
 created: 2025-05-22T15:14:54
 updated: 2025-06-06T15:37:24
 permalink: /Obsidian/Quartz/configuration-and-layout
+description: "Quartz 설정 파일의 플러그인과 페이지 레이아웃 구성을 설명하고, 목차 깊이 조정부터 댓글·최근 노트·푸터 링크·탐색기 UI까지 블로그에 적용한 수정 사항을 정리한다."
 ---
 ### Quartz의 기본 Configuration
 

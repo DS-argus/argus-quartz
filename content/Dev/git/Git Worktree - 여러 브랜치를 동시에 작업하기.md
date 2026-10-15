@@ -5,6 +5,7 @@ tags:
 created: 2026-05-10T00:00:00
 updated: 2026-05-10T00:00:00
 permalink: /Dev/git/git-worktree
+description: "하나의 저장소에서 여러 브랜치를 별도 작업 디렉터리로 체크아웃하는 Git worktree의 생성·조회·정리 방법과 bare clone, 핫픽스 활용을 다룬다. 의존성·IDE·서브모듈 주의점과 Worktrunk, GitButler 대안도 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - git worktree는 한 저장소에서 여러 브랜치를 별도 디렉토리로 동시에 체크아웃하는 기능

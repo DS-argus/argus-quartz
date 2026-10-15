@@ -5,6 +5,7 @@ tags:
 created: 2025-06-27T14:48:31
 updated: 2025-06-27T15:00:50
 permalink: /Dev/debug/postgres-container-initdb-script-permissions
+description: "PostgreSQL 컨테이너에서 initdb.d 스크립트가 권한 오류로 실행되지 않는 원인을 소유자와 읽기·실행 권한 관점에서 설명하고, COPY --chown과 권한 설정 방법을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

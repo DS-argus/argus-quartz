@@ -7,6 +7,7 @@ tags:
 created: 2026-05-21T00:00:00
 updated: 2026-05-21T00:00:00
 permalink: /Dev/workflow/cli-tui-dev-tools
+description: "Python, Go, Rust의 CLI·TUI 프레임워크를 비교하고, 성능·개발 편의성·배포 특성을 바탕으로 상황별 도구 선택 기준을 설명한다."
 ---
 
 > [!abstract]+ TL;DR

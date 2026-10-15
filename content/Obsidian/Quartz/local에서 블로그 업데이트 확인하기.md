@@ -6,6 +6,7 @@ tags:
 created: 2025-06-02T09:41:22
 updated: 2025-06-02T09:57:19
 permalink: /Obsidian/Quartz/check-blog-updates-locally
+description: "Quartz 블로그를 Docker 또는 npx로 로컬에서 빌드하고 웹서버로 미리보기하는 방법을 설명하며, 컨테이너 포트와 볼륨 설정을 정리한다."
 ---
 ### docker를 이용해 블로그 변경 사항 확인하기
 

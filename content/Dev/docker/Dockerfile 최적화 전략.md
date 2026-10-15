@@ -4,6 +4,7 @@ tags:
 created: 2025-06-04T11:19:33
 updated: 2025-06-04T00:07:39
 permalink: /Dev/docker/dockerfile-optimization-strategies
+description: "Docker 이미지 레이어에서 파일 삭제가 용량을 줄이지 않는 이유를 설명하고, 멀티스테이지 빌드와 .dockerignore, 캐시 배치, 베이스 이미지 선택 등 용량과 빌드 효율을 개선하는 방법을 정리한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -6,6 +6,7 @@ tags:
 created: 2026-06-01T00:00:00
 updated: 2026-06-21T00:00:00
 permalink: /Dev/linux/bash-shell-script-4-practical-patterns
+description: "mktemp를 이용한 안전한 파일 교체부터 Job Control, exec·flock, 오류 처리와 trap, BashPitfalls 및 이식성까지 실전 Bash 스크립트 패턴을 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - 파일 수정은 `mktemp` 임시 파일에 쓰고 `mv`로 교체, Job Control과 `exec`, `flock`으로 병렬 실행과 동시 실행 제어

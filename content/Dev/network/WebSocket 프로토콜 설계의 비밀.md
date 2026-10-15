@@ -6,6 +6,7 @@ tags:
 created: 2026-05-31T00:00:00
 updated: 2026-06-07T08:55:00
 permalink: /Dev/network/websocket-protocol-design-secrets
+description: "WebSocket의 HTTP Upgrade handshake를 바탕으로 Sec-WebSocket-Key 검증, TCP slow start, 클라이언트 프레임 마스킹과 포트 선택의 배경을 설명하고, 멀티플렉싱 한계와 HTTP/2·SSE 대안을 비교한다."
 ---
 > [!abstract]+ TL;DR
 > - WebSocket은 HTTP 업그레이드로 단일 TCP 연결에서 양방향 통신을 제공하는 프로토콜

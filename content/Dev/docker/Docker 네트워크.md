@@ -5,6 +5,7 @@ tags:
 created: 2025-06-04T08:59:41
 updated: 2025-06-04T00:38:37
 permalink: /Dev/docker/docker-networking
+description: "Docker의 네트워크 인프라, 드라이버와 IPAM, sandbox 및 endpoint 계층을 설명하고 bridge·host·overlay 등 드라이버 용도와 Linux·macOS의 네트워크 구조 및 기능 차이를 비교한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -5,6 +5,7 @@ tags:
 created: 2025-06-27T14:52:54
 updated: 2026-04-06T22:07:52
 permalink: /Dev/linux/linux-permission-numbers
+description: "Owner·Group·Other 권한을 숫자와 기호로 해석하고 chmod·chown·chgrp, 디렉터리 권한, umask와 setuid·setgid·sticky bit의 동작 및 활용을 설명한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -5,6 +5,7 @@ tags:
 created: 2026-04-26T00:00:00
 updated: 2026-10-11T09:05:55
 permalink: /Dev/python/python-dependency-injection
+description: "Dependency Injection의 개념과 필요성을 설명하고, Strategy 패턴을 활용한 직렬화 포맷 전환부터 생성자·세터·메서드 주입, Protocol, dependency-injector, 테스트 적용까지 Python 사례로 살펴본다."
 ---
 > [!abstract]+ TL;DR
 > - Dependency Injection(DI)은 의존성을 직접 생성하지 않고 외부에서 주입받는 설계 패턴

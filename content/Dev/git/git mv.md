@@ -6,6 +6,7 @@ created: 2025-05-23T23:40:09
 updated: 2025-05-25T00:05:13
 permalink: /Dev/git/git-mv
 related: 
+description: "git mv로 파일·폴더·심볼릭 링크를 이동하거나 이름을 바꾸는 방법을 설명하고, macOS의 대소문자 비구분 파일시스템에서 대소문자만 변경할 때 임시 경로를 거치는 우회 방법을 소개한다."
 ---
 
 > [!abstract]+ TL;DR

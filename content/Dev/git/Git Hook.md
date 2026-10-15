@@ -6,6 +6,7 @@ tags:
 created: 2026-04-23T00:00:00
 updated: 2026-04-23T00:00:00
 permalink: /Dev/git/git-hook
+description: "Git Hook의 실행 시점과 Client-side·Server-side Hook의 차이, 커밋·푸시 검증과 배포 자동화 사례를 살펴본다. Husky, pre-commit, Lefthook 등 팀 단위 관리 도구와 우회 제한도 정리한다."
 ---
 
 > [!abstract]+ TL;DR

@@ -7,6 +7,7 @@ tags:
 created: 2026-02-07T21:57:46
 updated: 2026-07-03T16:24:34
 permalink: /Dev/python/python-threading-and-multiprocessing
+description: "Python의 GIL을 기준으로 threading, multiprocessing, concurrent.futures와 asyncio의 역할을 비교하고, 동기화·프로세스 간 통신·작업 풀 및 선택 기준을 예제로 설명한다."
 ---
 > [!abstract]+ TL;DR
 > - Python의 동시성/병렬성은 thread와 process 두 갈래이며 GIL 때문에 CPU 병렬은 process의 몫

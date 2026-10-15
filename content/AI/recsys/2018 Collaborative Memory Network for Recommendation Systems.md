@@ -4,6 +4,7 @@ tags:
 created: 2025-07-03T14:17:07
 updated: 2025-07-03T22:32:47
 permalink: /AI/recsys/2018-collaborative-memory-network-for-recommendation-systems
+description: "사용자·아이템 임베딩과 이웃의 집합적 선호를 외부 메모리로 구성하고, attention으로 아이템별 이웃 기여도를 학습하는 Collaborative Memory Network를 설명한다. 다중 hop, BPR 학습과 latent factor·neighborhood 모델의 관계를 정리한다."
 ---
 > [!abstract]+ TL;DR
 > - Latent factor와 neighborhood 기반 CF를 딥러닝으로 결합한 Collaborative Memory Network (CMN) 논문([arXiv](https://arxiv.org/pdf/1804.10862), [코드](https://github.com/tebesu/CollaborativeMemoryNetwork/tree/master))

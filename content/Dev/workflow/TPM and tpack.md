@@ -6,6 +6,7 @@ tags:
 created: 2026-09-28T09:23:50
 updated: 2026-09-28T13:29:39
 permalink: /Dev/workflow/tpm-and-tpack
+description: "tmux 플러그인 매니저 TPM과 tpack의 선언·설치·로드 방식을 비교하고, 검색 registry 등록 절차와 매니저 전환 시 설치 경로에서 확인할 점을 설명한다."
 ---
 
 > [!abstract]+ TL;DR
