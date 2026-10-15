@@ -60,7 +60,7 @@ plugins:
         dark: nord
       keepBackground: false
     order: 20
-  - source: github:quartz-community/obsidian-flavored-markdown
+  - source: ./plugins/obsidian-flavored-markdown
     enabled: true
     options:
       comments: true
