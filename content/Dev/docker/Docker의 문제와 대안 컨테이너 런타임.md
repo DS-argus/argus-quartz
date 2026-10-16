@@ -1,5 +1,8 @@
 ---
-tags: 
+tags:
+  - docker
+  - k8s
+  - devops
 created: 2025-06-03T22:26:23
 updated: 2025-06-03T22:26:23
 permalink: /Dev/docker/docker-limitations-and-alternative-container-runtimes
