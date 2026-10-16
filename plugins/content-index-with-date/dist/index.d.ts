@@ -11,6 +11,7 @@ type ContentDetails = {
     content: string;
     richContent?: string;
     date?: Date;
+    lastmod?: Date;
     description?: string;
 };
 interface Options {

@@ -2264,11 +2264,18 @@ var write = async (args) => {
   await fs.writeFile(pathToPage, args.content);
   return pathToPage;
 };
+function formatSiteMapDate(date) {
+  // Frontmatter dates have no timezone, so the build machine's local calendar date preserves the written day.
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
 function generateSiteMap(cfg, idx) {
   const base = cfg.baseUrl ?? "";
   const createURLEntry = (slug2, content) => `<url>
     <loc>https://${joinSegments(base, encodeURI(slug2))}</loc>
-    ${content.date && `<lastmod>${content.date.toISOString()}</lastmod>`}
+    ${content.lastmod ? `<lastmod>${formatSiteMapDate(content.lastmod)}</lastmod>` : ""}
   </url>`;
   const urls = Array.from(idx).map(([slug2, content]) => createURLEntry(simplifySlug(slug2), content)).join("");
   return `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${urls}</urlset>`;
@@ -2330,6 +2337,7 @@ var ContentIndex = (opts) => {
           content: text2 ?? "",
           richContent: options.rssFullHtml && !isEncrypted ? escapeHTML(toHtml(tree, { allowDangerousHtml: true })) : void 0,
           date,
+          lastmod: data.dates?.modified,
           description: data.description ?? ""
         });
       }
@@ -2359,6 +2367,7 @@ var ContentIndex = (opts) => {
     const simplifiedIndex = Object.fromEntries(
       Array.from(linkIndex).map(([slug2, content2]) => {
         delete content2.description;
+        delete content2.lastmod;
         return [slug2, content2];
       })
     );

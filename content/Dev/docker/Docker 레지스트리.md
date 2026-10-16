@@ -2,7 +2,7 @@
 tags:
   - docker
   - registry
-created: 2025-06-04T12:39:56
+created: 2025-06-03T23:54:51
 updated: 2025-06-03T23:54:51
 permalink: /Dev/docker/docker-registry
 description: "Docker 이미지 레지스트리의 저장 구조와 이미지 참조, 매니페스트·레이어 기반 Pull·Push 흐름을 설명하고, 태그·digest 운영과 이미지 신뢰도 확인 기준을 정리한다."

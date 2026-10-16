@@ -1,6 +1,6 @@
 ---
 tags: 
-created: 2025-06-04T19:42:42
+created: 2025-06-03T22:26:23
 updated: 2025-06-03T22:26:23
 permalink: /Dev/docker/docker-limitations-and-alternative-container-runtimes
 description: "Docker 데몬 중심 구조와 Kubernetes의 CRI 변화 등에서 비롯된 제약을 살펴보고, containerd·Podman·CRI-O·Kata Containers·Firecracker의 특성과 사용 상황을 비교한다."

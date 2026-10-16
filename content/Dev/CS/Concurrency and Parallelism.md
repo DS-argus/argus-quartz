@@ -6,8 +6,9 @@ tags:
   - concurrency
   - parallelism
 created: 2026-06-30T00:00:00
-updated: 2026-10-11T13:07:22
+updated: 2026-10-15T20:11:29
 permalink: /Dev/CS/concurrency-and-parallelism
+description: "process·OS thread·coroutine의 실행 단위를 구분하고, 동시성과 병렬성 및 CPU-bound·I/O-bound 작업의 차이를 설명한다. 동기/비동기와 blocking/non-blocking의 관계, event loop·M:N 런타임, GIL과 동기화 방식까지 다룬다."
 ---
 > [!abstract]+ TL;DR
 > - thread는 하드웨어·OS·user 세 층위라 이름만 같아 먼저 구분이 필요
