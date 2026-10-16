@@ -1,7 +1,7 @@
 ---
 tags:
   - tmux
-  - CLI
+  - cli
   - terminal
   - plugin
 created: 2026-04-29T00:00:00

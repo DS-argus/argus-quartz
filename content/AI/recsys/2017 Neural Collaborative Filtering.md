@@ -1,6 +1,6 @@
 ---
 tags:
-  - RecSys
+  - recsys
 created: 2025-06-24T22:34:17
 updated: 2025-06-26T00:18:22
 permalink: /AI/recsys/2017-neural-collaborative-filtering

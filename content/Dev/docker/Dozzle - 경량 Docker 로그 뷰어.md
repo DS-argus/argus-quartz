@@ -1,7 +1,7 @@
 ---
 tags:
   - docker
-  - DevOps
+  - devops
   - logging
 created: 2026-05-16T10:00:00
 updated: 2026-05-16T10:00:00

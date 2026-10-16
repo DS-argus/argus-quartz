@@ -1,8 +1,8 @@
 ---
 tags:
   - network
-  - VPN
-  - DevOps
+  - vpn
+  - devops
 created: 2026-06-16T09:20:00
 updated: 2026-06-16T09:20:00
 permalink: /Dev/network/rustdesk-over-tailscale

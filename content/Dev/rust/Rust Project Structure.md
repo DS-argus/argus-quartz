@@ -1,7 +1,7 @@
 ---
 tags:
-  - Rust
-  - Cargo
+  - rust
+  - cargo
 created: 2026-10-02T13:25:38
 updated: 2026-10-04T13:45:53
 permalink: /Dev/rust/rust-project-structure

@@ -1,7 +1,7 @@
 ---
 tags:
   - obsidian
-  - Quartz
+  - quartz
 created: 2025-05-21T22:21:27
 updated: 2025-05-22T16:53:14
 permalink: /Obsidian/Quartz/getting-started-with-obsidian-quartz-blog

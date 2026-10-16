@@ -1,7 +1,7 @@
 ---
 tags:
   - obsidian
-  - Quartz
+  - quartz
 created: 2025-05-22T15:14:54
 updated: 2025-06-06T15:37:24
 permalink: /Obsidian/Quartz/configuration-and-layout

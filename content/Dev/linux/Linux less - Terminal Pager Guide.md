@@ -1,7 +1,7 @@
 ---
 tags:
   - linux
-  - CLI
+  - cli
 created: 2026-06-13T22:12:48
 updated: 2026-06-30T00:00:00
 permalink: /Dev/linux/linux-less-terminal-pager-guide

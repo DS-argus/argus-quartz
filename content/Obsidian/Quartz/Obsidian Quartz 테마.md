@@ -1,7 +1,7 @@
 ---
 tags:
   - obsidian
-  - Quartz
+  - quartz
 created: 2025-05-21T22:34:20
 updated: 2025-05-22T16:39:20
 permalink: /Obsidian/Quartz/obsidian-quartz-theme

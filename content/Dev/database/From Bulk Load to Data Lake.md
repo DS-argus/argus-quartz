@@ -1,7 +1,7 @@
 ---
 tags:
   - data_engineering
-  - Data
+  - data
   - architecture
   - hadoop
   - etl

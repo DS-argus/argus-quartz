@@ -1,7 +1,7 @@
 ---
 tags:
   - git
-  - CLI
+  - cli
 created: 2026-05-10T00:00:00
 updated: 2026-05-10T00:00:00
 permalink: /Dev/git/git-worktree

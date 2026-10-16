@@ -1,6 +1,6 @@
 ---
 tags:
-  - RecSys
+  - recsys
 created: 2025-07-03T14:17:07
 updated: 2025-07-03T22:32:47
 permalink: /AI/recsys/2018-collaborative-memory-network-for-recommendation-systems

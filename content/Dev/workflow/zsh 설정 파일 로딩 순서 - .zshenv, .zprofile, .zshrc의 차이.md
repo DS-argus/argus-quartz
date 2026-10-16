@@ -1,6 +1,6 @@
 ---
 tags:
-  - CLI
+  - cli
   - terminal
   - zsh
 created: 2026-04-20T00:00:00

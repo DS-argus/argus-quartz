@@ -1,7 +1,7 @@
 ---
 tags:
   - docker
-  - docker-compose
+  - docker_compose
   - airflow
 created: 2025-06-02T15:22:37
 updated: 2025-06-28T11:52:29

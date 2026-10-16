@@ -1,7 +1,7 @@
 ---
 tags:
-  - Quartz
-  - Obsidian
+  - quartz
+  - obsidian
   - blog
   - permalink
 permalink: /Obsidian/Quartz/quartz-share-button-and-permalink-automation

@@ -2,9 +2,9 @@
 tags:
   - data_engineering
   - architecture
-  - Data
+  - data
   - database
-  - distributed-system
+  - distributed_system
 created: 2026-08-05T00:00:00
 updated: 2026-09-18T20:53:36
 permalink: /Dev/database/open-table-formats-iceberg-vs-delta-lake-vs-hudi

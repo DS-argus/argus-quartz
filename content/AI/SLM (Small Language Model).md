@@ -1,8 +1,8 @@
 ---
 tags:
-  - AI
-  - LLM
-  - SLM
+  - ai
+  - llm
+  - slm
 created: 2025-06-06T18:34:06
 updated: 2025-07-09T17:48:52
 permalink: /AI/slm-small-language-model

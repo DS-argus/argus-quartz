@@ -1,7 +1,7 @@
 ---
 tags:
   - postgresql
-  - vectorDB
+  - vectordb
 created: 2025-08-09T13:42:56
 updated: 2025-08-19T15:10:14
 permalink: /Dev/database/pgvector

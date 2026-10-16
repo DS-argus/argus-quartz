@@ -1,8 +1,8 @@
 ---
 tags:
   - network
-  - DevOps
-  - VPN
+  - devops
+  - vpn
 created: 2026-05-31T00:00:00
 updated: 2026-05-31T23:25:41
 permalink: /Dev/network/headscale-tailscale-alternative

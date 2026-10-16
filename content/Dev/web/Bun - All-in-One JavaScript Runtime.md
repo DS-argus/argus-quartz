@@ -1,7 +1,7 @@
 ---
 tags:
   - javascript
-  - NodeJS
+  - nodejs
   - package_manager
   - tool
 created: 2026-06-11T21:22:35

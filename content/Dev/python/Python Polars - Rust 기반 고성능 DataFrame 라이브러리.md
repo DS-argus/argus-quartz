@@ -1,7 +1,7 @@
 ---
 tags:
   - python
-  - Data-Engineering
+  - data_engineering
 created: 2026-05-21T00:00:00
 updated: 2026-05-21T00:00:00
 permalink: /Dev/python/python-polars

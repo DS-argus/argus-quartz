@@ -1,6 +1,6 @@
 ---
 tags:
-  - RecSys
+  - recsys
 created: 2025-06-23T14:33:27
 updated: 2025-06-26T00:15:25
 permalink: /AI/recsys/2010-factorization-machines

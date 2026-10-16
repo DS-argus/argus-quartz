@@ -1,7 +1,7 @@
 ---
 tags:
-  - Rust
-  - Cargo
+  - rust
+  - cargo
   - test
 created: 2026-10-04T12:51:46
 updated: 2026-10-05T13:42:58

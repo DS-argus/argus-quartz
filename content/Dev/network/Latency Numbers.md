@@ -1,7 +1,7 @@
 ---
 tags:
   - cs
-  - system-design
+  - system_design
   - performance
 created: 2026-04-22T00:00:00
 updated: 2026-05-10T17:40:42

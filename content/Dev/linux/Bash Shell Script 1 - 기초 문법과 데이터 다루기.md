@@ -1,7 +1,7 @@
 ---
 tags:
   - linux
-  - CLI
+  - cli
   - bash
 created: 2026-06-01T00:00:00
 updated: 2026-06-14T00:29:14

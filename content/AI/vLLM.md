@@ -1,8 +1,8 @@
 ---
 tags:
-  - LLM
-  - vLLM
-  - AI
+  - llm
+  - vllm
+  - ai
 created: 2025-06-12T17:18:43
 updated: 2025-06-12T10:17:19
 permalink: /AI/vllm

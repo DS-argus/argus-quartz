@@ -2,7 +2,7 @@
 tags:
   - database
   - uuid
-  - distributed-system
+  - distributed_system
 created: 2026-04-15T21:00:00
 updated: 2026-05-31T23:22:37
 permalink: /Dev/database/guid-and-uuid

@@ -1,7 +1,7 @@
 ---
 tags:
   - airflow
-  - Celery
+  - celery
 created: 2025-06-02T17:00:00
 updated: 2025-06-02T17:55:14
 permalink: /Dev/airflow/dumb-init-setsid

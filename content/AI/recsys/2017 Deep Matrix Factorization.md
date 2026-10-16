@@ -1,6 +1,6 @@
 ---
 tags:
-  - RecSys
+  - recsys
 created: 2025-06-26T09:37:38
 updated: 2025-06-26T09:44:47
 permalink: /AI/recsys/2017-deep-matrix-factorization

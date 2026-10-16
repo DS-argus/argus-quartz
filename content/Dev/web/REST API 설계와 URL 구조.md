@@ -3,7 +3,7 @@ tags:
   - web
   - backend
   - network
-  - HTTP
+  - http
 created: 2026-05-23T00:00:00
 updated: 2026-05-23T00:00:00
 permalink: /Dev/web/rest-api-design-and-url-structure

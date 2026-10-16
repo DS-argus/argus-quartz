@@ -112,15 +112,15 @@ test("redirect rules exactly match confirmed audit mappings", async () => {
   const unmatched = auditRows.filter((row) => row.classification === "no_match")
   const rules = parseRedirectRules(await readFile(redirectsPath, "utf8"))
 
-  assert.equal(auditRows.length, 68)
-  assert.equal(confirmed.length, 66)
+  assert.equal(auditRows.length, 74)
+  assert.equal(confirmed.length, 72)
   assert.equal(unmatched.length, 2)
   assert.ok(confirmed.some((row) => row.old_url.includes("Task,-Operator,-Sensor")))
-  assert.equal(rules.length, 66)
-  assert.equal(new Set(rules.map((rule) => rule.source)).size, 66, "Sources must be unique")
+  assert.equal(rules.length, 72)
+  assert.equal(new Set(rules.map((rule) => rule.source)).size, 72, "Sources must be unique")
   assert.equal(
     new Set(rules.map((rule) => rule.destination)).size,
-    63,
+    68,
     "Destinations must match the audit",
   )
 

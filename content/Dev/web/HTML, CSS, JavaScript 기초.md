@@ -1,8 +1,8 @@
 ---
 tags:
   - web
-  - HTML
-  - CSS
+  - html
+  - css
   - javascript
 created: 2026-04-05T00:00:00
 updated: 2026-04-05T21:48:05

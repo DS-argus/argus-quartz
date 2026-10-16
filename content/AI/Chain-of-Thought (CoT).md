@@ -1,6 +1,6 @@
 ---
 tags:
-  - LLM
+  - llm
 created: 2025-06-25T23:55:02
 updated: 2025-06-26T13:00:22
 permalink: /AI/chain-of-thought-cot

@@ -2,7 +2,7 @@
 tags:
   - network
   - web
-  - HTTP
+  - http
 created: 2026-05-31T00:00:00
 updated: 2026-06-07T08:55:00
 permalink: /Dev/network/websocket-protocol-design-secrets

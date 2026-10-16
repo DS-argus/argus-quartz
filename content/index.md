@@ -23,11 +23,11 @@ description: "개인 블로그의 소개 페이지로, 데이터 엔지니어링
 
 ### Interests 🧭
 - Data Engineering : #airflow #spark #kafka #database
-- Dev Settings : #linux #git #tmux #multiplexer #terminal #TUI #CLI #neovim
+- Dev Settings : #linux #git #tmux #multiplexer #terminal #tui #cli #neovim
 - Languages : #python #golang
 - Infra : #docker #k8s #network
-- Agent : #Codex #Claude 
-- Obsidian : #obsidian #Quartz
+- Agent : #codex #claude 
+- Obsidian : #obsidian #quartz
 
 ---
 > [!tip] Here be dragons

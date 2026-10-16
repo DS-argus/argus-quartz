@@ -1,7 +1,7 @@
 ---
 tags:
   - fastapi
-  - ASGI
+  - asgi
   - uvicorn
   - gunicorn
   - starlette

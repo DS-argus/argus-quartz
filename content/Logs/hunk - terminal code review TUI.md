@@ -3,7 +3,7 @@ tags:
   - tool
   - terminal
   - git
-  - DevOps
+  - devops
 created: 2026-06-22T00:00:00
 updated: 2026-06-22T00:00:00
 permalink: /Logs/hunk-terminal-code-review-tui

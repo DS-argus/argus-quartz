@@ -3,7 +3,7 @@ tags:
   - python
   - web
   - backend
-  - ASGI
+  - asgi
   - uvicorn
   - gunicorn
   - fastapi

@@ -1,6 +1,6 @@
 ---
 tags:
-  - CLI
+  - cli
   - terminal
   - backend
   - workflow

@@ -2,7 +2,7 @@
 tags:
   - git
   - github
-  - CLI
+  - cli
 created: 2025-05-14
 updated: 2025-05-21T22:21:11
 permalink: /Dev/git/github-cli-gh

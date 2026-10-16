@@ -1,7 +1,7 @@
 # Preserve historical links; update this list when routes change.
 /Dev/airflow/5.-Task,-Operator,-Sensor,-Hook,-Provider /Dev/airflow/5-task-operator-sensor-hook-provider 301
 /AI/추천시스템/2010-Factorization-Machines /AI/recsys/2010-factorization-machines 301
-/tags/Data-Engineering /tags/data-engineering 301
+/tags/Data-Engineering /tags/data_engineering 301
 /Dev/network/2.-네트워크-미시적으로-살펴보기 /Dev/network/2-network-close-up 301
 /Dev/docker/Docker-네트워크 /Dev/docker/docker-networking 301
 /Dev/linux/Linux-Signal /Dev/linux/linux-signal 301
@@ -65,3 +65,9 @@
 /Dev/python/Faker /Dev/python/python-faker 301
 /Dev/기타/소켓-(Socket) /Dev/network/socket 301
 /Dev/python/uv---An-extremely-fast-Python-package-and-project-manager /Dev/python/python-uv-an-extremely-fast-python-package-and-project-manager 301
+/tags/data-engineering /tags/data_engineering 301
+/tags/distributed-system /tags/distributed_system 301
+/tags/docker-compose /tags/docker_compose 301
+/tags/reverse-proxy /tags/reverse_proxy 301
+/tags/system-design /tags/system_design 301
+/tags/wi-fi /tags/wi_fi 301

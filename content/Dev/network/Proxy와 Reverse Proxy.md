@@ -2,7 +2,7 @@
 tags:
   - network
   - proxy
-  - reverse-proxy
+  - reverse_proxy
 created: 2025-06-11T13:07:45
 updated: 2025-06-11T13:17:50
 permalink: /Dev/network/proxy-and-reverse-proxy

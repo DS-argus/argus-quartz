@@ -1,7 +1,7 @@
 ---
 tags:
   - bitnami
-  - Cloud
+  - cloud
   - docker
   - k8s
 created: 2025-06-02T23:05:13

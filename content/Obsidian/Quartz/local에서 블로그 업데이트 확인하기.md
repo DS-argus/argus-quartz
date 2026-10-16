@@ -1,7 +1,7 @@
 ---
 tags:
   - obsidian
-  - Quartz
+  - quartz
   - docker
 created: 2025-06-02T09:41:22
 updated: 2025-06-02T09:57:19

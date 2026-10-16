@@ -2,8 +2,8 @@
 tags:
   - troubleshooting
   - docker
-  - Quartz
-  - NodeJS
+  - quartz
+  - nodejs
 created: 2025-06-05T10:13:36
 updated: 2025-06-05T10:21:16
 permalink: /Dev/debug/quartz-module-errors-in-docker

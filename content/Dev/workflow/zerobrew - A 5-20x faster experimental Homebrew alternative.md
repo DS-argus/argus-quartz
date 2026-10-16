@@ -1,8 +1,8 @@
 ---
 tags:
-  - CLI
+  - cli
   - terminal
-  - Rust
+  - rust
   - package_manager
 created: 2026-04-16T00:00:00
 updated: 2026-06-01T00:00:00

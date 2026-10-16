@@ -1,8 +1,8 @@
 ---
 tags:
   - observability
-  - DevOps
-  - distributed-system
+  - devops
+  - distributed_system
 created: 2026-06-22T12:00:00
 updated: 2026-06-23T06:58:48
 permalink: /Dev/observability/opentelemetry-vendor-neutral-observability-standard

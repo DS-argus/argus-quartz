@@ -3,7 +3,7 @@ tags:
   - make
   - build
   - automation
-  - CLI
+  - cli
 created: 2026-06-18T00:00:00
 updated: 2026-06-18T22:46:08
 permalink: /Dev/linux/make-and-makefile

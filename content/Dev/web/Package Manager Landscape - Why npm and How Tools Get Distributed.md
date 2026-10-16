@@ -2,8 +2,8 @@
 tags:
   - package_manager
   - npm
-  - CLI
-  - DevOps
+  - cli
+  - devops
 created: 2026-04-29T00:00:00
 updated: 2026-06-11T21:30:00
 permalink: /Dev/web/package-manager-landscape-why-npm-and-how-tools-get-distributed
