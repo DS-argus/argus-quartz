@@ -14,7 +14,6 @@
   "scripts": {
     "prepare": "simple-git-hooks",
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "docs": "npx quartz build --serve -d docs",
     "stage:content": "node scripts/stage-content.mjs",
     "check": "tsc --noEmit && npx prettier . --check",
     "format": "npx prettier . --write",
