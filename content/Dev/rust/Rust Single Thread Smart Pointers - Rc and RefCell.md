@@ -4,7 +4,7 @@ tags:
   - memory
   - ownership
 created: 2026-10-16T12:20:16
-updated: 2026-10-21T13:55:04
+updated: 2026-10-21T14:12:34
 permalink: /Dev/rust/rust-single-thread-smart-pointers-rc-and-refcell
 description: "Rust의 기본 타입부터 Rc·RefCell과 두 타입의 조합까지 메모리 구조를 통해 살펴보며, 공유 소유권과 내부 가변성의 역할 및 메서드에 따른 상태 변화를 설명한다."
 ---
@@ -22,7 +22,7 @@ description: "Rust의 기본 타입부터 Rc·RefCell과 두 타입의 조합까
 
 Rust에서는 ownership과 borrowing 규칙으로 값의 수명과 접근을 관리한다. `&T`·`&mut T`로 값을 빌려도 소유권은 넘어오지 않으므로 참조를 사용하는 동안에는 원본 값을 유지할 소유자가 필요하다.
 
-여러 곳이 같은 값을 각자 필요한 동안 유지해야 한다면 _공유 소유권_이 필요하다. `Rc` 같은 [스마트 포인터](https://doc.rust-kr.org/ch15-00-smart-pointers.html)는 참조 수를 추적해 마지막 소유자가 놓을 때까지 값을 유지한다. 공유 참조로 내부 값을 수정해야 한다면 `RefCell`로 읽기·쓰기 접근을 관리한다.
+여러 곳이 같은 값을 각자 필요한 동안 유지해야 한다면 *공유 소유권*이 필요하다. `Rc` 같은 [스마트 포인터](https://doc.rust-kr.org/ch15-00-smart-pointers.html)는 참조 수를 추적해 마지막 소유자가 놓을 때까지 값을 유지한다. 공유 참조로 내부 값을 수정해야 한다면 `RefCell`로 읽기·쓰기 접근을 관리한다.
 
 이 글에서는 single thread의 `Rc`·`RefCell`과 두 타입의 조합을 메모리 구조와 함께 살펴본다. 변수에 담긴 값과 그 값이 소유하거나 빌린 메모리를 구분하면 `clone`·`borrow`가 무엇을 바꾸는지 이해하기 쉽다. 먼저 정수·배열·struct와 `String`·`Vec`·`Box`의 저장 구조부터 확인한다.
 
@@ -233,7 +233,7 @@ fn main() {
 
 > “…we can’t determine at compile time which part will finish using the data last.” ([The Rust Programming Language](https://doc.rust-lang.org/book/ch15-04-rc.html))
 
-Rc는 공유 값과 카운터를 특정 Rc 변수의 저장 공간과 분리된 _heap 할당_에 둔다.   
+Rc는 공유 값과 카운터를 특정 Rc 변수의 저장 공간과 분리된 *heap 할당*에 둔다.   
 각 Rc가 이 할당을 가리키므로 처음 만든 Rc가 drop되거나 생성 함수가 끝난 뒤에도 다른 Rc가 같은 값을 계속 소유할 수 있다.
 
 ```rust
