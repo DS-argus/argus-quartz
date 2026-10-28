@@ -341,6 +341,45 @@ pre > code:not([data-theme]) {
   margin: 1rem 0;
 }
 
+// 데스크톱에서는 스크롤하기 전에도 표의 가로 스크롤바를 표시한다.
+@media (hover: hover) and (pointer: fine) {
+  article .table-container {
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #2e3440;
+      border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #4c566a;
+      border-radius: 4px;
+    }
+
+    &:hover::-webkit-scrollbar-thumb {
+      background: #69768b;
+    }
+  }
+
+  @supports not selector(::-webkit-scrollbar) {
+    article .table-container {
+      scrollbar-width: thin;
+      scrollbar-color: #4c566a #2e3440;
+
+      &:hover {
+        scrollbar-color: #69768b #2e3440;
+      }
+    }
+  }
+}
+
+// 긴 셀은 자동 줄바꿈 대신 표 영역 안에서 가로로 스크롤한다.
+article table :is(th, td) {
+  white-space: nowrap;
+}
+
 th {
   border-bottom-color: var(--nord3);
 }
@@ -395,6 +434,19 @@ footer {
 
 .darkmode {
   display: none !important;
+}
+
+// Obsidian의 Nord 표 헤더와 색상·여백을 맞춘다.
+article table th {
+  background-color: #404758;
+  color: #eceff4;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-bottom: 1px solid #4c566a;
+
+  &:hover {
+    background-color: #42495a;
+  }
 }
 
 // Callouts: Nord colors on the left rule, icon, and title; body stays on a faint tint.
