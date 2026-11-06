@@ -427,13 +427,13 @@ flowchart LR
     SEL -->|준비 fd·만료 timer 수거| RQ
     RQ -->|실행 후 반복| TH
 
-    style EL fill:none,stroke:#495057,stroke-dasharray: 5 5
-    classDef srcYellow fill:#ffec99,stroke:#f08c00
-    classDef srcBlue fill:#a5d8ff,stroke:#1971c2
-    classDef srcGreen fill:#b2f2bb,stroke:#2f9e44
-    class CL,TH srcYellow
-    class AR,SEL srcBlue
-    class CS,RQ srcGreen
+    style EL fill:none,stroke:#667080,stroke-dasharray:5 5
+    classDef timer fill:none,stroke:#B8A77A,stroke-width:2px,stroke-dasharray:6 3
+    classDef io fill:none,stroke:#809BB5,stroke-width:2px
+    classDef ready fill:none,stroke:#8FA58B,stroke-width:2px,stroke-dasharray:2 3
+    class CL,TH timer
+    class AR,SEL io
+    class CS,RQ ready
 ```
 
 이 세 구조의 협력 골격은 asyncio 전용이 아니라 **reactor 패턴**으로, Node의 libuv·Go 런타임·nginx도 이름만 달리 같은 구조를 쓴다.
